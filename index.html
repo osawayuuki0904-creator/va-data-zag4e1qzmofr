@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>保有銘柄 出口監視</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --alert:#b4341f; --alert-bg:#fdeceb; --clear:#3f7a52; --clear-bg:#eef5f0;
+    --unknown:#8a6d1f; --unknown-bg:#fbf3e0; --anom:#8a4b1f; --anom-bg:#fbeee4;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --alert:#ff8a72; --alert-bg:#3a1e19; --clear:#7fc296; --clear-bg:#1b2a21;
+      --unknown:#e0be6a; --unknown-bg:#2e2718; --anom:#e3a377; --anom-bg:#31241a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:18px}
+  .meta b{color:var(--ink);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+  .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;
+        padding:5px 13px;font-size:12.5px;display:flex;gap:7px;align-items:center}
+  .chip b{font-size:15px}
+  .chip.alert b{color:var(--alert)} .chip.clear b{color:var(--clear)}
+  .chip.unknown b{color:var(--unknown)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+         overflow:hidden;margin-bottom:20px}
+  .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
+            color:var(--muted);font-weight:600;letter-spacing:.04em}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{font-size:11.5px;color:var(--muted);font-weight:600;cursor:pointer;user-select:none}
+  th:hover{color:var(--ink)}
+  tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right}
+  .tk{font-weight:600}
+  .nm{white-space:normal;min-width:140px;color:var(--muted)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
+  .b-ALERT{background:var(--alert-bg);color:var(--alert)}
+  .b-CLEAR{background:var(--clear-bg);color:var(--clear)}
+  .b-UNKNOWN{background:var(--unknown-bg);color:var(--unknown)}
+  .neg{color:var(--alert)} .pos{color:var(--clear)}
+  .anom{display:inline-block;background:var(--anom-bg);color:var(--anom);border-radius:5px;
+        padding:2px 7px;font-size:11.5px;margin:1px 3px 1px 0}
+  .anom b{font-weight:700}
+  .dim{color:var(--muted)}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
+       border-radius:10px;padding:16px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>保有銘柄 出口監視</h1>
+  <div class="meta" id="meta">読み込み中…</div>
+  <div class="chips" id="chips"></div>
+  <div id="content"></div>
+</div>
+
+<script>
+// この HTML は器のみ。中身は読み込み時に外部 JSON を取得して描画する。
+// 既定は同じ場所の latest.json。?src= で差し替えられる（ローカル確認用）。
+const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
+const STATUS_ORDER = { ALERT: 0, UNKNOWN: 1, CLEAR: 2 };
+let DATA = null, sortKey = 'drawdown_pct', sortAsc = true;
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const num = (v, d = 2, suffix = '') =>
+  v === null || v === undefined ? '<span class="dim">—</span>'
+    : esc(v.toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d })) + suffix;
+
+function signed(v, label) {
+  if (v === null || v === undefined) return '<span class="dim">—</span>';
+  const cls = v < 0 ? 'neg' : 'pos';
+  return `<span class="${cls}">${esc(label ?? (v > 0 ? '+' : '') + v.toFixed(1) + '%')}</span>`;
+}
+
+function anomaliesHtml(list) {
+  if (!list || !list.length) return '<span class="dim">—</span>';
+  // 値を隠さず、ラベルと併記する
+  return list.map(a => {
+    const v = a.value === null || a.value === undefined ? '不明'
+      : Number(a.value).toLocaleString('ja-JP', { maximumFractionDigits: 4 });
+    return `<span class="anom"><b>${esc(a.label)}</b> ${esc(a.field ?? '')} = ${esc(v)}</span>`;
+  }).join('');
+}
+
+function row(h) {
+  const stale = h.stale_days > 0
+    ? `<span class="neg">${h.stale_days}日</span>` : '<span class="dim">0</span>';
+  const miss = h.missing && h.missing.length
+    ? `<span class="dim" title="${esc(h.missing.join(', '))}">${h.missing.length}件</span>`
+    : '<span class="dim">—</span>';
+  return `<tr>
+    <td class="tk">${esc(h.ticker)}</td>
+    <td class="nm">${esc(h.name)}</td>
+    <td class="dim">${esc(h.market)}</td>
+    <td class="num">${num(h.price)} <span class="dim">${esc(h.currency)}</span></td>
+    <td class="num">${signed(h.change_pct)}</td>
+    <td class="num">${signed(h.drawdown_pct, h.drawdown_label)}</td>
+    <td class="num">${h.weight_pct === null ? '<span class="dim">—</span>' : num(h.weight_pct, 1, '%')}</td>
+    <td><span class="badge b-${esc(h.status)}">${esc(h.status)}</span></td>
+    <td class="dim">${esc(h.as_of ?? '—')}</td>
+    <td class="num">${stale}</td>
+    <td>${anomaliesHtml(h.anomalies)}</td>
+    <td class="num">${miss}</td>
+  </tr>`;
+}
+
+const COLS = [
+  ['ticker', 'コード', ''], ['name', '銘柄', ''], ['market', '市場', ''],
+  ['price', '株価', 'num'], ['change_pct', '前日比', 'num'],
+  ['drawdown_pct', '取得価格比', 'num'], ['weight_pct', '比率', 'num'],
+  ['status', '判定', ''], ['as_of', 'データ日付', ''], ['stale_days', 'stale', 'num'],
+  ['anomalies', '異常値', ''], ['missing', '欠損', 'num'],
+];
+
+function table(rows, title) {
+  if (!rows.length) return '';
+  const head = COLS.map(([k, label, cls]) =>
+    `<th class="${cls}" data-k="${k}">${label}</th>`).join('');
+  return `<div class="panel"><h2>${esc(title)}（${rows.length}件）</h2>
+    <div class="scroll"><table><thead><tr>${head}</tr></thead>
+    <tbody>${rows.map(row).join('')}</tbody></table></div></div>`;
+}
+
+function sortRows(rows) {
+  return rows.slice().sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (sortKey === 'status') { x = STATUS_ORDER[x]; y = STATUS_ORDER[y]; }
+    if (sortKey === 'anomalies' || sortKey === 'missing') {
+      x = (x || []).length; y = (y || []).length;
+    }
+    if (x === null || x === undefined) return 1;
+    if (y === null || y === undefined) return -1;
+    if (x < y) return sortAsc ? -1 : 1;
+    if (x > y) return sortAsc ? 1 : -1;
+    return 0;
+  });
+}
+
+function render() {
+  const d = DATA, s = d.summary;
+  const dates = Object.entries(d.data_dates || {})
+    .map(([m, v]) => `${m} <b>${esc(v.join(' / '))}</b>`).join('　');
+  // データ日付は市場ごとに分けて表示する。単一の日付にまとめない
+  document.getElementById('meta').innerHTML =
+    `実行日 <b>${esc(d.run_date)}</b>　データ日付: ${dates || '—'}`
+    + `<br>生成 ${esc(d.generated_at)}　出所 yfinance`;
+
+  document.getElementById('chips').innerHTML = `
+    <span class="chip alert">ALERT <b>${s.alert}</b></span>
+    <span class="chip clear">CLEAR <b>${s.clear}</b></span>
+    <span class="chip unknown">UNKNOWN <b>${s.unknown}</b></span>
+    <span class="chip">保有 <b>${s.total}</b></span>`;
+
+  const all = d.holdings;
+  const alert = sortRows(all.filter(h => h.status === 'ALERT'));
+  const unknown = sortRows(all.filter(h => h.status === 'UNKNOWN'));
+  const clear = sortRows(all.filter(h => h.status === 'CLEAR'));
+  const stale = all.filter(h => h.stale_days > 0);
+
+  document.getElementById('content').innerHTML =
+    table(alert, '売却条件に触れている銘柄')
+    + table(unknown, '判定不能（UNKNOWN）')
+    + table(clear, 'その他')
+    + `<div class="panel"><div class="note">
+        取得価格比は率のみ。金額・株数は公開していません。
+        UNKNOWN は判定に必要な数値が取れなかった銘柄で、「問題なし」ではありません。
+        ${stale.length ? `<br><b>取得に連続失敗している銘柄が ${stale.length} 件あります。</b>` : ''}
+       </div></div>`;
+
+  document.querySelectorAll('th[data-k]').forEach(th => {
+    th.onclick = () => {
+      const k = th.dataset.k;
+      if (k === sortKey) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
+      render();
+    };
+  });
+}
+
+fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(j => { DATA = j; render(); })
+  .catch(e => {
+    document.getElementById('meta').textContent = '';
+    document.getElementById('content').innerHTML =
+      `<div class="err"><b>データを読み込めませんでした</b><br>
+       <code>${esc(SRC)}</code><br>${esc(e.message)}</div>`;
+  });
+</script>
+</body>
+</html>
