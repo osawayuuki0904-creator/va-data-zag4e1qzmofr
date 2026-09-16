@@ -25,6 +25,7 @@
   h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
   .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
           flex-wrap:wrap}
+  .navbar nav{display:flex;gap:8px}
   .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
             border:1px solid var(--line);border-radius:8px;padding:5px 12px;
             background:var(--panel);white-space:nowrap}
@@ -70,7 +71,8 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="navbar"><h1>購入候補</h1><a href="index.html">保有一覧 →</a></div>
+  <div class="navbar"><h1>購入候補</h1>
+    <nav><a href="index.html">保有一覧 →</a><a id="perfLink" href="#">成績 →</a></nav></div>
   <div id="staleBanner"></div>
   <div class="meta" id="meta">読み込み中…</div>
   <div class="chips" id="chips"></div>
@@ -140,6 +142,8 @@ const COLS = ['コード', '銘柄', 'entry_rule', 'timing', '乖離', '株価',
 
 function render() {
   const d = DATA, s = d.summary;
+  document.getElementById('perfLink').href =
+    location.pathname.replace(/candidates-/, 'performance-').split('/').pop();
   renderStale(d);
   const dates = Object.entries(d.data_dates || {})
     .map(([m, v]) => `${m} <b>${esc(v.join(' / '))}</b>`).join('　');
