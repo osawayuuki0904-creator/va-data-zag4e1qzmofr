@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T00:11:59",
+  "generated_at": "2026-09-16T09:24:11+09:00",
   "run_date": "2026-09-16",
   "data_dates": {
     "JP": [
@@ -14,7 +14,8 @@
     "alert": 4,
     "clear": 34,
     "unknown": 0,
-    "drawdown_display": "exact"
+    "drawdown_display": "exact",
+    "stale_banner_days": 3
   },
   "holdings": [
     {

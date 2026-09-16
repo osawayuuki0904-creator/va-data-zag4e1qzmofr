@@ -56,6 +56,9 @@
   .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
   .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
        border-radius:10px;padding:16px}
+  .stale-banner{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
+       border-radius:10px;padding:13px 16px;margin-bottom:18px;font-size:13.5px}
+  .stale-banner b{display:block;font-size:15px;margin-bottom:4px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
   @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
 </style>
@@ -63,6 +66,7 @@
 <body>
 <div class="wrap">
   <h1>保有銘柄 出口監視</h1>
+  <div id="staleBanner"></div>
   <div class="meta" id="meta">読み込み中…</div>
   <div class="chips" id="chips"></div>
   <div id="content"></div>
@@ -152,8 +156,35 @@ function sortRows(rows) {
   });
 }
 
+function ageInDays(iso) {
+  // generated_at はタイムゾーン付き。Date が正しく解釈する。
+  const t = Date.parse(iso);
+  if (Number.isNaN(t)) return null;
+  return (Date.now() - t) / 86400000;
+}
+
+function renderStaleBanner(d) {
+  // 「蓄積は続くが画面が止まる」失敗に、画面を見た瞬間に気づくためのもの。
+  // 配信が止まってもこのページ自体は残り続け、古いデータを平然と表示する。
+  const limit = (d.summary && d.summary.stale_banner_days) || 3;
+  const age = ageInDays(d.generated_at);
+  const el = document.getElementById('staleBanner');
+  if (age === null) {
+    el.innerHTML = `<div class="stale-banner"><b>データの生成時刻が読めません</b>
+      表示されている数値がいつのものか確認できません。</div>`;
+    return;
+  }
+  if (age < limit) { el.innerHTML = ''; return; }
+  el.innerHTML = `<div class="stale-banner">
+      <b>データが ${Math.floor(age)} 日間更新されていません</b>
+      日次ジョブか配信が止まっている可能性があります。
+      以下の数値は ${esc(d.generated_at)} 時点のもので、現在の株価ではありません。
+    </div>`;
+}
+
 function render() {
   const d = DATA, s = d.summary;
+  renderStaleBanner(d);
   const dates = Object.entries(d.data_dates || {})
     .map(([m, v]) => `${m} <b>${esc(v.join(' / '))}</b>`).join('　');
   // データ日付は市場ごとに分けて表示する。単一の日付にまとめない
