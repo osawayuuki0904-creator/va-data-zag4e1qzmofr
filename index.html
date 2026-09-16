@@ -23,6 +23,12 @@
        font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
   .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
   h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
+  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+          flex-wrap:wrap}
+  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
+            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
+            background:var(--panel);white-space:nowrap}
+  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
   .meta{color:var(--muted);font-size:12.5px;margin-bottom:18px}
   .meta b{color:var(--ink);font-weight:600}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
@@ -65,7 +71,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>保有銘柄 出口監視</h1>
+  <div class="navbar"><h1>保有銘柄 出口監視</h1><a href="candidates-14h9azeln2gzh6.html">購入候補 →</a></div>
   <div id="staleBanner"></div>
   <div class="meta" id="meta">読み込み中…</div>
   <div class="chips" id="chips"></div>
@@ -209,7 +215,7 @@ function render() {
     + table(unknown, '判定不能（UNKNOWN）')
     + table(clear, 'その他')
     + `<div class="panel"><div class="note">
-        取得価格比は率のみ。金額・株数は公開していません。
+        取得価格比は率のみを出しています。
         UNKNOWN は判定に必要な数値が取れなかった銘柄で、「問題なし」ではありません。
         ${stale.length ? `<br><b>取得に連続失敗している銘柄が ${stale.length} 件あります。</b>` : ''}
        </div></div>`;
