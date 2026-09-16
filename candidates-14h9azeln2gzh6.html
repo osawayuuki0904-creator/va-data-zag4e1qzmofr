@@ -57,8 +57,6 @@
   .rule{font-size:11.5px;color:var(--muted)}
   .held{background:var(--alert-bg);color:var(--alert);border-radius:5px;padding:1px 7px;
         font-size:11px;font-weight:600}
-  .paper{background:var(--wait-bg);color:var(--wait);border-radius:5px;padding:1px 7px;
-        font-size:11px;font-weight:600}
   .dim{color:var(--muted)}
   .reason{white-space:normal;min-width:200px;color:var(--muted);font-size:12px}
   .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
@@ -119,8 +117,7 @@ function renderStale(d) {
 
 function row(c) {
   return `<tr>
-    <td class="tk">${esc(c.ticker)}${c.held ? ' <span class="held">保有中</span>' : ''}${
-      c.paper_open ? ' <span class="paper">paper</span>' : ''}</td>
+    <td class="tk">${esc(c.ticker)}${c.held ? ' <span class="held">保有中</span>' : ''}</td>
     <td class="nm">${esc(c.name)}</td>
     <td class="rule">${esc(c.entry_rule)}</td>
     <td>${badge(c.timing)}</td>
@@ -161,16 +158,11 @@ function render() {
     <span class="chip hit">成立 <b>${s.triggered}</b></span>
     <span class="chip">待機中 <b>${s.waiting}</b></span>
     <span class="chip">未該当 <b>${s.none}</b></span>
-    ${s.paper_open ? `<span class="chip">paper保有中 <b>${s.paper_open}</b></span>` : ''}
     ${byRule}
     <button id="toggle" aria-pressed="${showAll}">
       ${showAll ? '成立のみ表示' : '待機中・未該当も表示'}</button>`;
 
-  // 既定は「成立」＋「ペーパーで建玉が残っているもの」。
-  // entry_timing は上抜けた日だけが成立なので、翌日には待機中に戻る。
-  // 一度入った銘柄がその後どうなっているかを、トグルなしで追えるようにする。
-  const rows = showAll ? d.candidates
-    : d.candidates.filter(c => c.timing === '成立' || c.paper_open);
+  const rows = showAll ? d.candidates : d.candidates.filter(c => c.timing === '成立');
   const head = COLS.map((c, i) =>
     `<th class="${[4,5,6,7,8,9,10,11,12,13].includes(i) ? 'num' : ''}">${c}</th>`).join('');
 
@@ -178,12 +170,8 @@ function render() {
     ? `<div class="panel"><div class="scroll"><table><thead><tr>${head}</tr></thead>
        <tbody>${rows.map(row).join('')}</tbody></table></div>
        <div class="note">条件の充足状況を並べたものです。売買の判定ではありません。
-       <b>保有中</b> は holdings.csv に載っている銘柄、
-       <b>paper</b> はペーパーで建玉が残っている銘柄。
-       entry_timing は「5日線を上抜けた日」だけが成立なので、翌日は待機中に戻ります。
-       条件そのものは満たしたままです。</div></div>`
-    : `<div class="panel"><div class="note">entry_timing が成立した銘柄も、
-       ペーパーで建玉が残っている銘柄もありません。
+       「保有中」は entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。</div></div>`
+    : `<div class="panel"><div class="note">entry_timing が成立した銘柄はありません。
        待機中 ${s.waiting}件 / 未該当 ${s.none}件 はトグルで表示できます。</div></div>`;
 
   document.getElementById('toggle').onclick = () => { showAll = !showAll; render(); };

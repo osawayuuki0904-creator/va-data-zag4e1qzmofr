@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T08:43:52+09:00",
+  "generated_at": "2026-09-17T08:50:38+09:00",
   "run_date": "2026-09-17",
   "data_dates": {
     "JP": [
@@ -18,7 +18,6 @@
     "by_rule": {
       "analyst_gap_us": 3
     },
-    "paper_open": 7,
     "timing_mode": "confirm"
   },
   "thresholds": {
@@ -64,8 +63,7 @@
       "payout_ratio": 0.1034,
       "equity_ratio": 0.47884426156185705,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
+      "held": false
     },
     {
       "ticker": "ALGN",
@@ -85,8 +83,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.6495582955400595,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
+      "held": false
     },
     {
       "ticker": "GEV",
@@ -106,92 +103,7 @@
       "payout_ratio": 0.0573,
       "equity_ratio": 0.17738352164529644,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
-    },
-    {
-      "ticker": "4519.T",
-      "name": "中外製薬",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "5日線 6,440.00 を上回っているが、上抜けた日ではない",
-      "price": 6446.0,
-      "currency": "JPY",
-      "as_of": "2026-09-16",
-      "gap_pct": 44.6,
-      "target_mean_price": 9323.333,
-      "target_low_price": 7100.0,
-      "num_analyst_opinions": 15,
-      "pbr": 5.230466,
-      "per": 22.675627,
-      "payout_ratio": 0.4818,
-      "equity_ratio": 0.8206011921761164,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
-    },
-    {
-      "ticker": "AZO",
-      "name": "AutoZone",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "60日安値 2,849.04 を更新。5日線の上抜け待ち",
-      "price": 2849.0400390625,
-      "currency": "USD",
-      "as_of": "2026-09-16",
-      "gap_pct": 37.0,
-      "target_mean_price": 3902.6956,
-      "target_low_price": 3200.0,
-      "num_analyst_opinions": 23,
-      "pbr": -16.748125,
-      "per": 19.607983,
-      "payout_ratio": 0.0,
-      "equity_ratio": -0.17640174868682126,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
-    },
-    {
-      "ticker": "SYK",
-      "name": "Stryker Corporation",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "5日線 278.74 を上回っているが、上抜けた日ではない",
-      "price": 284.760009765625,
-      "currency": "USD",
-      "as_of": "2026-09-16",
-      "gap_pct": 31.6,
-      "target_mean_price": 374.88,
-      "target_low_price": 315.0,
-      "num_analyst_opinions": 25,
-      "pbr": 4.553392,
-      "per": 29.478262,
-      "payout_ratio": 0.36060002,
-      "equity_ratio": 0.46860630382075075,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
-    },
-    {
-      "ticker": "LEN",
-      "name": "Lennar",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "60日安値から 4日。5日線 79.18 の上抜け待ち",
-      "price": 78.36000061035156,
-      "currency": "USD",
-      "as_of": "2026-09-16",
-      "gap_pct": 8.4,
-      "target_mean_price": 84.92308,
-      "target_low_price": 67.0,
-      "num_analyst_opinions": 13,
-      "pbr": 0.8730822,
-      "per": 12.282131,
-      "payout_ratio": 0.31350002,
-      "equity_ratio": 0.6377908302470863,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true
+      "held": false
     },
     {
       "ticker": "5802.T",
@@ -211,8 +123,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.5686425128903695,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "6146.T",
@@ -232,8 +143,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.7906242853876058,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "GNRC",
@@ -253,8 +163,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.47229522905786286,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "ON",
@@ -274,8 +183,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.6126827476625066,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "MPWR",
@@ -295,8 +203,7 @@
       "payout_ratio": 0.4344,
       "equity_ratio": 0.8419955753172418,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "WDC",
@@ -316,8 +223,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.6394921001370752,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CRH",
@@ -337,8 +243,7 @@
       "payout_ratio": 0.26860002,
       "equity_ratio": 0.4115277134872876,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CCL",
@@ -358,8 +263,7 @@
       "payout_ratio": 0.1351,
       "equity_ratio": 0.2376613074854412,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "WYNN",
@@ -379,8 +283,7 @@
       "payout_ratio": 0.23979999,
       "equity_ratio": -0.021016901207091758,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "MCHP",
@@ -400,8 +303,7 @@
       "payout_ratio": 2.6764998,
       "equity_ratio": 0.447623885707128,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "APTV",
@@ -421,8 +323,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.3932430700892666,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "FLEX",
@@ -442,8 +343,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.23318223028105167,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "PCG",
@@ -463,8 +363,7 @@
       "payout_ratio": 0.1259,
       "equity_ratio": 0.22978440940322434,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "8830.T",
@@ -480,12 +379,31 @@
       "target_low_price": 3570.0,
       "num_analyst_opinions": 13,
       "pbr": 1.1519266,
-      "per": 13.850692,
+      "per": 13.985983,
       "payout_ratio": null,
       "equity_ratio": 0.343837495934629,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
+    },
+    {
+      "ticker": "4519.T",
+      "name": "中外製薬",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "5日線 6,440.00 を上回っているが、上抜けた日ではない",
+      "price": 6446.0,
+      "currency": "JPY",
+      "as_of": "2026-09-16",
+      "gap_pct": 44.6,
+      "target_mean_price": 9323.333,
+      "target_low_price": 7100.0,
+      "num_analyst_opinions": 15,
+      "pbr": 5.230466,
+      "per": 22.675627,
+      "payout_ratio": 0.4818,
+      "equity_ratio": 0.8206011921761164,
+      "operating_cf_ok": true,
+      "held": false
     },
     {
       "ticker": "SNPS",
@@ -505,8 +423,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.5874114798297072,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "LVS",
@@ -526,8 +443,7 @@
       "payout_ratio": 0.4264,
       "equity_ratio": 0.07253649635036497,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CDNS",
@@ -547,8 +463,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.5391609577640354,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CMI",
@@ -568,8 +483,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.36329136267357026,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CARR",
@@ -589,8 +503,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.3711750470556601,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "XYL",
@@ -610,8 +523,7 @@
       "payout_ratio": 0.3952,
       "equity_ratio": 0.6510150844958603,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "7936.T",
@@ -631,8 +543,7 @@
       "payout_ratio": 0.2013,
       "equity_ratio": 0.4633730050470604,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "WY",
@@ -652,8 +563,7 @@
       "payout_ratio": 1.2727,
       "equity_ratio": 0.5673869860952266,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "EXE",
@@ -673,8 +583,7 @@
       "payout_ratio": 0.275,
       "equity_ratio": 0.6567681267013116,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "BSX",
@@ -694,8 +603,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.5548508231630527,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "NCLH",
@@ -715,8 +623,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.09803685227905755,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "IP",
@@ -736,8 +643,7 @@
       "payout_ratio": 1.5812,
       "equity_ratio": 0.39055420925086926,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "TDG",
@@ -757,8 +663,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": -0.4228032650923218,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "4543.T",
@@ -778,8 +683,7 @@
       "payout_ratio": 0.32569999,
       "equity_ratio": 0.6852719058711185,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "8801.T",
@@ -799,8 +703,7 @@
       "payout_ratio": 0.3465,
       "equity_ratio": 0.32445186675395016,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "TRMB",
@@ -820,8 +723,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.6267396907216495,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "KLAC",
@@ -841,8 +743,7 @@
       "payout_ratio": 0.2186,
       "equity_ratio": 0.3537201693337088,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "BKNG",
@@ -862,8 +763,7 @@
       "payout_ratio": null,
       "equity_ratio": -0.19060962274466922,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "8802.T",
@@ -883,8 +783,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.31396374631737795,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "LRCX",
@@ -904,8 +803,7 @@
       "payout_ratio": 0.18059999,
       "equity_ratio": 0.5300066813309435,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "TJX",
@@ -925,8 +823,7 @@
       "payout_ratio": 0.325,
       "equity_ratio": 0.28489948835518775,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CASY",
@@ -946,8 +843,27 @@
       "payout_ratio": 0.1137,
       "equity_ratio": 0.4422218753129877,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
+    },
+    {
+      "ticker": "AZO",
+      "name": "AutoZone",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "60日安値 2,849.04 を更新。5日線の上抜け待ち",
+      "price": 2849.0400390625,
+      "currency": "USD",
+      "as_of": "2026-09-16",
+      "gap_pct": 37.0,
+      "target_mean_price": 3902.6956,
+      "target_low_price": 3200.0,
+      "num_analyst_opinions": 23,
+      "pbr": -16.748125,
+      "per": 19.607983,
+      "payout_ratio": 0.0,
+      "equity_ratio": -0.17640174868682126,
+      "operating_cf_ok": true,
+      "held": false
     },
     {
       "ticker": "PNR",
@@ -967,8 +883,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.5633007221057535,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "RCL",
@@ -988,8 +903,7 @@
       "payout_ratio": 0.30879998,
       "equity_ratio": 0.2411638914918667,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "LHX",
@@ -1006,11 +920,10 @@
       "num_analyst_opinions": 14,
       "pbr": 2.3476868,
       "per": 25.301716,
-      "payout_ratio": null,
+      "payout_ratio": 0.49490002,
       "equity_ratio": 0.4766355140186916,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "LII",
@@ -1030,8 +943,7 @@
       "payout_ratio": 0.2337,
       "equity_ratio": 0.2849478171394973,
       "operating_cf_ok": null,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "BA",
@@ -1051,8 +963,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.0324189377953458,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "FIS",
@@ -1072,8 +983,7 @@
       "payout_ratio": 0.2581,
       "equity_ratio": 0.41504419493549927,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "7741.T",
@@ -1093,8 +1003,7 @@
       "payout_ratio": 0.3966,
       "equity_ratio": 0.7844279754661592,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "BLDR",
@@ -1114,8 +1023,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.3872960517124315,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "IR",
@@ -1135,8 +1043,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.5514395645235337,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CEG",
@@ -1156,8 +1063,7 @@
       "payout_ratio": 0.1592,
       "equity_ratio": 0.25357648168526964,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "EQT",
@@ -1177,8 +1083,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.5683427514460958,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "FERG",
@@ -1198,8 +1103,7 @@
       "payout_ratio": 0.3327,
       "equity_ratio": 0.32895256359636754,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "4063.T",
@@ -1219,8 +1123,7 @@
       "payout_ratio": 0.41979998,
       "equity_ratio": 0.7885025310376875,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "DD",
@@ -1240,8 +1143,7 @@
       "payout_ratio": 1.3003999,
       "equity_ratio": 0.6451448435689455,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "KKR",
@@ -1261,8 +1163,7 @@
       "payout_ratio": 0.23959999,
       "equity_ratio": 0.0753456239152958,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "HII",
@@ -1282,8 +1183,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.3979135618479881,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "4578.T",
@@ -1303,8 +1203,7 @@
       "payout_ratio": 0.2214,
       "equity_ratio": 0.7226680630327795,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "PTC",
@@ -1324,8 +1223,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.5782272245605827,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CBRE",
@@ -1345,8 +1243,27 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.2875279334132202,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
+    },
+    {
+      "ticker": "SYK",
+      "name": "Stryker Corporation",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "5日線 278.74 を上回っているが、上抜けた日ではない",
+      "price": 284.760009765625,
+      "currency": "USD",
+      "as_of": "2026-09-16",
+      "gap_pct": 31.6,
+      "target_mean_price": 374.88,
+      "target_low_price": 315.0,
+      "num_analyst_opinions": 25,
+      "pbr": 4.553392,
+      "per": 29.478262,
+      "payout_ratio": 0.36060002,
+      "equity_ratio": 0.46860630382075075,
+      "operating_cf_ok": true,
+      "held": false
     },
     {
       "ticker": "VICI",
@@ -1366,8 +1283,7 @@
       "payout_ratio": 0.69769996,
       "equity_ratio": 0.5949306577272815,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "ZTS",
@@ -1387,8 +1303,7 @@
       "payout_ratio": 0.3361,
       "equity_ratio": 0.21536173789357987,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "MGM",
@@ -1404,12 +1319,11 @@
       "target_low_price": 43.0,
       "num_analyst_opinions": 18,
       "pbr": 3.8420737,
-      "per": 23.266666,
+      "per": 23.69753,
       "payout_ratio": null,
       "equity_ratio": 0.05873083502679692,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "EFX",
@@ -1429,8 +1343,7 @@
       "payout_ratio": 0.3726,
       "equity_ratio": 0.3880834780263313,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "TER",
@@ -1450,8 +1363,7 @@
       "payout_ratio": 0.0687,
       "equity_ratio": 0.6682648121868277,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "6758.T",
@@ -1467,12 +1379,11 @@
       "target_low_price": 3800.0,
       "num_analyst_opinions": 22,
       "pbr": 2.6095133,
-      "per": 20.0,
+      "per": 19.960283,
       "payout_ratio": null,
       "equity_ratio": 0.5176788457161002,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "IRM",
@@ -1492,8 +1403,7 @@
       "payout_ratio": 2.395,
       "equity_ratio": -0.04643815941656668,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "CMG",
@@ -1513,8 +1423,7 @@
       "payout_ratio": 0.0,
       "equity_ratio": 0.3147031234869278,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "ADI",
@@ -1534,8 +1443,7 @@
       "payout_ratio": null,
       "equity_ratio": 0.7046018778851255,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "9202.T",
@@ -1555,8 +1463,7 @@
       "payout_ratio": 0.2024,
       "equity_ratio": 0.37723153334101955,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "6902.T",
@@ -1576,8 +1483,27 @@
       "payout_ratio": 0.4111,
       "equity_ratio": 0.629112455665849,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
+    },
+    {
+      "ticker": "LEN",
+      "name": "Lennar",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "60日安値から 4日。5日線 79.18 の上抜け待ち",
+      "price": 78.36000061035156,
+      "currency": "USD",
+      "as_of": "2026-09-16",
+      "gap_pct": 8.4,
+      "target_mean_price": 84.92308,
+      "target_low_price": 67.0,
+      "num_analyst_opinions": 13,
+      "pbr": 0.8730822,
+      "per": 12.282131,
+      "payout_ratio": 0.31350002,
+      "equity_ratio": 0.6377908302470863,
+      "operating_cf_ok": true,
+      "held": false
     },
     {
       "ticker": "9104.T",
@@ -1597,8 +1523,7 @@
       "payout_ratio": 0.3227,
       "equity_ratio": 0.482094580145566,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     },
     {
       "ticker": "9101.T",
@@ -1618,8 +1543,7 @@
       "payout_ratio": 0.4061,
       "equity_ratio": 0.5905782181491713,
       "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false
+      "held": false
     }
   ]
 }
