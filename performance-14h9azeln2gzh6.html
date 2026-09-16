@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ペーパートレード成績</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --up:#3f7a52; --up-bg:#eef5f0; --down:#b4341f; --down-bg:#fdeceb;
+    --open:#8a6d1f; --open-bg:#fbf3e0;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --up:#7fc296; --up-bg:#1b2a21; --down:#ff8a72; --down-bg:#3a1e19;
+      --open:#e0be6a; --open-bg:#2e2718;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
+  h2{font-size:14px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
+     color:var(--muted);font-weight:600;letter-spacing:.03em}
+  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .navbar nav{display:flex;gap:8px}
+  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
+            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
+            background:var(--panel);white-space:nowrap}
+  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:16px}
+  .meta b{color:var(--ink);font-weight:600}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+         overflow:hidden;margin-bottom:20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
+        background:var(--line)}
+  .cell{background:var(--panel);padding:13px 15px}
+  .cell h3{margin:0 0 8px;font-size:13px;letter-spacing:.02em}
+  .cell .sub{color:var(--muted);font-size:11.5px;margin-bottom:8px}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:2px 0}
+  .kv span:first-child{color:var(--muted)}
+  .warn{background:var(--open-bg);color:var(--open);border-radius:6px;padding:7px 10px;
+        font-size:11.5px;margin:6px 0 8px;line-height:1.5}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{font-size:11.5px;color:var(--muted);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right}
+  .tk{font-weight:600}
+  .nm{white-space:normal;min-width:130px;color:var(--muted)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
+  .b-closed{background:var(--up-bg);color:var(--up)}
+  .b-open{background:var(--open-bg);color:var(--open)}
+  .pos{color:var(--up)} .neg{color:var(--down)}
+  .held{background:var(--down-bg);color:var(--down);border-radius:5px;padding:1px 7px;
+        font-size:11px;font-weight:600}
+  .dim{color:var(--muted)}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .err{background:var(--down-bg);color:var(--down);border:1px solid var(--down);
+       border-radius:10px;padding:16px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="navbar"><h1>ペーパートレード成績</h1>
+    <nav><a href="index.html">保有一覧 →</a><a id="candLink" href="#">購入候補 →</a></nav></div>
+  <div class="meta" id="meta">読み込み中…</div>
+  <div id="content"></div>
+</div>
+
+<script>
+const SRC = new URLSearchParams(location.search).get('src')
+  || location.pathname.replace(/\.html$/, '.json').split('/').pop();
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const n2 = (v, d = 2) => v === null || v === undefined ? '<span class="dim">—</span>'
+  : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
+const pc = v => v === null || v === undefined ? '<span class="dim">—</span>'
+  : `<span class="${v < 0 ? 'neg' : 'pos'}">${esc((v > 0 ? '+' : '') + Number(v).toFixed(2))}%</span>`;
+
+function stats(s, closed) {
+  if (!s || !s.n) return `<div class="sub">0件</div>`;
+  const held = s.held_at_entry
+    ? `<div class="sub">うち entry 時点で保有していた銘柄 ${s.held_at_entry}件</div>` : '';
+  if (!s.with_return)
+    return `<div class="sub">${s.n}件</div>${held}
+            <div class="warn">現在値が取得できず、リターンを計算できませんでした</div>`;
+  // 試行が少ないうちは勝率を数字として扱わない。3件で100%を勝率として並べると誤読を招く
+  const caveat = (closed && !s.enough_trials)
+    ? `<div class="warn">試行回数が ${s.with_return}件です。statistically に判断できません
+       （${s.min_trials}件未満）。以下は記録の要約であって、成績の評価ではありません。</div>` : '';
+  const reasons = s.exit_reasons && Object.keys(s.exit_reasons).length
+    ? `<div class="kv"><span>exit_reason</span><span>${
+        Object.entries(s.exit_reasons).map(([k, v]) => `${esc(k)} ${v}`).join(' / ')}</span></div>` : '';
+  return `<div class="sub">${s.n}件</div>${held}${caveat}
+    <div class="kv"><span>勝率</span><span>${s.win_rate}% (${s.wins}/${s.with_return})</span></div>
+    <div class="kv"><span>平均 / 中央値</span><span>${pc(s.mean)} / ${pc(s.median)}</span></div>
+    <div class="kv"><span>${closed ? '最悪トレード（確定）' : '最悪（評価中）'}</span>
+      <span>${pc(s.worst)}</span></div>
+    <div class="kv"><span>最良</span><span>${pc(s.best)}</span></div>
+    <div class="kv"><span>平均${closed ? '保有' : '経過'}日数</span><span>${s.days_mean}日</span></div>
+    ${reasons}`;
+}
+
+function render(d) {
+  document.getElementById('candLink').href =
+    location.pathname.replace(/performance-/, 'candidates-').split('/').pop();
+  document.getElementById('meta').innerHTML =
+    `実行日 <b>${esc(d.run_date)}</b>　決済済み <b>${d.summary.closed}</b>件 / `
+    + `保有中 <b>${d.summary.open}</b>件`
+    + (d.price_date ? `<br>保有中の評価に使った現在値: ${esc(d.price_date)} 時点` : '')
+    + `<br>生成 ${esc(d.generated_at)}`;
+
+  const rules = Object.entries(d.by_rule || {});
+  const cards = rules.length ? rules.map(([rule, v]) => `
+    <div class="cell"><h3>${esc(rule)}　<span class="dim">決済済み</span></h3>${stats(v.closed, true)}</div>
+    <div class="cell"><h3>${esc(rule)}　<span class="dim">保有中</span></h3>${stats(v.open, false)}</div>`
+  ).join('') : '';
+
+  const rows = (d.trades || []).map(t => `<tr>
+    <td class="tk">${esc(t.ticker)}${t.held_at_entry ? ' <span class="held">保有中</span>' : ''}</td>
+    <td class="nm">${esc(t.name)}</td>
+    <td class="dim">${esc(t.entry_rule)}</td>
+    <td><span class="badge ${t.status === '決済済み' ? 'b-closed' : 'b-open'}">${esc(t.status)}</span></td>
+    <td class="dim">${esc(t.entry_date)}</td>
+    <td class="num">${n2(t.entry_price)} <span class="dim">${esc(t.currency)}</span></td>
+    <td class="dim">${esc(t.exit_date ?? '—')}</td>
+    <td class="num">${n2(t.exit_price ?? t.current_price)}</td>
+    <td class="num">${pc(t.return_pct)}</td>
+    <td class="num">${t.days}日</td>
+    <td class="dim">${esc(t.exit_reason ?? '—')}</td></tr>`).join('');
+
+  document.getElementById('content').innerHTML =
+    (cards ? `<div class="panel"><h2>entry_rule 別</h2><div class="grid">${cards}</div></div>` : '')
+    + (rows ? `<div class="panel"><h2>個別トレード（${d.trades.length}件）</h2><div class="scroll">
+        <table><thead><tr><th>コード</th><th>銘柄</th><th>entry_rule</th><th>状態</th>
+        <th>entry日</th><th class="num">entry株価</th><th>決済日</th><th class="num">決済/現在</th>
+        <th class="num">リターン</th><th class="num">日数</th><th>exit_reason</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>
+        <div class="note">${esc(d.summary.note)}。
+        「保有中」タグは entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。</div></div>`
+      : `<div class="panel"><div class="note">記録がまだありません。
+         entry_timing が成立するとここに積まれます。</div></div>`)
+    + (d.summary.closed === 0 && d.summary.total > 0
+        ? `<div class="panel"><div class="note">決済済みの記録がまだありません。勝率は計算できません。</div></div>` : '');
+}
+
+fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(render)
+  .catch(e => {
+    document.getElementById('meta').textContent = '';
+    document.getElementById('content').innerHTML =
+      `<div class="err"><b>データを読み込めませんでした</b><br>
+       <code>${esc(SRC)}</code><br>${esc(e.message)}</div>`;
+  });
+</script>
+</body>
+</html>
