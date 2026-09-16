@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>購入候補</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --hit:#2f6b4f; --hit-bg:#eaf3ed; --wait:#8a6d1f; --wait-bg:#fbf3e0;
+    --none:#6b6b63; --none-bg:#f0f0ec; --alert:#b4341f; --alert-bg:#fdeceb;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --hit:#7fc296; --hit-bg:#1b2a21; --wait:#e0be6a; --wait-bg:#2e2718;
+      --none:#9b9b93; --none-bg:#26262b; --alert:#ff8a72; --alert-bg:#3a1e19;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
+  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+          flex-wrap:wrap}
+  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
+            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
+            background:var(--panel);white-space:nowrap}
+  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:16px}
+  .meta b{color:var(--ink);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;
+        padding:5px 13px;font-size:12.5px;display:flex;gap:7px;align-items:center}
+  .chip b{font-size:15px}
+  .chip.hit b{color:var(--hit)}
+  button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+         border-radius:8px;padding:6px 14px;cursor:pointer}
+  button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+         overflow:hidden;margin-bottom:20px}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;min-width:1080px;font-variant-numeric:tabular-nums}
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{font-size:11.5px;color:var(--muted);font-weight:600}
+  tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right}
+  .tk{font-weight:600}
+  .nm{white-space:normal;min-width:130px;color:var(--muted)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
+  .b-hit{background:var(--hit-bg);color:var(--hit)}
+  .b-wait{background:var(--wait-bg);color:var(--wait)}
+  .b-none{background:var(--none-bg);color:var(--none)}
+  .rule{font-size:11.5px;color:var(--muted)}
+  .held{background:var(--alert-bg);color:var(--alert);border-radius:5px;padding:1px 7px;
+        font-size:11px;font-weight:600}
+  .dim{color:var(--muted)}
+  .reason{white-space:normal;min-width:200px;color:var(--muted);font-size:12px}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
+       border-radius:10px;padding:16px}
+  .stale-banner{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
+       border-radius:10px;padding:13px 16px;margin-bottom:18px;font-size:13.5px}
+  .stale-banner b{display:block;font-size:15px;margin-bottom:4px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="navbar"><h1>購入候補</h1><a href="index.html">保有一覧 →</a></div>
+  <div id="staleBanner"></div>
+  <div class="meta" id="meta">読み込み中…</div>
+  <div class="chips" id="chips"></div>
+  <div id="content"></div>
+</div>
+
+<script>
+// 器のみ。自分のファイル名から JSON を導くので、
+// ランダム文字列をコードに埋め込まずに済む。
+const SRC = new URLSearchParams(location.search).get('src')
+  || location.pathname.replace(/\.html$/, '.json').split('/').pop();
+let DATA = null, showAll = false;
+
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const n2 = (v, d = 2) => v === null || v === undefined ? '<span class="dim">—</span>'
+  : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
+const pc = v => v === null || v === undefined ? '<span class="dim">—</span>'
+  : esc((v > 0 ? '+' : '') + Number(v).toFixed(1) + '%');
+const ratio = v => v === null || v === undefined ? '<span class="dim">—</span>'
+  : esc((Number(v) * 100).toFixed(0) + '%');
+
+function badge(t) {
+  const cls = t === '成立' ? 'b-hit' : t === '待機中' ? 'b-wait' : 'b-none';
+  return `<span class="badge ${cls}">${esc(t)}</span>`;
+}
+
+function ageInDays(iso) {
+  const t = Date.parse(iso);
+  return Number.isNaN(t) ? null : (Date.now() - t) / 86400000;
+}
+
+function renderStale(d) {
+  const age = ageInDays(d.generated_at);
+  const el = document.getElementById('staleBanner');
+  if (age === null || age < 3) { el.innerHTML = ''; return; }
+  el.innerHTML = `<div class="stale-banner">
+    <b>データが ${Math.floor(age)} 日間更新されていません</b>
+    週次ジョブが止まっている可能性があります。
+    以下は ${esc(d.generated_at)} 時点のもので、現在の株価ではありません。</div>`;
+}
+
+function row(c) {
+  return `<tr>
+    <td class="tk">${esc(c.ticker)}${c.held ? ' <span class="held">保有中</span>' : ''}</td>
+    <td class="nm">${esc(c.name)}</td>
+    <td class="rule">${esc(c.entry_rule)}</td>
+    <td>${badge(c.timing)}</td>
+    <td class="num">${pc(c.gap_pct)}</td>
+    <td class="num">${n2(c.price)} <span class="dim">${esc(c.currency)}</span></td>
+    <td class="num">${n2(c.target_mean_price)}</td>
+    <td class="num">${n2(c.target_low_price)}</td>
+    <td class="num">${c.num_analyst_opinions ?? '<span class="dim">—</span>'}</td>
+    <td class="num">${n2(c.pbr)}</td>
+    <td class="num">${n2(c.per, 1)}</td>
+    <td class="num">${ratio(c.payout_ratio)}</td>
+    <td class="num">${ratio(c.equity_ratio)}</td>
+    <td class="num">${c.operating_cf_ok === null || c.operating_cf_ok === undefined
+      ? '<span class="dim">—</span>' : (c.operating_cf_ok ? '○' : '×')}</td>
+    <td class="dim">${esc(c.as_of ?? '—')}</td>
+    <td class="reason">${esc(c.timing_reason)}</td>
+  </tr>`;
+}
+
+const COLS = ['コード', '銘柄', 'entry_rule', 'timing', '乖離', '株価', '目標平均',
+  '安値予想', '人数', 'PBR', 'PER', '配当性向', '自己資本', '営業CF', 'データ日付', '判定の理由'];
+
+function render() {
+  const d = DATA, s = d.summary;
+  renderStale(d);
+  const dates = Object.entries(d.data_dates || {})
+    .map(([m, v]) => `${m} <b>${esc(v.join(' / '))}</b>`).join('　');
+  document.getElementById('meta').innerHTML =
+    `実行日 <b>${esc(d.run_date)}</b>　データ日付: ${dates || '—'}`
+    + `<br>生成 ${esc(d.generated_at)}　出所 yfinance　`
+    + `entry_timing モード <b>${esc(s.timing_mode)}</b>`;
+
+  const byRule = Object.entries(s.by_rule || {})
+    .map(([k, v]) => `<span class="chip">${esc(k)} <b>${v}</b></span>`).join('');
+  document.getElementById('chips').innerHTML = `
+    <span class="chip hit">成立 <b>${s.triggered}</b></span>
+    <span class="chip">待機中 <b>${s.waiting}</b></span>
+    <span class="chip">未該当 <b>${s.none}</b></span>
+    ${byRule}
+    <button id="toggle" aria-pressed="${showAll}">
+      ${showAll ? '成立のみ表示' : '待機中・未該当も表示'}</button>`;
+
+  const rows = showAll ? d.candidates : d.candidates.filter(c => c.timing === '成立');
+  const head = COLS.map((c, i) =>
+    `<th class="${[4,5,6,7,8,9,10,11,12,13].includes(i) ? 'num' : ''}">${c}</th>`).join('');
+
+  document.getElementById('content').innerHTML = rows.length
+    ? `<div class="panel"><div class="scroll"><table><thead><tr>${head}</tr></thead>
+       <tbody>${rows.map(row).join('')}</tbody></table></div>
+       <div class="note">条件の充足状況を並べたものです。売買の判定ではありません。
+       「保有中」は entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。</div></div>`
+    : `<div class="panel"><div class="note">entry_timing が成立した銘柄はありません。
+       待機中 ${s.waiting}件 / 未該当 ${s.none}件 はトグルで表示できます。</div></div>`;
+
+  document.getElementById('toggle').onclick = () => { showAll = !showAll; render(); };
+}
+
+fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(j => { DATA = j; render(); })
+  .catch(e => {
+    document.getElementById('meta').textContent = '';
+    document.getElementById('content').innerHTML =
+      `<div class="err"><b>データを読み込めませんでした</b><br>
+       <code>${esc(SRC)}</code><br>${esc(e.message)}</div>`;
+  });
+</script>
+</body>
+</html>
