@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-17T08:50:38+09:00",
+  "generated_at": "2026-09-17T09:54:46+09:00",
   "run_date": "2026-09-17",
   "data_dates": {
     "JP": [
       "2026-09-16"
     ],
     "US": [
-      "2026-09-16"
+      "2026-09-15"
     ]
   },
   "summary": {
@@ -60,10 +60,7 @@
       "reason": "drawdown=-0.0146 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -104,10 +101,7 @@
       "reason": "drawdown=-0.0207 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -143,10 +137,7 @@
       "reason": "drawdown=0.0712 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -201,9 +192,7 @@
       "as_of": "2026-09-16",
       "stale_days": 0,
       "missing": [
-        "per",
-        "dividend_rate",
-        "payout_ratio"
+        "per"
       ],
       "anomalies": []
     },
@@ -222,10 +211,7 @@
       "reason": "drawdown=-0.0420 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -315,10 +301,7 @@
       "reason": "drawdown=0.0210 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -336,10 +319,7 @@
       "reason": "drawdown=0.0641 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -465,10 +445,7 @@
       "reason": "drawdown=0.2265 > -0.3",
       "as_of": "2026-09-16",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -477,14 +454,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 41.709999084472656,
-      "change_pct": -4.0,
-      "weight_pct": 6.04,
-      "drawdown_pct": -50.0,
-      "drawdown_label": "-50.0%",
+      "price": 42.529998779296875,
+      "change_pct": -2.12,
+      "weight_pct": 6.1,
+      "drawdown_pct": -49.0,
+      "drawdown_label": "-49.0%",
       "status": "ALERT",
-      "reason": "drawdown=-0.5001 <= -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.4903 <= -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
@@ -495,14 +472,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 49.7599983215332,
-      "change_pct": -2.98,
-      "weight_pct": 9.61,
-      "drawdown_pct": 21.7,
-      "drawdown_label": "+21.7%",
+      "price": 51.45000076293945,
+      "change_pct": 0.31,
+      "weight_pct": 9.84,
+      "drawdown_pct": 25.8,
+      "drawdown_label": "+25.8%",
       "status": "CLEAR",
-      "reason": "drawdown=0.2170 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.2583 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
@@ -513,14 +490,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 339.510009765625,
-      "change_pct": -1.51,
-      "weight_pct": 3.28,
-      "drawdown_pct": -3.8,
-      "drawdown_label": "-3.8%",
+      "price": 339.2699890136719,
+      "change_pct": -1.58,
+      "weight_pct": 3.25,
+      "drawdown_pct": -3.9,
+      "drawdown_label": "-3.9%",
       "status": "CLEAR",
-      "reason": "drawdown=-0.0379 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.0386 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
@@ -531,14 +508,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 64.9000015258789,
-      "change_pct": 3.43,
-      "weight_pct": 18.8,
-      "drawdown_pct": 18.2,
-      "drawdown_label": "+18.2%",
+      "price": 65.43000030517578,
+      "change_pct": 4.27,
+      "weight_pct": 18.78,
+      "drawdown_pct": 19.2,
+      "drawdown_label": "+19.2%",
       "status": "CLEAR",
-      "reason": "drawdown=0.1820 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.1916 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
         "per"
@@ -557,18 +534,17 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 34.08000183105469,
-      "change_pct": 7.34,
-      "weight_pct": 3.29,
-      "drawdown_pct": 12.2,
-      "drawdown_label": "+12.2%",
+      "price": 33.02000045776367,
+      "change_pct": 4.0,
+      "weight_pct": 3.16,
+      "drawdown_pct": 8.7,
+      "drawdown_label": "+8.7%",
       "status": "CLEAR",
-      "reason": "drawdown=0.1218 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.0869 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
-        "dividend_rate",
-        "payout_ratio"
+        "dividend_rate"
       ],
       "anomalies": []
     },
@@ -578,14 +554,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 44.59000015258789,
-      "change_pct": -1.17,
-      "weight_pct": 4.74,
-      "drawdown_pct": -16.9,
-      "drawdown_label": "-16.9%",
+      "price": 44.349998474121094,
+      "change_pct": -1.71,
+      "weight_pct": 4.67,
+      "drawdown_pct": -17.4,
+      "drawdown_label": "-17.4%",
       "status": "CLEAR",
-      "reason": "drawdown=-0.1694 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.1739 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
@@ -596,19 +572,16 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 213.89999389648438,
-      "change_pct": 1.39,
-      "weight_pct": 14.45,
-      "drawdown_pct": 60.9,
-      "drawdown_label": "+60.9%",
+      "price": 212.1699981689453,
+      "change_pct": 0.57,
+      "weight_pct": 14.21,
+      "drawdown_pct": 59.6,
+      "drawdown_label": "+59.6%",
       "status": "CLEAR",
-      "reason": "drawdown=0.6086 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.5955 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -617,14 +590,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 1.0299999713897705,
-      "change_pct": -2.83,
+      "price": 1.0199999809265137,
+      "change_pct": -3.77,
       "weight_pct": 0.07,
-      "drawdown_pct": -92.5,
-      "drawdown_label": "-92.5%",
+      "drawdown_pct": -92.6,
+      "drawdown_label": "-92.6%",
       "status": "ALERT",
-      "reason": "drawdown=-0.9252 <= -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.9259 <= -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
         "dividend_rate",
@@ -641,14 +614,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 1.1799999475479126,
-      "change_pct": -4.07,
-      "weight_pct": 0.51,
-      "drawdown_pct": -46.5,
-      "drawdown_label": "-46.5%",
+      "price": 1.2100000381469727,
+      "change_pct": -1.63,
+      "weight_pct": 0.52,
+      "drawdown_pct": -45.1,
+      "drawdown_label": "-45.1%",
       "status": "ALERT",
-      "reason": "drawdown=-0.4646 <= -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.4510 <= -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
         "per",
@@ -662,19 +635,16 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 70.0999984741211,
-      "change_pct": -0.72,
-      "weight_pct": 10.83,
-      "drawdown_pct": 27.7,
-      "drawdown_label": "+27.7%",
+      "price": 69.80999755859375,
+      "change_pct": -1.13,
+      "weight_pct": 10.68,
+      "drawdown_pct": 27.2,
+      "drawdown_label": "+27.2%",
       "status": "CLEAR",
-      "reason": "drawdown=0.2774 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.2721 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": [
         {
           "label": "pbr_negative_equity",
@@ -689,14 +659,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 8.300000190734863,
-      "change_pct": -2.47,
-      "weight_pct": 1.2,
-      "drawdown_pct": -53.0,
-      "drawdown_label": "-53.0%",
+      "price": 8.430000305175781,
+      "change_pct": -0.94,
+      "weight_pct": 1.21,
+      "drawdown_pct": -52.2,
+      "drawdown_label": "-52.2%",
       "status": "ALERT",
-      "reason": "drawdown=-0.5296 <= -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=-0.5222 <= -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
         "per",
@@ -710,14 +680,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 27.459999084472656,
-      "change_pct": -0.94,
-      "weight_pct": 8.22,
-      "drawdown_pct": 10.7,
-      "drawdown_label": "+10.7%",
+      "price": 27.549999237060547,
+      "change_pct": -0.61,
+      "weight_pct": 8.17,
+      "drawdown_pct": 11.0,
+      "drawdown_label": "+11.0%",
       "status": "CLEAR",
-      "reason": "drawdown=0.1068 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.1104 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
@@ -728,14 +698,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 35.619998931884766,
-      "change_pct": -1.63,
-      "weight_pct": 2.06,
-      "drawdown_pct": 68.4,
-      "drawdown_label": "+68.4%",
+      "price": 35.97999954223633,
+      "change_pct": -0.64,
+      "weight_pct": 2.07,
+      "drawdown_pct": 70.1,
+      "drawdown_label": "+70.1%",
       "status": "CLEAR",
-      "reason": "drawdown=0.6842 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.7012 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [
         "per",
@@ -749,19 +719,16 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 25.860000610351562,
-      "change_pct": -2.45,
-      "weight_pct": 8.74,
-      "drawdown_pct": 5.8,
-      "drawdown_label": "+5.8%",
+      "price": 26.719999313354492,
+      "change_pct": 0.79,
+      "weight_pct": 8.95,
+      "drawdown_pct": 9.4,
+      "drawdown_label": "+9.4%",
       "status": "CLEAR",
-      "reason": "drawdown=0.0584 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.0936 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
-      "missing": [
-        "dividend_rate",
-        "payout_ratio"
-      ],
+      "missing": [],
       "anomalies": []
     },
     {
@@ -770,14 +737,14 @@
       "market": "US",
       "currency": "USD",
       "entry_rule": "value_screen",
-      "price": 211.5399932861328,
-      "change_pct": -0.3,
-      "weight_pct": 8.17,
-      "drawdown_pct": 29.4,
-      "drawdown_label": "+29.4%",
+      "price": 217.77000427246094,
+      "change_pct": 2.64,
+      "weight_pct": 8.33,
+      "drawdown_pct": 33.2,
+      "drawdown_label": "+33.2%",
       "status": "CLEAR",
-      "reason": "drawdown=0.2938 > -0.3",
-      "as_of": "2026-09-16",
+      "reason": "drawdown=0.3319 > -0.3",
+      "as_of": "2026-09-15",
       "stale_days": 0,
       "missing": [],
       "anomalies": []
