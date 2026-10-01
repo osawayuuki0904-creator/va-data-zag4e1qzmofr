@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-30T10:31:46+09:00",
-  "run_date": "2026-09-30",
-  "price_date": "2026-09-30",
+  "generated_at": "2026-10-01T10:33:10+09:00",
+  "run_date": "2026-10-01",
+  "price_date": "2026-10-01",
   "summary": {
     "closed": 0,
     "open": 7,
@@ -26,11 +26,11 @@
         "min_trials": 10,
         "wins": 0,
         "win_rate": 0.0,
-        "mean": -6.22,
-        "median": -6.22,
-        "worst": -6.22,
-        "best": -6.22,
-        "days_mean": 14,
+        "mean": -4.23,
+        "median": -4.23,
+        "worst": -4.23,
+        "best": -4.23,
+        "days_mean": 15,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -55,7 +55,7 @@
         "median": -1.1,
         "worst": -5.88,
         "best": 4.04,
-        "days_mean": 13.6,
+        "days_mean": 14.6,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -80,7 +80,7 @@
         "median": 3.78,
         "worst": 3.78,
         "best": 3.78,
-        "days_mean": 14,
+        "days_mean": 15,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -97,9 +97,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 6096.0,
-      "return_pct": -6.22,
-      "days": 14,
+      "current_price": 6225.0,
+      "return_pct": -4.23,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -115,7 +115,7 @@
       "exit_reason": null,
       "current_price": 144.00999450683594,
       "return_pct": -5.88,
-      "days": 14,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -131,7 +131,7 @@
       "exit_reason": null,
       "current_price": 278.7699890136719,
       "return_pct": -1.1,
-      "days": 14,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -147,7 +147,7 @@
       "exit_reason": null,
       "current_price": 2875.969970703125,
       "return_pct": -3.02,
-      "days": 14,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -163,7 +163,7 @@
       "exit_reason": null,
       "current_price": 83.01000213623047,
       "return_pct": 3.78,
-      "days": 14,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -179,7 +179,7 @@
       "exit_reason": null,
       "current_price": 230.94000244140625,
       "return_pct": 1.41,
-      "days": 13,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false
     },
@@ -195,7 +195,7 @@
       "exit_reason": null,
       "current_price": 962.489990234375,
       "return_pct": 4.04,
-      "days": 13,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false
     }
