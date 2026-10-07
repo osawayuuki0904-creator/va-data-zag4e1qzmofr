@@ -7,13 +7,13 @@
 <title>ペーパートレード成績</title>
 <style>
   :root{
-    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc; --hover:#f3f3ef;
     --up:#3f7a52; --up-bg:#eef5f0; --down:#b4341f; --down-bg:#fdeceb;
     --open:#8a6d1f; --open-bg:#fbf3e0;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a; --hover:#26262b;
       --up:#7fc296; --up-bg:#1b2a21; --down:#ff8a72; --down-bg:#3a1e19;
       --open:#e0be6a; --open-bg:#2e2718;
     }
@@ -21,33 +21,44 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
        font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  .wrap{max-width:1240px;margin:0 auto;padding-block:20px 64px;padding-left:16px;padding-right:16px}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;overflow-x:auto}
+  .tabs a{color:var(--muted);text-decoration:none;padding:8px 14px;font-size:13.5px;white-space:nowrap;
+          border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a[aria-current]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
   h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
-  h2{font-size:14px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
-     color:var(--muted);font-weight:600;letter-spacing:.03em}
-  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .navbar nav{display:flex;gap:8px}
-  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
-            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
-            background:var(--panel);white-space:nowrap}
-  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
-  .meta{color:var(--muted);font-size:12.5px;margin-bottom:16px}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:14px}
   .meta b{color:var(--ink);font-weight:600}
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .toolbar .sep{width:1px;height:22px;background:var(--line)}
+  .chip{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+        border-radius:999px;padding:5px 13px;font-size:12.5px;display:inline-flex;gap:7px;
+        align-items:center;cursor:pointer}
+  .chip b{font-size:15px}
+  .chip[aria-pressed="false"]{opacity:.45}
+  .chip.closed b{color:var(--up)} .chip.open b{color:var(--open)}
+  .search{font:inherit;font-size:13px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+          border-radius:8px;padding:6px 11px;min-width:180px;margin-left:auto}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         overflow:hidden;margin-bottom:20px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
-        background:var(--line)}
-  .cell{background:var(--panel);padding:13px 15px}
-  .cell h3{margin:0 0 8px;font-size:13px;letter-spacing:.02em}
-  .cell .sub{color:var(--muted);font-size:11.5px;margin-bottom:8px}
-  .kv{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;padding:2px 0}
-  .kv span:first-child{color:var(--muted)}
-  .warn{background:var(--open-bg);color:var(--open);border-radius:6px;padding:7px 10px;
-        font-size:11.5px;margin:6px 0 8px;line-height:1.5}
+         overflow:hidden;margin-bottom:18px}
+  .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
+            color:var(--muted);font-weight:600;letter-spacing:.04em;display:flex;gap:8px;align-items:center}
+  .panel>h2 .cnt{font-size:12px;color:var(--ink);background:var(--bg);border-radius:999px;padding:0 8px}
+  /* 広い画面では表が収まるので内側スクロールを作らない（見出しの固定はページのスクロールに効く）。
+     狭い画面では横スクロールにし、先頭列を固定する */
   .scroll{overflow-x:auto}
-  table{border-collapse:collapse;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
-  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{font-size:11.5px;color:var(--muted);font-weight:600}
+  @media (min-width:960px){ .scroll{overflow:visible} }
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
+  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+  thead th{position:sticky;top:0;z-index:2;font-size:11.5px;color:var(--muted);font-weight:600;user-select:none}
+  thead th.sortable{cursor:pointer}
+  thead th.sortable:hover{color:var(--ink)}
+  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  thead th[aria-sort] .arrow{opacity:1;color:var(--ink)}
+  th:first-child,td:first-child{position:sticky;left:0;z-index:1}
+  thead th:first-child{z-index:3}
+  tbody tr:hover td{background:var(--hover)}
   tr:last-child td{border-bottom:none}
   td.num,th.num{text-align:right}
   .tk{font-weight:600}
@@ -58,54 +69,208 @@
   .pos{color:var(--up)} .neg{color:var(--down)}
   .held{background:var(--down-bg);color:var(--down);border-radius:5px;padding:1px 7px;
         font-size:11px;font-weight:600}
+  .tag{display:inline-block;background:var(--open-bg);color:var(--open);border-radius:5px;padding:0 6px;
+       font-size:10.5px;font-weight:600;margin-left:4px;vertical-align:middle}
   .dim{color:var(--muted)}
-  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .summary{min-width:760px}
+  .summary td.rule{font-weight:600}
+  .summary .few{color:var(--open);font-size:11px;font-weight:600;margin-left:4px}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line);line-height:1.7}
+  .warn{background:var(--open-bg);color:var(--open);border-radius:6px;padding:8px 12px;
+        font-size:12px;margin:12px 15px;line-height:1.6}
+  .empty{padding:18px 15px;color:var(--muted);font-size:13px}
+  .help{margin-bottom:18px;color:var(--muted);font-size:12.5px}
+  .help summary{cursor:pointer;color:var(--ink);font-size:12.5px}
+  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+  .help dt{color:var(--ink);font-weight:600}
+  .help dd{margin:0}
   .err{background:var(--down-bg);color:var(--down);border:1px solid var(--down);
        border-radius:10px;padding:16px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+  @media (max-width:600px){
+    .wrap{padding-block:12px 48px} h1{font-size:17px}
+    .search{min-width:0;width:100%;margin-left:0}
+    .help dl{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="navbar"><h1>ペーパートレード成績</h1>
-    <nav><a href="index.html">保有一覧 →</a><a id="candLink" href="#">購入候補 →</a></nav></div>
+  <nav class="tabs"><a href="index.html">保有銘柄</a><a id="candLink" href="#">購入候補</a>
+    <a href="#" aria-current="page">成績</a></nav>
+  <h1>ペーパートレード成績</h1>
   <div class="meta" id="meta">読み込み中…</div>
+  <div class="toolbar" id="toolbar"></div>
   <div id="content"></div>
+  <details class="help">
+    <summary>この画面の読み方</summary>
+    <dl>
+      <dt>約定</dt><dd>翌営業日の始値で買った想定の価格。シグナルは終値で確定するので、その終値では買えない。「終値」タグが付いた行は約定想定が無く、シグナル終値を基準にしている（実際には買えない値段）</dd>
+      <dt>リターン</dt><dd>約定から決済（保有中は現在値）までの騰落率。配当・手数料・税は含まない。通貨は建値のまま</dd>
+      <dt>超過</dt><dd>リターンから、同じ市場のベンチマーク（JP: TOPIX 連動 ETF 1306.T / US: S&amp;P500）の同期間リターンを引いたもの。上げ相場では何を買っても勝つので、市場に対して勝ったかで見る</dd>
+      <dt>決済済み / 保有中</dt><dd>別集計。混ぜると含み損のまま持ち続けている建玉が消え、勝率だけが良く見える</dd>
+      <dt>試行不足</dt><dd>決済が10件未満のルートには印を付ける。件数が少ないうちの勝率は記録の要約であって、成績の評価ではない</dd>
+      <dt>exit_reason</dt><dd>drawdown: 約定から −30% / target_cut: 目標株価が20%以上下方修正 / target_reached: entry 時点の目標の90%に到達 / time_limit: 365日経過（目標株価は12か月先の予想）</dd>
+      <dt>保有中タグ</dt><dd>entry 判定時点で holdings.csv に載っていたか。実際の保有とは別物で、集計にも影響しない</dd>
+    </dl>
+  </details>
 </div>
 
 <script>
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
+let DATA = null, query = '', sortKey = 'entry_date', sortAsc = false;
+const show = { closed: true, open: true };
+const rules = {};   // entry_rule -> 表示するか
+
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const n2 = (v, d = 2) => v === null || v === undefined ? '<span class="dim">—</span>'
   : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
 const pc = v => v === null || v === undefined ? '<span class="dim">—</span>'
   : `<span class="${v < 0 ? 'neg' : 'pos'}">${esc((v > 0 ? '+' : '') + Number(v).toFixed(2))}%</span>`;
+const cnt = (a, b) => a === null || a === undefined ? '<span class="dim">—</span>' : `${a} / ${b}`;
 
-function stats(s, closed) {
-  if (!s || !s.n) return `<div class="sub">0件</div>`;
-  const held = s.held_at_entry
-    ? `<div class="sub">うち entry 時点で保有していた銘柄 ${s.held_at_entry}件</div>` : '';
-  if (!s.with_return)
-    return `<div class="sub">${s.n}件</div>${held}
-            <div class="warn">現在値が取得できず、リターンを計算できませんでした</div>`;
-  // 試行が少ないうちは勝率を数字として扱わない。3件で100%を勝率として並べると誤読を招く
-  const caveat = (closed && !s.enough_trials)
-    ? `<div class="warn">試行回数が ${s.with_return}件です。statistically に判断できません
-       （${s.min_trials}件未満）。以下は記録の要約であって、成績の評価ではありません。</div>` : '';
-  const reasons = s.exit_reasons && Object.keys(s.exit_reasons).length
-    ? `<div class="kv"><span>exit_reason</span><span>${
-        Object.entries(s.exit_reasons).map(([k, v]) => `${esc(k)} ${v}`).join(' / ')}</span></div>` : '';
-  return `<div class="sub">${s.n}件</div>${held}${caveat}
-    <div class="kv"><span>勝率</span><span>${s.win_rate}% (${s.wins}/${s.with_return})</span></div>
-    <div class="kv"><span>平均 / 中央値</span><span>${pc(s.mean)} / ${pc(s.median)}</span></div>
-    <div class="kv"><span>${closed ? '最悪トレード（確定）' : '最悪（評価中）'}</span>
-      <span>${pc(s.worst)}</span></div>
-    <div class="kv"><span>最良</span><span>${pc(s.best)}</span></div>
-    <div class="kv"><span>平均${closed ? '保有' : '経過'}日数</span><span>${s.days_mean}日</span></div>
-    ${reasons}`;
+// ---------------------------------------------------------------- entry_rule 別の要約
+function summaryRow(rule, v) {
+  const c = v.closed || {}, o = v.open || {};
+  const few = c.n && !c.enough_trials ? `<span class="few" title="決済 ${c.min_trials}件未満">試行不足</span>` : '';
+  const closedCells = c.n
+    ? `<td class="num">${c.n}${few}</td>
+       <td class="num">${c.with_return ? `${c.win_rate}% <span class="dim">(${c.wins}/${c.with_return})</span>` : '—'}</td>
+       <td class="num">${c.with_return ? `${pc(c.mean)} <span class="dim">/</span> ${pc(c.median)}` : '—'}</td>
+       <td class="num">${c.with_excess ? `${pc(c.excess_mean)} <span class="dim">(${c.excess_wins}/${c.with_excess})</span>` : '<span class="dim">—</span>'}</td>
+       <td class="num">${c.days_mean ?? '—'}</td>`
+    : `<td class="num">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+  const openCells = o.n
+    ? `<td class="num">${o.n}</td>
+       <td class="num">${o.with_return ? `${pc(o.mean)} <span class="dim">/</span> ${pc(o.median)}` : '—'}</td>
+       <td class="num">${o.with_excess ? `${pc(o.excess_mean)} <span class="dim">(${o.excess_wins}/${o.with_excess})</span>` : '<span class="dim">—</span>'}</td>
+       <td class="num">${o.with_return ? pc(o.worst) : '—'}</td>`
+    : `<td class="num">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+  return `<tr><td class="rule">${esc(rule)}</td>${closedCells}${openCells}</tr>`;
+}
+
+function summaryTable(byRule) {
+  const entries = Object.entries(byRule || {});
+  if (!entries.length) return '';
+  const total = entries.reduce((a, [, v]) => {
+    a.n += ((v.closed || {}).n || 0) + ((v.open || {}).n || 0);
+    a.fill += ((v.closed || {}).basis_next_open || 0) + ((v.open || {}).basis_next_open || 0);
+    return a;
+  }, { n: 0, fill: 0 });
+  const fillNote = total.fill < total.n
+    ? `<div class="warn">約定想定（翌営業日の始値）が入っている建玉は ${total.fill}/${total.n} 件です。
+       残りはシグナル終値基準で、実際には買えない値段のため、リターンは良く出る側に寄ります。</div>` : '';
+  return `<div class="panel"><h2>entry_rule 別 <span class="cnt">${entries.length}</span></h2>
+    <div class="scroll"><table class="summary"><thead>
+      <tr><th rowspan="2">entry_rule</th>
+          <th colspan="5" style="text-align:center;border-bottom:none">決済済み</th>
+          <th colspan="4" style="text-align:center;border-bottom:none">保有中（評価中）</th></tr>
+      <tr><th class="num">件数</th><th class="num">勝率</th><th class="num">平均 / 中央値</th>
+          <th class="num">超過 平均 (市場に勝った)</th><th class="num">平均保有日数</th>
+          <th class="num">件数</th><th class="num">平均 / 中央値</th><th class="num">超過 平均 (市場に勝った)</th><th class="num">最悪</th></tr>
+    </thead><tbody>${entries.map(([r, v]) => summaryRow(r, v)).join('')}</tbody></table></div>
+    ${fillNote}
+    <div class="note">決済済みと保有中は別集計。「試行不足」は決済が ${DATA.summary.min_trials} 件未満で、
+    勝率は記録の要約であって成績の評価ではありません。超過はベンチマークの記録がある建玉だけで計算しています。</div></div>`;
+}
+
+// ---------------------------------------------------------------- 個別トレード
+const COLS = [
+  ['ticker', 'コード', ''], ['name', '銘柄', ''], ['entry_rule', 'entry_rule', ''], ['status', '状態', ''],
+  ['entry_date', 'entry日', ''], ['entry_price', '約定', 'num'], ['exit_date', '決済日', ''],
+  ['exit_price', '決済 / 現在', 'num'], ['return_pct', 'リターン', 'num'], ['excess_pct', '超過', 'num'],
+  ['days', '日数', 'num'], ['exit_reason', 'exit_reason', ''],
+];
+
+function row(t) {
+  const closed = t.status === '決済済み';
+  return `<tr>
+    <td class="tk">${esc(t.ticker)}${t.held_at_entry ? ' <span class="held">保有中</span>' : ''}</td>
+    <td class="nm">${esc(t.name)}</td>
+    <td class="dim">${esc(t.entry_rule)}${t.timing_mode ? `<span class="tag" title="entry_timing のモード">${esc(t.timing_mode)}</span>` : ''}</td>
+    <td><span class="badge ${closed ? 'b-closed' : 'b-open'}">${esc(t.status)}</span></td>
+    <td class="dim">${esc(t.entry_date)}</td>
+    <td class="num">${n2(t.entry_price)} <span class="dim">${esc(t.currency)}</span>${
+      t.basis === 'signal_close' ? '<span class="tag" title="約定想定なし。シグナル終値を基準にしている">終値</span>' : ''}</td>
+    <td class="dim">${esc(t.exit_date ?? '—')}</td>
+    <td class="num">${n2(t.exit_price ?? t.current_price)}</td>
+    <td class="num">${pc(t.return_pct)}</td>
+    <td class="num">${pc(t.excess_pct)}</td>
+    <td class="num">${t.days}日</td>
+    <td class="dim">${esc(t.exit_reason ?? '—')}</td></tr>`;
+}
+
+function visible(t) {
+  if (!(t.status === '決済済み' ? show.closed : show.open)) return false;
+  if (rules[t.entry_rule] === false) return false;
+  if (!query) return true;
+  const q = query.toLowerCase();
+  return (t.ticker || '').toLowerCase().includes(q) || (t.name || '').toLowerCase().includes(q);
+}
+
+function sortRows(rows) {
+  return rows.slice().sort((a, b) => {
+    let x = a[sortKey], y = b[sortKey];
+    if (sortKey === 'exit_price') { x = a.exit_price ?? a.current_price; y = b.exit_price ?? b.current_price; }
+    if (x === null || x === undefined) return 1;
+    if (y === null || y === undefined) return -1;
+    if (x < y) return sortAsc ? -1 : 1;
+    if (x > y) return sortAsc ? 1 : -1;
+    return 0;
+  });
+}
+
+function tradesTable(rows) {
+  const head = COLS.map(([k, label, cls]) => {
+    const on = k === sortKey;
+    return `<th class="${cls} sortable" data-k="${k}" ${on ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
+      ${label}<span class="arrow">${on ? (sortAsc ? '▲' : '▼') : '▲'}</span></th>`;
+  }).join('');
+  const body = rows.length ? rows.map(row).join('')
+    : `<tr><td colspan="${COLS.length}" class="empty">表示するトレードがありません</td></tr>`;
+  return `<div class="panel"><h2>個別トレード <span class="cnt">${rows.length}</span></h2>
+    <div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>
+    <div class="note">${esc(DATA.summary.note)}。
+    「保有中」タグは entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。見出しをクリックすると並べ替えできます。</div></div>`;
+}
+
+function renderToolbar() {
+  const s = DATA.summary;
+  const ruleChips = Object.keys(DATA.by_rule || {}).map(r =>
+    `<button class="chip" data-r="${esc(r)}" aria-pressed="${rules[r] !== false}">${esc(r)}</button>`).join('');
+  document.getElementById('toolbar').innerHTML = `
+    <button class="chip closed" data-f="closed" aria-pressed="${show.closed}">決済済み <b>${s.closed}</b></button>
+    <button class="chip open" data-f="open" aria-pressed="${show.open}">保有中 <b>${s.open}</b></button>
+    ${ruleChips ? `<span class="sep"></span>${ruleChips}` : ''}
+    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" value="${esc(query)}">`;
+  document.querySelectorAll('button.chip[data-f]').forEach(b => {
+    b.onclick = () => { show[b.dataset.f] = !show[b.dataset.f]; b.setAttribute('aria-pressed', show[b.dataset.f]); renderContent(); };
+  });
+  document.querySelectorAll('button.chip[data-r]').forEach(b => {
+    b.onclick = () => { rules[b.dataset.r] = rules[b.dataset.r] === false; b.setAttribute('aria-pressed', rules[b.dataset.r]); renderContent(); };
+  });
+  const q = document.getElementById('q');
+  q.oninput = () => { query = q.value; renderContent(); };
+}
+
+function renderContent() {
+  const d = DATA;
+  const rows = sortRows((d.trades || []).filter(visible));
+  document.getElementById('content').innerHTML =
+    summaryTable(d.by_rule)
+    + (d.trades && d.trades.length ? tradesTable(rows)
+       : `<div class="panel"><div class="empty">記録がまだありません。entry_timing が成立するとここに積まれます。</div></div>`)
+    + (d.summary.closed === 0 && d.summary.total > 0
+        ? `<div class="panel"><div class="note">決済済みの記録がまだありません。勝率は計算できません。</div></div>` : '');
+  document.querySelectorAll('th[data-k]').forEach(th => {
+    th.onclick = () => {
+      const k = th.dataset.k;
+      if (k === sortKey) sortAsc = !sortAsc; else { sortKey = k; sortAsc = !['return_pct', 'excess_pct', 'days'].includes(k); }
+      renderContent();
+    };
+  });
 }
 
 function render(d) {
@@ -115,45 +280,14 @@ function render(d) {
     `実行日 <b>${esc(d.run_date)}</b>　決済済み <b>${d.summary.closed}</b>件 / `
     + `保有中 <b>${d.summary.open}</b>件`
     + (d.price_date ? `<br>保有中の評価に使った現在値: ${esc(d.price_date)} 時点` : '')
-    + `<br>生成 ${esc(d.generated_at)}`;
-
-  const rules = Object.entries(d.by_rule || {});
-  const cards = rules.length ? rules.map(([rule, v]) => `
-    <div class="cell"><h3>${esc(rule)}　<span class="dim">決済済み</span></h3>${stats(v.closed, true)}</div>
-    <div class="cell"><h3>${esc(rule)}　<span class="dim">保有中</span></h3>${stats(v.open, false)}</div>`
-  ).join('') : '';
-
-  const rows = (d.trades || []).map(t => `<tr>
-    <td class="tk">${esc(t.ticker)}${t.held_at_entry ? ' <span class="held">保有中</span>' : ''}</td>
-    <td class="nm">${esc(t.name)}</td>
-    <td class="dim">${esc(t.entry_rule)}</td>
-    <td><span class="badge ${t.status === '決済済み' ? 'b-closed' : 'b-open'}">${esc(t.status)}</span></td>
-    <td class="dim">${esc(t.entry_date)}</td>
-    <td class="num">${n2(t.entry_price)} <span class="dim">${esc(t.currency)}</span></td>
-    <td class="dim">${esc(t.exit_date ?? '—')}</td>
-    <td class="num">${n2(t.exit_price ?? t.current_price)}</td>
-    <td class="num">${pc(t.return_pct)}</td>
-    <td class="num">${t.days}日</td>
-    <td class="dim">${esc(t.exit_reason ?? '—')}</td></tr>`).join('');
-
-  document.getElementById('content').innerHTML =
-    (cards ? `<div class="panel"><h2>entry_rule 別</h2><div class="grid">${cards}</div></div>` : '')
-    + (rows ? `<div class="panel"><h2>個別トレード（${d.trades.length}件）</h2><div class="scroll">
-        <table><thead><tr><th>コード</th><th>銘柄</th><th>entry_rule</th><th>状態</th>
-        <th>entry日</th><th class="num">entry株価</th><th>決済日</th><th class="num">決済/現在</th>
-        <th class="num">リターン</th><th class="num">日数</th><th>exit_reason</th></tr></thead>
-        <tbody>${rows}</tbody></table></div>
-        <div class="note">${esc(d.summary.note)}。
-        「保有中」タグは entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。</div></div>`
-      : `<div class="panel"><div class="note">記録がまだありません。
-         entry_timing が成立するとここに積まれます。</div></div>`)
-    + (d.summary.closed === 0 && d.summary.total > 0
-        ? `<div class="panel"><div class="note">決済済みの記録がまだありません。勝率は計算できません。</div></div>` : '');
+    + `　生成 ${esc(d.generated_at)}`;
+  renderToolbar();
+  renderContent();
 }
 
 fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
   .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-  .then(render)
+  .then(j => { DATA = j; render(j); })
   .catch(e => {
     document.getElementById('meta').textContent = '';
     document.getElementById('content').innerHTML =

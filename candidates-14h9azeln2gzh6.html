@@ -7,13 +7,13 @@
 <title>購入候補</title>
 <style>
   :root{
-    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc; --hover:#f3f3ef;
     --hit:#2f6b4f; --hit-bg:#eaf3ed; --wait:#8a6d1f; --wait-bg:#fbf3e0;
     --none:#6b6b63; --none-bg:#f0f0ec; --alert:#b4341f; --alert-bg:#fdeceb;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a; --hover:#26262b;
       --hit:#7fc296; --hit-bg:#1b2a21; --wait:#e0be6a; --wait-bg:#2e2718;
       --none:#9b9b93; --none-bg:#26262b; --alert:#ff8a72; --alert-bg:#3a1e19;
     }
@@ -21,31 +21,46 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
        font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1240px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  .wrap{max-width:1240px;margin:0 auto;padding-block:20px 64px;padding-left:16px;padding-right:16px}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;overflow-x:auto}
+  .tabs a{color:var(--muted);text-decoration:none;padding:8px 14px;font-size:13.5px;white-space:nowrap;
+          border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a[aria-current]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
   h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
-  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
-          flex-wrap:wrap}
-  .navbar nav{display:flex;gap:8px}
-  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
-            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
-            background:var(--panel);white-space:nowrap}
-  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
-  .meta{color:var(--muted);font-size:12.5px;margin-bottom:16px}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:14px}
   .meta b{color:var(--ink);font-weight:600}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
-  .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;
-        padding:5px 13px;font-size:12.5px;display:flex;gap:7px;align-items:center}
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .toolbar .sep{width:1px;height:22px;background:var(--line)}
+  .chip{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+        border-radius:999px;padding:5px 13px;font-size:12.5px;display:inline-flex;gap:7px;
+        align-items:center;cursor:pointer}
   .chip b{font-size:15px}
-  .chip.hit b{color:var(--hit)}
-  button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
-         border-radius:8px;padding:6px 14px;cursor:pointer}
-  button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .chip[aria-pressed="false"]{opacity:.45}
+  .chip.hit b{color:var(--hit)} .chip.wait b{color:var(--wait)}
+  .search{font:inherit;font-size:13px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+          border-radius:8px;padding:6px 11px;min-width:180px;margin-left:auto}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         overflow:hidden;margin-bottom:20px}
+         overflow:hidden;margin-bottom:18px}
+  .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
+            color:var(--muted);font-weight:600;letter-spacing:.04em;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .panel>h2 .cnt{font-size:12px;color:var(--ink);background:var(--bg);border-radius:999px;padding:0 8px}
+  .panel>h2 .cond{font-weight:400;letter-spacing:0;margin-left:auto}
+  /* 広い画面では表が収まるので内側スクロールを作らない（見出しの固定はページのスクロールに効く）。
+     狭い画面では横スクロールにし、先頭列を固定する */
   .scroll{overflow-x:auto}
-  table{border-collapse:collapse;width:100%;min-width:1080px;font-variant-numeric:tabular-nums}
-  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{font-size:11.5px;color:var(--muted);font-weight:600}
+  @media (min-width:960px){ .scroll{overflow:visible} }
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:860px;font-variant-numeric:tabular-nums}
+  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+  thead th{position:sticky;top:0;z-index:2;font-size:11.5px;color:var(--muted);font-weight:600;
+           cursor:pointer;user-select:none}
+  thead th:hover{color:var(--ink)}
+  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  thead th[aria-sort] .arrow{opacity:1;color:var(--ink)}
+  th:first-child,td:first-child{position:sticky;left:0;z-index:1}
+  thead th:first-child{z-index:3}
+  tbody tr:hover td{background:var(--hover)}
+  tbody tr.hit td:first-child{box-shadow:inset 3px 0 0 var(--hit)}
   tr:last-child td{border-bottom:none}
   td.num,th.num{text-align:right}
   .tk{font-weight:600}
@@ -54,31 +69,55 @@
   .b-hit{background:var(--hit-bg);color:var(--hit)}
   .b-wait{background:var(--wait-bg);color:var(--wait)}
   .b-none{background:var(--none-bg);color:var(--none)}
-  .rule{font-size:11.5px;color:var(--muted)}
   .held{background:var(--alert-bg);color:var(--alert);border-radius:5px;padding:1px 7px;
         font-size:11px;font-weight:600}
   .paper{background:var(--wait-bg);color:var(--wait);border-radius:5px;padding:1px 7px;
         font-size:11px;font-weight:600}
   .dim{color:var(--muted)}
-  .reason{white-space:normal;min-width:200px;color:var(--muted);font-size:12px}
-  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .reason{white-space:normal;min-width:220px;color:var(--muted);font-size:12px}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line);line-height:1.7}
+  .empty{padding:18px 15px;color:var(--muted);font-size:13px}
+  .help{margin-bottom:18px;color:var(--muted);font-size:12.5px}
+  .help summary{cursor:pointer;color:var(--ink);font-size:12.5px}
+  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+  .help dt{color:var(--ink);font-weight:600}
+  .help dd{margin:0}
   .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
        border-radius:10px;padding:16px}
   .stale-banner{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
        border-radius:10px;padding:13px 16px;margin-bottom:18px;font-size:13.5px}
   .stale-banner b{display:block;font-size:15px;margin-bottom:4px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+  @media (max-width:600px){
+    .wrap{padding-block:12px 48px} h1{font-size:17px}
+    .search{min-width:0;width:100%;margin-left:0}
+    .help dl{grid-template-columns:1fr}
+    .panel>h2 .cond{margin-left:0;width:100%}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="navbar"><h1>購入候補</h1>
-    <nav><a href="index.html">保有一覧 →</a><a id="perfLink" href="#">成績 →</a></nav></div>
+  <nav class="tabs"><a href="index.html">保有銘柄</a><a href="#" aria-current="page">購入候補</a>
+    <a id="perfLink" href="#">成績</a></nav>
+  <h1>購入候補</h1>
   <div id="staleBanner"></div>
   <div class="meta" id="meta">読み込み中…</div>
-  <div class="chips" id="chips"></div>
+  <div class="toolbar" id="toolbar"></div>
   <div id="content"></div>
+  <details class="help">
+    <summary>この画面の読み方</summary>
+    <dl>
+      <dt>成立</dt><dd>条件を満たし、かつ entry_timing が今日成立した。翌日には待機中に戻る。<span id="modeHelp"></span></dd>
+      <dt>待機中</dt><dd>条件は満たしているが、成立の日ではない（起点から20日以内）</dd>
+      <dt>未該当</dt><dd>条件は満たしているが、起点（安値更新 / 2番底）から20日を超えている</dd>
+      <dt>乖離</dt><dd>(目標平均 − 株価) ÷ 株価。アナリスト目標株価は12か月先の予想として出され、平均して上方に偏る</dd>
+      <dt>安値予想</dt><dd>目標株価の最低値。株価を上回っていることが条件。古い1人の予想で平均が押し上げられるのを補う</dd>
+      <dt>保有中</dt><dd>holdings.csv に載っている銘柄。表示の区別だけで、候補の判定には影響しない</dd>
+      <dt>paper</dt><dd>ペーパートレードで建玉が残っている銘柄。成績画面で追える</dd>
+      <dt>営業CF</dt><dd>直近期の営業キャッシュフローがプラスか。財務は週1回取得で、データ日付は株価と異なる</dd>
+    </dl>
+  </details>
 </div>
 
 <script>
@@ -86,7 +125,10 @@
 // ランダム文字列をコードに埋め込まずに済む。
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
-let DATA = null, showAll = false;
+let DATA = null, query = '';
+const show = { hit: true, paper: true, wait: false, none: false, JP: true, US: true };
+const sort = { analyst_gap: { key: 'gap_pct', asc: false },
+               value_screen: { key: 'pbr', asc: true } };
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -96,10 +138,103 @@ const pc = v => v === null || v === undefined ? '<span class="dim">—</span>'
   : esc((v > 0 ? '+' : '') + Number(v).toFixed(1) + '%');
 const ratio = v => v === null || v === undefined ? '<span class="dim">—</span>'
   : esc((Number(v) * 100).toFixed(0) + '%');
+const TIMING_KEY = { '成立': 'hit', '待機中': 'wait', '未該当': 'none' };
+const TIMING_ORDER = { '成立': 0, '待機中': 1, '未該当': 2, '判定不能': 3 };
 
 function badge(t) {
   const cls = t === '成立' ? 'b-hit' : t === '待機中' ? 'b-wait' : 'b-none';
   return `<span class="badge ${cls}">${esc(t)}</span>`;
+}
+function ticker(c) {
+  return `<td class="tk">${esc(c.ticker)}${c.held ? ' <span class="held">保有中</span>' : ''}${
+    c.paper_open ? ' <span class="paper">paper</span>' : ''}</td>`;
+}
+const market = c => c.currency === 'JPY' ? 'JP' : 'US';
+const baseRule = c => c.entry_rule.startsWith('analyst_gap') ? 'analyst_gap' : 'value_screen';
+
+// 列はルートごとに分ける。analyst_gap に PBR は要らず、value_screen に目標株価は要らない。
+// 16列を1つの表に並べると、見るべき数値が埋もれる。
+const COLS = {
+  analyst_gap: [
+    ['ticker', 'コード', ''], ['name', '銘柄', ''], ['market', '市場', ''], ['timing', 'timing', ''],
+    ['gap_pct', '乖離', 'num'], ['price', '株価', 'num'], ['target_mean_price', '目標平均', 'num'],
+    ['target_low_price', '安値予想', 'num'], ['num_analyst_opinions', '人数', 'num'],
+    ['as_of', 'データ日付', ''], ['timing_reason', '判定の理由', ''],
+  ],
+  value_screen: [
+    ['ticker', 'コード', ''], ['name', '銘柄', ''], ['market', '市場', ''], ['timing', 'timing', ''],
+    ['price', '株価', 'num'], ['pbr', 'PBR', 'num'], ['per', 'PER', 'num'],
+    ['payout_ratio', '配当性向', 'num'], ['equity_ratio', '自己資本比率', 'num'],
+    ['operating_cf_ok', '営業CF', ''], ['as_of', 'データ日付', ''], ['timing_reason', '判定の理由', ''],
+  ],
+};
+
+function cell(c, k) {
+  switch (k) {
+    case 'ticker': return ticker(c);
+    case 'name': return `<td class="nm">${esc(c.name)}</td>`;
+    case 'market': return `<td class="dim">${market(c)}</td>`;
+    case 'timing': return `<td>${badge(c.timing)}</td>`;
+    case 'gap_pct': return `<td class="num">${pc(c.gap_pct)}</td>`;
+    case 'price': return `<td class="num">${n2(c.price)} <span class="dim">${esc(c.currency)}</span></td>`;
+    case 'target_mean_price': case 'target_low_price': case 'pbr':
+      return `<td class="num">${n2(c[k])}</td>`;
+    case 'per': return `<td class="num">${n2(c.per, 1)}</td>`;
+    case 'num_analyst_opinions': return `<td class="num">${c[k] ?? '<span class="dim">—</span>'}</td>`;
+    case 'payout_ratio': case 'equity_ratio': return `<td class="num">${ratio(c[k])}</td>`;
+    case 'operating_cf_ok': return `<td>${c[k] === null || c[k] === undefined
+      ? '<span class="dim">—</span>' : (c[k] ? '○ プラス' : '× マイナス')}</td>`;
+    case 'as_of': return `<td class="dim">${esc(c.as_of ?? '—')}</td>`;
+    case 'timing_reason': return `<td class="reason">${esc(c.timing_reason)}</td>`;
+    default: return `<td>${esc(c[k])}</td>`;
+  }
+}
+
+function sortRows(rows, rule) {
+  const { key, asc } = sort[rule];
+  return rows.slice().sort((a, b) => {
+    let x = key === 'market' ? market(a) : a[key], y = key === 'market' ? market(b) : b[key];
+    if (key === 'timing') { x = TIMING_ORDER[x]; y = TIMING_ORDER[y]; }
+    if (x === null || x === undefined) return 1;
+    if (y === null || y === undefined) return -1;
+    if (x < y) return asc ? -1 : 1;
+    if (x > y) return asc ? 1 : -1;
+    return 0;
+  });
+}
+
+function visible(c) {
+  if (!show[market(c)]) return false;
+  const k = TIMING_KEY[c.timing] || 'none';
+  if (!(show[k] || (show.paper && c.paper_open))) return false;
+  if (!query) return true;
+  const q = query.toLowerCase();
+  return (c.ticker || '').toLowerCase().includes(q) || (c.name || '').toLowerCase().includes(q);
+}
+
+function conditions(rule, th) {
+  if (rule === 'analyst_gap') {
+    const a = th.analyst_gap || {};
+    return `条件: アナリスト ${a.min_analysts}人以上 / 乖離 ${Math.round((a.gap_min || 0) * 100)}% 以上 / 安値予想 > 株価`;
+  }
+  const v = th.value_screen || {};
+  return `条件: PBR < ${v.pbr_max} / PER < ${v.per_max} / 配当性向 < ${Math.round((v.payout_ratio_max || 0) * 100)}% `
+    + `/ 自己資本比率 > ${Math.round((v.equity_ratio_min || 0) * 100)}% / 営業CF プラス`;
+}
+
+function table(rule, title, rows) {
+  const cols = COLS[rule], s = sort[rule];
+  const head = cols.map(([k, label, cls]) => {
+    const on = k === s.key;
+    return `<th class="${cls}" data-rule="${rule}" data-k="${k}" ${on ? `aria-sort="${s.asc ? 'ascending' : 'descending'}"` : ''}>
+      ${label}<span class="arrow">${on ? (s.asc ? '▲' : '▼') : '▲'}</span></th>`;
+  }).join('');
+  const body = rows.length
+    ? rows.map(c => `<tr class="${c.timing === '成立' ? 'hit' : ''}">${cols.map(([k]) => cell(c, k)).join('')}</tr>`).join('')
+    : `<tr><td colspan="${cols.length}" class="empty">表示する銘柄がありません（絞り込みを変えると出ます）</td></tr>`;
+  return `<div class="panel"><h2>${esc(title)} <span class="cnt">${rows.length}</span>
+      <span class="cond">${esc(conditions(rule, DATA.thresholds || {}))}</span></h2>
+    <div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div></div>`;
 }
 
 function ageInDays(iso) {
@@ -113,38 +248,62 @@ function renderStale(d) {
   if (age === null || age < 3) { el.innerHTML = ''; return; }
   el.innerHTML = `<div class="stale-banner">
     <b>データが ${Math.floor(age)} 日間更新されていません</b>
-    週次ジョブが止まっている可能性があります。
+    日次ジョブが止まっている可能性があります。
     以下は ${esc(d.generated_at)} 時点のもので、現在の株価ではありません。</div>`;
 }
 
-function row(c) {
-  return `<tr>
-    <td class="tk">${esc(c.ticker)}${c.held ? ' <span class="held">保有中</span>' : ''}${
-      c.paper_open ? ' <span class="paper">paper</span>' : ''}</td>
-    <td class="nm">${esc(c.name)}</td>
-    <td class="rule">${esc(c.entry_rule)}</td>
-    <td>${badge(c.timing)}</td>
-    <td class="num">${pc(c.gap_pct)}</td>
-    <td class="num">${n2(c.price)} <span class="dim">${esc(c.currency)}</span></td>
-    <td class="num">${n2(c.target_mean_price)}</td>
-    <td class="num">${n2(c.target_low_price)}</td>
-    <td class="num">${c.num_analyst_opinions ?? '<span class="dim">—</span>'}</td>
-    <td class="num">${n2(c.pbr)}</td>
-    <td class="num">${n2(c.per, 1)}</td>
-    <td class="num">${ratio(c.payout_ratio)}</td>
-    <td class="num">${ratio(c.equity_ratio)}</td>
-    <td class="num">${c.operating_cf_ok === null || c.operating_cf_ok === undefined
-      ? '<span class="dim">—</span>' : (c.operating_cf_ok ? '○' : '×')}</td>
-    <td class="dim">${esc(c.as_of ?? '—')}</td>
-    <td class="reason">${esc(c.timing_reason)}</td>
-  </tr>`;
+function renderToolbar() {
+  const s = DATA.summary;
+  document.getElementById('toolbar').innerHTML = `
+    <button class="chip hit" data-f="hit" aria-pressed="${show.hit}">成立 <b>${s.triggered}</b></button>
+    <button class="chip" data-f="paper" aria-pressed="${show.paper}">paper保有中 <b>${s.paper_open || 0}</b></button>
+    <button class="chip wait" data-f="wait" aria-pressed="${show.wait}">待機中 <b>${s.waiting}</b></button>
+    <button class="chip" data-f="none" aria-pressed="${show.none}">未該当 <b>${s.none}</b></button>
+    <span class="sep"></span>
+    <button class="chip" data-f="JP" aria-pressed="${show.JP}">JP</button>
+    <button class="chip" data-f="US" aria-pressed="${show.US}">US</button>
+    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" value="${esc(query)}">`;
+  document.querySelectorAll('button.chip[data-f]').forEach(b => {
+    b.onclick = () => { show[b.dataset.f] = !show[b.dataset.f]; b.setAttribute('aria-pressed', show[b.dataset.f]); renderContent(); };
+  });
+  const q = document.getElementById('q');
+  q.oninput = () => { query = q.value; renderContent(); };
 }
 
-const COLS = ['コード', '銘柄', 'entry_rule', 'timing', '乖離', '株価', '目標平均',
-  '安値予想', '人数', 'PBR', 'PER', '配当性向', '自己資本', '営業CF', 'データ日付', '判定の理由'];
+function renderContent() {
+  const d = DATA;
+  const rows = d.candidates.filter(visible);
+  const ag = sortRows(rows.filter(c => baseRule(c) === 'analyst_gap'), 'analyst_gap');
+  const vs = sortRows(rows.filter(c => baseRule(c) === 'value_screen'), 'value_screen');
+  const byRule = Object.entries(d.summary.by_rule || {})
+    .map(([k, v]) => `${esc(k)} ${v}`).join(' / ');
+  document.getElementById('content').innerHTML =
+    table('analyst_gap', 'analyst_gap（目標株価との乖離）', ag)
+    + table('value_screen', 'value_screen（割安・財務）', vs)
+    + `<div class="panel"><div class="note">条件の充足状況を並べたものです。売買の判定ではありません。
+       既定では「成立」と「paper 保有中」だけを表示しています。
+       ${byRule ? `本日の成立: ${byRule}。` : ''}
+       entry_timing は「5日線を上抜けた日」だけが成立なので、翌日は待機中に戻ります。条件そのものは満たしたままです。
+       見出しをクリックすると並べ替えできます。</div></div>`;
+  document.querySelectorAll('th[data-k]').forEach(th => {
+    th.onclick = () => {
+      const s = sort[th.dataset.rule], k = th.dataset.k;
+      if (s.key === k) s.asc = !s.asc; else { s.key = k; s.asc = !['gap_pct', 'num_analyst_opinions'].includes(k); }
+      renderContent();
+    };
+  });
+}
+
+const MODE_HELP = {
+  double_bottom: 'double_bottom: 60日の安値圏（最安値から3%以内）に2回タッチし、間に5%以上の戻しがある形。'
+    + '1番底と2番底の間の高値（ネックライン）を終値で上抜けた日が成立',
+  confirm: 'confirm: 60日安値を更新した後、5日線を終値で上抜けた日が成立',
+  touch: 'touch: 60日安値を更新した日が成立',
+};
 
 function render() {
   const d = DATA, s = d.summary;
+  document.getElementById('modeHelp').textContent = MODE_HELP[s.timing_mode] || '';
   document.getElementById('perfLink').href =
     location.pathname.replace(/candidates-/, 'performance-').split('/').pop();
   renderStale(d);
@@ -153,40 +312,9 @@ function render() {
   document.getElementById('meta').innerHTML =
     `実行日 <b>${esc(d.run_date)}</b>　データ日付: ${dates || '—'}`
     + `<br>生成 ${esc(d.generated_at)}　出所 yfinance　`
-    + `entry_timing モード <b>${esc(s.timing_mode)}</b>`;
-
-  const byRule = Object.entries(s.by_rule || {})
-    .map(([k, v]) => `<span class="chip">${esc(k)} <b>${v}</b></span>`).join('');
-  document.getElementById('chips').innerHTML = `
-    <span class="chip hit">成立 <b>${s.triggered}</b></span>
-    <span class="chip">待機中 <b>${s.waiting}</b></span>
-    <span class="chip">未該当 <b>${s.none}</b></span>
-    ${s.paper_open ? `<span class="chip">paper保有中 <b>${s.paper_open}</b></span>` : ''}
-    ${byRule}
-    <button id="toggle" aria-pressed="${showAll}">
-      ${showAll ? '成立のみ表示' : '待機中・未該当も表示'}</button>`;
-
-  // 既定は「成立」＋「ペーパーで建玉が残っているもの」。
-  // entry_timing は上抜けた日だけが成立なので、翌日には待機中に戻る。
-  // 一度入った銘柄がその後どうなっているかを、トグルなしで追えるようにする。
-  const rows = showAll ? d.candidates
-    : d.candidates.filter(c => c.timing === '成立' || c.paper_open);
-  const head = COLS.map((c, i) =>
-    `<th class="${[4,5,6,7,8,9,10,11,12,13].includes(i) ? 'num' : ''}">${c}</th>`).join('');
-
-  document.getElementById('content').innerHTML = rows.length
-    ? `<div class="panel"><div class="scroll"><table><thead><tr>${head}</tr></thead>
-       <tbody>${rows.map(row).join('')}</tbody></table></div>
-       <div class="note">条件の充足状況を並べたものです。売買の判定ではありません。
-       <b>保有中</b> は holdings.csv に載っている銘柄、
-       <b>paper</b> はペーパーで建玉が残っている銘柄。
-       entry_timing は「5日線を上抜けた日」だけが成立なので、翌日は待機中に戻ります。
-       条件そのものは満たしたままです。</div></div>`
-    : `<div class="panel"><div class="note">entry_timing が成立した銘柄も、
-       ペーパーで建玉が残っている銘柄もありません。
-       待機中 ${s.waiting}件 / 未該当 ${s.none}件 はトグルで表示できます。</div></div>`;
-
-  document.getElementById('toggle').onclick = () => { showAll = !showAll; render(); };
+    + `entry_timing モード <b>${esc(s.timing_mode)}</b>　母集団 ${d.candidates.length}件（条件充足）`;
+  renderToolbar();
+  renderContent();
 }
 
 fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
