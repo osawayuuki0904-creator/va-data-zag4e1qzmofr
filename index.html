@@ -7,13 +7,13 @@
 <title>保有銘柄 出口監視</title>
 <style>
   :root{
-    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc;
+    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc; --hover:#f3f3ef;
     --alert:#b4341f; --alert-bg:#fdeceb; --clear:#3f7a52; --clear-bg:#eef5f0;
     --unknown:#8a6d1f; --unknown-bg:#fbf3e0; --anom:#8a4b1f; --anom-bg:#fbeee4;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a;
+      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a; --hover:#26262b;
       --alert:#ff8a72; --alert-bg:#3a1e19; --clear:#7fc296; --clear-bg:#1b2a21;
       --unknown:#e0be6a; --unknown-bg:#2e2718; --anom:#e3a377; --anom-bg:#31241a;
     }
@@ -21,31 +21,44 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
        font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:16px;padding-right:16px}
+  .wrap{max-width:1180px;margin:0 auto;padding-block:20px 64px;padding-left:16px;padding-right:16px}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;overflow-x:auto}
+  .tabs a{color:var(--muted);text-decoration:none;padding:8px 14px;font-size:13.5px;white-space:nowrap;
+          border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tabs a:hover{color:var(--ink)}
+  .tabs a[aria-current]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
   h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
-  .navbar{display:flex;align-items:baseline;justify-content:space-between;gap:12px;
-          flex-wrap:wrap}
-  .navbar a{color:var(--muted);font-size:12.5px;text-decoration:none;
-            border:1px solid var(--line);border-radius:8px;padding:5px 12px;
-            background:var(--panel);white-space:nowrap}
-  .navbar a:hover{color:var(--ink);border-color:var(--muted)}
-  .meta{color:var(--muted);font-size:12.5px;margin-bottom:18px}
+  .meta{color:var(--muted);font-size:12.5px;margin-bottom:14px}
   .meta b{color:var(--ink);font-weight:600}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-  .chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;
-        padding:5px 13px;font-size:12.5px;display:flex;gap:7px;align-items:center}
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .chip{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+        border-radius:999px;padding:5px 13px;font-size:12.5px;display:inline-flex;gap:7px;
+        align-items:center;cursor:pointer}
   .chip b{font-size:15px}
-  .chip.alert b{color:var(--alert)} .chip.clear b{color:var(--clear)}
-  .chip.unknown b{color:var(--unknown)}
+  .chip[aria-pressed="false"]{opacity:.45}
+  .chip.alert b{color:var(--alert)} .chip.clear b{color:var(--clear)} .chip.unknown b{color:var(--unknown)}
+  .chip.static{cursor:default}
+  .search{font:inherit;font-size:13px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+          border-radius:8px;padding:6px 11px;min-width:180px;margin-left:auto}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         overflow:hidden;margin-bottom:20px}
+         overflow:hidden;margin-bottom:18px}
   .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
-            color:var(--muted);font-weight:600;letter-spacing:.04em}
+            color:var(--muted);font-weight:600;letter-spacing:.04em;display:flex;gap:8px;align-items:center}
+  .panel>h2 .cnt{font-size:12px;color:var(--ink);background:var(--bg);border-radius:999px;padding:0 8px}
+  /* 広い画面では表が収まるので内側スクロールを作らない（見出しの固定はページのスクロールに効く）。
+     狭い画面では横スクロールにし、先頭列を固定する */
   .scroll{overflow-x:auto}
-  table{border-collapse:collapse;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
-  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
-  th{font-size:11.5px;color:var(--muted);font-weight:600;cursor:pointer;user-select:none}
-  th:hover{color:var(--ink)}
+  @media (min-width:960px){ .scroll{overflow:visible} }
+  table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
+  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+  thead th{position:sticky;top:0;z-index:2;font-size:11.5px;color:var(--muted);font-weight:600;
+           cursor:pointer;user-select:none;border-bottom:1px solid var(--line)}
+  thead th:hover{color:var(--ink)}
+  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  thead th[aria-sort] .arrow{opacity:1;color:var(--ink)}
+  th:first-child,td:first-child{position:sticky;left:0;z-index:1}
+  thead th:first-child{z-index:3}
+  tbody tr:hover td{background:var(--hover)}
   tr:last-child td{border-bottom:none}
   td.num,th.num{text-align:right}
   .tk{font-weight:600}
@@ -59,23 +72,48 @@
         padding:2px 7px;font-size:11.5px;margin:1px 3px 1px 0}
   .anom b{font-weight:700}
   .dim{color:var(--muted)}
-  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line)}
+  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line);line-height:1.7}
+  .help{margin-bottom:18px;color:var(--muted);font-size:12.5px}
+  .help summary{cursor:pointer;color:var(--ink);font-size:12.5px}
+  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+  .help dt{color:var(--ink);font-weight:600}
+  .help dd{margin:0}
   .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
        border-radius:10px;padding:16px}
   .stale-banner{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
        border-radius:10px;padding:13px 16px;margin-bottom:18px;font-size:13.5px}
   .stale-banner b{display:block;font-size:15px;margin-bottom:4px}
+  .empty{padding:18px 15px;color:var(--muted);font-size:13px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-  @media (max-width:600px){ .wrap{padding-block:16px 48px} h1{font-size:17px} }
+  @media (max-width:600px){
+    .wrap{padding-block:12px 48px} h1{font-size:17px}
+    .search{min-width:0;width:100%;margin-left:0}
+    .help dl{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="navbar"><h1>保有銘柄 出口監視</h1><a href="candidates-14h9azeln2gzh6.html">購入候補 →</a></div>
+  <nav class="tabs"><a href="index.html" aria-current="page">保有銘柄</a><a href="candidates-14h9azeln2gzh6.html">購入候補</a><a href="performance-14h9azeln2gzh6.html">成績</a></nav>
+  <h1>保有銘柄 出口監視</h1>
   <div id="staleBanner"></div>
   <div class="meta" id="meta">読み込み中…</div>
-  <div class="chips" id="chips"></div>
+  <div class="toolbar" id="toolbar"></div>
   <div id="content"></div>
+  <details class="help">
+    <summary>この画面の読み方</summary>
+    <dl>
+      <dt>ALERT</dt><dd>売却条件（取得価格比 −30% 以下）に触れている。売買の指示ではなく、確認すべき銘柄の合図</dd>
+      <dt>UNKNOWN</dt><dd>判定に必要な数値が取れていない。「問題なし」ではない。連続3回取得に失敗した銘柄もここに入る</dd>
+      <dt>CLEAR</dt><dd>売却条件に触れていない</dd>
+      <dt>取得価格比</dt><dd>取得価格からの騰落率。保有期間中の最大下落率ではない。通貨は建値のままで為替換算しない</dd>
+      <dt>前日比</dt><dd>前回スナップショットの確定終値との比較。前回実行が飛んでいれば2日分になる</dd>
+      <dt>比率</dt><dd>同じ通貨の保有の中での比率。円建てと米ドル建てを合算した比率は出さない</dd>
+      <dt>stale</dt><dd>連続して取得に失敗した回数。週末を挟んでも増えない。3以上で UNKNOWN</dd>
+      <dt>異常値</dt><dd>値はあるが信用できない項目。値は補正せず、ラベルと併記する</dd>
+      <dt>データ日付</dt><dd>確定終値の日付。日本株と米国株で異なる。場中の値は使わない</dd>
+    </dl>
+  </details>
 </div>
 
 <script>
@@ -83,11 +121,11 @@
 // 既定は同じ場所の latest.json。?src= で差し替えられる（ローカル確認用）。
 const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
 const STATUS_ORDER = { ALERT: 0, UNKNOWN: 1, CLEAR: 2 };
-let DATA = null, sortKey = 'drawdown_pct', sortAsc = true;
+let DATA = null, sortKey = 'drawdown_pct', sortAsc = true, query = '';
+const show = { ALERT: true, UNKNOWN: true, CLEAR: true };
 
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-
 const num = (v, d = 2, suffix = '') =>
   v === null || v === undefined ? '<span class="dim">—</span>'
     : esc(v.toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d })) + suffix;
@@ -110,7 +148,7 @@ function anomaliesHtml(list) {
 
 function row(h) {
   const stale = h.stale_days > 0
-    ? `<span class="neg">${h.stale_days}日</span>` : '<span class="dim">0</span>';
+    ? `<span class="neg">${h.stale_days}</span>` : '<span class="dim">0</span>';
   const miss = h.missing && h.missing.length
     ? `<span class="dim" title="${esc(h.missing.join(', '))}">${h.missing.length}件</span>`
     : '<span class="dim">—</span>';
@@ -122,7 +160,7 @@ function row(h) {
     <td class="num">${signed(h.change_pct)}</td>
     <td class="num">${signed(h.drawdown_pct, h.drawdown_label)}</td>
     <td class="num">${h.weight_pct === null ? '<span class="dim">—</span>' : num(h.weight_pct, 1, '%')}</td>
-    <td><span class="badge b-${esc(h.status)}">${esc(h.status)}</span></td>
+    <td><span class="badge b-${esc(h.status)}" title="${esc(h.reason)}">${esc(h.status)}</span></td>
     <td class="dim">${esc(h.as_of ?? '—')}</td>
     <td class="num">${stale}</td>
     <td>${anomaliesHtml(h.anomalies)}</td>
@@ -138,13 +176,17 @@ const COLS = [
   ['anomalies', '異常値', ''], ['missing', '欠損', 'num'],
 ];
 
-function table(rows, title) {
-  if (!rows.length) return '';
-  const head = COLS.map(([k, label, cls]) =>
-    `<th class="${cls}" data-k="${k}">${label}</th>`).join('');
-  return `<div class="panel"><h2>${esc(title)}（${rows.length}件）</h2>
-    <div class="scroll"><table><thead><tr>${head}</tr></thead>
-    <tbody>${rows.map(row).join('')}</tbody></table></div></div>`;
+function table(rows, title, status) {
+  if (!show[status]) return '';
+  const head = COLS.map(([k, label, cls]) => {
+    const sorted = k === sortKey;
+    return `<th class="${cls}" data-k="${k}" ${sorted ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
+      ${label}<span class="arrow">${sorted ? (sortAsc ? '▲' : '▼') : '▲'}</span></th>`;
+  }).join('');
+  const body = rows.length ? `<tbody>${rows.map(row).join('')}</tbody>`
+    : `<tbody><tr><td colspan="${COLS.length}" class="empty">該当なし</td></tr></tbody>`;
+  return `<div class="panel"><h2>${esc(title)} <span class="cnt">${rows.length}</span></h2>
+    <div class="scroll"><table><thead><tr>${head}</tr></thead>${body}</table></div></div>`;
 }
 
 function sortRows(rows) {
@@ -160,6 +202,12 @@ function sortRows(rows) {
     if (x > y) return sortAsc ? 1 : -1;
     return 0;
   });
+}
+
+function matches(h) {
+  if (!query) return true;
+  const q = query.toLowerCase();
+  return (h.ticker || '').toLowerCase().includes(q) || (h.name || '').toLowerCase().includes(q);
 }
 
 function ageInDays(iso) {
@@ -198,25 +246,41 @@ function render() {
     `実行日 <b>${esc(d.run_date)}</b>　データ日付: ${dates || '—'}`
     + `<br>生成 ${esc(d.generated_at)}　出所 yfinance`;
 
-  document.getElementById('chips').innerHTML = `
-    <span class="chip alert">ALERT <b>${s.alert}</b></span>
-    <span class="chip clear">CLEAR <b>${s.clear}</b></span>
-    <span class="chip unknown">UNKNOWN <b>${s.unknown}</b></span>
-    <span class="chip">保有 <b>${s.total}</b></span>`;
+  renderToolbar();
+  renderContent();
+}
 
-  const all = d.holdings;
+function renderToolbar() {
+  const s = DATA.summary;
+  document.getElementById('toolbar').innerHTML = `
+    <button class="chip alert" data-s="ALERT" aria-pressed="${show.ALERT}">ALERT <b>${s.alert}</b></button>
+    <button class="chip unknown" data-s="UNKNOWN" aria-pressed="${show.UNKNOWN}">UNKNOWN <b>${s.unknown}</b></button>
+    <button class="chip clear" data-s="CLEAR" aria-pressed="${show.CLEAR}">CLEAR <b>${s.clear}</b></button>
+    <span class="chip static">保有 <b>${s.total}</b></span>
+    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" value="${esc(query)}">`;
+  document.querySelectorAll('button.chip[data-s]').forEach(b => {
+    b.onclick = () => { show[b.dataset.s] = !show[b.dataset.s]; b.setAttribute('aria-pressed', show[b.dataset.s]); renderContent(); };
+  });
+  const q = document.getElementById('q');
+  q.oninput = () => { query = q.value; renderContent(); };
+}
+
+function renderContent() {
+  const d = DATA;
+  const all = d.holdings.filter(matches);
   const alert = sortRows(all.filter(h => h.status === 'ALERT'));
   const unknown = sortRows(all.filter(h => h.status === 'UNKNOWN'));
   const clear = sortRows(all.filter(h => h.status === 'CLEAR'));
-  const stale = all.filter(h => h.stale_days > 0);
+  const stale = d.holdings.filter(h => h.stale_days > 0);
 
   document.getElementById('content').innerHTML =
-    table(alert, '売却条件に触れている銘柄')
-    + table(unknown, '判定不能（UNKNOWN）')
-    + table(clear, 'その他')
+    table(alert, '売却条件に触れている銘柄', 'ALERT')
+    + table(unknown, '判定不能（UNKNOWN）', 'UNKNOWN')
+    + table(clear, 'その他', 'CLEAR')
     + `<div class="panel"><div class="note">
         取得価格比は率のみを出しています。
         UNKNOWN は判定に必要な数値が取れなかった銘柄で、「問題なし」ではありません。
+        見出しをクリックすると並べ替えできます。
         ${stale.length ? `<br><b>取得に連続失敗している銘柄が ${stale.length} 件あります。</b>` : ''}
        </div></div>`;
 
@@ -224,7 +288,7 @@ function render() {
     th.onclick = () => {
       const k = th.dataset.k;
       if (k === sortKey) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
-      render();
+      renderContent();
     };
   });
 }
