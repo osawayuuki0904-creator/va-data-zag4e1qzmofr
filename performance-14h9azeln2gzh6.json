@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-20T10:27:22+09:00",
-  "run_date": "2026-10-20",
-  "price_date": "2026-10-20",
+  "generated_at": "2026-10-21T10:07:28+09:00",
+  "run_date": "2026-10-21",
+  "price_date": "2026-10-21",
   "summary": {
     "closed": 1,
     "open": 92,
@@ -31,16 +31,16 @@
         "min_trials": 10,
         "basis_next_open": 9,
         "with_excess": 9,
-        "excess_mean": 5.7,
-        "excess_median": 5.39,
-        "excess_wins": 8,
-        "wins": 8,
-        "win_rate": 80.0,
-        "mean": 4.77,
-        "median": 3.15,
-        "worst": -2.1,
-        "best": 18.01,
-        "days_mean": 25.9,
+        "excess_mean": 6.95,
+        "excess_median": 7.73,
+        "excess_wins": 7,
+        "wins": 7,
+        "win_rate": 70.0,
+        "mean": 4.65,
+        "median": 3.5,
+        "worst": -6.56,
+        "best": 19.68,
+        "days_mean": 26.9,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -75,18 +75,18 @@
         "held_at_entry": 0,
         "enough_trials": true,
         "min_trials": 10,
-        "basis_next_open": 71,
+        "basis_next_open": 72,
         "with_excess": 70,
-        "excess_mean": 3.03,
-        "excess_median": 3.2,
-        "excess_wins": 45,
-        "wins": 45,
-        "win_rate": 62.5,
-        "mean": 2.48,
-        "median": 2.27,
-        "worst": -26.61,
-        "best": 21.2,
-        "days_mean": 20.3,
+        "excess_mean": 2.3,
+        "excess_median": 2.45,
+        "excess_wins": 41,
+        "wins": 42,
+        "win_rate": 58.3,
+        "mean": 2.03,
+        "median": 1.55,
+        "worst": -26.94,
+        "best": 19.43,
+        "days_mean": 21.3,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -112,16 +112,16 @@
         "min_trials": 10,
         "basis_next_open": 1,
         "with_excess": 1,
-        "excess_mean": -1.54,
-        "excess_median": -1.54,
+        "excess_mean": -2.33,
+        "excess_median": -2.33,
         "excess_wins": 0,
         "wins": 0,
         "win_rate": 0.0,
-        "mean": -2.25,
-        "median": -2.25,
-        "worst": -2.25,
-        "best": -2.25,
-        "days_mean": 4,
+        "mean": -2.76,
+        "median": -2.76,
+        "worst": -2.76,
+        "best": -2.76,
+        "days_mean": 5,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -145,18 +145,18 @@
         "held_at_entry": 2,
         "enough_trials": false,
         "min_trials": 10,
-        "basis_next_open": 8,
-        "with_excess": 8,
-        "excess_mean": 1.37,
-        "excess_median": 2.57,
-        "excess_wins": 5,
+        "basis_next_open": 9,
+        "with_excess": 9,
+        "excess_mean": 1.99,
+        "excess_median": 3.18,
+        "excess_wins": 6,
         "wins": 5,
         "win_rate": 55.6,
-        "mean": 0.44,
-        "median": 0.73,
-        "worst": -4.12,
-        "best": 4.06,
-        "days_mean": 15.9,
+        "mean": 0.34,
+        "median": 0.86,
+        "worst": -5.14,
+        "best": 5.33,
+        "days_mean": 16.9,
         "exit_reasons": {},
         "with_extremes": 0
       }
@@ -196,9 +196,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 6334.0,
-      "return_pct": -2.1,
-      "days": 34,
+      "current_price": 6430.0,
+      "return_pct": -0.62,
+      "days": 35,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 6500.0,
@@ -206,8 +206,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": 0.99,
-      "excess_pct": -3.1
+      "bench_return_pct": -0.26,
+      "excess_pct": -0.36
     },
     {
       "ticker": "ALGN",
@@ -219,9 +219,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 147.30999755859375,
-      "return_pct": -2.74,
-      "days": 34,
+      "current_price": 149.0,
+      "return_pct": -1.62,
+      "days": 35,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 153.0,
@@ -229,8 +229,8 @@
       "fill_date": "2026-09-15",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.03,
-      "excess_pct": -3.77
+      "bench_return_pct": 1.32,
+      "excess_pct": -2.94
     },
     {
       "ticker": "SYK",
@@ -242,9 +242,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 294.6600036621094,
-      "return_pct": 4.86,
-      "days": 34,
+      "current_price": 297.94000244140625,
+      "return_pct": 6.03,
+      "days": 35,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 281.8699951171875,
@@ -252,8 +252,8 @@
       "fill_date": "2026-09-15",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.03,
-      "excess_pct": 3.83
+      "bench_return_pct": 1.32,
+      "excess_pct": 4.71
     },
     {
       "ticker": "AZO",
@@ -265,9 +265,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 3120.590087890625,
-      "return_pct": 5.2,
-      "days": 34,
+      "current_price": 3097.8798828125,
+      "return_pct": 4.44,
+      "days": 35,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2965.52001953125,
@@ -275,8 +275,8 @@
       "fill_date": "2026-09-15",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.03,
-      "excess_pct": 4.17
+      "bench_return_pct": 1.32,
+      "excess_pct": 3.12
     },
     {
       "ticker": "LEN",
@@ -288,9 +288,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 77.08000183105469,
-      "return_pct": -3.63,
-      "days": 34,
+      "current_price": 75.87000274658203,
+      "return_pct": -5.14,
+      "days": 35,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 79.98999786376953,
@@ -298,8 +298,8 @@
       "fill_date": "2026-09-15",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.03,
-      "excess_pct": -4.66
+      "bench_return_pct": 1.32,
+      "excess_pct": -6.46
     },
     {
       "ticker": "HWM",
@@ -311,9 +311,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 220.9600067138672,
-      "return_pct": -3.58,
-      "days": 33,
+      "current_price": 220.02999877929688,
+      "return_pct": -3.99,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 227.72999572753906,
@@ -321,8 +321,8 @@
       "fill_date": "2026-09-17",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.78,
-      "excess_pct": -4.36
+      "bench_return_pct": 1.06,
+      "excess_pct": -5.05
     },
     {
       "ticker": "GEV",
@@ -334,9 +334,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 921.2000122070312,
-      "return_pct": -4.25,
-      "days": 33,
+      "current_price": 908.4400024414062,
+      "return_pct": -5.57,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 925.0900268554688,
@@ -344,8 +344,8 @@
       "fill_date": "2026-09-17",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.78,
-      "excess_pct": -5.02
+      "bench_return_pct": 1.06,
+      "excess_pct": -6.64
     },
     {
       "ticker": "ON",
@@ -357,9 +357,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 72.0199966430664,
-      "return_pct": -3.11,
-      "days": 33,
+      "current_price": 73.12000274658203,
+      "return_pct": -1.63,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 73.19999694824219,
@@ -367,8 +367,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.18,
-      "excess_pct": -4.28
+      "bench_return_pct": 1.46,
+      "excess_pct": -3.09
     },
     {
       "ticker": "XYL",
@@ -380,9 +380,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 104.05000305175781,
-      "return_pct": -4.14,
-      "days": 33,
+      "current_price": 103.52999877929688,
+      "return_pct": -4.62,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 107.5,
@@ -390,8 +390,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.18,
-      "excess_pct": -5.31
+      "bench_return_pct": 1.46,
+      "excess_pct": -6.08
     },
     {
       "ticker": "WY",
@@ -403,9 +403,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 19.610000610351562,
-      "return_pct": -12.18,
-      "days": 33,
+      "current_price": 19.200000762939453,
+      "return_pct": -14.02,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.290000915527344,
@@ -413,8 +413,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.18,
-      "excess_pct": -13.36
+      "bench_return_pct": 1.46,
+      "excess_pct": -15.48
     },
     {
       "ticker": "LHX",
@@ -426,9 +426,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 248.50999450683594,
-      "return_pct": -0.62,
-      "days": 33,
+      "current_price": 243.83999633789062,
+      "return_pct": -2.49,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 249.66000366210938,
@@ -436,8 +436,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.18,
-      "excess_pct": -1.8
+      "bench_return_pct": 1.46,
+      "excess_pct": -3.96
     },
     {
       "ticker": "DD",
@@ -449,9 +449,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 130.4499969482422,
-      "return_pct": 1.34,
-      "days": 33,
+      "current_price": 129.33999633789062,
+      "return_pct": 0.47,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 128.0399932861328,
@@ -459,8 +459,8 @@
       "fill_date": "2026-09-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 1.18,
-      "excess_pct": 0.16
+      "bench_return_pct": 1.46,
+      "excess_pct": -0.99
     },
     {
       "ticker": "9202.T",
@@ -472,9 +472,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 2872.0,
-      "return_pct": -4.12,
-      "days": 32,
+      "current_price": 2843.5,
+      "return_pct": -5.07,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3000.0,
@@ -482,8 +482,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": -3.66
+      "bench_return_pct": -1.7,
+      "excess_pct": -3.37
     },
     {
       "ticker": "5802.T",
@@ -495,9 +495,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 2071.5,
-      "return_pct": -0.46,
-      "days": 32,
+      "current_price": 1944.5,
+      "return_pct": -6.56,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2052.5,
@@ -505,8 +505,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": 0.01
+      "bench_return_pct": -1.7,
+      "excess_pct": -4.86
     },
     {
       "ticker": "8830.T",
@@ -518,9 +518,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 3246.0,
-      "return_pct": 0.62,
-      "days": 32,
+      "current_price": 3217.0,
+      "return_pct": -0.28,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3253.0,
@@ -528,8 +528,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": 1.09
+      "bench_return_pct": -1.7,
+      "excess_pct": 1.42
     },
     {
       "ticker": "7936.T",
@@ -541,9 +541,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 4803.0,
-      "return_pct": 18.01,
-      "days": 32,
+      "current_price": 4871.0,
+      "return_pct": 19.68,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 4097.0,
@@ -551,8 +551,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": 18.48
+      "bench_return_pct": -1.7,
+      "excess_pct": 21.38
     },
     {
       "ticker": "8802.T",
@@ -564,9 +564,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 3722.0,
-      "return_pct": 1.2,
-      "days": 32,
+      "current_price": 3728.0,
+      "return_pct": 1.36,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3678.0,
@@ -574,8 +574,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": 1.66
+      "bench_return_pct": -1.7,
+      "excess_pct": 3.06
     },
     {
       "ticker": "7741.T",
@@ -587,9 +587,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 25580.0,
-      "return_pct": 12.07,
-      "days": 32,
+      "current_price": 25990.0,
+      "return_pct": 13.87,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22655.0,
@@ -597,8 +597,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.47,
-      "excess_pct": 12.54
+      "bench_return_pct": -1.7,
+      "excess_pct": 15.57
     },
     {
       "ticker": "6146.T",
@@ -610,9 +610,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 53360.0,
-      "return_pct": 1.79,
-      "days": 31,
+      "current_price": 52630.0,
+      "return_pct": 0.4,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 52420.0,
@@ -633,9 +633,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1210.8599853515625,
-      "return_pct": 2.14,
-      "days": 31,
+      "current_price": 1253.6600341796875,
+      "return_pct": 5.75,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1169.5799560546875,
@@ -643,8 +643,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": 1.7
+      "bench_return_pct": 0.72,
+      "excess_pct": 5.02
     },
     {
       "ticker": "CDNS",
@@ -656,9 +656,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 319.510009765625,
-      "return_pct": 13.33,
-      "days": 31,
+      "current_price": 325.8599853515625,
+      "return_pct": 15.58,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 280.760009765625,
@@ -666,8 +666,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": 12.89
+      "bench_return_pct": 0.72,
+      "excess_pct": 14.86
     },
     {
       "ticker": "GNRC",
@@ -679,9 +679,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 192.67999267578125,
-      "return_pct": -8.04,
-      "days": 31,
+      "current_price": 193.30999755859375,
+      "return_pct": -7.74,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 207.22999572753906,
@@ -689,8 +689,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": -8.48
+      "bench_return_pct": 0.72,
+      "excess_pct": -8.46
     },
     {
       "ticker": "IP",
@@ -702,9 +702,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 34.04999923706055,
-      "return_pct": -1.73,
-      "days": 31,
+      "current_price": 33.75,
+      "return_pct": -2.6,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 35.54999923706055,
@@ -712,8 +712,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": -2.17
+      "bench_return_pct": 0.72,
+      "excess_pct": -3.32
     },
     {
       "ticker": "TJX",
@@ -725,9 +725,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 147.3300018310547,
-      "return_pct": 16.54,
-      "days": 31,
+      "current_price": 147.36000061035156,
+      "return_pct": 16.56,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 126.55000305175781,
@@ -735,8 +735,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": 16.1
+      "bench_return_pct": 0.72,
+      "excess_pct": 15.84
     },
     {
       "ticker": "CASY",
@@ -748,9 +748,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 689.219970703125,
-      "return_pct": 13.33,
-      "days": 31,
+      "current_price": 693.72998046875,
+      "return_pct": 14.07,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 607.4500122070312,
@@ -758,8 +758,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": 12.89
+      "bench_return_pct": 0.72,
+      "excess_pct": 13.35
     },
     {
       "ticker": "IR",
@@ -771,9 +771,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 77.77999877929688,
-      "return_pct": 7.55,
-      "days": 31,
+      "current_price": 77.75,
+      "return_pct": 7.51,
+      "days": 32,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 72.6500015258789,
@@ -781,8 +781,8 @@
       "fill_date": "2026-09-18",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.44,
-      "excess_pct": 7.11
+      "bench_return_pct": 0.72,
+      "excess_pct": 6.78
     },
     {
       "ticker": "MCHP",
@@ -794,9 +794,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 73.8499984741211,
-      "return_pct": -1.14,
-      "days": 29,
+      "current_price": 74.43000030517578,
+      "return_pct": -0.36,
+      "days": 30,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 73.2699966430664,
@@ -804,8 +804,8 @@
       "fill_date": "2026-09-21",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.03,
-      "excess_pct": -1.11
+      "bench_return_pct": 0.26,
+      "excess_pct": -0.62
     },
     {
       "ticker": "CCL",
@@ -817,9 +817,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 25.899999618530273,
-      "return_pct": 11.69,
-      "days": 27,
+      "current_price": 26.450000762939453,
+      "return_pct": 14.06,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.309999465942383,
@@ -827,8 +827,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": 12.72
+      "bench_return_pct": -0.75,
+      "excess_pct": 14.81
     },
     {
       "ticker": "CRH",
@@ -840,9 +840,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 83.62999725341797,
-      "return_pct": -5.07,
-      "days": 27,
+      "current_price": 83.18000030517578,
+      "return_pct": -5.58,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 87.13999938964844,
@@ -850,8 +850,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": -4.04
+      "bench_return_pct": -0.75,
+      "excess_pct": -4.84
     },
     {
       "ticker": "CARR",
@@ -863,9 +863,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 55.0,
-      "return_pct": -0.33,
-      "days": 27,
+      "current_price": 55.209999084472656,
+      "return_pct": 0.05,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 54.619998931884766,
@@ -873,8 +873,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": 0.7
+      "bench_return_pct": -0.75,
+      "excess_pct": 0.8
     },
     {
       "ticker": "RCL",
@@ -886,9 +886,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 277.67999267578125,
-      "return_pct": 7.21,
-      "days": 27,
+      "current_price": 281.9700012207031,
+      "return_pct": 8.87,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 250.25,
@@ -896,8 +896,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": 8.24
+      "bench_return_pct": -0.75,
+      "excess_pct": 9.62
     },
     {
       "ticker": "TDG",
@@ -909,9 +909,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1139.3399658203125,
-      "return_pct": 1.78,
-      "days": 27,
+      "current_price": 1142.449951171875,
+      "return_pct": 2.05,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1109.6500244140625,
@@ -919,8 +919,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": 2.81
+      "bench_return_pct": -0.75,
+      "excess_pct": 2.8
     },
     {
       "ticker": "LII",
@@ -932,9 +932,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 357.7300109863281,
-      "return_pct": -3.49,
-      "days": 27,
+      "current_price": 355.7799987792969,
+      "return_pct": -4.02,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 363.6400146484375,
@@ -942,8 +942,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": -2.46
+      "bench_return_pct": -0.75,
+      "excess_pct": -3.27
     },
     {
       "ticker": "FERG",
@@ -955,9 +955,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 231.61000061035156,
-      "return_pct": 5.77,
-      "days": 27,
+      "current_price": 226.36000061035156,
+      "return_pct": 3.37,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 216.13999938964844,
@@ -965,8 +965,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": 6.8
+      "bench_return_pct": -0.75,
+      "excess_pct": 4.12
     },
     {
       "ticker": "MGM",
@@ -978,9 +978,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 28.600000381469727,
-      "return_pct": -26.61,
-      "days": 27,
+      "current_price": 28.469999313354492,
+      "return_pct": -26.94,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 38.72999954223633,
@@ -988,8 +988,8 @@
       "fill_date": "2026-09-22",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.03,
-      "excess_pct": -25.58
+      "bench_return_pct": -0.75,
+      "excess_pct": -26.19
     },
     {
       "ticker": "APTV",
@@ -1001,9 +1001,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 44.86000061035156,
-      "return_pct": -0.24,
-      "days": 25,
+      "current_price": 44.47999954223633,
+      "return_pct": -1.09,
+      "days": 26,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 45.16999816894531,
@@ -1011,8 +1011,8 @@
       "fill_date": "2026-09-24",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.31,
-      "excess_pct": -0.55
+      "bench_return_pct": 0.59,
+      "excess_pct": -1.68
     },
     {
       "ticker": "BA",
@@ -1024,9 +1024,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 190.2100067138672,
-      "return_pct": -4.23,
-      "days": 25,
+      "current_price": 191.4199981689453,
+      "return_pct": -3.63,
+      "days": 26,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 199.92999267578125,
@@ -1034,8 +1034,8 @@
       "fill_date": "2026-09-24",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.31,
-      "excess_pct": -4.54
+      "bench_return_pct": 0.59,
+      "excess_pct": -4.22
     },
     {
       "ticker": "BLDR",
@@ -1047,9 +1047,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 54.650001525878906,
-      "return_pct": -7.06,
-      "days": 25,
+      "current_price": 52.95000076293945,
+      "return_pct": -9.95,
+      "days": 26,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 59.15999984741211,
@@ -1057,8 +1057,8 @@
       "fill_date": "2026-09-24",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": 0.31,
-      "excess_pct": -7.37
+      "bench_return_pct": 0.59,
+      "excess_pct": -10.54
     },
     {
       "ticker": "1928.T",
@@ -1070,9 +1070,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 3428.0,
-      "return_pct": 1.12,
-      "days": 24,
+      "current_price": 3423.0,
+      "return_pct": 0.97,
+      "days": 25,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 3369.0,
@@ -1080,8 +1080,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.97,
-      "excess_pct": 2.09
+      "bench_return_pct": -2.2,
+      "excess_pct": 3.18
     },
     {
       "ticker": "TMUS",
@@ -1093,9 +1093,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 159.10000610351562,
-      "return_pct": -3.94,
-      "days": 22,
+      "current_price": 156.08999633789062,
+      "return_pct": -5.76,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 165.42999267578125,
@@ -1103,8 +1103,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.4,
-      "excess_pct": -3.54
+      "bench_return_pct": -0.12,
+      "excess_pct": -5.64
     },
     {
       "ticker": "BKNG",
@@ -1116,9 +1116,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 163.4499969482422,
-      "return_pct": 0.5,
-      "days": 22,
+      "current_price": 162.60000610351562,
+      "return_pct": -0.02,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 163.9499969482422,
@@ -1126,8 +1126,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.4,
-      "excess_pct": 0.91
+      "bench_return_pct": -0.12,
+      "excess_pct": 0.1
     },
     {
       "ticker": "FIS",
@@ -1139,9 +1139,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 36.0099983215332,
-      "return_pct": 2.42,
-      "days": 22,
+      "current_price": 35.97999954223633,
+      "return_pct": 2.33,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 35.40999984741211,
@@ -1149,8 +1149,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.4,
-      "excess_pct": 2.82
+      "bench_return_pct": -0.12,
+      "excess_pct": 2.45
     },
     {
       "ticker": "OMC",
@@ -1162,9 +1162,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 80.55999755859375,
-      "return_pct": 6.67,
-      "days": 22,
+      "current_price": 79.44000244140625,
+      "return_pct": 5.19,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 76.1500015258789,
@@ -1172,8 +1172,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.4,
-      "excess_pct": 7.07
+      "bench_return_pct": -0.12,
+      "excess_pct": 5.31
     },
     {
       "ticker": "CVS",
@@ -1185,9 +1185,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 92.36000061035156,
-      "return_pct": 3.18,
-      "days": 22,
+      "current_price": 92.68000030517578,
+      "return_pct": 3.54,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 89.12999725341797,
@@ -1195,8 +1195,8 @@
       "fill_date": "2026-09-28",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.4,
-      "excess_pct": 3.59
+      "bench_return_pct": -0.12,
+      "excess_pct": 3.66
     },
     {
       "ticker": "MLM",
@@ -1208,9 +1208,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 500.8399963378906,
-      "return_pct": 1.47,
-      "days": 21,
+      "current_price": 501.6499938964844,
+      "return_pct": 1.63,
+      "days": 22,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 490.7699890136719,
@@ -1218,8 +1218,8 @@
       "fill_date": "2026-09-29",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.12,
-      "excess_pct": 1.59
+      "bench_return_pct": 0.17,
+      "excess_pct": 1.47
     },
     {
       "ticker": "TXT",
@@ -1231,9 +1231,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 75.93000030517578,
-      "return_pct": -1.71,
-      "days": 21,
+      "current_price": 76.19999694824219,
+      "return_pct": -1.36,
+      "days": 22,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 77.37000274658203,
@@ -1241,8 +1241,8 @@
       "fill_date": "2026-09-29",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.12,
-      "excess_pct": -1.59
+      "bench_return_pct": 0.17,
+      "excess_pct": -1.53
     },
     {
       "ticker": "EXE",
@@ -1254,9 +1254,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 93.41000366210938,
-      "return_pct": 9.35,
-      "days": 18,
+      "current_price": 92.91999816894531,
+      "return_pct": 8.78,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 85.95999908447266,
@@ -1264,8 +1264,8 @@
       "fill_date": "2026-10-02",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.46,
-      "excess_pct": 9.81
+      "bench_return_pct": -0.18,
+      "excess_pct": 8.96
     },
     {
       "ticker": "VRSK",
@@ -1277,9 +1277,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 190.89999389648438,
-      "return_pct": 13.37,
-      "days": 18,
+      "current_price": 189.2100067138672,
+      "return_pct": 12.37,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 168.3800048828125,
@@ -1287,8 +1287,8 @@
       "fill_date": "2026-10-02",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.46,
-      "excess_pct": 13.83
+      "bench_return_pct": -0.18,
+      "excess_pct": 12.55
     },
     {
       "ticker": "EQT",
@@ -1300,9 +1300,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 54.29999923706055,
-      "return_pct": 8.86,
-      "days": 18,
+      "current_price": 54.41999816894531,
+      "return_pct": 9.1,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 50.09000015258789,
@@ -1310,8 +1310,8 @@
       "fill_date": "2026-10-02",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.46,
-      "excess_pct": 9.32
+      "bench_return_pct": -0.18,
+      "excess_pct": 9.28
     },
     {
       "ticker": "FSLR",
@@ -1323,9 +1323,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 172.63999938964844,
-      "return_pct": -1.24,
-      "days": 15,
+      "current_price": 171.8000030517578,
+      "return_pct": -1.72,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 174.61000061035156,
@@ -1333,8 +1333,8 @@
       "fill_date": "2026-10-05",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.52,
-      "excess_pct": -0.72
+      "bench_return_pct": -0.24,
+      "excess_pct": -1.48
     },
     {
       "ticker": "PCG",
@@ -1346,9 +1346,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 13.09000015258789,
-      "return_pct": 6.34,
-      "days": 15,
+      "current_price": 13.130000114440918,
+      "return_pct": 6.66,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 12.319999694824219,
@@ -1356,8 +1356,8 @@
       "fill_date": "2026-10-05",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.52,
-      "excess_pct": 6.86
+      "bench_return_pct": -0.24,
+      "excess_pct": 6.9
     },
     {
       "ticker": "CMI",
@@ -1369,9 +1369,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 531.3300170898438,
-      "return_pct": 1.13,
-      "days": 15,
+      "current_price": 522.1300048828125,
+      "return_pct": -0.62,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 528.3200073242188,
@@ -1379,8 +1379,8 @@
       "fill_date": "2026-10-05",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.52,
-      "excess_pct": 1.65
+      "bench_return_pct": -0.24,
+      "excess_pct": -0.39
     },
     {
       "ticker": "HONA",
@@ -1392,9 +1392,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 168.08999633789062,
-      "return_pct": 9.23,
-      "days": 15,
+      "current_price": 162.49000549316406,
+      "return_pct": 5.6,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 154.6300048828125,
@@ -1402,8 +1402,8 @@
       "fill_date": "2026-10-05",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.52,
-      "excess_pct": 9.75
+      "bench_return_pct": -0.24,
+      "excess_pct": 5.83
     },
     {
       "ticker": "XYZ",
@@ -1415,9 +1415,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 77.88999938964844,
-      "return_pct": 5.0,
-      "days": 15,
+      "current_price": 77.5,
+      "return_pct": 4.48,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 74.33000183105469,
@@ -1425,8 +1425,8 @@
       "fill_date": "2026-10-05",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.52,
-      "excess_pct": 5.52
+      "bench_return_pct": -0.24,
+      "excess_pct": 4.71
     },
     {
       "ticker": "6902.T",
@@ -1438,9 +1438,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1869.5,
-      "return_pct": 0.73,
-      "days": 14,
+      "current_price": 1872.0,
+      "return_pct": 0.86,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1842.0,
@@ -1448,8 +1448,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -2.31,
-      "excess_pct": 3.04
+      "bench_return_pct": -3.52,
+      "excess_pct": 4.38
     },
     {
       "ticker": "NRG",
@@ -1461,9 +1461,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 103.75,
-      "return_pct": 2.72,
-      "days": 14,
+      "current_price": 99.37999725341797,
+      "return_pct": -1.6,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 96.80000305175781,
@@ -1471,8 +1471,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 4.2
+      "bench_return_pct": -1.2,
+      "excess_pct": -0.41
     },
     {
       "ticker": "EFX",
@@ -1484,9 +1484,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 161.25,
-      "return_pct": 12.53,
-      "days": 14,
+      "current_price": 158.57000732421875,
+      "return_pct": 10.66,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 142.60000610351562,
@@ -1494,8 +1494,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 14.0
+      "bench_return_pct": -1.2,
+      "excess_pct": 11.85
     },
     {
       "ticker": "CCI",
@@ -1507,9 +1507,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 82.26000213623047,
-      "return_pct": 21.2,
-      "days": 14,
+      "current_price": 81.05999755859375,
+      "return_pct": 19.43,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 67.58000183105469,
@@ -1517,8 +1517,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 22.68
+      "bench_return_pct": -1.2,
+      "excess_pct": 20.63
     },
     {
       "ticker": "SBAC",
@@ -1530,9 +1530,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 187.05999755859375,
-      "return_pct": 15.11,
-      "days": 14,
+      "current_price": 183.08999633789062,
+      "return_pct": 12.67,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 161.82000732421875,
@@ -1540,8 +1540,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 16.59
+      "bench_return_pct": -1.2,
+      "excess_pct": 13.87
     },
     {
       "ticker": "ZTS",
@@ -1553,9 +1553,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 79.37999725341797,
-      "return_pct": 10.43,
-      "days": 14,
+      "current_price": 79.58999633789062,
+      "return_pct": 10.73,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 71.41000366210938,
@@ -1563,8 +1563,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 11.91
+      "bench_return_pct": -1.2,
+      "excess_pct": 11.92
     },
     {
       "ticker": "SPGI",
@@ -1576,9 +1576,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 429.6400146484375,
-      "return_pct": 9.36,
-      "days": 14,
+      "current_price": 427.8299865722656,
+      "return_pct": 8.9,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 390.9200134277344,
@@ -1586,8 +1586,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 10.84
+      "bench_return_pct": -1.2,
+      "excess_pct": 10.1
     },
     {
       "ticker": "COF",
@@ -1599,9 +1599,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 201.74000549316406,
-      "return_pct": 2.81,
-      "days": 14,
+      "current_price": 199.8300018310547,
+      "return_pct": 1.84,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 195.13999938964844,
@@ -1609,8 +1609,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 4.29
+      "bench_return_pct": -1.2,
+      "excess_pct": 3.04
     },
     {
       "ticker": "OTIS",
@@ -1622,9 +1622,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 71.33000183105469,
-      "return_pct": 7.28,
-      "days": 14,
+      "current_price": 71.04000091552734,
+      "return_pct": 6.84,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 65.87999725341797,
@@ -1632,8 +1632,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 8.76
+      "bench_return_pct": -1.2,
+      "excess_pct": 8.04
     },
     {
       "ticker": "JKHY",
@@ -1645,9 +1645,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 153.19000244140625,
-      "return_pct": 6.22,
-      "days": 14,
+      "current_price": 152.7899932861328,
+      "return_pct": 5.94,
+      "days": 15,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 145.1199951171875,
@@ -1655,8 +1655,8 @@
       "fill_date": "2026-10-06",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.48,
-      "excess_pct": 7.7
+      "bench_return_pct": -1.2,
+      "excess_pct": 7.14
     },
     {
       "ticker": "2502.T",
@@ -1668,9 +1668,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1657.5,
-      "return_pct": 3.79,
-      "days": 13,
+      "current_price": 1675.5,
+      "return_pct": 4.92,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 1592.5,
@@ -1678,8 +1678,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -2.71,
-      "excess_pct": 6.5
+      "bench_return_pct": -3.92,
+      "excess_pct": 8.83
     },
     {
       "ticker": "4578.T",
@@ -1691,9 +1691,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 12320.0,
-      "return_pct": 6.57,
-      "days": 13,
+      "current_price": 12360.0,
+      "return_pct": 6.92,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 11455.0,
@@ -1701,8 +1701,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -2.71,
-      "excess_pct": 9.29
+      "bench_return_pct": -3.92,
+      "excess_pct": 10.84
     },
     {
       "ticker": "AXON",
@@ -1714,9 +1714,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 390.2900085449219,
-      "return_pct": -5.58,
-      "days": 13,
+      "current_price": 383.0899963378906,
+      "return_pct": -7.33,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 418.6199951171875,
@@ -1724,8 +1724,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": -4.27
+      "bench_return_pct": -1.03,
+      "excess_pct": -6.29
     },
     {
       "ticker": "CBRE",
@@ -1737,9 +1737,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 133.0800018310547,
-      "return_pct": 3.07,
-      "days": 13,
+      "current_price": 130.77000427246094,
+      "return_pct": 1.29,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 130.66000366210938,
@@ -1747,8 +1747,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 4.39
+      "bench_return_pct": -1.03,
+      "excess_pct": 2.32
     },
     {
       "ticker": "VICI",
@@ -1760,9 +1760,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 23.600000381469727,
-      "return_pct": 3.78,
-      "days": 13,
+      "current_price": 23.100000381469727,
+      "return_pct": 1.58,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.729999542236328,
@@ -1770,8 +1770,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 5.09
+      "bench_return_pct": -1.03,
+      "excess_pct": 2.61
     },
     {
       "ticker": "LOW",
@@ -1783,9 +1783,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 197.3800048828125,
-      "return_pct": 7.86,
-      "days": 13,
+      "current_price": 195.9199981689453,
+      "return_pct": 7.07,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 183.6699981689453,
@@ -1793,8 +1793,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 9.18
+      "bench_return_pct": -1.03,
+      "excess_pct": 8.1
     },
     {
       "ticker": "NOC",
@@ -1806,9 +1806,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 519.8599853515625,
-      "return_pct": 7.28,
-      "days": 13,
+      "current_price": 510.6499938964844,
+      "return_pct": 5.38,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 483.1099853515625,
@@ -1816,8 +1816,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 8.59
+      "bench_return_pct": -1.03,
+      "excess_pct": 6.41
     },
     {
       "ticker": "HD",
@@ -1829,9 +1829,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 309.6300048828125,
-      "return_pct": 8.64,
-      "days": 13,
+      "current_price": 309.8800048828125,
+      "return_pct": 8.73,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 286.69000244140625,
@@ -1839,8 +1839,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 9.95
+      "bench_return_pct": -1.03,
+      "excess_pct": 9.76
     },
     {
       "ticker": "AMT",
@@ -1852,9 +1852,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 185.27000427246094,
-      "return_pct": 11.99,
-      "days": 13,
+      "current_price": 183.02999877929688,
+      "return_pct": 10.63,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 164.77999877929688,
@@ -1862,8 +1862,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": 13.3
+      "bench_return_pct": -1.03,
+      "excess_pct": 11.66
     },
     {
       "ticker": "APO",
@@ -1875,9 +1875,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 110.77999877929688,
-      "return_pct": -3.17,
-      "days": 13,
+      "current_price": 110.94999694824219,
+      "return_pct": -3.02,
+      "days": 14,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 115.94999694824219,
@@ -1885,8 +1885,8 @@
       "fill_date": "2026-10-07",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.31,
-      "excess_pct": -1.86
+      "bench_return_pct": -1.03,
+      "excess_pct": -1.99
     },
     {
       "ticker": "APP",
@@ -1898,9 +1898,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 266.1300048828125,
-      "return_pct": -3.6,
-      "days": 12,
+      "current_price": 269.1199951171875,
+      "return_pct": -2.52,
+      "days": 13,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 281.2900085449219,
@@ -1908,8 +1908,8 @@
       "fill_date": "2026-10-08",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.13,
-      "excess_pct": -2.48
+      "bench_return_pct": -0.85,
+      "excess_pct": -1.67
     },
     {
       "ticker": "9022.T",
@@ -1921,9 +1921,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 3808.0,
-      "return_pct": 3.06,
-      "days": 11,
+      "current_price": 3855.0,
+      "return_pct": 4.33,
+      "days": 12,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3632.0,
@@ -1931,8 +1931,8 @@
       "fill_date": "2026-10-09",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.44,
-      "excess_pct": 3.5
+      "bench_return_pct": -1.68,
+      "excess_pct": 6.01
     },
     {
       "ticker": "1925.T",
@@ -1944,9 +1944,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 2253.0,
-      "return_pct": 4.06,
-      "days": 11,
+      "current_price": 2280.5,
+      "return_pct": 5.33,
+      "days": 12,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2166.0,
@@ -1954,8 +1954,8 @@
       "fill_date": "2026-10-09",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.44,
-      "excess_pct": 4.51
+      "bench_return_pct": -1.68,
+      "excess_pct": 7.01
     },
     {
       "ticker": "8801.T",
@@ -1967,9 +1967,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1525.5,
-      "return_pct": 5.53,
-      "days": 11,
+      "current_price": 1533.0,
+      "return_pct": 6.05,
+      "days": 12,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1425.0,
@@ -1977,8 +1977,8 @@
       "fill_date": "2026-10-09",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.44,
-      "excess_pct": 5.98
+      "bench_return_pct": -1.68,
+      "excess_pct": 7.73
     },
     {
       "ticker": "HII",
@@ -1990,9 +1990,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 272.0,
-      "return_pct": 2.4,
-      "days": 11,
+      "current_price": 269.6400146484375,
+      "return_pct": 1.51,
+      "days": 12,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 265.0199890136719,
@@ -2000,8 +2000,8 @@
       "fill_date": "2026-10-09",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.23,
-      "excess_pct": 3.63
+      "bench_return_pct": -0.95,
+      "excess_pct": 2.46
     },
     {
       "ticker": "CMG",
@@ -2013,9 +2013,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 29.889999389648438,
-      "return_pct": -8.06,
-      "days": 11,
+      "current_price": 29.850000381469727,
+      "return_pct": -8.18,
+      "days": 12,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 32.68000030517578,
@@ -2023,8 +2023,8 @@
       "fill_date": "2026-10-09",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.23,
-      "excess_pct": -6.83
+      "bench_return_pct": -0.95,
+      "excess_pct": -7.23
     },
     {
       "ticker": "2502.T",
@@ -2036,9 +2036,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 1657.5,
-      "return_pct": 4.51,
-      "days": 10,
+      "current_price": 1675.5,
+      "return_pct": 5.64,
+      "days": 11,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 1580.0,
@@ -2046,8 +2046,8 @@
       "fill_date": "2026-10-13",
       "basis": "next_open",
       "bench_ticker": "1306.T",
-      "bench_return_pct": -0.88,
-      "excess_pct": 5.39
+      "bench_return_pct": -2.11,
+      "excess_pct": 7.75
     },
     {
       "ticker": "BSX",
@@ -2059,9 +2059,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 44.38999938964844,
-      "return_pct": 2.99,
-      "days": 10,
+      "current_price": 45.04999923706055,
+      "return_pct": 4.52,
+      "days": 11,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 42.72999954223633,
@@ -2069,8 +2069,8 @@
       "fill_date": "2026-10-12",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.57,
-      "excess_pct": 4.56
+      "bench_return_pct": -1.29,
+      "excess_pct": 5.81
     },
     {
       "ticker": "KKR",
@@ -2082,9 +2082,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 86.20999908447266,
-      "return_pct": -4.87,
-      "days": 10,
+      "current_price": 87.0,
+      "return_pct": -3.99,
+      "days": 11,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 90.94999694824219,
@@ -2092,8 +2092,8 @@
       "fill_date": "2026-10-12",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.57,
-      "excess_pct": -3.3
+      "bench_return_pct": -1.29,
+      "excess_pct": -2.71
     },
     {
       "ticker": "LVS",
@@ -2107,7 +2107,7 @@
       "exit_reason": null,
       "current_price": 38.0099983215332,
       "return_pct": 4.14,
-      "days": 7,
+      "days": 8,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 36.150001525878906,
@@ -2115,8 +2115,8 @@
       "fill_date": "2026-10-13",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.34,
-      "excess_pct": 5.48
+      "bench_return_pct": -1.06,
+      "excess_pct": 5.2
     },
     {
       "ticker": "WYNN",
@@ -2128,9 +2128,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 75.5999984741211,
-      "return_pct": 0.56,
-      "days": 6,
+      "current_price": 75.9800033569336,
+      "return_pct": 1.06,
+      "days": 7,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 75.69999694824219,
@@ -2138,8 +2138,8 @@
       "fill_date": "2026-10-14",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -1.07,
-      "excess_pct": 1.63
+      "bench_return_pct": -0.79,
+      "excess_pct": 1.86
     },
     {
       "ticker": "SW",
@@ -2151,9 +2151,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 41.15999984741211,
-      "return_pct": 0.81,
-      "days": 6,
+      "current_price": 40.84000015258789,
+      "return_pct": 0.02,
+      "days": 7,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 41.45000076293945,
@@ -2174,9 +2174,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 77.08000183105469,
-      "return_pct": -1.04,
-      "days": 4,
+      "current_price": 75.87000274658203,
+      "return_pct": -2.59,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 77.69000244140625,
@@ -2184,8 +2184,8 @@
       "fill_date": "2026-10-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.7,
-      "excess_pct": -0.34
+      "bench_return_pct": -0.42,
+      "excess_pct": -2.17
     },
     {
       "ticker": "BKNG",
@@ -2197,9 +2197,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 163.4499969482422,
-      "return_pct": -2.25,
-      "days": 4,
+      "current_price": 162.60000610351562,
+      "return_pct": -2.76,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 165.8000030517578,
@@ -2207,8 +2207,8 @@
       "fill_date": "2026-10-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.7,
-      "excess_pct": -1.54
+      "bench_return_pct": -0.42,
+      "excess_pct": -2.33
     },
     {
       "ticker": "TKO",
@@ -2220,9 +2220,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 175.5,
-      "return_pct": -0.84,
-      "days": 4,
+      "current_price": 174.24000549316406,
+      "return_pct": -1.55,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 176.02000427246094,
@@ -2230,8 +2230,8 @@
       "fill_date": "2026-10-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.7,
-      "excess_pct": -0.13
+      "bench_return_pct": -0.42,
+      "excess_pct": -1.13
     },
     {
       "ticker": "WY",
@@ -2243,9 +2243,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 19.610000610351562,
-      "return_pct": 0.62,
-      "days": 3,
+      "current_price": 19.200000762939453,
+      "return_pct": -1.49,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 19.3799991607666,
@@ -2253,8 +2253,8 @@
       "fill_date": "2026-10-16",
       "basis": "next_open",
       "bench_ticker": "^GSPC",
-      "bench_return_pct": -0.7,
-      "excess_pct": 1.32
+      "bench_return_pct": -0.42,
+      "excess_pct": -1.07
     },
     {
       "ticker": "HWM",
@@ -2262,19 +2262,19 @@
       "entry_rule": "analyst_gap_us",
       "currency": "USD",
       "entry_date": "2026-10-19",
-      "entry_price": 220.9600067138672,
+      "entry_price": 220.97000122070312,
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 220.9600067138672,
-      "return_pct": 0.0,
-      "days": 1,
+      "current_price": 220.02999877929688,
+      "return_pct": -0.43,
+      "days": 2,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 220.9600067138672,
       "timing_mode": "confirm",
-      "fill_date": null,
-      "basis": "signal_close",
+      "fill_date": "2026-10-19",
+      "basis": "next_open",
       "bench_ticker": null,
       "bench_return_pct": null,
       "excess_pct": null
@@ -2285,22 +2285,22 @@
       "entry_rule": "value_screen",
       "currency": "JPY",
       "entry_date": "2026-10-20",
-      "entry_price": 2872.0,
+      "entry_price": 2860.0,
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 2872.0,
-      "return_pct": 0.0,
-      "days": 0,
+      "current_price": 2843.5,
+      "return_pct": -0.58,
+      "days": 1,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2872.0,
       "timing_mode": "confirm",
-      "fill_date": null,
-      "basis": "signal_close",
-      "bench_ticker": null,
-      "bench_return_pct": null,
-      "excess_pct": null
+      "fill_date": "2026-10-20",
+      "basis": "next_open",
+      "bench_ticker": "1306.T",
+      "bench_return_pct": -1.03,
+      "excess_pct": 0.46
     }
   ]
 }
