@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T12:06:14+09:00",
+  "generated_at": "2026-11-13T12:27:46+09:00",
   "run_date": "2026-11-13",
   "data_dates": {
     "JP": [
@@ -43,7 +43,8 @@
         "target_low_price",
         "num_analyst_opinions"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "1489.T"
     },
     {
       "ticker": "1928.T",
@@ -61,7 +62,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "1928.T"
     },
     {
       "ticker": "2163.T",
@@ -84,7 +86,8 @@
         "target_low_price",
         "num_analyst_opinions"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "2163.T"
     },
     {
       "ticker": "2502.T",
@@ -102,7 +105,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "2502.T"
     },
     {
       "ticker": "2914.T",
@@ -120,7 +124,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "2914.T"
     },
     {
       "ticker": "3231.T",
@@ -138,7 +143,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "3231.T"
     },
     {
       "ticker": "3309.T",
@@ -156,7 +162,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "3309.T"
     },
     {
       "ticker": "4183.T",
@@ -174,7 +181,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "4183.T"
     },
     {
       "ticker": "4502.T",
@@ -198,7 +206,8 @@
           "field": "payout_ratio",
           "value": 9.0502
         }
-      ]
+      ],
+      "chart_ric": "4502.T"
     },
     {
       "ticker": "4568.T",
@@ -216,7 +225,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "4568.T"
     },
     {
       "ticker": "5105.T",
@@ -234,7 +244,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "5105.T"
     },
     {
       "ticker": "5411.T",
@@ -252,7 +263,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "5411.T"
     },
     {
       "ticker": "7164.T",
@@ -270,7 +282,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "7164.T"
     },
     {
       "ticker": "7203.T",
@@ -288,7 +301,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "7203.T"
     },
     {
       "ticker": "8473.T",
@@ -306,7 +320,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "8473.T"
     },
     {
       "ticker": "8593.T",
@@ -324,7 +339,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "8593.T"
     },
     {
       "ticker": "8698.T",
@@ -342,7 +358,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "8698.T"
     },
     {
       "ticker": "8725.T",
@@ -360,7 +377,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "8725.T"
     },
     {
       "ticker": "8766.T",
@@ -378,7 +396,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "8766.T"
     },
     {
       "ticker": "9432.T",
@@ -396,7 +415,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "9432.T"
     },
     {
       "ticker": "9434.T",
@@ -414,7 +434,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "9434.T"
     },
     {
       "ticker": "VZ",
@@ -432,7 +453,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "VZ.N"
     },
     {
       "ticker": "AVGO",
@@ -450,7 +472,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "AVGO.O"
     },
     {
       "ticker": "APTV",
@@ -470,7 +493,8 @@
       "missing": [
         "dividend_rate"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "APTV.N"
     },
     {
       "ticker": "LYB",
@@ -488,7 +512,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "LYB.N"
     },
     {
       "ticker": "FIVN",
@@ -508,7 +533,8 @@
       "missing": [
         "dividend_rate"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "FIVN.O"
     },
     {
       "ticker": "UVV",
@@ -528,7 +554,8 @@
       "missing": [
         "per"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "UVV.N"
     },
     {
       "ticker": "WIMI",
@@ -558,7 +585,8 @@
           "field": "pbr",
           "value": 0.02906858
         }
-      ]
+      ],
+      "chart_ric": "WIMI.O"
     },
     {
       "ticker": "LIDR",
@@ -580,7 +608,8 @@
         "dividend_rate",
         "payout_ratio"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "LIDR.O"
     },
     {
       "ticker": "MO",
@@ -604,7 +633,8 @@
           "field": "pbr",
           "value": -58.279728
         }
-      ]
+      ],
+      "chart_ric": "MO.N"
     },
     {
       "ticker": "SMR",
@@ -626,7 +656,8 @@
         "dividend_rate",
         "payout_ratio"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "SMR.N"
     },
     {
       "ticker": "PFE",
@@ -644,7 +675,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "PFE.N"
     },
     {
       "ticker": "OKLO",
@@ -666,7 +698,8 @@
         "dividend_rate",
         "payout_ratio"
       ],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "OKLO.N"
     },
     {
       "ticker": "T",
@@ -684,7 +717,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "T.N"
     },
     {
       "ticker": "CVX",
@@ -702,7 +736,8 @@
       "as_of": "2026-11-12",
       "stale_days": 0,
       "missing": [],
-      "anomalies": []
+      "anomalies": [],
+      "chart_ric": "CVX.N"
     }
   ]
 }

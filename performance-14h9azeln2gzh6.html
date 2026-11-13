@@ -127,6 +127,9 @@
     th,td{padding:9px 10px}
   }
   a{color:var(--buy)}
+  .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
+             border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
+  .chartlink:hover{background:var(--buy-bg)}
 
   table{min-width:940px}
   .summary{min-width:860px}
@@ -271,6 +274,19 @@ function siblingPage(kind) {
   return file.replace(/^(candidates|performance)-/, kind + '-');
 }
 
+// 楽天証券の銘柄ページ（株価・チャート）。chart_ric は公開時に付く。
+// 日本株は古い JSON でもコードから作れる。米国株は取引所が分からないと作れないのでリンクなし
+const RAKUTEN_QUOTE = 'https://www.rakuten-sec.co.jp/web/market/search/';
+function chartUrl(x) {
+  const ric = x.chart_ric || (/\.T$/.test(x.ticker || '') ? x.ticker : null);
+  if (!ric) return null;
+  return RAKUTEN_QUOTE + (/\.T$/.test(ric) ? 'quote.html' : 'us_search/quote.html') + '?ric=' + encodeURIComponent(ric);
+}
+function chartLink(x) {
+  const u = chartUrl(x);
+  return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
+}
+
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
 let DATA = null, query = '', sortKey = 'entry_date', sortAsc = false;
@@ -367,7 +383,7 @@ const COLS = [
 function row(t) {
   const closed = t.status === '決済済み';
   return `<tr>
-    <td><div class="stock"><span class="nm">${esc(t.name || t.ticker)}</span><span class="cd">${esc(t.ticker)}${
+    <td><div class="stock"><span class="nm">${esc(t.name || t.ticker)}</span><span class="cd">${esc(t.ticker)}${chartLink(t)}${
       t.held_at_entry ? ' <span class="tag held" title="シグナルの時点で実際に保有していた">保有中</span>' : ''}</span></div></td>
     <td class="dim">${esc(RULE_SHORT[t.entry_rule] || t.entry_rule)}${t.timing_mode ? ` <span class="tag">${esc(modeLabel(t.timing_mode))}</span>` : ''}</td>
     <td><span class="badge ${closed ? 'b-ok' : 'b-wait'}">${esc(t.status)}</span></td>

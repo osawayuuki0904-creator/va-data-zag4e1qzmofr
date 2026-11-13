@@ -127,6 +127,9 @@
     th,td{padding:9px 10px}
   }
   a{color:var(--buy)}
+  .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
+             border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
+  .chartlink:hover{background:var(--buy-bg)}
 
   /* ---- 今日のシグナル */
   .signals{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
@@ -316,6 +319,19 @@ function siblingPage(kind) {
   return file.replace(/^(candidates|performance)-/, kind + '-');
 }
 
+// 楽天証券の銘柄ページ（株価・チャート）。chart_ric は公開時に付く。
+// 日本株は古い JSON でもコードから作れる。米国株は取引所が分からないと作れないのでリンクなし
+const RAKUTEN_QUOTE = 'https://www.rakuten-sec.co.jp/web/market/search/';
+function chartUrl(x) {
+  const ric = x.chart_ric || (/\.T$/.test(x.ticker || '') ? x.ticker : null);
+  if (!ric) return null;
+  return RAKUTEN_QUOTE + (/\.T$/.test(ric) ? 'quote.html' : 'us_search/quote.html') + '?ric=' + encodeURIComponent(ric);
+}
+function chartLink(x) {
+  const u = chartUrl(x);
+  return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
+}
+
 // この HTML は器のみ。中身は読み込み時に JSON を取得して描画する。
 // 保有は latest.json（?src= で差し替え可）。購入候補・ペーパー成績はナビのリンク先から導く。
 const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
@@ -330,8 +346,8 @@ const show = { ALERT: true, UNKNOWN: true, CLEAR: true };
 const linkOf = page => { const a = document.querySelector(`#nav a[data-page="${page}"]`); return a ? a.getAttribute('href') : null; };
 const jsonOf = page => { const h = linkOf(page); return h ? h.replace(/\.html$/, '.json') : null; };
 
-const nameCode = x => x.name && x.name !== x.ticker
-  ? `${esc(x.name)}<span class="cd">${esc(x.ticker)}</span>` : esc(x.ticker);
+const nameCode = x => (x.name && x.name !== x.ticker
+  ? `${esc(x.name)}<span class="cd">${esc(x.ticker)}</span>` : esc(x.ticker)) + chartLink(x);
 const RECENT_MAX = 8;
 
 // ---------------------------------------------------------------- 買いシグナル
@@ -394,7 +410,7 @@ function recentSignals(d) {
   return `<h3>この1週間に成立した買いシグナル（成立後の騰落率）</h3>
     <div class="scroll"><table class="recent"><tbody>${rows.slice(0, RECENT_MAX).map(({ t, modes }) => `<tr>
       <td class="dim">${esc(mmdd(t.entry_date))}</td>
-      <td><b>${esc(t.name || t.ticker)}</b> <span class="dim">${t.name && t.name !== t.ticker ? esc(t.ticker) : ''}</span></td>
+      <td><b>${esc(t.name || t.ticker)}</b> <span class="dim">${t.name && t.name !== t.ticker ? esc(t.ticker) : ''}</span>${chartLink(t)}</td>
       <td>${modes.filter(Boolean).map(m => `<span class="tag">${esc(modeLabel(m))}</span>`).join(' ')}</td>
       <td class="num">${pct(t.return_pct)}</td></tr>`).join('')}
     </tbody></table></div>
@@ -501,7 +517,7 @@ const COLS = [
 function holdRow(h) {
   const st = STATUS[h.status] || STATUS.UNKNOWN;
   return `<tr class="${h.status === 'ALERT' ? 'sell' : ''}">
-    <td><div class="stock"><span class="nm">${esc(h.name)}</span><span class="cd">${esc(h.ticker)}</span></div></td>
+    <td><div class="stock"><span class="nm">${esc(h.name)}</span><span class="cd">${esc(h.ticker)}${chartLink(h)}</span></div></td>
     <td class="dim">${esc(MARKET_LABEL[h.market] || h.market)}</td>
     <td class="num">${price(h.price, h.currency)}</td>
     <td class="num">${pct(h.change_pct)}</td>
