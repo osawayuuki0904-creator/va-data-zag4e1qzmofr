@@ -4,100 +4,146 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>ペーパートレード成績</title>
+<title>ペーパートレード成績｜バリュー株ボード</title>
 <style>
+  /* 3画面で共通の見た目。公開時に publish.render_page が各 HTML に埋め込む。
+     色の意味: 藍 = 買い / 朱 = 売り・下落 / 緑 = 上昇 / 琥珀 = 待機・注意 */
   :root{
-    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc; --hover:#f3f3ef;
-    --up:#3f7a52; --up-bg:#eef5f0; --down:#b4341f; --down-bg:#fdeceb;
-    --open:#8a6d1f; --open-bg:#fbf3e0;
+    --bg:#f3f5f8; --panel:#fff; --ink:#16202e; --muted:#5b6878; --line:#dbe1e9; --hover:#f0f3f7;
+    --buy:#1d4e89; --buy-bg:#e8eff8; --sell:#b3361f; --sell-bg:#fbeae6;
+    --up:#1b7446; --up-bg:#e6f3ec; --down:#c0392b;
+    --wait:#85600c; --wait-bg:#fbf1d9; --off:#5b6878; --off-bg:#eceff3;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a; --hover:#26262b;
-      --up:#7fc296; --up-bg:#1b2a21; --down:#ff8a72; --down-bg:#3a1e19;
-      --open:#e0be6a; --open-bg:#2e2718;
+      --bg:#12161c; --panel:#1a2029; --ink:#e8ecf1; --muted:#98a4b3; --line:#2c3542; --hover:#212935;
+      --buy:#8ab4ea; --buy-bg:#1b2a3f; --sell:#ff8f78; --sell-bg:#3b1e19;
+      --up:#79c79a; --up-bg:#182c22; --down:#ff8f78;
+      --wait:#e2bd62; --wait-bg:#2f2816; --off:#98a4b3; --off-bg:#252c37;
     }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
-       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1240px;margin:0 auto;padding-block:20px 64px;padding-left:16px;padding-right:16px}
-  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;overflow-x:auto}
-  .tabs a{color:var(--muted);text-decoration:none;padding:8px 14px;font-size:13.5px;white-space:nowrap;
-          border-bottom:2px solid transparent;margin-bottom:-1px}
+       font:15px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",Meiryo,sans-serif;
+       -webkit-text-size-adjust:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px 72px}
+
+  /* ---- 上部のナビ */
+  .top{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .top-in{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:20px}
+  .brand{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap;padding:12px 0}
+  .tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs a{color:var(--muted);text-decoration:none;padding:13px 14px 11px;font-size:14.5px;white-space:nowrap;
+          border-bottom:3px solid transparent}
   .tabs a:hover{color:var(--ink)}
-  .tabs a[aria-current]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
-  h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
-  .meta{color:var(--muted);font-size:12.5px;margin-bottom:14px}
+  .tabs a[aria-current]{color:var(--buy);font-weight:700;border-bottom-color:var(--buy)}
+  a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,th:focus-visible{
+    outline:2px solid var(--buy);outline-offset:2px}
+
+  h1{font-size:22px;margin:22px 0 2px;letter-spacing:.02em}
+  .meta{color:var(--muted);font-size:13px;margin-bottom:16px}
   .meta b{color:var(--ink);font-weight:600}
+
+  /* ---- 絞り込み */
   .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
-  .toolbar .sep{width:1px;height:22px;background:var(--line)}
+  .toolbar .sep{width:1px;height:24px;background:var(--line)}
   .chip{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
-        border-radius:999px;padding:5px 13px;font-size:12.5px;display:inline-flex;gap:7px;
-        align-items:center;cursor:pointer}
+        border-radius:999px;padding:6px 14px;font-size:13.5px;display:inline-flex;gap:7px;
+        align-items:center;cursor:pointer;min-height:36px}
   .chip b{font-size:15px}
   .chip[aria-pressed="false"]{opacity:.45}
-  .chip.closed b{color:var(--up)} .chip.open b{color:var(--open)}
-  .search{font:inherit;font-size:13px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
-          border-radius:8px;padding:6px 11px;min-width:180px;margin-left:auto}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         overflow:hidden;margin-bottom:18px}
-  .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
-            color:var(--muted);font-weight:600;letter-spacing:.04em;display:flex;gap:8px;align-items:center}
-  .panel>h2 .cnt{font-size:12px;color:var(--ink);background:var(--bg);border-radius:999px;padding:0 8px}
-  /* 広い画面では表が収まるので内側スクロールを作らない（見出しの固定はページのスクロールに効く）。
-     狭い画面では横スクロールにし、先頭列を固定する */
-  .scroll{overflow-x:auto}
-  @media (min-width:960px){ .scroll{overflow:visible} }
-  table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
-  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
-  thead th{position:sticky;top:0;z-index:2;font-size:11.5px;color:var(--muted);font-weight:600;user-select:none}
+  .chip[aria-pressed="true"]{border-color:var(--ink)}
+  .chip.static{cursor:default}
+  .search{font:inherit;font-size:14px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+          border-radius:8px;padding:7px 12px;min-width:200px;margin-left:auto;min-height:36px}
+
+  /* ---- 箱と表 */
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:18px}
+  .panel>h2{font-size:15px;margin:0;padding:12px 16px;border-bottom:1px solid var(--line);
+            font-weight:700;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+  .panel>h2 .cnt{font-size:13px;font-weight:600;color:var(--muted)}
+  .panel>h2 .cond{font-size:12.5px;font-weight:400;color:var(--muted);margin-left:auto}
+  .scroll{overflow-x:auto;border-radius:0 0 10px 10px}
+  table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:tabular-nums}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+  thead th{font-size:12.5px;color:var(--muted);font-weight:600;user-select:none;background:var(--hover)}
   thead th.sortable{cursor:pointer}
   thead th.sortable:hover{color:var(--ink)}
-  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  thead th .arrow{opacity:.3;font-size:9px;margin-left:3px}
   thead th[aria-sort] .arrow{opacity:1;color:var(--ink)}
   th:first-child,td:first-child{position:sticky;left:0;z-index:1}
-  thead th:first-child{z-index:3}
   tbody tr:hover td{background:var(--hover)}
-  tr:last-child td{border-bottom:none}
+  tbody tr:last-child td{border-bottom:none}
   td.num,th.num{text-align:right}
-  .tk{font-weight:600}
-  .nm{white-space:normal;min-width:130px;color:var(--muted)}
-  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
-  .b-closed{background:var(--up-bg);color:var(--up)}
-  .b-open{background:var(--open-bg);color:var(--open)}
-  .pos{color:var(--up)} .neg{color:var(--down)}
-  .held{background:var(--down-bg);color:var(--down);border-radius:5px;padding:1px 7px;
-        font-size:11px;font-weight:600}
-  .tag{display:inline-block;background:var(--open-bg);color:var(--open);border-radius:5px;padding:0 6px;
-       font-size:10.5px;font-weight:600;margin-left:4px;vertical-align:middle}
+  .stock{display:flex;flex-direction:column;line-height:1.35;min-width:130px;max-width:230px}
+  .stock .nm{font-weight:600;white-space:normal}
+  .stock .cd{font-size:12px;color:var(--muted)}
+  .reason{white-space:normal;min-width:240px;max-width:420px;color:var(--muted);font-size:13px;line-height:1.5}
   .dim{color:var(--muted)}
-  .summary{min-width:760px}
-  .summary td.rule{font-weight:600}
-  .summary .few{color:var(--open);font-size:11px;font-weight:600;margin-left:4px}
-  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line);line-height:1.7}
-  .warn{background:var(--open-bg);color:var(--open);border-radius:6px;padding:8px 12px;
-        font-size:12px;margin:12px 15px;line-height:1.6}
-  .empty{padding:18px 15px;color:var(--muted);font-size:13px}
-  .help{margin-bottom:18px;color:var(--muted);font-size:12.5px}
-  .help summary{cursor:pointer;color:var(--ink);font-size:12.5px}
-  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+  .pos{color:var(--up)} .neg{color:var(--down)}
+  .big{font-size:16px;font-weight:700}
+
+  /* ---- ラベル */
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}
+  .b-buy{background:var(--buy);color:#fff}
+  .b-sell{background:var(--sell);color:#fff}
+  .b-wait{background:var(--wait-bg);color:var(--wait)}
+  .b-ok{background:var(--up-bg);color:var(--up)}
+  .b-off{background:var(--off-bg);color:var(--off)}
+  @media (prefers-color-scheme:dark){ .b-buy,.b-sell{color:#10151c} }
+  .tag{display:inline-block;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:0 6px;
+       font-size:11.5px;font-weight:600;line-height:1.7;white-space:nowrap}
+  .tag.held{border-color:var(--sell);color:var(--sell)}
+  .tag.paper{border-color:var(--buy);color:var(--buy)}
+  .tag.warn{border-color:var(--wait);color:var(--wait)}
+
+  .note{color:var(--muted);font-size:13px;padding:12px 16px;border-top:1px solid var(--line);line-height:1.75}
+  .panel>.note:first-child{border-top:none}
+  .callout{background:var(--wait-bg);color:var(--wait);border-radius:8px;padding:10px 14px;font-size:13px;margin:12px 16px;line-height:1.65}
+  .empty{padding:20px 16px;color:var(--muted);font-size:14px;white-space:normal}
+  .stale-banner{background:var(--sell-bg);color:var(--sell);border:1px solid var(--sell);border-radius:10px;
+                padding:12px 16px;margin:16px 0 0;font-size:14px;line-height:1.6}
+  .stale-banner b{display:block;font-size:15px}
+  .err{background:var(--sell-bg);color:var(--sell);border:1px solid var(--sell);border-radius:10px;padding:16px;margin-top:16px}
+  .help{margin:6px 0 18px;color:var(--muted);font-size:13.5px}
+  .help summary{cursor:pointer;color:var(--ink);font-size:14px;padding:6px 0}
+  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;max-width:80ch}
   .help dt{color:var(--ink);font-weight:600}
   .help dd{margin:0}
-  .err{background:var(--down-bg);color:var(--down);border:1px solid var(--down);
-       border-radius:10px;padding:16px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-  @media (max-width:600px){
-    .wrap{padding-block:12px 48px} h1{font-size:17px}
+
+  @media (max-width:640px){
+    body{font-size:14.5px}
+    .top-in{gap:10px;padding:0 12px}
+    .brand{display:none}
+    .tabs a{padding:12px 11px 10px;font-size:14px}
+    .wrap{padding:0 12px 56px}
+    h1{font-size:19px;margin-top:16px}
     .search{min-width:0;width:100%;margin-left:0}
-    .help dl{grid-template-columns:1fr}
+    .help dl{grid-template-columns:1fr;gap:2px 0}
+    .help dd{margin-bottom:8px}
+    .panel>h2 .cond{margin-left:0;width:100%}
+    th,td{padding:9px 10px}
   }
+  a{color:var(--buy)}
+
+  table{min-width:940px}
+  .summary{min-width:860px}
+  .summary td.rule{font-weight:600;white-space:normal;min-width:170px}
+  .summary th,.summary td{padding-left:9px;padding-right:9px}
+  .summary .few{color:var(--wait);font-size:11.5px;font-weight:700;margin-left:4px}
+  .summary th.grp{text-align:center;border-bottom:none}
+  .summary .edge{border-left:1px solid var(--line)}
 </style>
 </head>
 <body>
+<header class="top"><div class="top-in">
+  <div class="brand">バリュー株ボード</div>
+  <nav class="tabs"><a href="index.html">今日のシグナル</a><a href="index.html#holdings">保有銘柄</a><a id="candLink" href="#">購入候補</a><a href="#" aria-current="page">ペーパー成績</a></nav>
+</div></header>
 <div class="wrap">
-  <nav class="tabs"><a href="index.html">保有銘柄</a><a id="candLink" href="#">購入候補</a>
-    <a href="#" aria-current="page">成績</a></nav>
+  <div id="staleBanner"></div>
   <h1>ペーパートレード成績</h1>
   <div class="meta" id="meta">読み込み中…</div>
   <div class="toolbar" id="toolbar"></div>
@@ -105,52 +151,155 @@
   <details class="help">
     <summary>この画面の読み方</summary>
     <dl>
-      <dt>約定</dt><dd>翌営業日の始値で買った想定の価格。シグナルは終値で確定するので、その終値では買えない。「終値」タグが付いた行は約定想定が無く、シグナル終値を基準にしている（実際には買えない値段）</dd>
-      <dt>リターン</dt><dd>約定から決済（保有中は現在値）までの騰落率。配当・手数料・税は含まない。通貨は建値のまま</dd>
-      <dt>超過</dt><dd>リターンから、同じ市場のベンチマーク（JP: TOPIX 連動 ETF 1306.T / US: S&amp;P500）の同期間リターンを引いたもの。上げ相場では何を買っても勝つので、市場に対して勝ったかで見る</dd>
-      <dt>決済済み / 保有中</dt><dd>別集計。混ぜると含み損のまま持ち続けている建玉が消え、勝率だけが良く見える</dd>
-      <dt>試行不足</dt><dd>決済が10件未満のルートには印を付ける。件数が少ないうちの勝率は記録の要約であって、成績の評価ではない</dd>
-      <dt>exit_reason</dt><dd>drawdown: 約定から −30% / target_cut: 目標株価が20%以上下方修正 / target_reached: entry 時点の目標の90%に到達 / time_limit: 365日経過（目標株価は12か月先の予想）</dd>
-      <dt>保有中タグ</dt><dd>entry 判定時点で holdings.csv に載っていたか。実際の保有とは別物で、集計にも影響しない</dd>
+      <dt>ペーパートレード</dt><dd>買いシグナルが成立した銘柄を、実際には買わずに「買った想定」で記録して追いかけているもの</dd>
+      <dt>買値（想定）</dt><dd>シグナルの次の営業日の始値。シグナルは終値で確定するので、その終値では買えない。「終値」の印が付いた行は始値の記録がなく、シグナルの日の終値を使っている（実際には買えない値段）</dd>
+      <dt>リターン</dt><dd>買値から決済（保有中はいまの株価）までの騰落率。配当・手数料・税は含まない。通貨は建値のまま</dd>
+      <dt>市場との差</dt><dd>リターンから、同じ期間の市場全体（日本株: TOPIX 連動 ETF／米国株: S&amp;P500）のリターンを引いたもの。上げ相場では何を買っても勝つので、市場に勝ったかで見る</dd>
+      <dt>決済済み／保有中</dt><dd>別々に集計している。混ぜると、含み損のまま持ち続けている分が隠れて勝率だけが良く見える</dd>
+      <dt>件数不足</dt><dd>決済が10件未満の方式に付く印。件数が少ないうちの勝率は、成績の評価には使えない</dd>
+      <dt>決済の理由</dt><dd>目標到達: 買った時点の目標株価の90%に届いた／損切り: 買値から −30%／目標引き下げ: 目標株価が20%以上下がった／期限: 365日たった</dd>
+      <dt>タイミングの判定</dt><dd id="modeHelp"></dd>
     </dl>
   </details>
 </div>
-
 <script>
+// 3画面で共通の関数と、内部名 → 日本語の対応。公開時に publish.render_page が各 HTML に埋め込む。
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const DASH = '<span class="dim">—</span>';
+const none = v => v === null || v === undefined;
+const n2 = (v, d = 2) => none(v) ? DASH
+  : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
+// 株価。円は小数を出さない（1,581.5 のような端数だけ1桁）、ドルは2桁
+const price = (v, cur) => none(v) ? DASH
+  : (cur === 'JPY'
+      ? esc(Number(v).toLocaleString('ja-JP', { maximumFractionDigits: 1 })) + '<span class="dim">円</span>'
+      : '<span class="dim">$</span>' + esc(Number(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })));
+const pct = (v, d = 1) => none(v) ? DASH
+  : `<span class="${v < 0 ? 'neg' : (v > 0 ? 'pos' : '')}">${esc((v > 0 ? '+' : '') + Number(v).toFixed(d))}%</span>`;
+const ratio = v => none(v) ? DASH : esc((Number(v) * 100).toFixed(0) + '%');
+const mmdd = iso => { const m = /^(\d{4})-(\d\d)-(\d\d)/.exec(iso || ''); return m ? `${+m[2]}/${+m[3]}` : (iso || '—'); };
+const WEEK = ['日', '月', '火', '水', '木', '金', '土'];
+function jpDate(iso) {
+  const m = /^(\d{4})-(\d\d)-(\d\d)/.exec(iso || '');
+  if (!m) return iso || '—';
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  return `${+m[1]}年${+m[2]}月${+m[3]}日（${WEEK[d.getUTCDay()]}）`;
+}
+function jpTime(iso) {
+  const m = /T(\d\d):(\d\d)/.exec(iso || '');
+  return m ? `${+m[1]}:${m[2]}` : '';
+}
+
+const RULE_LABEL = {
+  value_screen: '割安株',
+  analyst_gap_jp: '目標株価との差（日本株）',
+  analyst_gap_us: '目標株価との差（米国株）',
+};
+const RULE_SHORT = { value_screen: '割安株', analyst_gap_jp: '目標株価との差', analyst_gap_us: '目標株価との差' };
+const MODE_LABEL = {
+  double_bottom: 'ダブルボトム',
+  confirm: '反発確認',
+  confirm_near_low: '反発確認（安値近く）',
+  touch: '安値更新',
+};
+const MODE_HELP = {
+  double_bottom: '60日の安値圏に2回タッチし（間に5%以上の戻し）、その間の高値を終値で上抜けた日',
+  confirm: '60日安値を更新したあと、5日移動平均を終値で上抜けた日',
+  confirm_near_low: '反発確認の成立のうち、終値が60日安値から5%以内の日',
+  touch: '60日安値を更新した日',
+};
+const EXIT_LABEL = {
+  target_reached: '目標到達',
+  drawdown: '損切り（−30%）',
+  target_cut: '目標引き下げ',
+  time_limit: '期限（365日）',
+};
+const MARKET_LABEL = { JP: '日本', US: '米国' };
+const ruleLabel = r => RULE_LABEL[r] || r || '—';
+const modeLabel = m => MODE_LABEL[m] || m || '—';
+// 集計キー "analyst_gap_us [confirm]" → "目標株価との差（米国株）｜反発確認"
+function groupLabel(key) {
+  const m = /^(\S+)(?: \[(.+)\])?$/.exec(key || '');
+  if (!m) return esc(key);
+  return esc(ruleLabel(m[1])) + (m[2] ? ` <span class="tag">${esc(modeLabel(m[2]))}</span>` : '');
+}
+
+function ageInDays(iso) {
+  // generated_at はタイムゾーン付き。Date が正しく解釈する
+  const t = Date.parse(iso);
+  return Number.isNaN(t) ? null : (Date.now() - t) / 86400000;
+}
+// 配信が止まってもページ自体は残り、古いデータを平然と表示する。見た瞬間に気づけるようにする
+function staleBanner(d, limit) {
+  const el = document.getElementById('staleBanner');
+  if (!el) return;
+  const age = ageInDays(d.generated_at), lim = limit || 3;
+  if (age === null) {
+    el.innerHTML = `<div class="stale-banner"><b>データの作成時刻が読めません</b>
+      表示されている数値がいつのものか確認できません。</div>`;
+  } else if (age >= lim) {
+    el.innerHTML = `<div class="stale-banner"><b>データが ${Math.floor(age)} 日間更新されていません</b>
+      毎日の自動更新が止まっている可能性があります。
+      以下は ${esc(jpDate(d.generated_at))} 時点の数値で、いまの株価ではありません。</div>`;
+  } else el.innerHTML = '';
+}
+const dataDates = d => Object.entries(d.data_dates || {})
+  .map(([m, v]) => `${esc(MARKET_LABEL[m] || m)} <b>${esc(v.map(mmdd).join('・'))}</b>`).join('　') || '—';
+
+function loadJson(src) {
+  return fetch(src + (src.includes('?') ? '&' : '?') + 't=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error(`${src}: HTTP ${r.status}`); return r.json(); });
+}
+function showError(e, src) {
+  const m = document.getElementById('meta'); if (m) m.textContent = '';
+  document.getElementById('content').innerHTML =
+    `<div class="err"><b>データを読み込めませんでした</b><br>
+     時間をおいて開き直してください。続く場合は毎日の自動更新が失敗している可能性があります。<br>
+     <code>${esc(src || '')}</code> ${esc(e.message)}</div>`;
+}
+function cmp(x, y, asc) {
+  if (none(x)) return 1;
+  if (none(y)) return -1;
+  if (x < y) return asc ? -1 : 1;
+  if (x > y) return asc ? 1 : -1;
+  return 0;
+}
+// ナビ。他画面へのリンクは、ファイル名の slug を入れ替えて作る（ランダム文字列をコードに書かない）
+function siblingPage(kind) {
+  const file = location.pathname.split('/').pop();
+  return file.replace(/^(candidates|performance)-/, kind + '-');
+}
+
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
 let DATA = null, query = '', sortKey = 'entry_date', sortAsc = false;
 const show = { closed: true, open: true };
-const rules = {};   // entry_rule -> 表示するか
-
-const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
-  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const n2 = (v, d = 2) => v === null || v === undefined ? '<span class="dim">—</span>'
-  : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
-const pc = v => v === null || v === undefined ? '<span class="dim">—</span>'
-  : `<span class="${v < 0 ? 'neg' : 'pos'}">${esc((v > 0 ? '+' : '') + Number(v).toFixed(2))}%</span>`;
-const cnt = (a, b) => a === null || a === undefined ? '<span class="dim">—</span>' : `${a} / ${b}`;
-
-// ---------------------------------------------------------------- entry_rule 別の要約
-function summaryRow(rule, v) {
+const groups = {};   // 集計キー（種類 [方式]） -> 表示するか
+const cnt = (a, b) => none(a) ? DASH : `${a} / ${b}`;
+const p2 = v => pct(v, 2);
+// 集計キー。perf.group_key と同じ規則（方式が1種類だけなら種類のみ）
+const SPLIT = () => Object.keys(DATA.by_rule || {}).some(k => k.includes('['));
+const groupKey = t => SPLIT() ? `${t.entry_rule} [${t.timing_mode || '?'}]` : t.entry_rule;
+// ---------------------------------------------------------------- 方式ごとの成績
+function summaryRow(key, v) {
   const c = v.closed || {}, o = v.open || {};
-  const few = c.n && !c.enough_trials ? `<span class="few" title="決済 ${c.min_trials}件未満">試行不足</span>` : '';
+  const few = c.n && !c.enough_trials ? `<span class="few" title="決済 ${c.min_trials}件未満">件数不足</span>` : '';
   const closedCells = c.n
-    ? `<td class="num">${c.n}${few}</td>
-       <td class="num">${c.with_return ? `${c.win_rate}% <span class="dim">(${c.wins}/${c.with_return})</span>` : '—'}</td>
-       <td class="num">${c.with_return ? `${pc(c.mean)} <span class="dim">/</span> ${pc(c.median)}` : '—'}</td>
-       <td class="num">${c.with_excess ? `${pc(c.excess_mean)} <span class="dim">(${c.excess_wins}/${c.with_excess})</span>` : '<span class="dim">—</span>'}</td>
-       <td class="num">${c.days_mean ?? '—'}</td>`
-    : `<td class="num">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+    ? `<td class="num edge">${c.n}${few}</td>
+       <td class="num big">${c.with_return ? `${c.win_rate}%` : '—'} <span class="dim" style="font-size:12.5px;font-weight:400">${c.with_return ? `${c.wins}勝${c.with_return - c.wins}敗` : ''}</span></td>
+       <td class="num">${c.with_return ? p2(c.mean) : '—'}</td>
+       <td class="num">${c.with_excess ? `${p2(c.excess_mean)} <span class="dim">(${c.excess_wins}/${c.with_excess})</span>` : DASH}</td>
+       <td class="num">${none(c.days_mean) ? '—' : c.days_mean + '日'}</td>`
+    : `<td class="num edge">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
   const openCells = o.n
-    ? `<td class="num">${o.n}</td>
-       <td class="num">${o.with_return ? `${pc(o.mean)} <span class="dim">/</span> ${pc(o.median)}` : '—'}</td>
-       <td class="num">${o.with_excess ? `${pc(o.excess_mean)} <span class="dim">(${o.excess_wins}/${o.with_excess})</span>` : '<span class="dim">—</span>'}</td>
-       <td class="num">${o.with_return ? pc(o.worst) : '—'}</td>`
-    : `<td class="num">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
-  return `<tr><td class="rule">${esc(rule)}</td>${closedCells}${openCells}</tr>`;
+    ? `<td class="num edge">${o.n}</td>
+       <td class="num">${o.with_return ? p2(o.mean) : '—'}</td>
+       <td class="num">${o.with_excess ? `${p2(o.excess_mean)} <span class="dim">(${o.excess_wins}/${o.with_excess})</span>` : DASH}</td>
+       <td class="num">${o.with_return ? p2(o.worst) : '—'}</td>`
+    : `<td class="num edge">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+  return `<tr><td class="rule">${groupLabel(key)}</td>${closedCells}${openCells}</tr>`;
 }
-
 function summaryTable(byRule) {
   const entries = Object.entries(byRule || {});
   if (!entries.length) return '';
@@ -160,140 +309,153 @@ function summaryTable(byRule) {
     return a;
   }, { n: 0, fill: 0 });
   const fillNote = total.fill < total.n
-    ? `<div class="warn">約定想定（翌営業日の始値）が入っている建玉は ${total.fill}/${total.n} 件です。
-       残りはシグナル終値基準で、実際には買えない値段のため、リターンは良く出る側に寄ります。</div>` : '';
-  return `<div class="panel"><h2>entry_rule 別 <span class="cnt">${entries.length}</span></h2>
+    ? `<div class="callout">買値（次の営業日の始値）が記録されているのは ${total.fill}/${total.n} 件です。
+       残りはシグナルの日の終値を使っていて、実際には買えない値段のため、リターンは良く出やすくなります。</div>` : '';
+  return `<div class="panel"><h2>方式ごとの成績</h2>
     <div class="scroll"><table class="summary"><thead>
-      <tr><th rowspan="2">entry_rule</th>
-          <th colspan="5" style="text-align:center;border-bottom:none">決済済み</th>
-          <th colspan="4" style="text-align:center;border-bottom:none">保有中（評価中）</th></tr>
-      <tr><th class="num">件数</th><th class="num">勝率</th><th class="num">平均 / 中央値</th>
-          <th class="num">超過 平均 (市場に勝った)</th><th class="num">平均保有日数</th>
-          <th class="num">件数</th><th class="num">平均 / 中央値</th><th class="num">超過 平均 (市場に勝った)</th><th class="num">最悪</th></tr>
+      <tr><th rowspan="2">買いシグナルの種類｜タイミングの判定</th>
+          <th colspan="5" class="grp edge">決済済み</th>
+          <th colspan="4" class="grp edge">保有中（いまの株価で評価）</th></tr>
+      <tr><th class="num edge">件数</th><th class="num">勝率</th><th class="num">平均リターン</th>
+          <th class="num" title="かっこ内は市場に勝った件数／比較できた件数">市場との差</th><th class="num">平均日数</th>
+          <th class="num edge">件数</th><th class="num">平均リターン</th><th class="num" title="かっこ内は市場に勝った件数／比較できた件数">市場との差</th><th class="num">最も悪い</th></tr>
     </thead><tbody>${entries.map(([r, v]) => summaryRow(r, v)).join('')}</tbody></table></div>
     ${fillNote}
-    <div class="note">決済済みと保有中は別集計。「試行不足」は決済が ${DATA.summary.min_trials} 件未満で、
-    勝率は記録の要約であって成績の評価ではありません。超過はベンチマークの記録がある建玉だけで計算しています。</div></div>`;
+    <div class="note">決済済みと保有中は別々に集計しています。「件数不足」は決済が ${DATA.summary.min_trials} 件未満で、
+    勝率はまだ成績の評価に使えません。市場との差のかっこ内は「市場に勝った件数／比較できた件数」です。</div></div>`;
+}
+
+// ---------------------------------------------------------------- 均等額で買った場合の試算
+const yen = v => none(v) ? DASH
+  : `<span class="${v < 0 ? 'neg' : (v > 0 ? 'pos' : '')}">${v > 0 ? '+' : ''}${esc(Math.round(v).toLocaleString('ja-JP'))}円</span>`;
+function fixedTable(byRule) {
+  const amount = DATA.summary.fixed_amount;
+  const rows = [];
+  for (const [key, v] of Object.entries(byRule || {})) {
+    for (const [cur, f] of Object.entries(v.fixed || {})) rows.push([key, cur, f]);
+  }
+  if (!amount || !rows.length) return '';
+  const amt = esc(amount.toLocaleString('ja-JP'));
+  const body = rows.map(([key, cur, f]) => `<tr>
+    <td class="rule">${groupLabel(key)}</td>
+    <td>${cur === 'JPY' ? '円' : esc(cur)}${cur === 'USD' ? ' <span class="tag warn" title="騰落率をそのまま円の投入額に掛けた値。為替の増減は含まない">為替固定</span>' : ''}</td>
+    <td class="num">${f.n}</td>
+    <td class="num">${esc(f.invested.toLocaleString('ja-JP'))}円</td>
+    <td class="num">${yen(f.realized)}</td>
+    <td class="num">${yen(f.unrealized)}</td>
+    <td class="num big">${yen(f.net)}</td>
+    <td class="num">${p2(f.net_pct)}</td></tr>`).join('');
+  return `<div class="panel"><h2>1銘柄 ${amt}円ずつ買っていた場合</h2>
+    <div class="scroll"><table class="summary"><thead>
+      <tr><th>買いシグナルの種類｜タイミングの判定</th><th>通貨</th><th class="num">件数</th><th class="num">投入額</th>
+          <th class="num">確定した分</th><th class="num">保有中の分</th><th class="num">合計</th><th class="num">投入額に対して</th></tr>
+    </thead><tbody>${body}</tbody></table></div>
+    <div class="note">成立したシグナルを全部、買値（想定）で ${amt}円ずつ買った場合の試算です。
+    配当・手数料・税は含みません。投入額は全件の合計で、同時に必要な資金ではありません。
+    米ドル建ては騰落率をそのまま円に当てはめた値で、為替の増減は含みません。
+    通貨やタイミングの判定が違う行は別の数字なので、行どうしを足さないでください
+    （「反発確認（安値近く）」は「反発確認」の一部で、同じ銘柄が両方に入っています）。</div></div>`;
 }
 
 // ---------------------------------------------------------------- 個別トレード
 const COLS = [
-  ['ticker', 'コード', ''], ['name', '銘柄', ''], ['entry_rule', 'entry_rule', ''], ['status', '状態', ''],
-  ['entry_date', 'entry日', ''], ['entry_price', '約定', 'num'], ['exit_date', '決済日', ''],
-  ['exit_price', '決済 / 現在', 'num'], ['return_pct', 'リターン', 'num'], ['excess_pct', '超過', 'num'],
-  ['days', '日数', 'num'], ['exit_reason', 'exit_reason', ''],
+  ['name', '銘柄', ''], ['entry_rule', '種類｜判定', ''], ['status', '状態', ''],
+  ['entry_date', '成立日', ''], ['entry_price', '買値（想定）', 'num'], ['exit_date', '決済日', ''],
+  ['exit_price', '決済／いま', 'num'], ['return_pct', 'リターン', 'num'], ['excess_pct', '市場との差', 'num'],
+  ['days', '日数', 'num'], ['exit_reason', '決済の理由', ''],
 ];
-
 function row(t) {
   const closed = t.status === '決済済み';
   return `<tr>
-    <td class="tk">${esc(t.ticker)}${t.held_at_entry ? ' <span class="held">保有中</span>' : ''}</td>
-    <td class="nm">${esc(t.name)}</td>
-    <td class="dim">${esc(t.entry_rule)}${t.timing_mode ? `<span class="tag" title="entry_timing のモード">${esc(t.timing_mode)}</span>` : ''}</td>
-    <td><span class="badge ${closed ? 'b-closed' : 'b-open'}">${esc(t.status)}</span></td>
-    <td class="dim">${esc(t.entry_date)}</td>
-    <td class="num">${n2(t.entry_price)} <span class="dim">${esc(t.currency)}</span>${
-      t.basis === 'signal_close' ? '<span class="tag" title="約定想定なし。シグナル終値を基準にしている">終値</span>' : ''}</td>
-    <td class="dim">${esc(t.exit_date ?? '—')}</td>
-    <td class="num">${n2(t.exit_price ?? t.current_price)}</td>
-    <td class="num">${pc(t.return_pct)}</td>
-    <td class="num">${pc(t.excess_pct)}</td>
+    <td><div class="stock"><span class="nm">${esc(t.name || t.ticker)}</span><span class="cd">${esc(t.ticker)}${
+      t.held_at_entry ? ' <span class="tag held" title="シグナルの時点で実際に保有していた">保有中</span>' : ''}</span></div></td>
+    <td class="dim">${esc(RULE_SHORT[t.entry_rule] || t.entry_rule)}${t.timing_mode ? ` <span class="tag">${esc(modeLabel(t.timing_mode))}</span>` : ''}</td>
+    <td><span class="badge ${closed ? 'b-ok' : 'b-wait'}">${esc(t.status)}</span></td>
+    <td class="dim">${esc(mmdd(t.entry_date))}</td>
+    <td class="num">${price(t.entry_price, t.currency)}${
+      t.basis === 'signal_close' ? ' <span class="tag warn" title="始値の記録がなく、シグナルの日の終値を使っている">終値</span>' : ''}</td>
+    <td class="dim">${t.exit_date ? esc(mmdd(t.exit_date)) : '—'}</td>
+    <td class="num">${price(t.exit_price ?? t.current_price, t.currency)}</td>
+    <td class="num big">${p2(t.return_pct)}</td>
+    <td class="num">${p2(t.excess_pct)}</td>
     <td class="num">${t.days}日</td>
-    <td class="dim">${esc(t.exit_reason ?? '—')}</td></tr>`;
+    <td class="dim">${t.exit_reason ? esc(EXIT_LABEL[t.exit_reason] || t.exit_reason) : '—'}</td></tr>`;
 }
-
 function visible(t) {
   if (!(t.status === '決済済み' ? show.closed : show.open)) return false;
-  if (rules[t.entry_rule] === false) return false;
+  if (groups[groupKey(t)] === false) return false;
   if (!query) return true;
   const q = query.toLowerCase();
   return (t.ticker || '').toLowerCase().includes(q) || (t.name || '').toLowerCase().includes(q);
 }
-
 function sortRows(rows) {
-  return rows.slice().sort((a, b) => {
-    let x = a[sortKey], y = b[sortKey];
-    if (sortKey === 'exit_price') { x = a.exit_price ?? a.current_price; y = b.exit_price ?? b.current_price; }
-    if (x === null || x === undefined) return 1;
-    if (y === null || y === undefined) return -1;
-    if (x < y) return sortAsc ? -1 : 1;
-    if (x > y) return sortAsc ? 1 : -1;
-    return 0;
-  });
+  const val = t => sortKey === 'exit_price' ? (t.exit_price ?? t.current_price)
+    : sortKey === 'entry_rule' ? groupKey(t) : t[sortKey];
+  return rows.slice().sort((a, b) => cmp(val(a), val(b), sortAsc));
 }
-
 function tradesTable(rows) {
   const head = COLS.map(([k, label, cls]) => {
     const on = k === sortKey;
-    return `<th class="${cls} sortable" data-k="${k}" ${on ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
+    return `<th class="${cls} sortable" data-k="${k}" tabindex="0" ${on ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
       ${label}<span class="arrow">${on ? (sortAsc ? '▲' : '▼') : '▲'}</span></th>`;
   }).join('');
   const body = rows.length ? rows.map(row).join('')
-    : `<tr><td colspan="${COLS.length}" class="empty">表示するトレードがありません</td></tr>`;
-  return `<div class="panel"><h2>個別トレード <span class="cnt">${rows.length}</span></h2>
+    : `<tr><td colspan="${COLS.length}" class="empty">表示するトレードがありません。絞り込みを変えてください。</td></tr>`;
+  return `<div class="panel"><h2>個別トレード <span class="cnt">${rows.length}件</span></h2>
     <div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>
-    <div class="note">${esc(DATA.summary.note)}。
-    「保有中」タグは entry 判定時点で holdings.csv に載っていたかどうかの表示だけです。見出しをクリックすると並べ替えできます。</div></div>`;
+    <div class="note">同じ銘柄が複数行あるのは、30日以上あけて再びシグナルが成立した場合や、判定の方式が違う場合です。
+    「保有中」の印は、シグナルの時点で実際に保有していた銘柄です（集計には影響しません）。見出しを押すと並べ替えできます。</div></div>`;
 }
-
 function renderToolbar() {
   const s = DATA.summary;
-  const ruleChips = Object.keys(DATA.by_rule || {}).map(r =>
-    `<button class="chip" data-r="${esc(r)}" aria-pressed="${rules[r] !== false}">${esc(r)}</button>`).join('');
+  const chips = Object.keys(DATA.by_rule || {}).map(k =>
+    `<button class="chip" data-r="${esc(k)}" aria-pressed="${groups[k] !== false}">${groupLabel(k)}</button>`).join('');
   document.getElementById('toolbar').innerHTML = `
-    <button class="chip closed" data-f="closed" aria-pressed="${show.closed}">決済済み <b>${s.closed}</b></button>
-    <button class="chip open" data-f="open" aria-pressed="${show.open}">保有中 <b>${s.open}</b></button>
-    ${ruleChips ? `<span class="sep"></span>${ruleChips}` : ''}
-    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" value="${esc(query)}">`;
+    <button class="chip" data-f="closed" aria-pressed="${show.closed}">決済済み <b>${s.closed}</b></button>
+    <button class="chip" data-f="open" aria-pressed="${show.open}">保有中 <b>${s.open}</b></button>
+    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" aria-label="コード・銘柄名で絞り込み" value="${esc(query)}">
+    ${chips ? `<div style="flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px">${chips}</div>` : ''}`;
   document.querySelectorAll('button.chip[data-f]').forEach(b => {
     b.onclick = () => { show[b.dataset.f] = !show[b.dataset.f]; b.setAttribute('aria-pressed', show[b.dataset.f]); renderContent(); };
   });
   document.querySelectorAll('button.chip[data-r]').forEach(b => {
-    b.onclick = () => { rules[b.dataset.r] = rules[b.dataset.r] === false; b.setAttribute('aria-pressed', rules[b.dataset.r]); renderContent(); };
+    b.onclick = () => { groups[b.dataset.r] = groups[b.dataset.r] === false; b.setAttribute('aria-pressed', groups[b.dataset.r]); renderContent(); };
   });
   const q = document.getElementById('q');
   q.oninput = () => { query = q.value; renderContent(); };
 }
-
 function renderContent() {
   const d = DATA;
   const rows = sortRows((d.trades || []).filter(visible));
   document.getElementById('content').innerHTML =
     summaryTable(d.by_rule)
+    + fixedTable(d.by_rule)
     + (d.trades && d.trades.length ? tradesTable(rows)
-       : `<div class="panel"><div class="empty">記録がまだありません。entry_timing が成立するとここに積まれます。</div></div>`)
+       : `<div class="panel"><div class="empty">記録がまだありません。買いシグナルが成立するとここに積まれます。</div></div>`)
     + (d.summary.closed === 0 && d.summary.total > 0
-        ? `<div class="panel"><div class="note">決済済みの記録がまだありません。勝率は計算できません。</div></div>` : '');
+        ? `<div class="panel"><div class="note">決済済みの記録がまだないので、勝率は計算できません。</div></div>` : '');
   document.querySelectorAll('th[data-k]').forEach(th => {
-    th.onclick = () => {
+    const go = () => {
       const k = th.dataset.k;
       if (k === sortKey) sortAsc = !sortAsc; else { sortKey = k; sortAsc = !['return_pct', 'excess_pct', 'days'].includes(k); }
       renderContent();
     };
+    th.onclick = go;
+    th.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
   });
 }
-
 function render(d) {
-  document.getElementById('candLink').href =
-    location.pathname.replace(/performance-/, 'candidates-').split('/').pop();
+  document.getElementById('candLink').href = siblingPage('candidates');
+  document.getElementById('modeHelp').innerHTML = ['double_bottom', 'confirm', 'confirm_near_low'].map(m =>
+    `<b>${esc(modeLabel(m))}</b>: ${esc(MODE_HELP[m])}`).join('<br>');
+  staleBanner(d);
   document.getElementById('meta').innerHTML =
-    `実行日 <b>${esc(d.run_date)}</b>　決済済み <b>${d.summary.closed}</b>件 / `
-    + `保有中 <b>${d.summary.open}</b>件`
-    + (d.price_date ? `<br>保有中の評価に使った現在値: ${esc(d.price_date)} 時点` : '')
-    + `　生成 ${esc(d.generated_at)}`;
+    `<b>${esc(jpDate(d.run_date))}</b> ${esc(jpTime(d.generated_at))} 更新　決済済み <b>${d.summary.closed}</b>件・保有中 <b>${d.summary.open}</b>件`
+    + (d.price_date ? `　保有中は ${esc(mmdd(d.price_date))} 時点の株価で評価` : '');
   renderToolbar();
   renderContent();
 }
-
-fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-  .then(j => { DATA = j; render(j); })
-  .catch(e => {
-    document.getElementById('meta').textContent = '';
-    document.getElementById('content').innerHTML =
-      `<div class="err"><b>データを読み込めませんでした</b><br>
-       <code>${esc(SRC)}</code><br>${esc(e.message)}</div>`;
-  });
+loadJson(SRC).then(j => { DATA = j; render(j); }).catch(e => showError(e, SRC));
 </script>
 </body>
 </html>
