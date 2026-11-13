@@ -199,7 +199,7 @@
     <summary>この画面の読み方</summary>
     <dl>
       <dt>買いシグナル</dt><dd>購入候補の条件を満たし、買うタイミングの判定が今回の更新で成立した銘柄。ペーパートレードでは次の営業日の始値で買った想定で記録している</dd>
-      <dt>売りシグナル</dt><dd>保有銘柄のうち、売却条件（取得価格から −30% 以下）に当てはまった銘柄</dd>
+      <dt>売りシグナル</dt><dd>保有銘柄のうち、売却条件に当てはまった銘柄。条件は2つ: 取得価格から −30% 以下／目標株価を根拠に買った銘柄は、アナリストの目標株価（平均）が買った時点から −20% 以下</dd>
       <dt>シグナルの位置づけ</dt><dd>あらかじめ決めた条件に当てはまったことを知らせる合図で、売買の指示ではない。最終判断は自分で行う</dd>
       <dt>取得価格比</dt><dd>取得価格からの騰落率。保有期間中の最大下落率ではない。通貨は建値のままで為替は含まない</dd>
       <dt>前日比</dt><dd>前回の更新時の終値との比較。更新が1日飛んでいれば2日分になる</dd>
@@ -431,17 +431,25 @@ function buyPanel() {
 }
 
 // ---------------------------------------------------------------- 売りシグナル
+const ALERT_LABEL = { drawdown: '取得価格比', target_cut: '目標引き下げ' };
 function sellWhy(h) {
-  // reason は "drawdown=-0.3181 <= -0.3" の形。基準値だけ取り出す
-  const m = /<=\s*(-?[\d.]+)\s*$/.exec(h.reason || '');
-  const th = m ? `${Math.round(Number(m[1]) * 100)}%` : '−30%';
-  return `売却条件（取得価格から ${th.replace('-', '−')} 以下）に当てはまっています`;
+  // reason は "drawdown=-0.3181 <= -0.3 / target_change=-0.22 <= -0.2" の形。基準値だけ取り出す
+  const th = (name, fallback) => {
+    const m = new RegExp(name + '=-?[\\d.]+ <= (-?[\\d.]+)').exec(h.reason || '');
+    return (m ? `${Math.round(Number(m[1]) * 100)}%` : fallback).replace('-', '−');
+  };
+  const rules = h.alert_rules || ['drawdown'];
+  const out = [];
+  if (rules.includes('drawdown')) out.push(`取得価格から ${th('drawdown', '−30%')} 以下`);
+  if (rules.includes('target_cut')) out.push(`アナリストの目標株価が買った時点から ${th('target_change', '−20%')} 以下`);
+  return `売却条件（${out.join('／')}）に当てはまっています`;
 }
 function sellItem(h) {
   return `<div class="item">
     <div class="head"><div class="nm">${nameCode(h)}</div>
       <div class="px">${price(h.price, h.currency)}</div></div>
     <div class="key">取得価格比 <b>${pct(h.drawdown_pct)}</b>　前日比 ${pct(h.change_pct)}
+${none(h.target_change_pct) ? '' : `　目標株価 ${pct(h.target_change_pct)}`}
       <span class="dim">　比率 ${none(h.weight_pct) ? '—' : esc(h.weight_pct.toFixed(1)) + '%'}</span></div>
     <div class="why">${esc(sellWhy(h))}${
       (h.anomalies || []).length || h.stale_days > 0 ? '　※ データに注意点あり（保有銘柄の表を確認）' : ''}</div></div>`;
@@ -506,6 +514,8 @@ function cautions(h) {
     const v = none(a.value) ? '不明' : Number(a.value).toLocaleString('ja-JP', { maximumFractionDigits: 4 });
     out.push(`<span class="tag warn" title="${esc(a.label)}">異常値 ${esc(a.field ?? '')} = ${esc(v)}</span>`);
   }
+  if (!none(h.target_change_pct)) out.push(`<span class="tag" title="アナリスト目標株価（平均）の、買った時点からの変化">目標株価 ${h.target_change_pct > 0 ? '+' : ''}${esc(h.target_change_pct.toFixed(1))}%</span>`);
+  if (h.status === 'UNKNOWN') out.push(`<span class="tag warn" title="${esc(h.reason)}">判定できない理由あり</span>`);
   if ((h.missing || []).length) out.push(`<span class="tag" title="${esc(h.missing.join(', '))}">取得できない項目 ${h.missing.length}</span>`);
   return out.join(' ') || DASH;
 }
@@ -523,7 +533,8 @@ function holdRow(h) {
     <td class="num">${pct(h.change_pct)}</td>
     <td class="num">${gainCell(h)}</td>
     <td class="num">${none(h.weight_pct) ? DASH : esc(h.weight_pct.toFixed(1)) + '%'}</td>
-    <td><span class="badge ${st.cls}">${st.label}</span></td>
+    <td><span class="badge ${st.cls}" title="${esc(h.reason)}">${st.label}</span>${
+      (h.alert_rules || []).map(r => ` <span class="tag held">${esc(ALERT_LABEL[r] || r)}</span>`).join('')}</td>
     <td>${cautions(h)}</td>
     <td class="dim">${esc(mmdd(h.as_of))}</td></tr>`;
 }
