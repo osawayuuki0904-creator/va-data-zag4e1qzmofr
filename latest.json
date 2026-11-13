@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T12:27:46+09:00",
+  "generated_at": "2026-11-13T13:18:59+09:00",
   "run_date": "2026-11-13",
   "data_dates": {
     "JP": [
@@ -10,9 +10,9 @@
     ]
   },
   "summary": {
-    "total": 35,
+    "total": 36,
     "alert": 4,
-    "clear": 31,
+    "clear": 32,
     "unknown": 0,
     "drawdown_display": "exact",
     "stale_banner_days": 3
@@ -26,7 +26,7 @@
       "entry_rule": "value_screen",
       "price": 3537.0,
       "change_pct": 1.52,
-      "weight_pct": 7.16,
+      "weight_pct": 7.14,
       "drawdown_pct": 47.9,
       "drawdown_label": "+47.9%",
       "status": "CLEAR",
@@ -44,7 +44,9 @@
         "num_analyst_opinions"
       ],
       "anomalies": [],
-      "chart_ric": "1489.T"
+      "chart_ric": "1489.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "1928.T",
@@ -54,7 +56,7 @@
       "entry_rule": "value_screen",
       "price": 3564.0,
       "change_pct": 1.63,
-      "weight_pct": 2.17,
+      "weight_pct": 2.16,
       "drawdown_pct": 5.0,
       "drawdown_label": "+5.0%",
       "status": "CLEAR",
@@ -63,7 +65,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "1928.T"
+      "chart_ric": "1928.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "2163.T",
@@ -73,7 +77,7 @@
       "entry_rule": "value_screen",
       "price": 945.0,
       "change_pct": 1.29,
-      "weight_pct": 3.83,
+      "weight_pct": 3.81,
       "drawdown_pct": -5.4,
       "drawdown_label": "-5.4%",
       "status": "CLEAR",
@@ -87,7 +91,9 @@
         "num_analyst_opinions"
       ],
       "anomalies": [],
-      "chart_ric": "2163.T"
+      "chart_ric": "2163.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "2502.T",
@@ -97,7 +103,7 @@
       "entry_rule": "value_screen",
       "price": 1748.5,
       "change_pct": 2.28,
-      "weight_pct": 5.31,
+      "weight_pct": 5.29,
       "drawdown_pct": 6.4,
       "drawdown_label": "+6.4%",
       "status": "CLEAR",
@@ -106,7 +112,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "2502.T"
+      "chart_ric": "2502.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "2914.T",
@@ -116,7 +124,7 @@
       "entry_rule": "value_screen",
       "price": 5996.0,
       "change_pct": 7.8,
-      "weight_pct": 4.86,
+      "weight_pct": 4.84,
       "drawdown_pct": 50.6,
       "drawdown_label": "+50.6%",
       "status": "CLEAR",
@@ -125,7 +133,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "2914.T"
+      "chart_ric": "2914.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "3231.T",
@@ -135,7 +145,7 @@
       "entry_rule": "value_screen",
       "price": 914.0,
       "change_pct": 1.66,
-      "weight_pct": 1.85,
+      "weight_pct": 1.84,
       "drawdown_pct": 7.5,
       "drawdown_label": "+7.5%",
       "status": "CLEAR",
@@ -144,7 +154,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "3231.T"
+      "chart_ric": "3231.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "3309.T",
@@ -154,7 +166,7 @@
       "entry_rule": "value_screen",
       "price": 64600.0,
       "change_pct": 1.41,
-      "weight_pct": 5.23,
+      "weight_pct": 5.21,
       "drawdown_pct": -14.1,
       "drawdown_label": "-14.1%",
       "status": "CLEAR",
@@ -163,7 +175,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "3309.T"
+      "chart_ric": "3309.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "4183.T",
@@ -173,7 +187,7 @@
       "entry_rule": "value_screen",
       "price": 1821.0,
       "change_pct": 5.47,
-      "weight_pct": 3.69,
+      "weight_pct": 3.67,
       "drawdown_pct": -7.9,
       "drawdown_label": "-7.9%",
       "status": "CLEAR",
@@ -182,7 +196,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "4183.T"
+      "chart_ric": "4183.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "4502.T",
@@ -192,7 +208,7 @@
       "entry_rule": "value_screen",
       "price": 6825.0,
       "change_pct": 2.28,
-      "weight_pct": 2.49,
+      "weight_pct": 2.48,
       "drawdown_pct": 63.4,
       "drawdown_label": "+63.4%",
       "status": "CLEAR",
@@ -207,7 +223,9 @@
           "value": 9.0502
         }
       ],
-      "chart_ric": "4502.T"
+      "chart_ric": "4502.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "4568.T",
@@ -217,7 +235,7 @@
       "entry_rule": "value_screen",
       "price": 2857.5,
       "change_pct": 3.16,
-      "weight_pct": 5.79,
+      "weight_pct": 5.77,
       "drawdown_pct": -3.3,
       "drawdown_label": "-3.3%",
       "status": "CLEAR",
@@ -226,7 +244,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "4568.T"
+      "chart_ric": "4568.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "5105.T",
@@ -236,7 +256,7 @@
       "entry_rule": "value_screen",
       "price": 4247.0,
       "change_pct": 0.9,
-      "weight_pct": 5.16,
+      "weight_pct": 5.14,
       "drawdown_pct": 10.1,
       "drawdown_label": "+10.1%",
       "status": "CLEAR",
@@ -245,7 +265,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "5105.T"
+      "chart_ric": "5105.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "5411.T",
@@ -255,7 +277,7 @@
       "entry_rule": "value_screen",
       "price": 1827.5,
       "change_pct": 0.86,
-      "weight_pct": 2.37,
+      "weight_pct": 2.36,
       "drawdown_pct": 1.1,
       "drawdown_label": "+1.1%",
       "status": "CLEAR",
@@ -264,7 +286,30 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "5411.T"
+      "chart_ric": "5411.T",
+      "alert_rules": [],
+      "target_change_pct": null
+    },
+    {
+      "ticker": "5803.T",
+      "name": "フジクラ",
+      "market": "JP",
+      "currency": "JPY",
+      "entry_rule": "analyst_gap_jp",
+      "price": 3002.0,
+      "change_pct": null,
+      "weight_pct": 0.36,
+      "drawdown_pct": 3.0,
+      "drawdown_label": "+3.0%",
+      "status": "CLEAR",
+      "reason": "drawdown=0.0302 > -0.3 / target_change=0.0000 > -0.2",
+      "as_of": "2026-11-12",
+      "stale_days": 0,
+      "missing": [],
+      "anomalies": [],
+      "chart_ric": "5803.T",
+      "alert_rules": [],
+      "target_change_pct": 0.0
     },
     {
       "ticker": "7164.T",
@@ -274,7 +319,7 @@
       "entry_rule": "value_screen",
       "price": 3218.0,
       "change_pct": 0.56,
-      "weight_pct": 6.52,
+      "weight_pct": 6.49,
       "drawdown_pct": 2.3,
       "drawdown_label": "+2.3%",
       "status": "CLEAR",
@@ -283,7 +328,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "7164.T"
+      "chart_ric": "7164.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "7203.T",
@@ -293,7 +340,7 @@
       "entry_rule": "value_screen",
       "price": 3408.0,
       "change_pct": -0.79,
-      "weight_pct": 6.9,
+      "weight_pct": 6.88,
       "drawdown_pct": 20.2,
       "drawdown_label": "+20.2%",
       "status": "CLEAR",
@@ -302,7 +349,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "7203.T"
+      "chart_ric": "7203.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "8473.T",
@@ -312,7 +361,7 @@
       "entry_rule": "value_screen",
       "price": 2934.0,
       "change_pct": 1.7,
-      "weight_pct": 4.75,
+      "weight_pct": 4.74,
       "drawdown_pct": -3.4,
       "drawdown_label": "-3.4%",
       "status": "CLEAR",
@@ -321,7 +370,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "8473.T"
+      "chart_ric": "8473.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "8593.T",
@@ -331,7 +382,7 @@
       "entry_rule": "value_screen",
       "price": 1348.5,
       "change_pct": 1.47,
-      "weight_pct": 2.73,
+      "weight_pct": 2.72,
       "drawdown_pct": 33.0,
       "drawdown_label": "+33.0%",
       "status": "CLEAR",
@@ -340,7 +391,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "8593.T"
+      "chart_ric": "8593.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "8698.T",
@@ -350,7 +403,7 @@
       "entry_rule": "value_screen",
       "price": 600.0,
       "change_pct": 1.35,
-      "weight_pct": 2.19,
+      "weight_pct": 2.18,
       "drawdown_pct": -30.9,
       "drawdown_label": "-30.9%",
       "status": "ALERT",
@@ -359,7 +412,11 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "8698.T"
+      "chart_ric": "8698.T",
+      "alert_rules": [
+        "drawdown"
+      ],
+      "target_change_pct": null
     },
     {
       "ticker": "8725.T",
@@ -369,7 +426,7 @@
       "entry_rule": "value_screen",
       "price": 5258.0,
       "change_pct": 0.79,
-      "weight_pct": 5.32,
+      "weight_pct": 5.3,
       "drawdown_pct": 41.4,
       "drawdown_label": "+41.4%",
       "status": "CLEAR",
@@ -378,7 +435,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "8725.T"
+      "chart_ric": "8725.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "8766.T",
@@ -388,7 +447,7 @@
       "entry_rule": "value_screen",
       "price": 593.7999877929688,
       "change_pct": 0.32,
-      "weight_pct": 9.02,
+      "weight_pct": 8.99,
       "drawdown_pct": 53.9,
       "drawdown_label": "+53.9%",
       "status": "CLEAR",
@@ -397,7 +456,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "8766.T"
+      "chart_ric": "8766.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "9432.T",
@@ -407,7 +468,7 @@
       "entry_rule": "value_screen",
       "price": 167.5,
       "change_pct": 3.27,
-      "weight_pct": 8.82,
+      "weight_pct": 8.79,
       "drawdown_pct": 9.3,
       "drawdown_label": "+9.3%",
       "status": "CLEAR",
@@ -416,7 +477,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "9432.T"
+      "chart_ric": "9432.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "9434.T",
@@ -426,7 +489,7 @@
       "entry_rule": "value_screen",
       "price": 237.39999389648438,
       "change_pct": 1.5,
-      "weight_pct": 3.85,
+      "weight_pct": 3.83,
       "drawdown_pct": 17.0,
       "drawdown_label": "+17.0%",
       "status": "CLEAR",
@@ -435,7 +498,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "9434.T"
+      "chart_ric": "9434.T",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "VZ",
@@ -454,7 +519,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "VZ.N"
+      "chart_ric": "VZ.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "AVGO",
@@ -473,7 +540,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "AVGO.O"
+      "chart_ric": "AVGO.O",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "APTV",
@@ -494,7 +563,9 @@
         "dividend_rate"
       ],
       "anomalies": [],
-      "chart_ric": "APTV.N"
+      "chart_ric": "APTV.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "LYB",
@@ -513,7 +584,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "LYB.N"
+      "chart_ric": "LYB.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "FIVN",
@@ -534,7 +607,9 @@
         "dividend_rate"
       ],
       "anomalies": [],
-      "chart_ric": "FIVN.O"
+      "chart_ric": "FIVN.O",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "UVV",
@@ -555,7 +630,9 @@
         "per"
       ],
       "anomalies": [],
-      "chart_ric": "UVV.N"
+      "chart_ric": "UVV.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "WIMI",
@@ -586,7 +663,11 @@
           "value": 0.02906858
         }
       ],
-      "chart_ric": "WIMI.O"
+      "chart_ric": "WIMI.O",
+      "alert_rules": [
+        "drawdown"
+      ],
+      "target_change_pct": null
     },
     {
       "ticker": "LIDR",
@@ -609,7 +690,11 @@
         "payout_ratio"
       ],
       "anomalies": [],
-      "chart_ric": "LIDR.O"
+      "chart_ric": "LIDR.O",
+      "alert_rules": [
+        "drawdown"
+      ],
+      "target_change_pct": null
     },
     {
       "ticker": "MO",
@@ -634,7 +719,9 @@
           "value": -58.279728
         }
       ],
-      "chart_ric": "MO.N"
+      "chart_ric": "MO.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "SMR",
@@ -657,7 +744,11 @@
         "payout_ratio"
       ],
       "anomalies": [],
-      "chart_ric": "SMR.N"
+      "chart_ric": "SMR.N",
+      "alert_rules": [
+        "drawdown"
+      ],
+      "target_change_pct": null
     },
     {
       "ticker": "PFE",
@@ -676,7 +767,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "PFE.N"
+      "chart_ric": "PFE.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "OKLO",
@@ -699,7 +792,9 @@
         "payout_ratio"
       ],
       "anomalies": [],
-      "chart_ric": "OKLO.N"
+      "chart_ric": "OKLO.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "T",
@@ -718,7 +813,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "T.N"
+      "chart_ric": "T.N",
+      "alert_rules": [],
+      "target_change_pct": null
     },
     {
       "ticker": "CVX",
@@ -737,7 +834,9 @@
       "stale_days": 0,
       "missing": [],
       "anomalies": [],
-      "chart_ric": "CVX.N"
+      "chart_ric": "CVX.N",
+      "alert_rules": [],
+      "target_change_pct": null
     }
   ]
 }
