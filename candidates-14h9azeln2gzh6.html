@@ -127,6 +127,9 @@
     th,td{padding:9px 10px}
   }
   a{color:var(--buy)}
+  .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
+             border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
+  .chartlink:hover{background:var(--buy-bg)}
 
   table{min-width:980px}
   th,td{padding-left:10px;padding-right:10px}
@@ -275,6 +278,19 @@ function siblingPage(kind) {
   return file.replace(/^(candidates|performance)-/, kind + '-');
 }
 
+// 楽天証券の銘柄ページ（株価・チャート）。chart_ric は公開時に付く。
+// 日本株は古い JSON でもコードから作れる。米国株は取引所が分からないと作れないのでリンクなし
+const RAKUTEN_QUOTE = 'https://www.rakuten-sec.co.jp/web/market/search/';
+function chartUrl(x) {
+  const ric = x.chart_ric || (/\.T$/.test(x.ticker || '') ? x.ticker : null);
+  if (!ric) return null;
+  return RAKUTEN_QUOTE + (/\.T$/.test(ric) ? 'quote.html' : 'us_search/quote.html') + '?ric=' + encodeURIComponent(ric);
+}
+function chartLink(x) {
+  const u = chartUrl(x);
+  return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
+}
+
 // 器のみ。自分のファイル名から JSON を導くので、ランダム文字列をコードに埋め込まずに済む。
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
@@ -305,7 +321,7 @@ function stateOf(c) {
 function stockCell(c) {
   const tags = (c.held ? '<span class="tag held">保有中</span>' : '')
     + (c.paper_open ? '<span class="tag paper">ペーパー保有中</span>' : '');
-  return `<td><div class="stock"><span class="nm">${esc(c.name || c.ticker)}</span>${c.name && c.name !== c.ticker ? `<span class="cd">${esc(c.ticker)}</span>` : ''}
+  return `<td><div class="stock"><span class="nm">${esc(c.name || c.ticker)}</span><span class="cd">${c.name && c.name !== c.ticker ? esc(c.ticker) : ''}${chartLink(c)}</span>
     ${tags ? `<span class="tags">${tags}</span>` : ''}</div></td>`;
 }
 function modesCell(c) {

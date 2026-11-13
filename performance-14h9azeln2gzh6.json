@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T12:06:14+09:00",
+  "generated_at": "2026-11-13T12:27:45+09:00",
   "run_date": "2026-11-13",
   "price_date": "2026-11-13",
   "summary": {
@@ -317,6 +317,7 @@
   },
   "trades": [
     {
+      "chart_ric": "SYK.N",
       "ticker": "SYK",
       "name": "Stryker Corporation",
       "entry_rule": "analyst_gap_us",
@@ -340,6 +341,7 @@
       "excess_pct": 19.87
     },
     {
+      "chart_ric": "DD.N",
       "ticker": "DD",
       "name": "DuPont",
       "entry_rule": "analyst_gap_us",
@@ -363,6 +365,7 @@
       "excess_pct": 19.64
     },
     {
+      "chart_ric": "5802.T",
       "ticker": "5802.T",
       "name": "住友電気工業",
       "entry_rule": "analyst_gap_jp",
@@ -386,6 +389,7 @@
       "excess_pct": -28.09
     },
     {
+      "chart_ric": "7936.T",
       "ticker": "7936.T",
       "name": "アシックス",
       "entry_rule": "analyst_gap_jp",
@@ -409,6 +413,7 @@
       "excess_pct": 30.1
     },
     {
+      "chart_ric": "IR.N",
       "ticker": "IR",
       "name": "Ingersoll Rand",
       "entry_rule": "analyst_gap_us",
@@ -432,6 +437,7 @@
       "excess_pct": 21.53
     },
     {
+      "chart_ric": "MCHP.O",
       "ticker": "MCHP",
       "name": "Microchip Technology",
       "entry_rule": "analyst_gap_us",
@@ -455,6 +461,7 @@
       "excess_pct": -15.81
     },
     {
+      "chart_ric": "SNPS.O",
       "ticker": "SNPS",
       "name": "Synopsys",
       "entry_rule": "analyst_gap_us",
@@ -478,6 +485,7 @@
       "excess_pct": 28.78
     },
     {
+      "chart_ric": "CCL.N",
       "ticker": "CCL",
       "name": "Carnival Corporation",
       "entry_rule": "analyst_gap_us",
@@ -501,6 +509,7 @@
       "excess_pct": 36.12
     },
     {
+      "chart_ric": "RCL.N",
       "ticker": "RCL",
       "name": "Royal Caribbean Group",
       "entry_rule": "analyst_gap_us",
@@ -524,6 +533,7 @@
       "excess_pct": 26.92
     },
     {
+      "chart_ric": "LII.N",
       "ticker": "LII",
       "name": "Lennox International",
       "entry_rule": "analyst_gap_us",
@@ -547,6 +557,7 @@
       "excess_pct": -5.43
     },
     {
+      "chart_ric": "FERG.N",
       "ticker": "FERG",
       "name": "Ferguson Enterprises",
       "entry_rule": "analyst_gap_us",
@@ -570,6 +581,7 @@
       "excess_pct": 21.55
     },
     {
+      "chart_ric": "MGM.N",
       "ticker": "MGM",
       "name": "MGM Resorts",
       "entry_rule": "analyst_gap_us",
@@ -593,6 +605,7 @@
       "excess_pct": -29.68
     },
     {
+      "chart_ric": "FIS.N",
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
       "entry_rule": "analyst_gap_us",
@@ -616,6 +629,7 @@
       "excess_pct": -13.82
     },
     {
+      "chart_ric": "VRSK.O",
       "ticker": "VRSK",
       "name": "Verisk Analytics",
       "entry_rule": "analyst_gap_us",
@@ -639,6 +653,7 @@
       "excess_pct": 30.41
     },
     {
+      "chart_ric": "XYZ.N",
       "ticker": "XYZ",
       "name": "Block, Inc.",
       "entry_rule": "analyst_gap_us",
@@ -662,6 +677,7 @@
       "excess_pct": 21.73
     },
     {
+      "chart_ric": "EFX.N",
       "ticker": "EFX",
       "name": "Equifax",
       "entry_rule": "analyst_gap_us",
@@ -685,6 +701,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "CCI.N",
       "ticker": "CCI",
       "name": "Crown Castle",
       "entry_rule": "analyst_gap_us",
@@ -708,6 +725,7 @@
       "excess_pct": 29.0
     },
     {
+      "chart_ric": "ZTS.N",
       "ticker": "ZTS",
       "name": "Zoetis",
       "entry_rule": "analyst_gap_us",
@@ -731,6 +749,7 @@
       "excess_pct": 25.6
     },
     {
+      "chart_ric": "SPGI.N",
       "ticker": "SPGI",
       "name": "S&P Global",
       "entry_rule": "analyst_gap_us",
@@ -754,6 +773,7 @@
       "excess_pct": 24.34
     },
     {
+      "chart_ric": "OTIS.N",
       "ticker": "OTIS",
       "name": "Otis Worldwide",
       "entry_rule": "analyst_gap_us",
@@ -777,6 +797,7 @@
       "excess_pct": 21.26
     },
     {
+      "chart_ric": "JKHY.O",
       "ticker": "JKHY",
       "name": "Jack Henry & Associates",
       "entry_rule": "analyst_gap_us",
@@ -800,6 +821,7 @@
       "excess_pct": 25.73
     },
     {
+      "chart_ric": "AXON.O",
       "ticker": "AXON",
       "name": "Axon Enterprise",
       "entry_rule": "analyst_gap_us",
@@ -823,6 +845,7 @@
       "excess_pct": -18.94
     },
     {
+      "chart_ric": "LOW.N",
       "ticker": "LOW",
       "name": "Lowe's",
       "entry_rule": "analyst_gap_us",
@@ -846,6 +869,7 @@
       "excess_pct": 26.69
     },
     {
+      "chart_ric": "HD.N",
       "ticker": "HD",
       "name": "Home Depot (The)",
       "entry_rule": "analyst_gap_us",
@@ -869,6 +893,7 @@
       "excess_pct": 22.93
     },
     {
+      "chart_ric": "AMT.N",
       "ticker": "AMT",
       "name": "American Tower",
       "entry_rule": "analyst_gap_us",
@@ -892,6 +917,7 @@
       "excess_pct": 19.12
     },
     {
+      "chart_ric": "WDC.O",
       "ticker": "WDC",
       "name": "Western Digital",
       "entry_rule": "analyst_gap_us",
@@ -915,6 +941,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "STX.O",
       "ticker": "STX",
       "name": "Seagate Technology",
       "entry_rule": "analyst_gap_us",
@@ -938,6 +965,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "CVNA.N",
       "ticker": "CVNA",
       "name": "Carvana",
       "entry_rule": "analyst_gap_us",
@@ -961,6 +989,7 @@
       "excess_pct": 32.87
     },
     {
+      "chart_ric": "4519.T",
       "ticker": "4519.T",
       "name": "中外製薬",
       "entry_rule": "analyst_gap_jp",
@@ -984,6 +1013,7 @@
       "excess_pct": 12.51
     },
     {
+      "chart_ric": "ALGN.O",
       "ticker": "ALGN",
       "name": "Align Technology",
       "entry_rule": "analyst_gap_us",
@@ -1007,6 +1037,7 @@
       "excess_pct": 10.5
     },
     {
+      "chart_ric": "AZO.N",
       "ticker": "AZO",
       "name": "AutoZone",
       "entry_rule": "analyst_gap_us",
@@ -1030,6 +1061,7 @@
       "excess_pct": 9.9
     },
     {
+      "chart_ric": "LEN.N",
       "ticker": "LEN",
       "name": "Lennar",
       "entry_rule": "value_screen",
@@ -1053,6 +1085,7 @@
       "excess_pct": 4.76
     },
     {
+      "chart_ric": "HWM.N",
       "ticker": "HWM",
       "name": "Howmet Aerospace",
       "entry_rule": "analyst_gap_us",
@@ -1076,6 +1109,7 @@
       "excess_pct": -2.13
     },
     {
+      "chart_ric": "GEV.N",
       "ticker": "GEV",
       "name": "GE Vernova",
       "entry_rule": "analyst_gap_us",
@@ -1099,6 +1133,7 @@
       "excess_pct": -14.41
     },
     {
+      "chart_ric": "ON.O",
       "ticker": "ON",
       "name": "ON Semiconductor",
       "entry_rule": "analyst_gap_us",
@@ -1122,6 +1157,7 @@
       "excess_pct": -0.69
     },
     {
+      "chart_ric": "XYL.N",
       "ticker": "XYL",
       "name": "Xylem Inc.",
       "entry_rule": "analyst_gap_us",
@@ -1145,6 +1181,7 @@
       "excess_pct": -13.25
     },
     {
+      "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
       "entry_rule": "analyst_gap_us",
@@ -1168,6 +1205,7 @@
       "excess_pct": -8.26
     },
     {
+      "chart_ric": "LHX.N",
       "ticker": "LHX",
       "name": "L3Harris",
       "entry_rule": "analyst_gap_us",
@@ -1191,6 +1229,7 @@
       "excess_pct": 8.82
     },
     {
+      "chart_ric": "9202.T",
       "ticker": "9202.T",
       "name": "ＡＮＡホールディングス",
       "entry_rule": "value_screen",
@@ -1214,6 +1253,7 @@
       "excess_pct": 14.52
     },
     {
+      "chart_ric": "8830.T",
       "ticker": "8830.T",
       "name": "住友不動産",
       "entry_rule": "analyst_gap_jp",
@@ -1237,6 +1277,7 @@
       "excess_pct": 13.34
     },
     {
+      "chart_ric": "8802.T",
       "ticker": "8802.T",
       "name": "三菱地所",
       "entry_rule": "analyst_gap_jp",
@@ -1260,6 +1301,7 @@
       "excess_pct": 14.92
     },
     {
+      "chart_ric": "7741.T",
       "ticker": "7741.T",
       "name": "ＨＯＹＡ",
       "entry_rule": "analyst_gap_jp",
@@ -1283,6 +1325,7 @@
       "excess_pct": 8.99
     },
     {
+      "chart_ric": "6146.T",
       "ticker": "6146.T",
       "name": "ディスコ",
       "entry_rule": "analyst_gap_jp",
@@ -1306,6 +1349,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "MPWR.O",
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "entry_rule": "analyst_gap_us",
@@ -1329,6 +1373,7 @@
       "excess_pct": 22.94
     },
     {
+      "chart_ric": "CDNS.O",
       "ticker": "CDNS",
       "name": "Cadence Design Systems",
       "entry_rule": "analyst_gap_us",
@@ -1352,6 +1397,7 @@
       "excess_pct": 19.07
     },
     {
+      "chart_ric": "GNRC.N",
       "ticker": "GNRC",
       "name": "Generac",
       "entry_rule": "analyst_gap_us",
@@ -1375,6 +1421,7 @@
       "excess_pct": -7.1
     },
     {
+      "chart_ric": "IP.N",
       "ticker": "IP",
       "name": "International Paper",
       "entry_rule": "analyst_gap_us",
@@ -1398,6 +1445,7 @@
       "excess_pct": -1.2
     },
     {
+      "chart_ric": "TJX.N",
       "ticker": "TJX",
       "name": "TJX Companies",
       "entry_rule": "analyst_gap_us",
@@ -1421,6 +1469,7 @@
       "excess_pct": 8.41
     },
     {
+      "chart_ric": "CASY.O",
       "ticker": "CASY",
       "name": "Casey's",
       "entry_rule": "analyst_gap_us",
@@ -1444,6 +1493,7 @@
       "excess_pct": 17.04
     },
     {
+      "chart_ric": "CRH.N",
       "ticker": "CRH",
       "name": "CRH plc",
       "entry_rule": "analyst_gap_us",
@@ -1467,6 +1517,7 @@
       "excess_pct": 8.9
     },
     {
+      "chart_ric": "CARR.N",
       "ticker": "CARR",
       "name": "Carrier Global",
       "entry_rule": "analyst_gap_us",
@@ -1490,6 +1541,7 @@
       "excess_pct": 0.83
     },
     {
+      "chart_ric": "TDG.N",
       "ticker": "TDG",
       "name": "TransDigm Group",
       "entry_rule": "analyst_gap_us",
@@ -1513,6 +1565,7 @@
       "excess_pct": 9.76
     },
     {
+      "chart_ric": "APTV.N",
       "ticker": "APTV",
       "name": "Aptiv",
       "entry_rule": "analyst_gap_us",
@@ -1536,6 +1589,7 @@
       "excess_pct": -12.73
     },
     {
+      "chart_ric": "BA.N",
       "ticker": "BA",
       "name": "Boeing",
       "entry_rule": "analyst_gap_us",
@@ -1559,6 +1613,7 @@
       "excess_pct": -12.66
     },
     {
+      "chart_ric": "BLDR.N",
       "ticker": "BLDR",
       "name": "Builders FirstSource",
       "entry_rule": "analyst_gap_us",
@@ -1582,6 +1637,7 @@
       "excess_pct": 3.22
     },
     {
+      "chart_ric": "1928.T",
       "ticker": "1928.T",
       "name": "積水ハウス",
       "entry_rule": "value_screen",
@@ -1605,6 +1661,7 @@
       "excess_pct": 9.07
     },
     {
+      "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
       "entry_rule": "analyst_gap_us",
@@ -1628,6 +1685,7 @@
       "excess_pct": 4.93
     },
     {
+      "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
       "entry_rule": "analyst_gap_us",
@@ -1651,6 +1709,7 @@
       "excess_pct": 0.8
     },
     {
+      "chart_ric": "OMC.N",
       "ticker": "OMC",
       "name": "Omnicom Group",
       "entry_rule": "analyst_gap_us",
@@ -1674,6 +1733,7 @@
       "excess_pct": 16.66
     },
     {
+      "chart_ric": "CVS.N",
       "ticker": "CVS",
       "name": "CVS Health",
       "entry_rule": "analyst_gap_us",
@@ -1697,6 +1757,7 @@
       "excess_pct": 1.99
     },
     {
+      "chart_ric": "MLM.N",
       "ticker": "MLM",
       "name": "Martin Marietta Materials",
       "entry_rule": "analyst_gap_us",
@@ -1720,6 +1781,7 @@
       "excess_pct": 6.2
     },
     {
+      "chart_ric": "TXT.N",
       "ticker": "TXT",
       "name": "Textron",
       "entry_rule": "analyst_gap_us",
@@ -1743,6 +1805,7 @@
       "excess_pct": 10.53
     },
     {
+      "chart_ric": "EXE.O",
       "ticker": "EXE",
       "name": "Expand Energy",
       "entry_rule": "analyst_gap_us",
@@ -1766,6 +1829,7 @@
       "excess_pct": 4.52
     },
     {
+      "chart_ric": "EQT.N",
       "ticker": "EQT",
       "name": "EQT Corporation",
       "entry_rule": "analyst_gap_us",
@@ -1789,6 +1853,7 @@
       "excess_pct": 6.7
     },
     {
+      "chart_ric": "FSLR.O",
       "ticker": "FSLR",
       "name": "First Solar",
       "entry_rule": "analyst_gap_us",
@@ -1812,6 +1877,7 @@
       "excess_pct": 0.36
     },
     {
+      "chart_ric": "PCG.N",
       "ticker": "PCG",
       "name": "PG&E Corporation",
       "entry_rule": "analyst_gap_us",
@@ -1835,6 +1901,7 @@
       "excess_pct": 7.15
     },
     {
+      "chart_ric": "CMI.N",
       "ticker": "CMI",
       "name": "Cummins",
       "entry_rule": "analyst_gap_us",
@@ -1858,6 +1925,7 @@
       "excess_pct": -11.53
     },
     {
+      "chart_ric": "HONA.O",
       "ticker": "HONA",
       "name": "Honeywell Aerospace",
       "entry_rule": "analyst_gap_us",
@@ -1881,6 +1949,7 @@
       "excess_pct": 9.82
     },
     {
+      "chart_ric": "6902.T",
       "ticker": "6902.T",
       "name": "デンソー",
       "entry_rule": "value_screen",
@@ -1904,6 +1973,7 @@
       "excess_pct": 8.5
     },
     {
+      "chart_ric": "NRG.N",
       "ticker": "NRG",
       "name": "NRG Energy",
       "entry_rule": "analyst_gap_us",
@@ -1927,6 +1997,7 @@
       "excess_pct": -0.18
     },
     {
+      "chart_ric": "SBAC.O",
       "ticker": "SBAC",
       "name": "SBA Communications",
       "entry_rule": "analyst_gap_us",
@@ -1950,6 +2021,7 @@
       "excess_pct": 17.55
     },
     {
+      "chart_ric": "COF.N",
       "ticker": "COF",
       "name": "Capital One",
       "entry_rule": "analyst_gap_us",
@@ -1973,6 +2045,7 @@
       "excess_pct": 1.4
     },
     {
+      "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
       "entry_rule": "value_screen",
@@ -1996,6 +2069,7 @@
       "excess_pct": 15.11
     },
     {
+      "chart_ric": "4578.T",
       "ticker": "4578.T",
       "name": "大塚ホールディングス",
       "entry_rule": "analyst_gap_jp",
@@ -2019,6 +2093,7 @@
       "excess_pct": 11.73
     },
     {
+      "chart_ric": "CBRE.N",
       "ticker": "CBRE",
       "name": "CBRE Group",
       "entry_rule": "analyst_gap_us",
@@ -2042,6 +2117,7 @@
       "excess_pct": 5.23
     },
     {
+      "chart_ric": "VICI.N",
       "ticker": "VICI",
       "name": "Vici Properties",
       "entry_rule": "analyst_gap_us",
@@ -2065,6 +2141,7 @@
       "excess_pct": 11.63
     },
     {
+      "chart_ric": "NOC.N",
       "ticker": "NOC",
       "name": "Northrop Grumman",
       "entry_rule": "analyst_gap_us",
@@ -2088,6 +2165,7 @@
       "excess_pct": 15.89
     },
     {
+      "chart_ric": "APO.N",
       "ticker": "APO",
       "name": "Apollo Global Management",
       "entry_rule": "analyst_gap_us",
@@ -2111,6 +2189,7 @@
       "excess_pct": 8.64
     },
     {
+      "chart_ric": "APP.O",
       "ticker": "APP",
       "name": "AppLovin",
       "entry_rule": "analyst_gap_us",
@@ -2134,6 +2213,7 @@
       "excess_pct": 44.99
     },
     {
+      "chart_ric": "9022.T",
       "ticker": "9022.T",
       "name": "東海旅客鉄道",
       "entry_rule": "value_screen",
@@ -2157,6 +2237,7 @@
       "excess_pct": 22.26
     },
     {
+      "chart_ric": "1925.T",
       "ticker": "1925.T",
       "name": "大和ハウス工業",
       "entry_rule": "value_screen",
@@ -2180,6 +2261,7 @@
       "excess_pct": 13.93
     },
     {
+      "chart_ric": "8801.T",
       "ticker": "8801.T",
       "name": "三井不動産",
       "entry_rule": "analyst_gap_jp",
@@ -2203,6 +2285,7 @@
       "excess_pct": 13.8
     },
     {
+      "chart_ric": "HII.N",
       "ticker": "HII",
       "name": "Huntington Ingalls Industries",
       "entry_rule": "analyst_gap_us",
@@ -2226,6 +2309,7 @@
       "excess_pct": 18.57
     },
     {
+      "chart_ric": "CMG.N",
       "ticker": "CMG",
       "name": "Chipotle Mexican Grill",
       "entry_rule": "analyst_gap_us",
@@ -2249,6 +2333,7 @@
       "excess_pct": 10.67
     },
     {
+      "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
       "entry_rule": "analyst_gap_jp",
@@ -2272,6 +2357,7 @@
       "excess_pct": 14.1
     },
     {
+      "chart_ric": "BSX.N",
       "ticker": "BSX",
       "name": "Boston Scientific",
       "entry_rule": "analyst_gap_us",
@@ -2295,6 +2381,7 @@
       "excess_pct": 5.38
     },
     {
+      "chart_ric": "KKR.N",
       "ticker": "KKR",
       "name": "KKR & Co.",
       "entry_rule": "analyst_gap_us",
@@ -2318,6 +2405,7 @@
       "excess_pct": 10.09
     },
     {
+      "chart_ric": "LVS.N",
       "ticker": "LVS",
       "name": "Las Vegas Sands",
       "entry_rule": "analyst_gap_us",
@@ -2341,6 +2429,7 @@
       "excess_pct": 10.36
     },
     {
+      "chart_ric": "WYNN.O",
       "ticker": "WYNN",
       "name": "Wynn Resorts",
       "entry_rule": "analyst_gap_us",
@@ -2364,6 +2453,7 @@
       "excess_pct": 12.77
     },
     {
+      "chart_ric": "SW.N",
       "ticker": "SW",
       "name": "Smurfit Westrock",
       "entry_rule": "analyst_gap_us",
@@ -2387,6 +2477,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "LEN.N",
       "ticker": "LEN",
       "name": "Lennar",
       "entry_rule": "value_screen",
@@ -2410,6 +2501,7 @@
       "excess_pct": 9.28
     },
     {
+      "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
       "entry_rule": "analyst_gap_us",
@@ -2433,6 +2525,7 @@
       "excess_pct": -1.62
     },
     {
+      "chart_ric": "TKO.N",
       "ticker": "TKO",
       "name": "TKO Group Holdings",
       "entry_rule": "analyst_gap_us",
@@ -2456,6 +2549,7 @@
       "excess_pct": 11.64
     },
     {
+      "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
       "entry_rule": "analyst_gap_us",
@@ -2479,6 +2573,7 @@
       "excess_pct": 6.95
     },
     {
+      "chart_ric": "HWM.N",
       "ticker": "HWM",
       "name": "Howmet Aerospace",
       "entry_rule": "analyst_gap_us",
@@ -2502,6 +2597,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "9202.T",
       "ticker": "9202.T",
       "name": "ＡＮＡホールディングス",
       "entry_rule": "value_screen",
@@ -2525,6 +2621,7 @@
       "excess_pct": 19.12
     },
     {
+      "chart_ric": "6146.T",
       "ticker": "6146.T",
       "name": "ディスコ",
       "entry_rule": "analyst_gap_jp",
@@ -2548,6 +2645,7 @@
       "excess_pct": -9.49
     },
     {
+      "chart_ric": "AKAM.O",
       "ticker": "AKAM",
       "name": "Akamai Technologies",
       "entry_rule": "analyst_gap_us",
@@ -2571,6 +2669,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "VRT.N",
       "ticker": "VRT",
       "name": "Vertiv",
       "entry_rule": "analyst_gap_us",
@@ -2594,6 +2693,7 @@
       "excess_pct": null
     },
     {
+      "chart_ric": "7203.T",
       "ticker": "7203.T",
       "name": "トヨタ自動車",
       "entry_rule": "value_screen",
@@ -2617,6 +2717,7 @@
       "excess_pct": 11.39
     },
     {
+      "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
       "entry_rule": "analyst_gap_us",
@@ -2640,6 +2741,7 @@
       "excess_pct": 3.97
     },
     {
+      "chart_ric": "ANET.N",
       "ticker": "ANET",
       "name": "Arista Networks",
       "entry_rule": "analyst_gap_us",
@@ -2663,6 +2765,7 @@
       "excess_pct": 15.8
     },
     {
+      "chart_ric": "FLEX.O",
       "ticker": "FLEX",
       "name": "Flex Ltd.",
       "entry_rule": "analyst_gap_us",
@@ -2686,6 +2789,7 @@
       "excess_pct": -10.86
     },
     {
+      "chart_ric": "KLAC.O",
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "entry_rule": "analyst_gap_us",
@@ -2709,6 +2813,7 @@
       "excess_pct": 2.97
     },
     {
+      "chart_ric": "LRCX.O",
       "ticker": "LRCX",
       "name": "Lam Research",
       "entry_rule": "analyst_gap_us",
@@ -2732,6 +2837,7 @@
       "excess_pct": -2.73
     },
     {
+      "chart_ric": "MPWR.O",
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "entry_rule": "analyst_gap_us",
@@ -2755,6 +2861,7 @@
       "excess_pct": 20.09
     },
     {
+      "chart_ric": "APTV.N",
       "ticker": "APTV",
       "name": "Aptiv",
       "entry_rule": "analyst_gap_us",
@@ -2778,6 +2885,7 @@
       "excess_pct": -9.56
     },
     {
+      "chart_ric": "Q.N",
       "ticker": "Q",
       "name": "Qnity Electronics",
       "entry_rule": "analyst_gap_us",
@@ -2801,6 +2909,7 @@
       "excess_pct": 3.02
     },
     {
+      "chart_ric": "CRH.N",
       "ticker": "CRH",
       "name": "CRH plc",
       "entry_rule": "analyst_gap_us",
@@ -2824,6 +2933,7 @@
       "excess_pct": 11.31
     },
     {
+      "chart_ric": "TER.O",
       "ticker": "TER",
       "name": "Teradyne",
       "entry_rule": "analyst_gap_us",
@@ -2847,6 +2957,7 @@
       "excess_pct": -11.01
     },
     {
+      "chart_ric": "GEV.N",
       "ticker": "GEV",
       "name": "GE Vernova",
       "entry_rule": "analyst_gap_us",
@@ -2870,6 +2981,7 @@
       "excess_pct": -4.75
     },
     {
+      "chart_ric": "APH.N",
       "ticker": "APH",
       "name": "Amphenol",
       "entry_rule": "analyst_gap_us",
@@ -2893,6 +3005,7 @@
       "excess_pct": -2.08
     },
     {
+      "chart_ric": "5802.T",
       "ticker": "5802.T",
       "name": "住友電気工業",
       "entry_rule": "analyst_gap_jp",
@@ -2916,6 +3029,7 @@
       "excess_pct": -17.25
     },
     {
+      "chart_ric": "6762.T",
       "ticker": "6762.T",
       "name": "ＴＤＫ",
       "entry_rule": "analyst_gap_jp",
@@ -2939,6 +3053,7 @@
       "excess_pct": -14.9
     },
     {
+      "chart_ric": "6273.T",
       "ticker": "6273.T",
       "name": "ＳＭＣ",
       "entry_rule": "analyst_gap_jp",
@@ -2962,6 +3077,7 @@
       "excess_pct": -6.1
     },
     {
+      "chart_ric": "GLW.N",
       "ticker": "GLW",
       "name": "Corning Inc.",
       "entry_rule": "analyst_gap_us",
@@ -2985,6 +3101,7 @@
       "excess_pct": -5.94
     },
     {
+      "chart_ric": "GOOGL.O",
       "ticker": "GOOGL",
       "name": "Alphabet Inc. (Class A)",
       "entry_rule": "analyst_gap_us",
@@ -3008,6 +3125,7 @@
       "excess_pct": 5.51
     },
     {
+      "chart_ric": "GOOG.O",
       "ticker": "GOOG",
       "name": "Alphabet Inc. (Class C)",
       "entry_rule": "analyst_gap_us",
@@ -3031,6 +3149,7 @@
       "excess_pct": 5.45
     },
     {
+      "chart_ric": "F.N",
       "ticker": "F",
       "name": "Ford Motor Company",
       "entry_rule": "analyst_gap_us",
@@ -3054,6 +3173,7 @@
       "excess_pct": 2.5
     },
     {
+      "chart_ric": "CMCSA.O",
       "ticker": "CMCSA",
       "name": "Comcast",
       "entry_rule": "value_screen",
@@ -3077,6 +3197,7 @@
       "excess_pct": 8.95
     },
     {
+      "chart_ric": "8801.T",
       "ticker": "8801.T",
       "name": "三井不動産",
       "entry_rule": "analyst_gap_jp",
@@ -3100,6 +3221,7 @@
       "excess_pct": 2.38
     },
     {
+      "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
       "entry_rule": "analyst_gap_us",
@@ -3123,6 +3245,7 @@
       "excess_pct": 14.53
     },
     {
+      "chart_ric": "MGM.N",
       "ticker": "MGM",
       "name": "MGM Resorts",
       "entry_rule": "analyst_gap_us",
@@ -3146,6 +3269,7 @@
       "excess_pct": 15.8
     },
     {
+      "chart_ric": "CTVA.N",
       "ticker": "CTVA",
       "name": "Corteva",
       "entry_rule": "value_screen",
@@ -3169,6 +3293,7 @@
       "excess_pct": -20.6
     },
     {
+      "chart_ric": "8802.T",
       "ticker": "8802.T",
       "name": "三菱地所",
       "entry_rule": "analyst_gap_jp",
@@ -3192,6 +3317,7 @@
       "excess_pct": 7.2
     },
     {
+      "chart_ric": "CTVA.N",
       "ticker": "CTVA",
       "name": "Corteva",
       "entry_rule": "analyst_gap_us",
@@ -3215,6 +3341,7 @@
       "excess_pct": -20.6
     },
     {
+      "chart_ric": "8830.T",
       "ticker": "8830.T",
       "name": "住友不動産",
       "entry_rule": "analyst_gap_jp",
@@ -3238,6 +3365,7 @@
       "excess_pct": 9.07
     },
     {
+      "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
       "entry_rule": "analyst_gap_us",
@@ -3261,6 +3389,7 @@
       "excess_pct": 3.48
     },
     {
+      "chart_ric": "UBER.N",
       "ticker": "UBER",
       "name": "Uber",
       "entry_rule": "analyst_gap_us",
@@ -3284,6 +3413,7 @@
       "excess_pct": 3.04
     },
     {
+      "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
       "entry_rule": "analyst_gap_us",
@@ -3307,6 +3437,7 @@
       "excess_pct": 6.64
     },
     {
+      "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
       "entry_rule": "value_screen",
@@ -3330,6 +3461,7 @@
       "excess_pct": -6.46
     },
     {
+      "chart_ric": "6902.T",
       "ticker": "6902.T",
       "name": "デンソー",
       "entry_rule": "value_screen",
@@ -3353,6 +3485,7 @@
       "excess_pct": -2.13
     },
     {
+      "chart_ric": "6702.T",
       "ticker": "6702.T",
       "name": "富士通",
       "entry_rule": "analyst_gap_jp",
@@ -3376,6 +3509,7 @@
       "excess_pct": 1.08
     },
     {
+      "chart_ric": "MRVL.O",
       "ticker": "MRVL",
       "name": "Marvell Technology",
       "entry_rule": "analyst_gap_us",
@@ -3399,6 +3533,7 @@
       "excess_pct": 8.6
     },
     {
+      "chart_ric": "CIEN.N",
       "ticker": "CIEN",
       "name": "Ciena",
       "entry_rule": "analyst_gap_us",
@@ -3422,6 +3557,7 @@
       "excess_pct": 10.51
     },
     {
+      "chart_ric": "LITE.O",
       "ticker": "LITE",
       "name": "Lumentum",
       "entry_rule": "analyst_gap_us",
@@ -3445,6 +3581,7 @@
       "excess_pct": -2.7
     },
     {
+      "chart_ric": "NRG.N",
       "ticker": "NRG",
       "name": "NRG Energy",
       "entry_rule": "analyst_gap_us",
@@ -3468,6 +3605,7 @@
       "excess_pct": 2.27
     },
     {
+      "chart_ric": "AVGO.O",
       "ticker": "AVGO",
       "name": "Broadcom",
       "entry_rule": "analyst_gap_us",
@@ -3491,6 +3629,7 @@
       "excess_pct": 13.99
     },
     {
+      "chart_ric": "COHR.N",
       "ticker": "COHR",
       "name": "Coherent Corp.",
       "entry_rule": "analyst_gap_us",
@@ -3514,6 +3653,7 @@
       "excess_pct": 6.93
     },
     {
+      "chart_ric": "INTC.O",
       "ticker": "INTC",
       "name": "Intel",
       "entry_rule": "analyst_gap_us",
@@ -3537,6 +3677,7 @@
       "excess_pct": 4.53
     },
     {
+      "chart_ric": "GNRC.N",
       "ticker": "GNRC",
       "name": "Generac",
       "entry_rule": "analyst_gap_us",
@@ -3560,6 +3701,7 @@
       "excess_pct": 5.1
     },
     {
+      "chart_ric": "KEYS.N",
       "ticker": "KEYS",
       "name": "Keysight Technologies",
       "entry_rule": "analyst_gap_us",
@@ -3583,6 +3725,7 @@
       "excess_pct": -1.17
     },
     {
+      "chart_ric": "ON.O",
       "ticker": "ON",
       "name": "ON Semiconductor",
       "entry_rule": "analyst_gap_us",
@@ -3606,6 +3749,7 @@
       "excess_pct": 8.34
     },
     {
+      "chart_ric": "Q.N",
       "ticker": "Q",
       "name": "Qnity Electronics",
       "entry_rule": "analyst_gap_us",
@@ -3629,6 +3773,7 @@
       "excess_pct": -5.24
     },
     {
+      "chart_ric": "ECHO.O",
       "ticker": "ECHO",
       "name": "EchoStar",
       "entry_rule": "analyst_gap_us",
@@ -3652,6 +3797,7 @@
       "excess_pct": -3.5
     },
     {
+      "chart_ric": "9984.T",
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
       "entry_rule": "analyst_gap_jp",
@@ -3675,6 +3821,7 @@
       "excess_pct": 3.04
     },
     {
+      "chart_ric": "8035.T",
       "ticker": "8035.T",
       "name": "東京エレクトロン",
       "entry_rule": "analyst_gap_jp",
@@ -3698,6 +3845,7 @@
       "excess_pct": 1.22
     },
     {
+      "chart_ric": "6501.T",
       "ticker": "6501.T",
       "name": "日立製作所",
       "entry_rule": "analyst_gap_jp",
@@ -3721,6 +3869,7 @@
       "excess_pct": -0.36
     },
     {
+      "chart_ric": "6861.T",
       "ticker": "6861.T",
       "name": "キーエンス",
       "entry_rule": "analyst_gap_jp",
@@ -3744,6 +3893,7 @@
       "excess_pct": -2.09
     },
     {
+      "chart_ric": "4063.T",
       "ticker": "4063.T",
       "name": "信越化学工業",
       "entry_rule": "analyst_gap_jp",
@@ -3767,6 +3917,7 @@
       "excess_pct": 1.18
     },
     {
+      "chart_ric": "DVN.N",
       "ticker": "DVN",
       "name": "Devon Energy",
       "entry_rule": "analyst_gap_us",
@@ -3790,6 +3941,7 @@
       "excess_pct": 5.09
     },
     {
+      "chart_ric": "CSCO.O",
       "ticker": "CSCO",
       "name": "Cisco",
       "entry_rule": "analyst_gap_us",
@@ -3813,6 +3965,7 @@
       "excess_pct": 2.17
     },
     {
+      "chart_ric": "TRMB.O",
       "ticker": "TRMB",
       "name": "Trimble Inc.",
       "entry_rule": "analyst_gap_us",
@@ -3836,6 +3989,7 @@
       "excess_pct": 1.75
     },
     {
+      "chart_ric": "5020.T",
       "ticker": "5020.T",
       "name": "ＥＮＥＯＳホールディングス",
       "entry_rule": "value_screen",
@@ -3859,6 +4013,7 @@
       "excess_pct": -1.2
     },
     {
+      "chart_ric": "FIS.N",
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
       "entry_rule": "value_screen",
@@ -3882,6 +4037,7 @@
       "excess_pct": -6.86
     },
     {
+      "chart_ric": "5803.T",
       "ticker": "5803.T",
       "name": "フジクラ",
       "entry_rule": "analyst_gap_jp",
@@ -3905,6 +4061,7 @@
       "excess_pct": -5.71
     },
     {
+      "chart_ric": "6701.T",
       "ticker": "6701.T",
       "name": "日本電気",
       "entry_rule": "analyst_gap_jp",
@@ -3928,6 +4085,7 @@
       "excess_pct": -1.1
     },
     {
+      "chart_ric": "DELL.N",
       "ticker": "DELL",
       "name": "Dell Technologies",
       "entry_rule": "analyst_gap_us",
@@ -3951,6 +4109,7 @@
       "excess_pct": 9.89
     },
     {
+      "chart_ric": "BKR.O",
       "ticker": "BKR",
       "name": "Baker Hughes",
       "entry_rule": "analyst_gap_us",
@@ -3974,6 +4133,7 @@
       "excess_pct": -0.84
     },
     {
+      "chart_ric": "FANG.O",
       "ticker": "FANG",
       "name": "Diamondback Energy",
       "entry_rule": "analyst_gap_us",
