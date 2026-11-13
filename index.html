@@ -4,304 +4,587 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>保有銘柄 出口監視</title>
+<title>今日のシグナル｜バリュー株ボード</title>
 <style>
+  /* 3画面で共通の見た目。公開時に publish.render_page が各 HTML に埋め込む。
+     色の意味: 藍 = 買い / 朱 = 売り・下落 / 緑 = 上昇 / 琥珀 = 待機・注意 */
   :root{
-    --bg:#f7f7f5; --panel:#fff; --ink:#1b1b18; --muted:#6b6b63; --line:#e2e2dc; --hover:#f3f3ef;
-    --alert:#b4341f; --alert-bg:#fdeceb; --clear:#3f7a52; --clear-bg:#eef5f0;
-    --unknown:#8a6d1f; --unknown-bg:#fbf3e0; --anom:#8a4b1f; --anom-bg:#fbeee4;
+    --bg:#f3f5f8; --panel:#fff; --ink:#16202e; --muted:#5b6878; --line:#dbe1e9; --hover:#f0f3f7;
+    --buy:#1d4e89; --buy-bg:#e8eff8; --sell:#b3361f; --sell-bg:#fbeae6;
+    --up:#1b7446; --up-bg:#e6f3ec; --down:#c0392b;
+    --wait:#85600c; --wait-bg:#fbf1d9; --off:#5b6878; --off-bg:#eceff3;
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --bg:#17171a; --panel:#1f1f23; --ink:#eceae4; --muted:#9b9b93; --line:#33333a; --hover:#26262b;
-      --alert:#ff8a72; --alert-bg:#3a1e19; --clear:#7fc296; --clear-bg:#1b2a21;
-      --unknown:#e0be6a; --unknown-bg:#2e2718; --anom:#e3a377; --anom-bg:#31241a;
+      --bg:#12161c; --panel:#1a2029; --ink:#e8ecf1; --muted:#98a4b3; --line:#2c3542; --hover:#212935;
+      --buy:#8ab4ea; --buy-bg:#1b2a3f; --sell:#ff8f78; --sell-bg:#3b1e19;
+      --up:#79c79a; --up-bg:#182c22; --down:#ff8f78;
+      --wait:#e2bd62; --wait-bg:#2f2816; --off:#98a4b3; --off-bg:#252c37;
     }
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
-       font:14px/1.6 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif}
-  .wrap{max-width:1180px;margin:0 auto;padding-block:20px 64px;padding-left:16px;padding-right:16px}
-  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:14px;overflow-x:auto}
-  .tabs a{color:var(--muted);text-decoration:none;padding:8px 14px;font-size:13.5px;white-space:nowrap;
-          border-bottom:2px solid transparent;margin-bottom:-1px}
+       font:15px/1.65 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Noto Sans JP",Meiryo,sans-serif;
+       -webkit-text-size-adjust:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 16px 72px}
+
+  /* ---- 上部のナビ */
+  .top{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .top-in{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:20px}
+  .brand{font-weight:700;font-size:15px;letter-spacing:.04em;white-space:nowrap;padding:12px 0}
+  .tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs a{color:var(--muted);text-decoration:none;padding:13px 14px 11px;font-size:14.5px;white-space:nowrap;
+          border-bottom:3px solid transparent}
   .tabs a:hover{color:var(--ink)}
-  .tabs a[aria-current]{color:var(--ink);font-weight:600;border-bottom-color:var(--ink)}
-  h1{font-size:19px;margin:0 0 4px;letter-spacing:.02em}
-  .meta{color:var(--muted);font-size:12.5px;margin-bottom:14px}
+  .tabs a[aria-current]{color:var(--buy);font-weight:700;border-bottom-color:var(--buy)}
+  a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible,th:focus-visible{
+    outline:2px solid var(--buy);outline-offset:2px}
+
+  h1{font-size:22px;margin:22px 0 2px;letter-spacing:.02em}
+  .meta{color:var(--muted);font-size:13px;margin-bottom:16px}
   .meta b{color:var(--ink);font-weight:600}
+
+  /* ---- 絞り込み */
   .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .toolbar .sep{width:1px;height:24px;background:var(--line)}
   .chip{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);
-        border-radius:999px;padding:5px 13px;font-size:12.5px;display:inline-flex;gap:7px;
-        align-items:center;cursor:pointer}
+        border-radius:999px;padding:6px 14px;font-size:13.5px;display:inline-flex;gap:7px;
+        align-items:center;cursor:pointer;min-height:36px}
   .chip b{font-size:15px}
   .chip[aria-pressed="false"]{opacity:.45}
-  .chip.alert b{color:var(--alert)} .chip.clear b{color:var(--clear)} .chip.unknown b{color:var(--unknown)}
+  .chip[aria-pressed="true"]{border-color:var(--ink)}
   .chip.static{cursor:default}
-  .search{font:inherit;font-size:13px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
-          border-radius:8px;padding:6px 11px;min-width:180px;margin-left:auto}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
-         overflow:hidden;margin-bottom:18px}
-  .panel>h2{font-size:13px;margin:0;padding:11px 15px;border-bottom:1px solid var(--line);
-            color:var(--muted);font-weight:600;letter-spacing:.04em;display:flex;gap:8px;align-items:center}
-  .panel>h2 .cnt{font-size:12px;color:var(--ink);background:var(--bg);border-radius:999px;padding:0 8px}
-  /* 広い画面では表が収まるので内側スクロールを作らない（見出しの固定はページのスクロールに効く）。
-     狭い画面では横スクロールにし、先頭列を固定する */
-  .scroll{overflow-x:auto}
-  @media (min-width:960px){ .scroll{overflow:visible} }
-  table{border-collapse:separate;border-spacing:0;width:100%;min-width:900px;font-variant-numeric:tabular-nums}
-  th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
-  thead th{position:sticky;top:0;z-index:2;font-size:11.5px;color:var(--muted);font-weight:600;
-           cursor:pointer;user-select:none;border-bottom:1px solid var(--line)}
-  thead th:hover{color:var(--ink)}
-  thead th .arrow{opacity:.35;font-size:9px;margin-left:3px}
+  .search{font:inherit;font-size:14px;background:var(--panel);color:var(--ink);border:1px solid var(--line);
+          border-radius:8px;padding:7px 12px;min-width:200px;margin-left:auto;min-height:36px}
+
+  /* ---- 箱と表 */
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:18px}
+  .panel>h2{font-size:15px;margin:0;padding:12px 16px;border-bottom:1px solid var(--line);
+            font-weight:700;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+  .panel>h2 .cnt{font-size:13px;font-weight:600;color:var(--muted)}
+  .panel>h2 .cond{font-size:12.5px;font-weight:400;color:var(--muted);margin-left:auto}
+  .scroll{overflow-x:auto;border-radius:0 0 10px 10px}
+  table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:tabular-nums}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+  thead th{font-size:12.5px;color:var(--muted);font-weight:600;user-select:none;background:var(--hover)}
+  thead th.sortable{cursor:pointer}
+  thead th.sortable:hover{color:var(--ink)}
+  thead th .arrow{opacity:.3;font-size:9px;margin-left:3px}
   thead th[aria-sort] .arrow{opacity:1;color:var(--ink)}
   th:first-child,td:first-child{position:sticky;left:0;z-index:1}
-  thead th:first-child{z-index:3}
   tbody tr:hover td{background:var(--hover)}
-  tr:last-child td{border-bottom:none}
+  tbody tr:last-child td{border-bottom:none}
   td.num,th.num{text-align:right}
-  .tk{font-weight:600}
-  .nm{white-space:normal;min-width:140px;color:var(--muted)}
-  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:600}
-  .b-ALERT{background:var(--alert-bg);color:var(--alert)}
-  .b-CLEAR{background:var(--clear-bg);color:var(--clear)}
-  .b-UNKNOWN{background:var(--unknown-bg);color:var(--unknown)}
-  .neg{color:var(--alert)} .pos{color:var(--clear)}
-  .anom{display:inline-block;background:var(--anom-bg);color:var(--anom);border-radius:5px;
-        padding:2px 7px;font-size:11.5px;margin:1px 3px 1px 0}
-  .anom b{font-weight:700}
+  .stock{display:flex;flex-direction:column;line-height:1.35;min-width:130px;max-width:230px}
+  .stock .nm{font-weight:600;white-space:normal}
+  .stock .cd{font-size:12px;color:var(--muted)}
+  .reason{white-space:normal;min-width:240px;max-width:420px;color:var(--muted);font-size:13px;line-height:1.5}
   .dim{color:var(--muted)}
-  .note{color:var(--muted);font-size:12px;padding:11px 15px;border-top:1px solid var(--line);line-height:1.7}
-  .help{margin-bottom:18px;color:var(--muted);font-size:12.5px}
-  .help summary{cursor:pointer;color:var(--ink);font-size:12.5px}
-  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 14px}
+  .pos{color:var(--up)} .neg{color:var(--down)}
+  .big{font-size:16px;font-weight:700}
+
+  /* ---- ラベル */
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}
+  .b-buy{background:var(--buy);color:#fff}
+  .b-sell{background:var(--sell);color:#fff}
+  .b-wait{background:var(--wait-bg);color:var(--wait)}
+  .b-ok{background:var(--up-bg);color:var(--up)}
+  .b-off{background:var(--off-bg);color:var(--off)}
+  @media (prefers-color-scheme:dark){ .b-buy,.b-sell{color:#10151c} }
+  .tag{display:inline-block;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:0 6px;
+       font-size:11.5px;font-weight:600;line-height:1.7;white-space:nowrap}
+  .tag.held{border-color:var(--sell);color:var(--sell)}
+  .tag.paper{border-color:var(--buy);color:var(--buy)}
+  .tag.warn{border-color:var(--wait);color:var(--wait)}
+
+  .note{color:var(--muted);font-size:13px;padding:12px 16px;border-top:1px solid var(--line);line-height:1.75}
+  .panel>.note:first-child{border-top:none}
+  .callout{background:var(--wait-bg);color:var(--wait);border-radius:8px;padding:10px 14px;font-size:13px;margin:12px 16px;line-height:1.65}
+  .empty{padding:20px 16px;color:var(--muted);font-size:14px;white-space:normal}
+  .stale-banner{background:var(--sell-bg);color:var(--sell);border:1px solid var(--sell);border-radius:10px;
+                padding:12px 16px;margin:16px 0 0;font-size:14px;line-height:1.6}
+  .stale-banner b{display:block;font-size:15px}
+  .err{background:var(--sell-bg);color:var(--sell);border:1px solid var(--sell);border-radius:10px;padding:16px;margin-top:16px}
+  .help{margin:6px 0 18px;color:var(--muted);font-size:13.5px}
+  .help summary{cursor:pointer;color:var(--ink);font-size:14px;padding:6px 0}
+  .help dl{margin:8px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;max-width:80ch}
   .help dt{color:var(--ink);font-weight:600}
   .help dd{margin:0}
-  .err{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
-       border-radius:10px;padding:16px}
-  .stale-banner{background:var(--alert-bg);color:var(--alert);border:1px solid var(--alert);
-       border-radius:10px;padding:13px 16px;margin-bottom:18px;font-size:13.5px}
-  .stale-banner b{display:block;font-size:15px;margin-bottom:4px}
-  .empty{padding:18px 15px;color:var(--muted);font-size:13px}
   code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
-  @media (max-width:600px){
-    .wrap{padding-block:12px 48px} h1{font-size:17px}
+
+  @media (max-width:640px){
+    body{font-size:14.5px}
+    .top-in{gap:10px;padding:0 12px}
+    .brand{display:none}
+    .tabs a{padding:12px 11px 10px;font-size:14px}
+    .wrap{padding:0 12px 56px}
+    h1{font-size:19px;margin-top:16px}
     .search{min-width:0;width:100%;margin-left:0}
-    .help dl{grid-template-columns:1fr}
+    .help dl{grid-template-columns:1fr;gap:2px 0}
+    .help dd{margin-bottom:8px}
+    .panel>h2 .cond{margin-left:0;width:100%}
+    th,td{padding:9px 10px}
   }
+  a{color:var(--buy)}
+
+  /* ---- 今日のシグナル */
+  .signals{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+  @media (max-width:860px){ .signals{grid-template-columns:1fr} }
+  .sig{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;overflow:hidden}
+  .sig>h2{margin:0;padding:13px 16px;font-size:16px;display:flex;align-items:baseline;gap:10px;color:#fff}
+  .sig.buy>h2{background:var(--buy)} .sig.sell>h2{background:var(--sell)}
+  @media (prefers-color-scheme:dark){ .sig>h2{color:#10151c} }
+  .sig>h2 .n{font-size:22px;font-weight:700;line-height:1}
+  .sig>h2 .sub{font-size:12.5px;font-weight:400;opacity:.9;margin-left:auto;text-align:right}
+  .item{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:none}
+  .item .head{display:flex;gap:12px;align-items:baseline;justify-content:space-between}
+  .item .nm{font-size:16px;font-weight:700;line-height:1.4}
+  .item .cd{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:6px}
+  .item .px{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+  .item .tags{display:flex;flex-wrap:wrap;gap:5px;margin:6px 0}
+  .item .key{font-size:14px;font-variant-numeric:tabular-nums}
+  .item .key b{font-size:16px}
+  .item .why{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.55}
+  .sig h3{margin:0;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;
+          background:var(--hover);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .recent{width:100%}
+  .recent td{padding:8px 10px;font-size:13.5px}
+  .recent td:first-child{padding-left:16px;position:static}
+  .recent td:last-child{padding-right:16px}
+  .overview{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+  @media (max-width:860px){ .overview{grid-template-columns:1fr} }
+  .ov{display:block;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 16px;
+      text-decoration:none;color:var(--ink)}
+  .ov:hover{border-color:var(--buy)}
+  .ov .t{font-size:13px;color:var(--muted);font-weight:600}
+  .ov .v{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.5}
+  .ov .v small{font-size:13px;font-weight:400;color:var(--muted);margin-left:4px}
+  .ov .d{font-size:13px;color:var(--muted)}
+  .lead{font-size:13px;color:var(--muted);margin:-6px 0 16px;max-width:80ch;line-height:1.7}
+  /* ---- 保有銘柄の表 */
+  #holdTable table{min-width:820px}
+  #holdTable th,#holdTable td{padding-left:10px;padding-right:10px}
+  .bar{display:inline-block;vertical-align:middle;width:72px;height:8px;background:var(--off-bg);border-radius:4px;
+       position:relative;margin-right:10px}
+  .bar::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted);opacity:.5}
+  .bar i{position:absolute;top:0;bottom:0;border-radius:4px}
+  .bar i.up{left:50%;background:var(--up)} .bar i.dn{right:50%;background:var(--down)}
+  .gain{display:inline-block;min-width:62px;text-align:right;font-weight:700}
+  tr.sell td:first-child{box-shadow:inset 4px 0 0 var(--sell)}
+  [hidden]{display:none!important}
 </style>
 </head>
 <body>
+<header class="top"><div class="top-in">
+  <div class="brand">バリュー株ボード</div>
+  <nav class="tabs" id="nav"><a href="#today" data-view="today">今日のシグナル</a><a href="#holdings" data-view="holdings">保有銘柄</a><a data-page="candidates" href="candidates-14h9azeln2gzh6.html">購入候補</a><a data-page="performance" href="performance-14h9azeln2gzh6.html">ペーパー成績</a></nav>
+</div></header>
 <div class="wrap">
-  <nav class="tabs"><a href="index.html" aria-current="page">保有銘柄</a><a href="candidates-14h9azeln2gzh6.html">購入候補</a><a href="performance-14h9azeln2gzh6.html">成績</a></nav>
-  <h1>保有銘柄 出口監視</h1>
   <div id="staleBanner"></div>
+  <h1 id="title">今日のシグナル</h1>
   <div class="meta" id="meta">読み込み中…</div>
-  <div class="toolbar" id="toolbar"></div>
-  <div id="content"></div>
+  <div id="content">
+    <section id="view-today"></section>
+    <section id="view-holdings" hidden>
+      <div class="toolbar" id="toolbar"></div>
+      <div id="holdTable"></div>
+    </section>
+  </div>
   <details class="help">
     <summary>この画面の読み方</summary>
     <dl>
-      <dt>ALERT</dt><dd>売却条件（取得価格比 −30% 以下）に触れている。売買の指示ではなく、確認すべき銘柄の合図</dd>
-      <dt>UNKNOWN</dt><dd>判定に必要な数値が取れていない。「問題なし」ではない。連続3回取得に失敗した銘柄もここに入る</dd>
-      <dt>CLEAR</dt><dd>売却条件に触れていない</dd>
-      <dt>取得価格比</dt><dd>取得価格からの騰落率。保有期間中の最大下落率ではない。通貨は建値のままで為替換算しない</dd>
-      <dt>前日比</dt><dd>前回スナップショットの確定終値との比較。前回実行が飛んでいれば2日分になる</dd>
+      <dt>買いシグナル</dt><dd>購入候補の条件を満たし、買うタイミングの判定が今回の更新で成立した銘柄。ペーパートレードでは次の営業日の始値で買った想定で記録している</dd>
+      <dt>売りシグナル</dt><dd>保有銘柄のうち、売却条件（取得価格から −30% 以下）に当てはまった銘柄</dd>
+      <dt>シグナルの位置づけ</dt><dd>あらかじめ決めた条件に当てはまったことを知らせる合図で、売買の指示ではない。最終判断は自分で行う</dd>
+      <dt>取得価格比</dt><dd>取得価格からの騰落率。保有期間中の最大下落率ではない。通貨は建値のままで為替は含まない</dd>
+      <dt>前日比</dt><dd>前回の更新時の終値との比較。更新が1日飛んでいれば2日分になる</dd>
       <dt>比率</dt><dd>同じ通貨の保有の中での比率。円建てと米ドル建てを合算した比率は出さない</dd>
-      <dt>stale</dt><dd>連続して取得に失敗した回数。週末を挟んでも増えない。3以上で UNKNOWN</dd>
-      <dt>異常値</dt><dd>値はあるが信用できない項目。値は補正せず、ラベルと併記する</dd>
-      <dt>データ日付</dt><dd>確定終値の日付。日本株と米国株で異なる。場中の値は使わない</dd>
+      <dt>判定不能</dt><dd>判定に必要な数値が取れていない。「問題なし」ではない。3回続けて取得に失敗した銘柄もここに入る</dd>
+      <dt>株価の日付</dt><dd>確定した終値の日付。日本株と米国株で異なる。取引時間中の値は使わない</dd>
     </dl>
   </details>
 </div>
 
 <script>
-// この HTML は器のみ。中身は読み込み時に外部 JSON を取得して描画する。
-// 既定は同じ場所の latest.json。?src= で差し替えられる（ローカル確認用）。
-const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
-const STATUS_ORDER = { ALERT: 0, UNKNOWN: 1, CLEAR: 2 };
-let DATA = null, sortKey = 'drawdown_pct', sortAsc = true, query = '';
-const show = { ALERT: true, UNKNOWN: true, CLEAR: true };
-
+// 3画面で共通の関数と、内部名 → 日本語の対応。公開時に publish.render_page が各 HTML に埋め込む。
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const num = (v, d = 2, suffix = '') =>
-  v === null || v === undefined ? '<span class="dim">—</span>'
-    : esc(v.toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d })) + suffix;
-
-function signed(v, label) {
-  if (v === null || v === undefined) return '<span class="dim">—</span>';
-  const cls = v < 0 ? 'neg' : 'pos';
-  return `<span class="${cls}">${esc(label ?? (v > 0 ? '+' : '') + v.toFixed(1) + '%')}</span>`;
+const DASH = '<span class="dim">—</span>';
+const none = v => v === null || v === undefined;
+const n2 = (v, d = 2) => none(v) ? DASH
+  : esc(Number(v).toLocaleString('ja-JP', { minimumFractionDigits: d, maximumFractionDigits: d }));
+// 株価。円は小数を出さない（1,581.5 のような端数だけ1桁）、ドルは2桁
+const price = (v, cur) => none(v) ? DASH
+  : (cur === 'JPY'
+      ? esc(Number(v).toLocaleString('ja-JP', { maximumFractionDigits: 1 })) + '<span class="dim">円</span>'
+      : '<span class="dim">$</span>' + esc(Number(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })));
+const pct = (v, d = 1) => none(v) ? DASH
+  : `<span class="${v < 0 ? 'neg' : (v > 0 ? 'pos' : '')}">${esc((v > 0 ? '+' : '') + Number(v).toFixed(d))}%</span>`;
+const ratio = v => none(v) ? DASH : esc((Number(v) * 100).toFixed(0) + '%');
+const mmdd = iso => { const m = /^(\d{4})-(\d\d)-(\d\d)/.exec(iso || ''); return m ? `${+m[2]}/${+m[3]}` : (iso || '—'); };
+const WEEK = ['日', '月', '火', '水', '木', '金', '土'];
+function jpDate(iso) {
+  const m = /^(\d{4})-(\d\d)-(\d\d)/.exec(iso || '');
+  if (!m) return iso || '—';
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  return `${+m[1]}年${+m[2]}月${+m[3]}日（${WEEK[d.getUTCDay()]}）`;
+}
+function jpTime(iso) {
+  const m = /T(\d\d):(\d\d)/.exec(iso || '');
+  return m ? `${+m[1]}:${m[2]}` : '';
 }
 
-function anomaliesHtml(list) {
-  if (!list || !list.length) return '<span class="dim">—</span>';
-  // 値を隠さず、ラベルと併記する
-  return list.map(a => {
-    const v = a.value === null || a.value === undefined ? '不明'
-      : Number(a.value).toLocaleString('ja-JP', { maximumFractionDigits: 4 });
-    return `<span class="anom"><b>${esc(a.label)}</b> ${esc(a.field ?? '')} = ${esc(v)}</span>`;
-  }).join('');
-}
-
-function row(h) {
-  const stale = h.stale_days > 0
-    ? `<span class="neg">${h.stale_days}</span>` : '<span class="dim">0</span>';
-  const miss = h.missing && h.missing.length
-    ? `<span class="dim" title="${esc(h.missing.join(', '))}">${h.missing.length}件</span>`
-    : '<span class="dim">—</span>';
-  return `<tr>
-    <td class="tk">${esc(h.ticker)}</td>
-    <td class="nm">${esc(h.name)}</td>
-    <td class="dim">${esc(h.market)}</td>
-    <td class="num">${num(h.price)} <span class="dim">${esc(h.currency)}</span></td>
-    <td class="num">${signed(h.change_pct)}</td>
-    <td class="num">${signed(h.drawdown_pct, h.drawdown_label)}</td>
-    <td class="num">${h.weight_pct === null ? '<span class="dim">—</span>' : num(h.weight_pct, 1, '%')}</td>
-    <td><span class="badge b-${esc(h.status)}" title="${esc(h.reason)}">${esc(h.status)}</span></td>
-    <td class="dim">${esc(h.as_of ?? '—')}</td>
-    <td class="num">${stale}</td>
-    <td>${anomaliesHtml(h.anomalies)}</td>
-    <td class="num">${miss}</td>
-  </tr>`;
-}
-
-const COLS = [
-  ['ticker', 'コード', ''], ['name', '銘柄', ''], ['market', '市場', ''],
-  ['price', '株価', 'num'], ['change_pct', '前日比', 'num'],
-  ['drawdown_pct', '取得価格比', 'num'], ['weight_pct', '比率', 'num'],
-  ['status', '判定', ''], ['as_of', 'データ日付', ''], ['stale_days', 'stale', 'num'],
-  ['anomalies', '異常値', ''], ['missing', '欠損', 'num'],
-];
-
-function table(rows, title, status) {
-  if (!show[status]) return '';
-  const head = COLS.map(([k, label, cls]) => {
-    const sorted = k === sortKey;
-    return `<th class="${cls}" data-k="${k}" ${sorted ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
-      ${label}<span class="arrow">${sorted ? (sortAsc ? '▲' : '▼') : '▲'}</span></th>`;
-  }).join('');
-  const body = rows.length ? `<tbody>${rows.map(row).join('')}</tbody>`
-    : `<tbody><tr><td colspan="${COLS.length}" class="empty">該当なし</td></tr></tbody>`;
-  return `<div class="panel"><h2>${esc(title)} <span class="cnt">${rows.length}</span></h2>
-    <div class="scroll"><table><thead><tr>${head}</tr></thead>${body}</table></div></div>`;
-}
-
-function sortRows(rows) {
-  return rows.slice().sort((a, b) => {
-    let x = a[sortKey], y = b[sortKey];
-    if (sortKey === 'status') { x = STATUS_ORDER[x]; y = STATUS_ORDER[y]; }
-    if (sortKey === 'anomalies' || sortKey === 'missing') {
-      x = (x || []).length; y = (y || []).length;
-    }
-    if (x === null || x === undefined) return 1;
-    if (y === null || y === undefined) return -1;
-    if (x < y) return sortAsc ? -1 : 1;
-    if (x > y) return sortAsc ? 1 : -1;
-    return 0;
-  });
-}
-
-function matches(h) {
-  if (!query) return true;
-  const q = query.toLowerCase();
-  return (h.ticker || '').toLowerCase().includes(q) || (h.name || '').toLowerCase().includes(q);
+const RULE_LABEL = {
+  value_screen: '割安株',
+  analyst_gap_jp: '目標株価との差（日本株）',
+  analyst_gap_us: '目標株価との差（米国株）',
+};
+const RULE_SHORT = { value_screen: '割安株', analyst_gap_jp: '目標株価との差', analyst_gap_us: '目標株価との差' };
+const MODE_LABEL = {
+  double_bottom: 'ダブルボトム',
+  confirm: '反発確認',
+  confirm_near_low: '反発確認（安値近く）',
+  touch: '安値更新',
+};
+const MODE_HELP = {
+  double_bottom: '60日の安値圏に2回タッチし（間に5%以上の戻し）、その間の高値を終値で上抜けた日',
+  confirm: '60日安値を更新したあと、5日移動平均を終値で上抜けた日',
+  confirm_near_low: '反発確認の成立のうち、終値が60日安値から5%以内の日',
+  touch: '60日安値を更新した日',
+};
+const EXIT_LABEL = {
+  target_reached: '目標到達',
+  drawdown: '損切り（−30%）',
+  target_cut: '目標引き下げ',
+  time_limit: '期限（365日）',
+};
+const MARKET_LABEL = { JP: '日本', US: '米国' };
+const ruleLabel = r => RULE_LABEL[r] || r || '—';
+const modeLabel = m => MODE_LABEL[m] || m || '—';
+// 集計キー "analyst_gap_us [confirm]" → "目標株価との差（米国株）｜反発確認"
+function groupLabel(key) {
+  const m = /^(\S+)(?: \[(.+)\])?$/.exec(key || '');
+  if (!m) return esc(key);
+  return esc(ruleLabel(m[1])) + (m[2] ? ` <span class="tag">${esc(modeLabel(m[2]))}</span>` : '');
 }
 
 function ageInDays(iso) {
-  // generated_at はタイムゾーン付き。Date が正しく解釈する。
+  // generated_at はタイムゾーン付き。Date が正しく解釈する
   const t = Date.parse(iso);
-  if (Number.isNaN(t)) return null;
-  return (Date.now() - t) / 86400000;
+  return Number.isNaN(t) ? null : (Date.now() - t) / 86400000;
 }
-
-function renderStaleBanner(d) {
-  // 「蓄積は続くが画面が止まる」失敗に、画面を見た瞬間に気づくためのもの。
-  // 配信が止まってもこのページ自体は残り続け、古いデータを平然と表示する。
-  const limit = (d.summary && d.summary.stale_banner_days) || 3;
-  const age = ageInDays(d.generated_at);
+// 配信が止まってもページ自体は残り、古いデータを平然と表示する。見た瞬間に気づけるようにする
+function staleBanner(d, limit) {
   const el = document.getElementById('staleBanner');
+  if (!el) return;
+  const age = ageInDays(d.generated_at), lim = limit || 3;
   if (age === null) {
-    el.innerHTML = `<div class="stale-banner"><b>データの生成時刻が読めません</b>
+    el.innerHTML = `<div class="stale-banner"><b>データの作成時刻が読めません</b>
       表示されている数値がいつのものか確認できません。</div>`;
-    return;
-  }
-  if (age < limit) { el.innerHTML = ''; return; }
-  el.innerHTML = `<div class="stale-banner">
-      <b>データが ${Math.floor(age)} 日間更新されていません</b>
-      日次ジョブか配信が止まっている可能性があります。
-      以下の数値は ${esc(d.generated_at)} 時点のもので、現在の株価ではありません。
-    </div>`;
+  } else if (age >= lim) {
+    el.innerHTML = `<div class="stale-banner"><b>データが ${Math.floor(age)} 日間更新されていません</b>
+      毎日の自動更新が止まっている可能性があります。
+      以下は ${esc(jpDate(d.generated_at))} 時点の数値で、いまの株価ではありません。</div>`;
+  } else el.innerHTML = '';
 }
+const dataDates = d => Object.entries(d.data_dates || {})
+  .map(([m, v]) => `${esc(MARKET_LABEL[m] || m)} <b>${esc(v.map(mmdd).join('・'))}</b>`).join('　') || '—';
 
-function render() {
-  const d = DATA, s = d.summary;
-  renderStaleBanner(d);
-  const dates = Object.entries(d.data_dates || {})
-    .map(([m, v]) => `${m} <b>${esc(v.join(' / '))}</b>`).join('　');
-  // データ日付は市場ごとに分けて表示する。単一の日付にまとめない
-  document.getElementById('meta').innerHTML =
-    `実行日 <b>${esc(d.run_date)}</b>　データ日付: ${dates || '—'}`
-    + `<br>生成 ${esc(d.generated_at)}　出所 yfinance`;
-
-  renderToolbar();
-  renderContent();
+function loadJson(src) {
+  return fetch(src + (src.includes('?') ? '&' : '?') + 't=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error(`${src}: HTTP ${r.status}`); return r.json(); });
 }
-
-function renderToolbar() {
-  const s = DATA.summary;
-  document.getElementById('toolbar').innerHTML = `
-    <button class="chip alert" data-s="ALERT" aria-pressed="${show.ALERT}">ALERT <b>${s.alert}</b></button>
-    <button class="chip unknown" data-s="UNKNOWN" aria-pressed="${show.UNKNOWN}">UNKNOWN <b>${s.unknown}</b></button>
-    <button class="chip clear" data-s="CLEAR" aria-pressed="${show.CLEAR}">CLEAR <b>${s.clear}</b></button>
-    <span class="chip static">保有 <b>${s.total}</b></span>
-    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" value="${esc(query)}">`;
-  document.querySelectorAll('button.chip[data-s]').forEach(b => {
-    b.onclick = () => { show[b.dataset.s] = !show[b.dataset.s]; b.setAttribute('aria-pressed', show[b.dataset.s]); renderContent(); };
-  });
-  const q = document.getElementById('q');
-  q.oninput = () => { query = q.value; renderContent(); };
-}
-
-function renderContent() {
-  const d = DATA;
-  const all = d.holdings.filter(matches);
-  const alert = sortRows(all.filter(h => h.status === 'ALERT'));
-  const unknown = sortRows(all.filter(h => h.status === 'UNKNOWN'));
-  const clear = sortRows(all.filter(h => h.status === 'CLEAR'));
-  const stale = d.holdings.filter(h => h.stale_days > 0);
-
+function showError(e, src) {
+  const m = document.getElementById('meta'); if (m) m.textContent = '';
   document.getElementById('content').innerHTML =
-    table(alert, '売却条件に触れている銘柄', 'ALERT')
-    + table(unknown, '判定不能（UNKNOWN）', 'UNKNOWN')
-    + table(clear, 'その他', 'CLEAR')
-    + `<div class="panel"><div class="note">
-        取得価格比は率のみを出しています。
-        UNKNOWN は判定に必要な数値が取れなかった銘柄で、「問題なし」ではありません。
-        見出しをクリックすると並べ替えできます。
-        ${stale.length ? `<br><b>取得に連続失敗している銘柄が ${stale.length} 件あります。</b>` : ''}
-       </div></div>`;
+    `<div class="err"><b>データを読み込めませんでした</b><br>
+     時間をおいて開き直してください。続く場合は毎日の自動更新が失敗している可能性があります。<br>
+     <code>${esc(src || '')}</code> ${esc(e.message)}</div>`;
+}
+function cmp(x, y, asc) {
+  if (none(x)) return 1;
+  if (none(y)) return -1;
+  if (x < y) return asc ? -1 : 1;
+  if (x > y) return asc ? 1 : -1;
+  return 0;
+}
+// ナビ。他画面へのリンクは、ファイル名の slug を入れ替えて作る（ランダム文字列をコードに書かない）
+function siblingPage(kind) {
+  const file = location.pathname.split('/').pop();
+  return file.replace(/^(candidates|performance)-/, kind + '-');
+}
 
-  document.querySelectorAll('th[data-k]').forEach(th => {
-    th.onclick = () => {
+// この HTML は器のみ。中身は読み込み時に JSON を取得して描画する。
+// 保有は latest.json（?src= で差し替え可）。購入候補・ペーパー成績はナビのリンク先から導く。
+const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
+const STATUS = {
+  ALERT: { label: '売りシグナル', cls: 'b-sell', order: 0 },
+  UNKNOWN: { label: '判定不能', cls: 'b-wait', order: 1 },
+  CLEAR: { label: '問題なし', cls: 'b-ok', order: 2 },
+};
+let HOLD = null, CAND = null, PERF = null;
+let sortKey = 'drawdown_pct', sortAsc = true, query = '';
+const show = { ALERT: true, UNKNOWN: true, CLEAR: true };
+const linkOf = page => { const a = document.querySelector(`#nav a[data-page="${page}"]`); return a ? a.getAttribute('href') : null; };
+const jsonOf = page => { const h = linkOf(page); return h ? h.replace(/\.html$/, '.json') : null; };
+
+const nameCode = x => x.name && x.name !== x.ticker
+  ? `${esc(x.name)}<span class="cd">${esc(x.ticker)}</span>` : esc(x.ticker);
+const RECENT_MAX = 8;
+
+// ---------------------------------------------------------------- 買いシグナル
+function timingModes(c, d) {
+  // 判定方式ごとの状態。古い JSON（timing_modes なし）は既定の方式だけ
+  return c.timing_modes || { [d.summary.timing_mode]: { state: c.timing, reason: c.timing_reason } };
+}
+function notifyModes(d) {
+  const et = (d.thresholds || {}).entry_timing || {};
+  return et.notify_modes || [d.summary.timing_mode];
+}
+function buySignals(d) {
+  const allow = notifyModes(d), out = [];
+  for (const c of d.candidates || []) {
+    const tm = timingModes(c, d);
+    const hit = allow.filter(m => (tm[m] || {}).state === '成立');
+    if (!hit.length) continue;
+    out.push({ c, modes: hit, reason: tm[hit[0]].reason,
+               nearLow: (tm.confirm_near_low || {}).state === '成立' });
+  }
+  return out;
+}
+function keyLine(c) {
+  if (c.entry_rule.startsWith('analyst_gap')) {
+    return `目標株価の平均 ${price(c.target_mean_price, c.currency)}　<b>${pct(c.gap_pct)}</b>
+      <span class="dim">（アナリスト ${esc(c.num_analyst_opinions ?? '—')}人）</span>`;
+  }
+  return `PBR <b>${n2(c.pbr)}</b>　PER <b>${n2(c.per, 1)}</b>　自己資本比率 ${ratio(c.equity_ratio)}`;
+}
+function buyItem(s) {
+  const c = s.c;
+  return `<div class="item">
+    <div class="head"><div class="nm">${nameCode(c)}</div>
+      <div class="px">${price(c.price, c.currency)}</div></div>
+    <div class="tags"><span class="tag">${esc(ruleLabel(c.entry_rule))}</span>
+      ${s.modes.map(m => `<span class="tag paper">${esc(modeLabel(m))}</span>`).join('')}
+      ${s.nearLow ? '<span class="tag paper">安値近く</span>' : ''}
+      ${c.held ? '<span class="tag held">保有中</span>' : ''}</div>
+    <div class="key">${keyLine(c)}</div>
+    <div class="why">${esc(s.reason)}</div></div>`;
+}
+function recentSignals(d) {
+  // 成立は当日だけで、翌日には待機中に戻る。直近の成立をペーパートレードの記録から拾う
+  if (!PERF) return '';
+  const today = (CAND || {}).run_date || PERF.run_date;
+  const from = new Date(Date.parse(today) - 8 * 86400000).toISOString().slice(0, 10);
+  const allow = CAND ? notifyModes(CAND) : null;
+  const seen = {}, rows = [];
+  for (const t of PERF.trades || []) {
+    if (t.entry_date >= today || t.entry_date < from) continue;
+    if (allow && t.timing_mode && !allow.includes(t.timing_mode)) continue;
+    const k = t.ticker + t.entry_date + t.entry_rule;
+    if (seen[k]) { seen[k].modes.push(t.timing_mode); continue; }
+    seen[k] = { t, modes: [t.timing_mode] };
+    rows.push(seen[k]);
+  }
+  if (!rows.length) return '';
+  rows.sort((a, b) => cmp(a.t.entry_date, b.t.entry_date, false));
+  const more = rows.length - RECENT_MAX;
+  return `<h3>この1週間に成立した買いシグナル（成立後の騰落率）</h3>
+    <div class="scroll"><table class="recent"><tbody>${rows.slice(0, RECENT_MAX).map(({ t, modes }) => `<tr>
+      <td class="dim">${esc(mmdd(t.entry_date))}</td>
+      <td><b>${esc(t.name || t.ticker)}</b> <span class="dim">${t.name && t.name !== t.ticker ? esc(t.ticker) : ''}</span></td>
+      <td>${modes.filter(Boolean).map(m => `<span class="tag">${esc(modeLabel(m))}</span>`).join(' ')}</td>
+      <td class="num">${pct(t.return_pct)}</td></tr>`).join('')}
+    </tbody></table></div>
+    ${more > 0 ? `<div class="note">ほか ${more}件。<a href="${esc(linkOf('performance'))}">ペーパー成績</a>ですべて見られます。</div>` : ''}`;
+}
+function buyPanel() {
+  if (!CAND) {
+    return `<div class="sig buy"><h2>買いシグナル</h2>
+      <div class="empty">購入候補のデータを読み込めませんでした。「購入候補」の画面で確認してください。</div></div>`;
+  }
+  const list = buySignals(CAND);
+  const body = list.length ? list.map(buyItem).join('')
+    : `<div class="empty">今回の更新で成立した買いシグナルはありません。<br>
+       条件を満たして買い時を待っている銘柄は「購入候補」で見られます。</div>`;
+  return `<div class="sig buy"><h2>買いシグナル <span class="n">${list.length}</span>件
+      <span class="sub">${esc(notifyModes(CAND).map(modeLabel).join('・'))}で判定</span></h2>
+    ${body}${recentSignals()}</div>`;
+}
+
+// ---------------------------------------------------------------- 売りシグナル
+function sellWhy(h) {
+  // reason は "drawdown=-0.3181 <= -0.3" の形。基準値だけ取り出す
+  const m = /<=\s*(-?[\d.]+)\s*$/.exec(h.reason || '');
+  const th = m ? `${Math.round(Number(m[1]) * 100)}%` : '−30%';
+  return `売却条件（取得価格から ${th.replace('-', '−')} 以下）に当てはまっています`;
+}
+function sellItem(h) {
+  return `<div class="item">
+    <div class="head"><div class="nm">${nameCode(h)}</div>
+      <div class="px">${price(h.price, h.currency)}</div></div>
+    <div class="key">取得価格比 <b>${pct(h.drawdown_pct)}</b>　前日比 ${pct(h.change_pct)}
+      <span class="dim">　比率 ${none(h.weight_pct) ? '—' : esc(h.weight_pct.toFixed(1)) + '%'}</span></div>
+    <div class="why">${esc(sellWhy(h))}${
+      (h.anomalies || []).length || h.stale_days > 0 ? '　※ データに注意点あり（保有銘柄の表を確認）' : ''}</div></div>`;
+}
+function sellPanel() {
+  const list = HOLD.holdings.filter(h => h.status === 'ALERT')
+    .sort((a, b) => cmp(a.drawdown_pct, b.drawdown_pct, true));
+  const unknown = HOLD.holdings.filter(h => h.status === 'UNKNOWN').length;
+  const body = list.length ? list.map(sellItem).join('')
+    : `<div class="empty">売却条件に当てはまった保有銘柄はありません。</div>`;
+  return `<div class="sig sell"><h2>売りシグナル <span class="n">${list.length}</span>件
+      <span class="sub">保有 ${HOLD.summary.total}銘柄のうち</span></h2>
+    ${body}${unknown ? `<div class="callout">判定できない保有銘柄が ${unknown}件あります。<a href="#holdings">保有銘柄</a>で確認してください。</div>` : ''}</div>`;
+}
+
+// ---------------------------------------------------------------- 概況
+function overview() {
+  const hs = HOLD.holdings.filter(h => !none(h.drawdown_pct));
+  const up = hs.filter(h => h.drawdown_pct > 0).length, dn = hs.filter(h => h.drawdown_pct < 0).length;
+  let cand = '', perf = '';
+  if (CAND) {
+    const s = CAND.summary, allow = notifyModes(CAND);
+    const waiting = (CAND.candidates || []).filter(c => {
+      const tm = timingModes(c, CAND), st = allow.map(m => (tm[m] || {}).state);
+      return !st.includes('成立') && st.includes('待機中');
+    }).length;
+    cand = `<a class="ov" href="${esc(linkOf('candidates'))}"><div class="t">購入候補</div>
+      <div class="v">${s.total}<small>銘柄が条件を満たす</small></div>
+      <div class="d">うち買い時を待っている銘柄 ${waiting}</div></a>`;
+  }
+  if (PERF) {
+    const s = PERF.summary;
+    const top = Object.entries(PERF.by_rule || {})
+      .filter(([, v]) => (v.closed || {}).enough_trials)
+      .sort((a, b) => b[1].closed.n - a[1].closed.n)[0];
+    perf = `<a class="ov" href="${esc(linkOf('performance'))}"><div class="t">ペーパートレード成績</div>
+      <div class="v">${s.closed}<small>件決済</small>　${s.open}<small>件保有中</small></div>
+      <div class="d">${top ? `${groupLabel(top[0])}　決済の勝率 ${top[1].closed.win_rate}%` : '決済が10件に達した方式はまだありません'}</div></a>`;
+  }
+  return `<div class="overview">
+    <a class="ov" href="#holdings"><div class="t">保有銘柄</div>
+      <div class="v">${HOLD.summary.total}<small>銘柄</small></div>
+      <div class="d">取得価格より上 <span class="pos">${up}</span>　下 <span class="neg">${dn}</span></div></a>
+    ${cand}${perf}</div>`;
+}
+function renderToday() {
+  document.getElementById('view-today').innerHTML =
+    `<div class="signals">${buyPanel()}${sellPanel()}</div>${overview()}`;
+}
+
+// ---------------------------------------------------------------- 保有銘柄
+function gainCell(h) {
+  if (none(h.drawdown_pct)) return DASH;
+  const w = Math.min(Math.abs(h.drawdown_pct), 50);      // ±50% で振り切り
+  return `<span class="bar"><i class="${h.drawdown_pct < 0 ? 'dn' : 'up'}" style="width:${w}%"></i></span>`
+    + `<span class="gain ${h.drawdown_pct < 0 ? 'neg' : 'pos'}">${esc(h.drawdown_label ?? '')}</span>`;
+}
+function cautions(h) {
+  const out = [];
+  if (h.stale_days > 0) out.push(`<span class="tag warn" title="続けて取得に失敗した回数">取得失敗 ${h.stale_days}回</span>`);
+  for (const a of h.anomalies || []) {
+    const v = none(a.value) ? '不明' : Number(a.value).toLocaleString('ja-JP', { maximumFractionDigits: 4 });
+    out.push(`<span class="tag warn" title="${esc(a.label)}">異常値 ${esc(a.field ?? '')} = ${esc(v)}</span>`);
+  }
+  if ((h.missing || []).length) out.push(`<span class="tag" title="${esc(h.missing.join(', '))}">取得できない項目 ${h.missing.length}</span>`);
+  return out.join(' ') || DASH;
+}
+const COLS = [
+  ['name', '銘柄', ''], ['market', '市場', ''], ['price', '株価', 'num'], ['change_pct', '前日比', 'num'],
+  ['drawdown_pct', '取得価格比', 'num'], ['weight_pct', '比率', 'num'], ['status', '判定', ''],
+  ['cautions', 'データの注意点', ''], ['as_of', '株価の日付', ''],
+];
+function holdRow(h) {
+  const st = STATUS[h.status] || STATUS.UNKNOWN;
+  return `<tr class="${h.status === 'ALERT' ? 'sell' : ''}">
+    <td><div class="stock"><span class="nm">${esc(h.name)}</span><span class="cd">${esc(h.ticker)}</span></div></td>
+    <td class="dim">${esc(MARKET_LABEL[h.market] || h.market)}</td>
+    <td class="num">${price(h.price, h.currency)}</td>
+    <td class="num">${pct(h.change_pct)}</td>
+    <td class="num">${gainCell(h)}</td>
+    <td class="num">${none(h.weight_pct) ? DASH : esc(h.weight_pct.toFixed(1)) + '%'}</td>
+    <td><span class="badge ${st.cls}">${st.label}</span></td>
+    <td>${cautions(h)}</td>
+    <td class="dim">${esc(mmdd(h.as_of))}</td></tr>`;
+}
+function sortHold(rows) {
+  const val = (h) => sortKey === 'status' ? (STATUS[h.status] || STATUS.UNKNOWN).order
+    : sortKey === 'cautions' ? -((h.anomalies || []).length + (h.missing || []).length + (h.stale_days || 0))
+    : h[sortKey];
+  return rows.slice().sort((a, b) => cmp(val(a), val(b), sortAsc));
+}
+function renderHoldTable() {
+  const q = query.toLowerCase();
+  const rows = sortHold(HOLD.holdings.filter(h => show[h.status] !== false
+    && (!q || (h.ticker || '').toLowerCase().includes(q) || (h.name || '').toLowerCase().includes(q))));
+  const head = COLS.map(([k, label, cls]) => {
+    const on = k === sortKey;
+    return `<th class="${cls} sortable" data-k="${k}" tabindex="0" ${on ? `aria-sort="${sortAsc ? 'ascending' : 'descending'}"` : ''}>
+      ${label}<span class="arrow">${on ? (sortAsc ? '▲' : '▼') : '▲'}</span></th>`;
+  }).join('');
+  const body = rows.length ? rows.map(holdRow).join('')
+    : `<tr><td colspan="${COLS.length}" class="empty">当てはまる銘柄がありません。絞り込みを変えてください。</td></tr>`;
+  const stale = HOLD.holdings.filter(h => h.stale_days > 0).length;
+  document.getElementById('holdTable').innerHTML = `<div class="panel">
+    <div class="scroll"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>
+    <div class="note">取得価格比は率だけを表示しています（金額は載せていません）。棒は ±50% で振り切りです。
+      見出しを押すと並べ替えできます。
+      ${stale ? `<br><b>株価の取得に続けて失敗している銘柄が ${stale}件あります。</b>` : ''}</div></div>`;
+  document.querySelectorAll('#holdTable th[data-k]').forEach(th => {
+    const go = () => {
       const k = th.dataset.k;
       if (k === sortKey) sortAsc = !sortAsc; else { sortKey = k; sortAsc = true; }
-      renderContent();
+      renderHoldTable();
     };
+    th.onclick = go;
+    th.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
   });
 }
-
-fetch(SRC + (SRC.includes('?') ? '&' : '?') + 't=' + Date.now())
-  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-  .then(j => { DATA = j; render(); })
-  .catch(e => {
-    document.getElementById('meta').textContent = '';
-    document.getElementById('content').innerHTML =
-      `<div class="err"><b>データを読み込めませんでした</b><br>
-       <code>${esc(SRC)}</code><br>${esc(e.message)}</div>`;
+function renderHoldings() {
+  const s = HOLD.summary;
+  document.getElementById('toolbar').innerHTML = `
+    <button class="chip" data-s="ALERT" aria-pressed="${show.ALERT}">売りシグナル <b class="neg">${s.alert}</b></button>
+    <button class="chip" data-s="UNKNOWN" aria-pressed="${show.UNKNOWN}">判定不能 <b>${s.unknown}</b></button>
+    <button class="chip" data-s="CLEAR" aria-pressed="${show.CLEAR}">問題なし <b>${s.clear}</b></button>
+    <input class="search" id="q" type="search" placeholder="コード・銘柄名で絞り込み" aria-label="コード・銘柄名で絞り込み" value="${esc(query)}">`;
+  document.querySelectorAll('#toolbar button[data-s]').forEach(b => {
+    b.onclick = () => { show[b.dataset.s] = !show[b.dataset.s]; b.setAttribute('aria-pressed', show[b.dataset.s]); renderHoldTable(); };
   });
+  const q = document.getElementById('q');
+  q.oninput = () => { query = q.value; renderHoldTable(); };
+  renderHoldTable();
+}
+
+// ---------------------------------------------------------------- 画面の切り替え
+function route() {
+  const view = location.hash === '#holdings' ? 'holdings' : 'today';
+  document.getElementById('view-today').hidden = view !== 'today';
+  document.getElementById('view-holdings').hidden = view !== 'holdings';
+  document.getElementById('title').textContent = view === 'holdings' ? '保有銘柄の成績' : '今日のシグナル';
+  document.title = (view === 'holdings' ? '保有銘柄' : '今日のシグナル') + '｜バリュー株ボード';
+  document.querySelectorAll('#nav a[data-view]').forEach(a => {
+    if (a.dataset.view === view) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
+}
+function render() {
+  staleBanner(HOLD, (HOLD.summary || {}).stale_banner_days);
+  document.getElementById('meta').innerHTML =
+    `<b>${esc(jpDate(HOLD.run_date))}</b> ${esc(jpTime(HOLD.generated_at))} 更新　株価は終値: ${dataDates(HOLD)}`;
+  renderToday();
+  renderHoldings();
+  route();
+}
+window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
+route();
+
+const optional = page => { const j = jsonOf(page); return j ? loadJson(j).catch(() => null) : Promise.resolve(null); };
+Promise.all([loadJson(SRC), optional('candidates'), optional('performance')])
+  .then(([h, c, p]) => { HOLD = h; CAND = c; PERF = p; render(); })
+  .catch(e => showError(e, SRC));
 </script>
 </body>
 </html>
