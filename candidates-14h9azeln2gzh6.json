@@ -1,22 +1,25 @@
 {
-  "generated_at": "2026-11-13T13:18:59+09:00",
-  "run_date": "2026-11-13",
+  "generated_at": "2026-11-14T11:33:57+09:00",
+  "run_date": "2026-11-14",
   "data_dates": {
     "JP": [
-      "2026-11-12"
+      "2026-11-13"
     ],
     "US": [
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-13"
     ]
   },
   "summary": {
-    "total": 69,
-    "triggered": 0,
+    "total": 74,
+    "triggered": 1,
     "waiting": 22,
-    "none": 47,
+    "none": 51,
     "unavailable": 0,
-    "by_rule": {},
-    "paper_open": 56,
+    "by_rule": {
+      "value_screen": 1
+    },
+    "paper_open": 59,
     "timing_mode": "double_bottom"
   },
   "thresholds": {
@@ -66,20 +69,56 @@
   },
   "candidates": [
     {
+      "ticker": "6902.T",
+      "name": "デンソー",
+      "entry_rule": "value_screen",
+      "timing": "成立",
+      "timing_reason": "1番底 28日前 / 2番底 5日前（安値 1,808.00）、ネックライン 1,926.00 を上抜け",
+      "price": 1936.5,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 7.1,
+      "target_mean_price": 2073.3333,
+      "target_low_price": 1670.0,
+      "num_analyst_opinions": 18,
+      "pbr": 0.9437558,
+      "per": 12.18461,
+      "payout_ratio": 0.4578,
+      "equity_ratio": 0.629112455665849,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "成立",
+          "reason": "1番底 28日前 / 2番底 5日前（安値 1,808.00）、ネックライン 1,926.00 を上抜け"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 28日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 28日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "6902.T"
+    },
+    {
       "ticker": "5803.T",
       "name": "フジクラ",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "安値圏 2,962.00 にいる（タッチ 2回目）。2番底の形成待ち",
-      "price": 3002.0,
+      "timing_reason": "安値圏 2,906.00 にいる（タッチ 2回目）。2番底の形成待ち",
+      "price": 2906.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 126.7,
-      "target_mean_price": 6805.385,
+      "as_of": "2026-11-13",
+      "gap_pct": 131.3,
+      "target_mean_price": 6720.769,
       "target_low_price": 3500.0,
       "num_analyst_opinions": 13,
-      "pbr": 6.9202414,
-      "per": 18.449879,
+      "pbr": 6.94174,
+      "per": 17.80201,
       "payout_ratio": 0.3778,
       "equity_ratio": 0.578022268204577,
       "operating_cf_ok": true,
@@ -88,15 +127,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "安値圏 2,962.00 にいる（タッチ 2回目）。2番底の形成待ち"
+          "reason": "安値圏 2,906.00 にいる（タッチ 2回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値から 4日。5日線 3,050.80 の上抜け待ち"
+          "reason": "60日安値 2,906.00 を更新。5日線の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値から 4日。5日線 3,050.80 の上抜け待ち"
+          "reason": "60日安値 2,906.00 を更新。5日線の上抜け待ち"
         }
       },
       "chart_ric": "5803.T"
@@ -107,15 +146,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 1555.0,
+      "price": 1519.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 106.5,
+      "as_of": "2026-11-13",
+      "gap_pct": 111.4,
       "target_mean_price": 3211.818,
       "target_low_price": 2500.0,
       "num_analyst_opinions": 11,
-      "pbr": 1.6452061,
-      "per": 15.192347,
+      "pbr": 1.6479183,
+      "per": 15.577889,
       "payout_ratio": 1.303,
       "equity_ratio": 0.5686425128903695,
       "operating_cf_ok": true,
@@ -128,11 +167,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 1,485.10 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 1,516.90 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 1,485.10 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 1,516.90 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "5802.T"
@@ -143,15 +182,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 3738.0,
+      "price": 3547.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 104.8,
-      "target_mean_price": 7656.3057,
+      "as_of": "2026-11-13",
+      "gap_pct": 108.2,
+      "target_mean_price": 7385.1387,
       "target_low_price": 4270.0,
       "num_analyst_opinions": 18,
-      "pbr": 1.2490107,
-      "per": 15.754215,
+      "pbr": 1.2329037,
+      "per": 16.584066,
       "payout_ratio": 0.048800003,
       "equity_ratio": 0.290073323509721,
       "operating_cf_ok": false,
@@ -164,11 +203,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 3,682.80 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 4日。5日線 3,682.40 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 3,682.80 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 4日。5日線 3,682.40 の上抜け待ち"
         }
       },
       "chart_ric": "9984.T"
@@ -179,15 +218,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 78.12000274658203,
+      "price": 74.9800033569336,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 93.8,
+      "as_of": "2026-11-13",
+      "gap_pct": 101.9,
       "target_mean_price": 151.4,
       "target_low_price": 128.0,
       "num_analyst_opinions": 10,
-      "pbr": 4.970098,
-      "per": 28.100721,
+      "pbr": 4.770327,
+      "per": 26.971224,
       "payout_ratio": 0.0,
       "equity_ratio": 0.23318223028105167,
       "operating_cf_ok": true,
@@ -200,11 +239,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 76.23 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 77.27 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 76.23 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 77.27 の上抜け待ち"
         }
       },
       "chart_ric": "FLEX.O"
@@ -215,15 +254,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 164.4499969482422,
+      "price": 156.75999450683594,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 88.7,
+      "as_of": "2026-11-13",
+      "gap_pct": 98.0,
       "target_mean_price": 310.31824,
       "target_low_price": 175.0,
       "num_analyst_opinions": 40,
-      "pbr": 7.780932,
-      "per": 55.55743,
+      "pbr": 7.4170804,
+      "per": 51.56579,
       "payout_ratio": 0.0789,
       "equity_ratio": 0.6420555253911772,
       "operating_cf_ok": true,
@@ -236,122 +275,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 156.69 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 159.80 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 156.69 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 159.80 の上抜け待ち"
         }
       },
       "chart_ric": "MRVL.O"
-    },
-    {
-      "ticker": "CTVA",
-      "name": "Corteva",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 9.1899995803833,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 85.5,
-      "target_mean_price": 17.04664,
-      "target_low_price": 13.65291,
-      "num_analyst_opinions": 14,
-      "pbr": 0.75675225,
-      "per": 7.4715443,
-      "payout_ratio": 0.44439998,
-      "equity_ratio": 0.563519663904773,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "CTVA.N"
-    },
-    {
-      "ticker": "CTVA",
-      "name": "Corteva",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 9.1899995803833,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 85.5,
-      "target_mean_price": 17.04664,
-      "target_low_price": 13.65291,
-      "num_analyst_opinions": 14,
-      "pbr": 0.75675225,
-      "per": 7.4715443,
-      "payout_ratio": 0.44439998,
-      "equity_ratio": 0.563519663904773,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "CTVA.N"
-    },
-    {
-      "ticker": "6762.T",
-      "name": "ＴＤＫ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 2337.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 78.5,
-      "target_mean_price": 4172.5,
-      "target_low_price": 2900.0,
-      "num_analyst_opinions": 16,
-      "pbr": 1.8827902,
-      "per": 11.939102,
-      "payout_ratio": 0.1976,
-      "equity_ratio": 0.49539010345003315,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 2,235.70 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 2,235.70 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6762.T"
     },
     {
       "ticker": "CIEN",
@@ -359,15 +290,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 293.989990234375,
+      "price": 280.5400085449219,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 74.5,
+      "as_of": "2026-11-13",
+      "gap_pct": 82.9,
       "target_mean_price": 512.9907,
       "target_low_price": 347.0,
       "num_analyst_opinions": 20,
-      "pbr": 13.647293,
-      "per": 65.76958,
+      "pbr": 13.022932,
+      "per": 62.76063,
       "payout_ratio": 0.0,
       "equity_ratio": 0.4653841386049711,
       "operating_cf_ok": true,
@@ -380,14 +311,50 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 274.97 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 282.40 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 274.97 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 282.40 の上抜け待ち"
         }
       },
       "chart_ric": "CIEN.N"
+    },
+    {
+      "ticker": "6762.T",
+      "name": "ＴＤＫ",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 2310.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 80.6,
+      "target_mean_price": 4172.5,
+      "target_low_price": 2900.0,
+      "num_analyst_opinions": 16,
+      "pbr": 1.8831978,
+      "per": 11.936134,
+      "payout_ratio": 0.1976,
+      "equity_ratio": 0.49539010345003315,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 2,276.30 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 2,276.30 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6762.T"
     },
     {
       "ticker": "LITE",
@@ -402,7 +369,7 @@
       "target_mean_price": 1069.194,
       "target_low_price": 685.0,
       "num_analyst_opinions": 25,
-      "pbr": 12.376659,
+      "pbr": 11.82128,
       "per": null,
       "payout_ratio": 0.0,
       "equity_ratio": 0.6354977762572699,
@@ -426,20 +393,92 @@
       "chart_ric": "LITE.O"
     },
     {
+      "ticker": "COHR",
+      "name": "Coherent Corp.",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 218.14999389648438,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 70.5,
+      "target_mean_price": 371.9185,
+      "target_low_price": 228.0,
+      "num_analyst_opinions": 25,
+      "pbr": 3.7917368,
+      "per": 45.16563,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.5958242175947652,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 224.92 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 224.92 の上抜け待ち"
+        }
+      },
+      "chart_ric": "COHR.N"
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 249.5500030517578,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 66.6,
+      "target_mean_price": 415.875,
+      "target_low_price": 284.0,
+      "num_analyst_opinions": 16,
+      "pbr": 10.566093,
+      "per": 28.683908,
+      "payout_ratio": 0.0586,
+      "equity_ratio": 0.6682648121868277,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 254.10 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 254.10 の上抜け待ち"
+        }
+      },
+      "chart_ric": "TER.O"
+    },
+    {
       "ticker": "NRG",
       "name": "NRG Energy",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 98.05000305175781,
+      "price": 97.0999984741211,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 67.8,
-      "target_mean_price": 164.5294,
+      "as_of": "2026-11-13",
+      "gap_pct": 65.8,
+      "target_mean_price": 161.0,
       "target_low_price": 104.0,
-      "num_analyst_opinions": 17,
-      "pbr": 4.4545913,
-      "per": 17.052174,
+      "num_analyst_opinions": 16,
+      "pbr": 4.411431,
+      "per": 16.975525,
       "payout_ratio": 0.32599998,
       "equity_ratio": 0.057687028140013724,
       "operating_cf_ok": true,
@@ -452,86 +491,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 95.67 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 97.43 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 95.67 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 97.43 の上抜け待ち"
         }
       },
       "chart_ric": "NRG.N"
-    },
-    {
-      "ticker": "8035.T",
-      "name": "東京エレクトロン",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 9304.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 64.2,
-      "target_mean_price": 15278.261,
-      "target_low_price": 9600.0,
-      "num_analyst_opinions": 23,
-      "pbr": 9.743515,
-      "per": 53.022396,
-      "payout_ratio": 0.4636,
-      "equity_ratio": 0.7235219051260802,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 8,867.40 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 8,867.40 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "8035.T"
-    },
-    {
-      "ticker": "6146.T",
-      "name": "ディスコ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 47370.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 62.5,
-      "target_mean_price": 76955.0,
-      "target_low_price": 54900.0,
-      "num_analyst_opinions": 20,
-      "pbr": 8.161763,
-      "per": 32.29376,
-      "payout_ratio": 0.3822,
-      "equity_ratio": 0.7906242853876058,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 44,712.00 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 44,712.00 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6146.T"
     },
     {
       "ticker": "VRT",
@@ -539,15 +506,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 209.63999938964844,
+      "price": 202.07000732421875,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 59.5,
+      "as_of": "2026-11-13",
+      "gap_pct": 65.4,
       "target_mean_price": 334.286,
       "target_low_price": 240.0,
       "num_analyst_opinions": 30,
-      "pbr": 14.670399,
-      "per": 39.185047,
+      "pbr": 14.140658,
+      "per": 37.770096,
       "payout_ratio": 0.0467,
       "equity_ratio": 0.3227293570469359,
       "operating_cf_ok": true,
@@ -560,14 +527,194 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 198.74 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 202.58 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 198.74 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 202.58 の上抜け待ち"
         }
       },
       "chart_ric": "VRT.N"
+    },
+    {
+      "ticker": "6146.T",
+      "name": "ディスコ",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 47470.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 62.1,
+      "target_mean_price": 76955.0,
+      "target_low_price": 54900.0,
+      "num_analyst_opinions": 20,
+      "pbr": 8.194562,
+      "per": 32.212315,
+      "payout_ratio": 0.3822,
+      "equity_ratio": 0.7906242853876058,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 46,034.00 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 46,034.00 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6146.T"
+    },
+    {
+      "ticker": "8035.T",
+      "name": "東京エレクトロン",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 9461.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 61.2,
+      "target_mean_price": 15252.174,
+      "target_low_price": 9600.0,
+      "num_analyst_opinions": 23,
+      "pbr": 9.757955,
+      "per": 52.218792,
+      "payout_ratio": 0.59400004,
+      "equity_ratio": 0.7235219051260802,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 9,107.00 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 9,107.00 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "8035.T"
+    },
+    {
+      "ticker": "CTVA",
+      "name": "Corteva",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 9.1899995803833,
+      "currency": "USD",
+      "as_of": "2026-11-12",
+      "gap_pct": 60.8,
+      "target_mean_price": 14.78125,
+      "target_low_price": 10.0,
+      "num_analyst_opinions": 16,
+      "pbr": 0.7765152,
+      "per": 7.2538466,
+      "payout_ratio": 0.44439998,
+      "equity_ratio": 0.563519663904773,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
+        }
+      },
+      "chart_ric": "CTVA.N"
+    },
+    {
+      "ticker": "CTVA",
+      "name": "Corteva",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 9.1899995803833,
+      "currency": "USD",
+      "as_of": "2026-11-12",
+      "gap_pct": 60.8,
+      "target_mean_price": 14.78125,
+      "target_low_price": 10.0,
+      "num_analyst_opinions": 16,
+      "pbr": 0.7765152,
+      "per": 7.2538466,
+      "payout_ratio": 0.44439998,
+      "equity_ratio": 0.563519663904773,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 9.19 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値 9.19 を更新。5日線の上抜け待ち"
+        }
+      },
+      "chart_ric": "CTVA.N"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 225.9199981689453,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 60.3,
+      "target_mean_price": 362.1,
+      "target_low_price": 255.0,
+      "num_analyst_opinions": 30,
+      "pbr": 20.291,
+      "per": 33.66915,
+      "payout_ratio": 0.16540001,
+      "equity_ratio": 0.5300066813309435,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 227.86 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 227.86 の上抜け待ち"
+        }
+      },
+      "chart_ric": "LRCX.O"
     },
     {
       "ticker": "DELL",
@@ -582,8 +729,8 @@
       "target_mean_price": 590.0,
       "target_low_price": 490.0,
       "num_analyst_opinions": 25,
-      "pbr": -166.44395,
-      "per": 21.731266,
+      "pbr": -154.49776,
+      "per": 20.030813,
       "payout_ratio": 0.13430001,
       "equity_ratio": -0.02438639101159094,
       "operating_cf_ok": true,
@@ -606,22 +753,22 @@
       "chart_ric": "DELL.N"
     },
     {
-      "ticker": "TER",
-      "name": "Teradyne",
+      "ticker": "GLW",
+      "name": "Corning Inc.",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 263.75,
+      "price": 114.08000183105469,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 57.7,
-      "target_mean_price": 415.875,
-      "target_low_price": 284.0,
-      "num_analyst_opinions": 16,
-      "pbr": 11.16733,
-      "per": 30.561993,
-      "payout_ratio": 0.0586,
-      "equity_ratio": 0.6682648121868277,
+      "as_of": "2026-11-13",
+      "gap_pct": 53.4,
+      "target_mean_price": 174.94444,
+      "target_low_price": 120.0,
+      "num_analyst_opinions": 18,
+      "pbr": 7.560475,
+      "per": 46.186234,
+      "payout_ratio": 0.45340002,
+      "equity_ratio": 0.38116606404958675,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -632,34 +779,34 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 247.83 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 116.42 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 247.83 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 116.42 の上抜け待ち"
         }
       },
-      "chart_ric": "TER.O"
+      "chart_ric": "GLW.N"
     },
     {
-      "ticker": "LRCX",
-      "name": "Lam Research",
+      "ticker": "AVGO",
+      "name": "Broadcom",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 233.77999877929688,
+      "price": 347.010009765625,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 54.9,
-      "target_mean_price": 362.1,
-      "target_low_price": 255.0,
-      "num_analyst_opinions": 30,
-      "pbr": 20.996946,
-      "per": 35.15489,
-      "payout_ratio": 0.16540001,
-      "equity_ratio": 0.5300066813309435,
+      "as_of": "2026-11-13",
+      "gap_pct": 52.5,
+      "target_mean_price": 529.2381,
+      "target_low_price": 398.4699,
+      "num_analyst_opinions": 47,
+      "pbr": 16.617662,
+      "per": 44.31801,
+      "payout_ratio": 0.32439998,
+      "equity_ratio": 0.4751361840413345,
       "operating_cf_ok": true,
-      "held": false,
+      "held": true,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
@@ -668,122 +815,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 222.76 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 341.61 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 222.76 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 341.61 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "LRCX.O"
-    },
-    {
-      "ticker": "APTV",
-      "name": "Aptiv",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "安値圏 38.81 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 38.810001373291016,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 49.6,
-      "target_mean_price": 58.05556,
-      "target_low_price": 44.0,
-      "num_analyst_opinions": 18,
-      "pbr": 0.8993998,
-      "per": 10.994335,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.3932430700892666,
-      "operating_cf_ok": true,
-      "held": true,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 38.81 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 38.81 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 38.81 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "APTV.N"
-    },
-    {
-      "ticker": "APTV",
-      "name": "Aptiv",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "安値圏 38.81 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 38.810001373291016,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 49.6,
-      "target_mean_price": 58.05556,
-      "target_low_price": 44.0,
-      "num_analyst_opinions": 18,
-      "pbr": 0.8993998,
-      "per": 10.994335,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.3932430700892666,
-      "operating_cf_ok": true,
-      "held": true,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 38.81 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 38.81 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 38.81 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "APTV.N"
-    },
-    {
-      "ticker": "GNRC",
-      "name": "Generac",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "1番底 42日前 / 2番底 5日前（安値 172.33）、ネックライン 224.94。ネックライン上抜け待ち",
-      "price": 192.8800048828125,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 48.6,
-      "target_mean_price": 286.6111,
-      "target_low_price": 227.0,
-      "num_analyst_opinions": 18,
-      "pbr": 3.7772949,
-      "per": 38.269844,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.47229522905786286,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 42日前 / 2番底 5日前（安値 172.33）、ネックライン 224.94。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 186.84 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 186.84 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "GNRC.N"
+      "chart_ric": "AVGO.O"
     },
     {
       "ticker": "INTC",
@@ -791,14 +830,14 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 61.20000076293945,
+      "price": 59.65999984741211,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 48.1,
+      "as_of": "2026-11-13",
+      "gap_pct": 51.9,
       "target_mean_price": 90.65116,
       "target_low_price": 63.0,
       "num_analyst_opinions": 43,
-      "pbr": 2.8279653,
+      "pbr": 2.7568042,
       "per": null,
       "payout_ratio": 0.0,
       "equity_ratio": 0.5405171476003765,
@@ -812,68 +851,176 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 59.50 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 60.17 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 59.50 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 60.17 の上抜け待ち"
         }
       },
       "chart_ric": "INTC.O"
     },
     {
-      "ticker": "AVGO",
-      "name": "Broadcom",
+      "ticker": "GNRC",
+      "name": "Generac",
       "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 364.3599853515625,
+      "timing": "待機中",
+      "timing_reason": "1番底 43日前 / 2番底 6日前（安値 172.33）、ネックライン 224.94。ネックライン上抜け待ち",
+      "price": 190.77000427246094,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 46.4,
-      "target_mean_price": 533.4238,
-      "target_low_price": 400.0,
-      "num_analyst_opinions": 47,
-      "pbr": 17.448519,
-      "per": 46.533844,
-      "payout_ratio": 0.32439998,
-      "equity_ratio": 0.4751361840413345,
+      "as_of": "2026-11-13",
+      "gap_pct": 51.2,
+      "target_mean_price": 288.5,
+      "target_low_price": 227.0,
+      "num_analyst_opinions": 18,
+      "pbr": 3.7359734,
+      "per": 37.62722,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.47229522905786286,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 43日前 / 2番底 6日前（安値 172.33）、ネックライン 224.94。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 189.64 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 189.64 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "GNRC.N"
+    },
+    {
+      "ticker": "APTV",
+      "name": "Aptiv",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "安値圏 38.75 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 38.75,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 47.7,
+      "target_mean_price": 57.22222,
+      "target_low_price": 41.0,
+      "num_analyst_opinions": 18,
+      "pbr": 0.8980093,
+      "per": 10.824022,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.3932430700892666,
       "operating_cf_ok": true,
       "held": true,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+          "state": "待機中",
+          "reason": "安値圏 38.75 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 330.95 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値 38.75 を更新。5日線の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 330.95 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値 38.75 を更新。5日線の上抜け待ち"
         }
       },
-      "chart_ric": "AVGO.O"
+      "chart_ric": "APTV.N"
     },
     {
-      "ticker": "GLW",
-      "name": "Corning Inc.",
+      "ticker": "APTV",
+      "name": "Aptiv",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "安値圏 38.75 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 38.75,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 47.7,
+      "target_mean_price": 57.22222,
+      "target_low_price": 41.0,
+      "num_analyst_opinions": 18,
+      "pbr": 0.8980093,
+      "per": 10.824022,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.3932430700892666,
+      "operating_cf_ok": true,
+      "held": true,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 38.75 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値 38.75 を更新。5日線の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値 38.75 を更新。5日線の上抜け待ち"
+        }
+      },
+      "chart_ric": "APTV.N"
+    },
+    {
+      "ticker": "6701.T",
+      "name": "日本電気",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "安値圏 4,315.00 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 4315.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 46.2,
+      "target_mean_price": 6307.6924,
+      "target_low_price": 5400.0,
+      "num_analyst_opinions": 13,
+      "pbr": 2.5412176,
+      "per": 18.277702,
+      "payout_ratio": 0.17790002,
+      "equity_ratio": 0.4917582762005058,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 4,315.00 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値 4,315.00 を更新。5日線の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値 4,315.00 を更新。5日線の上抜け待ち"
+        }
+      },
+      "chart_ric": "6701.T"
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 119.5,
+      "price": 152.32000732421875,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 46.4,
-      "target_mean_price": 174.94444,
-      "target_low_price": 120.0,
-      "num_analyst_opinions": 18,
-      "pbr": 7.919677,
-      "per": 48.77551,
-      "payout_ratio": 0.45340002,
-      "equity_ratio": 0.38116606404958675,
+      "as_of": "2026-11-13",
+      "gap_pct": 44.2,
+      "target_mean_price": 219.61539,
+      "target_low_price": 175.0,
+      "num_analyst_opinions": 26,
+      "pbr": 30.433567,
+      "per": 38.17544,
+      "payout_ratio": 0.21030001,
+      "equity_ratio": 0.3537201693337088,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -884,14 +1031,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 114.83 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 155.00 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 114.83 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 155.00 の上抜け待ち"
         }
       },
-      "chart_ric": "GLW.N"
+      "chart_ric": "KLAC.O"
     },
     {
       "ticker": "GEV",
@@ -906,8 +1053,8 @@
       "target_mean_price": 1178.389,
       "target_low_price": 940.0,
       "num_analyst_opinions": 32,
-      "pbr": 19.033323,
-      "per": 21.220898,
+      "pbr": 18.67614,
+      "per": 21.085062,
       "payout_ratio": 0.045900002,
       "equity_ratio": 0.17738352164529644,
       "operating_cf_ok": true,
@@ -930,56 +1077,20 @@
       "chart_ric": "GEV.N"
     },
     {
-      "ticker": "BKR",
-      "name": "Baker Hughes",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 48.86000061035156,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 43.3,
-      "target_mean_price": 70.0,
-      "target_low_price": 51.0,
-      "num_analyst_opinions": 24,
-      "pbr": 2.4091516,
-      "per": 16.965277,
-      "payout_ratio": 0.31620002,
-      "equity_ratio": 0.4607030160710354,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 48.47 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 48.47 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "BKR.O"
-    },
-    {
       "ticker": "UBER",
       "name": "Uber",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 69.12000274658203,
+      "price": 69.69000244140625,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 43.1,
+      "as_of": "2026-11-13",
+      "gap_pct": 41.9,
       "target_mean_price": 98.87913,
       "target_low_price": 70.0,
       "num_analyst_opinions": 46,
-      "pbr": 5.096218,
-      "per": 41.638557,
+      "pbr": 5.138244,
+      "per": 40.994118,
       "payout_ratio": 0.0,
       "equity_ratio": 0.4375424743535808,
       "operating_cf_ok": true,
@@ -992,32 +1103,32 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値から 9日。5日線 69.92 の上抜け待ち"
+          "reason": "60日安値から 10日。5日線 70.14 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値から 9日。5日線 69.92 の上抜け待ち"
+          "reason": "60日安値から 10日。5日線 70.14 の上抜け待ち"
         }
       },
       "chart_ric": "UBER.N"
     },
     {
-      "ticker": "6273.T",
-      "name": "ＳＭＣ",
-      "entry_rule": "analyst_gap_jp",
+      "ticker": "BKR",
+      "name": "Baker Hughes",
+      "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 60000.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 42.9,
-      "target_mean_price": 85746.664,
-      "target_low_price": 69000.0,
-      "num_analyst_opinions": 15,
-      "pbr": 1.7446245,
-      "per": 23.149654,
-      "payout_ratio": 0.3808,
-      "equity_ratio": 0.9148966081056823,
+      "price": 49.439998626708984,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 41.6,
+      "target_mean_price": 70.0,
+      "target_low_price": 51.0,
+      "num_analyst_opinions": 24,
+      "pbr": 2.4377496,
+      "per": 16.989689,
+      "payout_ratio": 0.31620002,
+      "equity_ratio": 0.4607030160710354,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -1028,50 +1139,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 58,820.00 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 48.79 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 58,820.00 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 48.79 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "6273.T"
-    },
-    {
-      "ticker": "ECHO",
-      "name": "EchoStar",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "1番底 57日前 / 2番底 15日前（安値 85.32）、ネックライン 100.01。ネックライン上抜け待ち",
-      "price": 98.12999725341797,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 41.9,
-      "target_mean_price": 139.2,
-      "target_low_price": 117.0,
-      "num_analyst_opinions": 10,
-      "pbr": 1.6842881,
-      "per": 3.7086167,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.13403701917561356,
-      "operating_cf_ok": false,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 57日前 / 2番底 15日前（安値 85.32）、ネックライン 100.01。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 57日前（20日以内ではない）"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 57日前（20日以内ではない）"
-        }
-      },
-      "chart_ric": "ECHO.O"
+      "chart_ric": "BKR.O"
     },
     {
       "ticker": "Q",
@@ -1086,8 +1161,8 @@
       "target_mean_price": 173.3,
       "target_low_price": 150.0,
       "num_analyst_opinions": 10,
-      "pbr": 3.3815665,
-      "per": 47.554264,
+      "pbr": 3.2622235,
+      "per": 44.49624,
       "payout_ratio": 0.112799995,
       "equity_ratio": 0.5042643923240938,
       "operating_cf_ok": true,
@@ -1115,15 +1190,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "待機中",
       "timing_reason": "安値圏 448.58 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 455.3999938964844,
+      "price": 452.17999267578125,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 41.1,
-      "target_mean_price": 642.7158,
+      "as_of": "2026-11-13",
+      "gap_pct": 40.2,
+      "target_mean_price": 634.05786,
       "target_low_price": 462.0,
       "num_analyst_opinions": 19,
-      "pbr": 4.6827283,
-      "per": 19.329372,
+      "pbr": 4.649618,
+      "per": 18.864414,
       "payout_ratio": 0.3421,
       "equity_ratio": 0.36329136267357026,
       "operating_cf_ok": true,
@@ -1136,68 +1211,32 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値から 5日。5日線 457.88 の上抜け待ち"
+          "reason": "60日安値から 6日。5日線 458.30 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値から 5日。5日線 457.88 の上抜け待ち"
+          "reason": "60日安値から 6日。5日線 458.30 の上抜け待ち"
         }
       },
       "chart_ric": "CMI.N"
     },
     {
-      "ticker": "WYNN",
-      "name": "Wynn Resorts",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 83.0199966430664,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 40.6,
-      "target_mean_price": 116.75,
-      "target_low_price": 92.0,
-      "num_analyst_opinions": 20,
-      "pbr": -38.649906,
-      "per": 24.13372,
-      "payout_ratio": 0.2825,
-      "equity_ratio": -0.021016901207091758,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 85.10 の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 85.10 の上抜け待ち"
-        }
-      },
-      "chart_ric": "WYNN.O"
-    },
-    {
-      "ticker": "6701.T",
-      "name": "日本電気",
+      "ticker": "6702.T",
+      "name": "富士通",
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4489.0,
+      "price": 3455.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 40.5,
-      "target_mean_price": 6307.6924,
-      "target_low_price": 5400.0,
+      "as_of": "2026-11-13",
+      "gap_pct": 39.9,
+      "target_mean_price": 4833.846,
+      "target_low_price": 4100.0,
       "num_analyst_opinions": 13,
-      "pbr": 2.52885,
-      "per": 18.326931,
-      "payout_ratio": 0.17790002,
-      "equity_ratio": 0.4917582762005058,
+      "pbr": 2.9203212,
+      "per": 23.062546,
+      "payout_ratio": 0.38639998,
+      "equity_ratio": 0.5956079058870591,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -1208,14 +1247,50 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 4,443.20 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 3,475.80 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 4,443.20 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 3,475.80 の上抜け待ち"
         }
       },
-      "chart_ric": "6701.T"
+      "chart_ric": "6702.T"
+    },
+    {
+      "ticker": "ECHO",
+      "name": "EchoStar",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "1番底 58日前 / 2番底 16日前（安値 85.32）、ネックライン 100.01。ネックライン上抜け待ち",
+      "price": 100.0,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 39.2,
+      "target_mean_price": 139.2,
+      "target_low_price": 117.0,
+      "num_analyst_opinions": 10,
+      "pbr": 1.7163845,
+      "per": 3.6258159,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.13403701917561356,
+      "operating_cf_ok": false,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 58日前 / 2番底 16日前（安値 85.32）、ネックライン 100.01。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 58日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 58日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "ECHO.O"
     },
     {
       "ticker": "EXE",
@@ -1226,12 +1301,12 @@
       "price": 87.80000305175781,
       "currency": "USD",
       "as_of": "2026-11-12",
-      "gap_pct": 39.6,
-      "target_mean_price": 122.59259,
+      "gap_pct": 39.0,
+      "target_mean_price": 122.07407,
       "target_low_price": 92.0,
       "num_analyst_opinions": 27,
-      "pbr": 1.0398409,
-      "per": 7.6414275,
+      "pbr": 1.0484865,
+      "per": 7.638481,
       "payout_ratio": 0.1984,
       "equity_ratio": 0.6567681267013116,
       "operating_cf_ok": true,
@@ -1254,40 +1329,40 @@
       "chart_ric": "EXE.O"
     },
     {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
+      "ticker": "CSCO",
+      "name": "Cisco",
       "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 157.3000030517578,
+      "timing": "待機中",
+      "timing_reason": "安値圏 93.85 にいる（タッチ 2回目）。2番底の形成待ち",
+      "price": 95.63999938964844,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 39.6,
-      "target_mean_price": 219.61539,
-      "target_low_price": 175.0,
-      "num_analyst_opinions": 26,
-      "pbr": 31.428572,
-      "per": 40.333332,
-      "payout_ratio": 0.21030001,
-      "equity_ratio": 0.3537201693337088,
+      "as_of": "2026-11-13",
+      "gap_pct": 38.2,
+      "target_mean_price": 132.16667,
+      "target_low_price": 109.0,
+      "num_analyst_opinions": 24,
+      "pbr": 7.505297,
+      "per": 25.43617,
+      "payout_ratio": 0.4985,
+      "equity_ratio": 0.3878908027800705,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+          "state": "待機中",
+          "reason": "安値圏 93.85 にいる（タッチ 2回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 152.23 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 99.04 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 152.23 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 99.04 の上抜け待ち"
         }
       },
-      "chart_ric": "KLAC.O"
+      "chart_ric": "CSCO.O"
     },
     {
       "ticker": "KEYS",
@@ -1302,8 +1377,8 @@
       "target_mean_price": 419.66666,
       "target_low_price": 350.0,
       "num_analyst_opinions": 12,
-      "pbr": 7.8846707,
-      "per": 41.335598,
+      "pbr": 7.7149153,
+      "per": 40.28146,
       "payout_ratio": 0.0,
       "equity_ratio": 0.5203964250951243,
       "operating_cf_ok": true,
@@ -1326,22 +1401,22 @@
       "chart_ric": "KEYS.N"
     },
     {
-      "ticker": "6702.T",
-      "name": "富士通",
+      "ticker": "6273.T",
+      "name": "ＳＭＣ",
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 3550.0,
+      "price": 62320.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 36.2,
-      "target_mean_price": 4833.846,
-      "target_low_price": 4100.0,
-      "num_analyst_opinions": 13,
-      "pbr": 2.8991902,
-      "per": 22.282856,
-      "payout_ratio": 0.38639998,
-      "equity_ratio": 0.5956079058870591,
+      "as_of": "2026-11-13",
+      "gap_pct": 37.6,
+      "target_mean_price": 85746.664,
+      "target_low_price": 69000.0,
+      "num_analyst_opinions": 15,
+      "pbr": 1.818448,
+      "per": 22.846165,
+      "payout_ratio": 0.3808,
+      "equity_ratio": 0.9148966081056823,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -1352,66 +1427,30 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 3,428.40 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 60,226.00 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 3,428.40 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 60,226.00 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "6702.T"
-    },
-    {
-      "ticker": "PCG",
-      "name": "PG&E Corporation",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 12.970000267028809,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 35.8,
-      "target_mean_price": 17.61765,
-      "target_low_price": 14.0,
-      "num_analyst_opinions": 17,
-      "pbr": 0.8657633,
-      "per": 9.679105,
-      "payout_ratio": 0.1481,
-      "equity_ratio": 0.22978440940322434,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 33日前（20日以内ではない）"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 33日前（20日以内ではない）"
-        }
-      },
-      "chart_ric": "PCG.N"
+      "chart_ric": "6273.T"
     },
     {
       "ticker": "APH",
       "name": "Amphenol",
       "entry_rule": "analyst_gap_us",
       "timing": "待機中",
-      "timing_reason": "1番底 15日前 / 2番底 5日前（安値 71.64）、ネックライン 84.19。ネックライン上抜け待ち",
-      "price": 79.62000274658203,
+      "timing_reason": "1番底 16日前 / 2番底 6日前（安値 71.64）、ネックライン 84.19。ネックライン上抜け待ち",
+      "price": 78.2300033569336,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 34.4,
+      "as_of": "2026-11-13",
+      "gap_pct": 36.7,
       "target_mean_price": 106.97368,
       "target_low_price": 85.0,
       "num_analyst_opinions": 19,
-      "pbr": 11.477585,
-      "per": 34.467533,
+      "pbr": 11.27721,
+      "per": 34.013046,
       "payout_ratio": 0.2174,
       "equity_ratio": 0.37015031639019896,
       "operating_cf_ok": true,
@@ -1420,18 +1459,54 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 15日前 / 2番底 5日前（安値 71.64）、ネックライン 84.19。ネックライン上抜け待ち"
+          "reason": "1番底 16日前 / 2番底 6日前（安値 71.64）、ネックライン 84.19。ネックライン上抜け待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 78.84 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 79.56 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 78.84 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 6日。5日線 79.56 の上抜け待ち"
         }
       },
       "chart_ric": "APH.N"
+    },
+    {
+      "ticker": "WYNN",
+      "name": "Wynn Resorts",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 85.05999755859375,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 36.6,
+      "target_mean_price": 116.15,
+      "target_low_price": 92.0,
+      "num_analyst_opinions": 20,
+      "pbr": -39.599625,
+      "per": 24.028248,
+      "payout_ratio": 0.2825,
+      "equity_ratio": -0.021016901207091758,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 12日。5日線 85.49 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 12日。5日線 85.49 の上抜け待ち"
+        }
+      },
+      "chart_ric": "WYNN.O"
     },
     {
       "ticker": "GOOGL",
@@ -1439,15 +1514,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 298.70001220703125,
+      "price": 295.7699890136719,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 34.0,
+      "as_of": "2026-11-13",
+      "gap_pct": 35.4,
       "target_mean_price": 400.37357,
       "target_low_price": 300.0,
       "num_analyst_opinions": 53,
-      "pbr": 5.567983,
-      "per": 15.325809,
+      "pbr": 5.5133653,
+      "per": 15.444908,
       "payout_ratio": 0.044899996,
       "equity_ratio": 0.6975949173583568,
       "operating_cf_ok": true,
@@ -1460,14 +1535,50 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 290.49 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 292.69 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 290.49 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 292.69 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "GOOGL.O"
+    },
+    {
+      "ticker": "ON",
+      "name": "ON Semiconductor",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 71.05999755859375,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 35.3,
+      "target_mean_price": 96.16,
+      "target_low_price": 75.0,
+      "num_analyst_opinions": 25,
+      "pbr": 3.6583607,
+      "per": 41.555553,
+      "payout_ratio": 0.0,
+      "equity_ratio": 0.6126827476625066,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 71.43 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 71.43 の上抜け待ち"
+        }
+      },
+      "chart_ric": "ON.O"
     },
     {
       "ticker": "6861.T",
@@ -1475,15 +1586,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 75030.0,
+      "price": 74580.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 33.8,
+      "as_of": "2026-11-13",
+      "gap_pct": 34.6,
       "target_mean_price": 100406.25,
       "target_low_price": 81200.0,
       "num_analyst_opinions": 16,
-      "pbr": 4.885903,
-      "per": 33.58773,
+      "pbr": 4.8819757,
+      "per": 33.455948,
       "payout_ratio": 0.2675,
       "equity_ratio": 0.945736115216494,
       "operating_cf_ok": true,
@@ -1496,14 +1607,50 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 73,456.00 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 74,422.00 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 73,456.00 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 74,422.00 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "6861.T"
+    },
+    {
+      "ticker": "HWM",
+      "name": "Howmet Aerospace",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 220.82000732421875,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 34.2,
+      "target_mean_price": 296.2857,
+      "target_low_price": 230.0,
+      "num_analyst_opinions": 21,
+      "pbr": 15.239476,
+      "per": 43.298042,
+      "payout_ratio": 0.098000005,
+      "equity_ratio": 0.47884426156185705,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 220.64 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 220.64 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "HWM.N"
     },
     {
       "ticker": "GOOG",
@@ -1518,8 +1665,8 @@
       "target_mean_price": 393.92856,
       "target_low_price": 340.0,
       "num_analyst_opinions": 14,
-      "pbr": 5.5055366,
-      "per": 15.177288,
+      "pbr": 5.4527826,
+      "per": 15.275195,
       "payout_ratio": 0.044899996,
       "equity_ratio": 0.6975949173583568,
       "operating_cf_ok": true,
@@ -1547,16 +1694,16 @@
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 1249.5,
+      "price": 1249.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
+      "as_of": "2026-11-13",
       "gap_pct": 33.3,
       "target_mean_price": 1665.0,
       "target_low_price": 1500.0,
       "num_analyst_opinions": 6,
-      "pbr": 0.9942095,
-      "per": 4.684092,
-      "payout_ratio": 0.1329,
+      "pbr": 0.9970034,
+      "per": 4.742738,
+      "payout_ratio": 0.1367,
       "equity_ratio": 0.3705364692707993,
       "operating_cf_ok": true,
       "held": false,
@@ -1568,50 +1715,14 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 1,226.20 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 1,241.20 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 1,226.20 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 1,241.20 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "5020.T"
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 102.01000213623047,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 33.1,
-      "target_mean_price": 135.79167,
-      "target_low_price": 110.0,
-      "num_analyst_opinions": 24,
-      "pbr": 8.005179,
-      "per": 30.270031,
-      "payout_ratio": 0.4985,
-      "equity_ratio": 0.3878908027800705,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 98.68 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 98.68 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "CSCO.O"
     },
     {
       "ticker": "TRMB",
@@ -1619,14 +1730,14 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 55.83000183105469,
+      "price": 55.63999938964844,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 32.9,
+      "as_of": "2026-11-13",
+      "gap_pct": 33.3,
       "target_mean_price": 74.18182,
       "target_low_price": 60.0,
       "num_analyst_opinions": 11,
-      "pbr": 2.5761352,
+      "pbr": 2.5673678,
       "per": null,
       "payout_ratio": 0.0,
       "equity_ratio": 0.6267396907216495,
@@ -1640,32 +1751,32 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 55.17 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 55.48 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 55.17 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 55.48 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "TRMB.O"
     },
     {
-      "ticker": "HWM",
-      "name": "Howmet Aerospace",
+      "ticker": "PCG",
+      "name": "PG&E Corporation",
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 223.11000061035156,
+      "price": 13.25,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 32.8,
-      "target_mean_price": 296.2857,
-      "target_low_price": 230.0,
-      "num_analyst_opinions": 21,
-      "pbr": 15.397516,
-      "per": 43.919292,
-      "payout_ratio": 0.098000005,
-      "equity_ratio": 0.47884426156185705,
+      "as_of": "2026-11-13",
+      "gap_pct": 33.0,
+      "target_mean_price": 17.61765,
+      "target_low_price": 14.0,
+      "num_analyst_opinions": 17,
+      "pbr": 0.88445365,
+      "per": 9.814815,
+      "payout_ratio": 0.1481,
+      "equity_ratio": 0.22978440940322434,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
@@ -1675,123 +1786,15 @@
           "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "5日線 217.64 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 217.64 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "HWM.N"
-    },
-    {
-      "ticker": "COF",
-      "name": "Capital One",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "1番底 31日前 / 2番底 0日前（安値 193.07）、ネックライン 210.77。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 193.60000610351562,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 31.8,
-      "target_mean_price": 255.19048,
-      "target_low_price": 225.0,
-      "num_analyst_opinions": 21,
-      "pbr": 1.1066146,
-      "per": 11.862745,
-      "payout_ratio": 0.19610001,
-      "equity_ratio": 0.1698273117402008,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 31日前 / 2番底 0日前（安値 193.07）、ネックライン 210.77。2番底をつけている最中（ネックライン上抜け待ち）"
-        },
-        "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 31日前（20日以内ではない）"
+          "reason": "60日安値の更新が 34日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 31日前（20日以内ではない）"
+          "reason": "60日安値の更新が 34日前（20日以内ではない）"
         }
       },
-      "chart_ric": "COF.N"
-    },
-    {
-      "ticker": "6501.T",
-      "name": "日立製作所",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4981.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 31.4,
-      "target_mean_price": 6543.75,
-      "target_low_price": 5200.0,
-      "num_analyst_opinions": 16,
-      "pbr": 3.3325503,
-      "per": 29.189093,
-      "payout_ratio": 0.355,
-      "equity_ratio": 0.43669048428567686,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 4,807.80 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 4,807.80 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6501.T"
-    },
-    {
-      "ticker": "ON",
-      "name": "ON Semiconductor",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 73.7300033569336,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 30.4,
-      "target_mean_price": 96.16,
-      "target_low_price": 75.0,
-      "num_analyst_opinions": 25,
-      "pbr": 3.7958198,
-      "per": 43.11696,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.6126827476625066,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 69.88 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 69.88 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "ON.O"
+      "chart_ric": "PCG.N"
     },
     {
       "ticker": "4063.T",
@@ -1799,15 +1802,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 5791.0,
+      "price": 5704.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 30.3,
+      "as_of": "2026-11-13",
+      "gap_pct": 32.3,
       "target_mean_price": 7547.0586,
       "target_low_price": 6200.0,
       "num_analyst_opinions": 17,
-      "pbr": 2.289115,
-      "per": 22.212244,
+      "pbr": 2.2951505,
+      "per": 22.936186,
       "payout_ratio": 0.41979998,
       "equity_ratio": 0.7885025310376875,
       "operating_cf_ok": true,
@@ -1820,14 +1823,122 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 5,582.20 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 5,660.60 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 5,582.20 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 5,660.60 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "4063.T"
+    },
+    {
+      "ticker": "6501.T",
+      "name": "日立製作所",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 4962.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 31.9,
+      "target_mean_price": 6543.75,
+      "target_low_price": 5200.0,
+      "num_analyst_opinions": 16,
+      "pbr": 3.3878539,
+      "per": 29.972816,
+      "payout_ratio": 0.355,
+      "equity_ratio": 0.43669048428567686,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 4,891.80 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 4,891.80 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6501.T"
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "1番底 43日前 / 2番底 6日前（安値 1,131.43）、ネックライン 1,479.89。ネックライン上抜け待ち",
+      "price": 1390.5400390625,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 31.7,
+      "target_mean_price": 1831.3572,
+      "target_low_price": 1500.0,
+      "num_analyst_opinions": 14,
+      "pbr": 18.171293,
+      "per": 76.23575,
+      "payout_ratio": 0.4165,
+      "equity_ratio": 0.8419955753172418,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 43日前 / 2番底 6日前（安値 1,131.43）、ネックライン 1,479.89。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 1,412.46 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 6日。5日線 1,412.46 の上抜け待ち"
+        }
+      },
+      "chart_ric": "MPWR.O"
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "1番底 32日前 / 2番底 1日前（安値 193.07）、ネックライン 210.77。2番底をつけている最中（ネックライン上抜け待ち）",
+      "price": 195.0800018310547,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 30.4,
+      "target_mean_price": 254.4762,
+      "target_low_price": 225.0,
+      "num_analyst_opinions": 21,
+      "pbr": 1.1150742,
+      "per": 11.953432,
+      "payout_ratio": 0.19610001,
+      "equity_ratio": 0.1698273117402008,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 32日前 / 2番底 1日前（安値 193.07）、ネックライン 210.77。2番底をつけている最中（ネックライン上抜け待ち）"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 32日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 32日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "COF.N"
     },
     {
       "ticker": "FANG",
@@ -1842,8 +1953,8 @@
       "target_mean_price": 237.43333,
       "target_low_price": 192.0,
       "num_analyst_opinions": 30,
-      "pbr": 1.3057,
-      "per": 24.522207,
+      "pbr": 1.325264,
+      "per": 24.889637,
       "payout_ratio": 0.572,
       "equity_ratio": 0.5203000323674692,
       "operating_cf_ok": true,
@@ -1866,56 +1977,56 @@
       "chart_ric": "FANG.O"
     },
     {
-      "ticker": "WY",
-      "name": "Weyerhaeuser",
+      "ticker": "CRH",
+      "name": "CRH plc",
       "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "1番底 29日前 / 2番底 16日前（安値 18.47）、ネックライン 19.61 を上回っているが、上抜けた日ではない",
-      "price": 20.459999084472656,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 93.16000366210938,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 30.2,
-      "target_mean_price": 26.63636,
-      "target_low_price": 23.0,
-      "num_analyst_opinions": 11,
-      "pbr": 1.5709459,
-      "per": 32.47619,
-      "payout_ratio": 1.3333,
-      "equity_ratio": 0.5673869860952266,
+      "as_of": "2026-11-13",
+      "gap_pct": 30.1,
+      "target_mean_price": 121.175,
+      "target_low_price": 95.0,
+      "num_analyst_opinions": 24,
+      "pbr": 2.4787145,
+      "per": 17.544256,
+      "payout_ratio": 0.29,
+      "equity_ratio": 0.4115277134872876,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 29日前 / 2番底 16日前（安値 18.47）、ネックライン 19.61 を上回っているが、上抜けた日ではない"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 29日前（20日以内ではない）"
+          "reason": "60日安値の更新が 22日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 29日前（20日以内ではない）"
+          "reason": "60日安値の更新が 22日前（20日以内ではない）"
         }
       },
-      "chart_ric": "WY.N"
+      "chart_ric": "CRH.N"
     },
     {
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
       "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "安値圏 28.31 にいる（タッチ 2回目）。2番底の形成待ち",
-      "price": 28.360000610351562,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 2回）",
+      "price": 29.540000915527344,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 25.3,
+      "as_of": "2026-11-13",
+      "gap_pct": 20.3,
       "target_mean_price": 35.54545,
       "target_low_price": 25.0,
       "num_analyst_opinions": 22,
-      "pbr": 0.9017488,
-      "per": 4.239163,
+      "pbr": 0.9392687,
+      "per": 4.4155455,
       "payout_ratio": 0.2571,
       "equity_ratio": 0.41504419493549927,
       "operating_cf_ok": true,
@@ -1923,16 +2034,16 @@
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 28.31 にいる（タッチ 2回目）。2番底の形成待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 2回）"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 28.79 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 28.31 を 3日前に更新後、5日線 28.95 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 28.79 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 28.31 を 3日前に更新後、5日線 28.95 を上抜け（安値から 4.3%）"
         }
       },
       "chart_ric": "FIS.N"
@@ -1943,15 +2054,15 @@
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 24.799999237060547,
+      "price": 25.15999984741211,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 12.8,
+      "as_of": "2026-11-13",
+      "gap_pct": 11.2,
       "target_mean_price": 27.97727,
       "target_low_price": 17.0,
       "num_analyst_opinions": 22,
-      "pbr": 0.9512485,
-      "per": 7.923322,
+      "pbr": 0.965057,
+      "per": 7.962025,
       "payout_ratio": 0.4177,
       "equity_ratio": 0.35543646907358295,
       "operating_cf_ok": true,
@@ -1964,50 +2075,86 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 24日前（20日以内ではない）"
+          "reason": "60日安値の更新が 25日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 24日前（20日以内ではない）"
+          "reason": "60日安値の更新が 25日前（20日以内ではない）"
         }
       },
       "chart_ric": "CMCSA.O"
     },
     {
-      "ticker": "6902.T",
-      "name": "デンソー",
+      "ticker": "1925.T",
+      "name": "大和ハウス工業",
       "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "1番底 27日前 / 2番底 4日前（安値 1,808.00）、ネックライン 1,926.00。ネックライン上抜け待ち",
-      "price": 1916.5,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 2380.5,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 8.2,
-      "target_mean_price": 2073.3333,
-      "target_low_price": 1670.0,
-      "num_analyst_opinions": 18,
-      "pbr": 0.9388823,
-      "per": 12.018091,
-      "payout_ratio": 0.4578,
-      "equity_ratio": 0.629112455665849,
+      "as_of": "2026-11-13",
+      "gap_pct": 5.8,
+      "target_mean_price": 2517.7778,
+      "target_low_price": 2300.0,
+      "num_analyst_opinions": 9,
+      "pbr": 0.9881927,
+      "per": 10.289604,
+      "payout_ratio": 0.45459998,
+      "equity_ratio": 0.344341146107915,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 27日前 / 2番底 4日前（安値 1,808.00）、ネックライン 1,926.00。ネックライン上抜け待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 27日前（20日以内ではない）"
+          "reason": "60日安値の更新が 28日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 27日前（20日以内ではない）"
+          "reason": "60日安値の更新が 28日前（20日以内ではない）"
         }
       },
-      "chart_ric": "6902.T"
+      "chart_ric": "1925.T"
+    },
+    {
+      "ticker": "9202.T",
+      "name": "ＡＮＡホールディングス",
+      "entry_rule": "value_screen",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 3332.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 3.5,
+      "target_mean_price": 3449.1667,
+      "target_low_price": 2700.0,
+      "num_analyst_opinions": 12,
+      "pbr": 0.9957219,
+      "per": 10.899219,
+      "payout_ratio": 0.31120002,
+      "equity_ratio": 0.37723153334101955,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 17日。5日線 3,334.80 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 17日。5日線 3,334.80 の上抜け待ち"
+        }
+      },
+      "chart_ric": "9202.T"
     },
     {
       "ticker": "9022.T",
@@ -2015,15 +2162,15 @@
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4391.0,
+      "price": 4473.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 3.9,
+      "as_of": "2026-11-13",
+      "gap_pct": 2.0,
       "target_mean_price": 4561.6665,
       "target_low_price": 3630.0,
       "num_analyst_opinions": 12,
-      "pbr": 0.7995654,
-      "per": 7.783518,
+      "pbr": 0.79653805,
+      "per": 7.8147383,
       "payout_ratio": 0.0587,
       "equity_ratio": 0.46598816088849054,
       "operating_cf_ok": true,
@@ -2036,50 +2183,14 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 25日前（20日以内ではない）"
+          "reason": "60日安値の更新が 26日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 25日前（20日以内ではない）"
+          "reason": "60日安値の更新が 26日前（20日以内ではない）"
         }
       },
       "chart_ric": "9022.T"
-    },
-    {
-      "ticker": "9202.T",
-      "name": "ＡＮＡホールディングス",
-      "entry_rule": "value_screen",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 3327.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 3.7,
-      "target_mean_price": 3449.1667,
-      "target_low_price": 2700.0,
-      "num_analyst_opinions": 12,
-      "pbr": 0.98944634,
-      "per": 10.79803,
-      "payout_ratio": 0.31120002,
-      "equity_ratio": 0.37723153334101955,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 2,843.50 を 16日前に更新後、5日線 3,315.80 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値 2,843.50 を 16日前に更新後、5日線 3,315.80 を上抜け。ただし終値が安値から 17.0% 上（5% 以内ではない）"
-        }
-      },
-      "chart_ric": "9202.T"
     },
     {
       "ticker": "WDC",
@@ -2087,15 +2198,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 311.2099914550781,
+      "price": 295.6499938964844,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 97.1,
+      "as_of": "2026-11-13",
+      "gap_pct": 107.5,
       "target_mean_price": 613.375,
       "target_low_price": 405.0,
       "num_analyst_opinions": 24,
-      "pbr": 12.45089,
-      "per": 11.020184,
+      "pbr": 11.828365,
+      "per": 10.399226,
       "payout_ratio": 0.019299999,
       "equity_ratio": 0.6394921001370752,
       "operating_cf_ok": true,
@@ -2108,11 +2219,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 293.46 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 299.83 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 293.46 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 5日。5日線 299.83 の上抜け待ち"
         }
       },
       "chart_ric": "WDC.O"
@@ -2123,15 +2234,15 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 545.1400146484375,
+      "price": 528.2899780273438,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 91.7,
+      "as_of": "2026-11-13",
+      "gap_pct": 97.8,
       "target_mean_price": 1044.8334,
       "target_low_price": 700.0,
       "num_analyst_opinions": 24,
-      "pbr": 36.265305,
-      "per": 28.935246,
+      "pbr": 35.14436,
+      "per": 27.702673,
       "payout_ratio": 0.1552,
       "equity_ratio": 0.2173084636983554,
       "operating_cf_ok": true,
@@ -2144,30 +2255,66 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 513.12 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 526.58 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 513.12 を上回っているが、上抜けた日ではない"
+          "reason": "5日線 526.58 を上回っているが、上抜けた日ではない"
         }
       },
       "chart_ric": "STX.O"
+    },
+    {
+      "ticker": "7011.T",
+      "name": "三菱重工業",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "安値圏 2,912.50 にいる（タッチ 2回目）。2番底の形成待ち",
+      "price": 2920.5,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 83.5,
+      "target_mean_price": 5359.375,
+      "target_low_price": 3110.0,
+      "num_analyst_opinions": 16,
+      "pbr": 3.0516157,
+      "per": 34.45205,
+      "payout_ratio": 0.29479998,
+      "equity_ratio": 0.37347931505708,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": false,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 2,912.50 にいる（タッチ 2回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 5日。5日線 3,085.50 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 5日。5日線 3,085.50 の上抜け待ち"
+        }
+      },
+      "chart_ric": "7011.T"
     },
     {
       "ticker": "NVDA",
       "name": "Nvidia",
       "entry_rule": "analyst_gap_us",
       "timing": "待機中",
-      "timing_reason": "安値圏 166.19 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 166.19000244140625,
+      "timing_reason": "安値圏 162.85 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 162.85000610351562,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 86.4,
-      "target_mean_price": 309.71964,
-      "target_low_price": 180.0,
-      "num_analyst_opinions": 56,
-      "pbr": 17.525045,
-      "per": 21.010115,
+      "as_of": "2026-11-13",
+      "gap_pct": 74.0,
+      "target_mean_price": 283.30756,
+      "target_low_price": 174.0,
+      "num_analyst_opinions": 53,
+      "pbr": 17.172836,
+      "per": 20.587864,
       "payout_ratio": 0.0354,
       "equity_ratio": 0.7605934149891442,
       "operating_cf_ok": true,
@@ -2176,15 +2323,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "安値圏 166.19 にいる（タッチ 1回目）。2番底の形成待ち"
+          "reason": "安値圏 162.85 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 166.19 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 162.85 を更新。5日線の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 166.19 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 162.85 を更新。5日線の上抜け待ち"
         }
       },
       "chart_ric": "NVDA.O"
@@ -2193,55 +2340,19 @@
       "ticker": "AXON",
       "name": "Axon Enterprise",
       "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "安値圏 302.54 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 307.1099853515625,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 315.42999267578125,
       "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 76.3,
+      "as_of": "2026-11-13",
+      "gap_pct": 71.6,
       "target_mean_price": 541.3158,
       "target_low_price": 380.0,
       "num_analyst_opinions": 19,
-      "pbr": 6.644382,
-      "per": 101.35643,
+      "pbr": 6.824387,
+      "per": 101.42444,
       "payout_ratio": 0.0,
       "equity_ratio": 0.4632161447638127,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 302.54 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 308.25 の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 308.25 の上抜け待ち"
-        }
-      },
-      "chart_ric": "AXON.O"
-    },
-    {
-      "ticker": "RDDT",
-      "name": "Reddit",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 99.55000305175781,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 50.7,
-      "target_mean_price": 150.0138,
-      "target_low_price": 100.0,
-      "num_analyst_opinions": 29,
-      "pbr": 5.367445,
-      "per": 21.54762,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.9042548823418817,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": false,
@@ -2251,31 +2362,31 @@
           "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 8日。5日線 99.95 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 302.54 を 3日前に更新後、5日線 308.74 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 8日。5日線 99.95 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 302.54 を 3日前に更新後、5日線 308.74 を上抜け（安値から 4.3%）"
         }
       },
-      "chart_ric": "RDDT.N"
+      "chart_ric": "AXON.O"
     },
     {
       "ticker": "2802.T",
       "name": "味の素",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "安値圏 4,260.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 4260.0,
+      "timing_reason": "安値圏 4,227.00 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 4227.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 47.6,
+      "as_of": "2026-11-13",
+      "gap_pct": 48.7,
       "target_mean_price": 6285.7144,
       "target_low_price": 5800.0,
       "num_analyst_opinions": 14,
-      "pbr": 5.2524796,
-      "per": 25.9282,
+      "pbr": 5.254966,
+      "per": 26.142618,
       "payout_ratio": 0.3007,
       "equity_ratio": 0.4253155854345693,
       "operating_cf_ok": true,
@@ -2284,15 +2395,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "安値圏 4,260.00 にいる（タッチ 1回目）。2番底の形成待ち"
+          "reason": "安値圏 4,227.00 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 4,260.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 4,227.00 を更新。5日線の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 4,260.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 4,227.00 を更新。5日線の上抜け待ち"
         }
       },
       "chart_ric": "2802.T"
@@ -2310,8 +2421,8 @@
       "target_mean_price": 250.68872,
       "target_low_price": 200.0,
       "num_analyst_opinions": 39,
-      "pbr": 7.0202985,
-      "per": 71.609955,
+      "pbr": 6.9767723,
+      "per": 71.16597,
       "payout_ratio": 0.0,
       "equity_ratio": 0.5103514929548807,
       "operating_cf_ok": true,
@@ -2346,8 +2457,8 @@
       "target_mean_price": 72.2019,
       "target_low_price": 62.0,
       "num_analyst_opinions": 21,
-      "pbr": 2.5125225,
-      "per": 25.855669,
+      "pbr": 2.418854,
+      "per": 24.891752,
       "payout_ratio": 0.2874,
       "equity_ratio": 0.32524438120833665,
       "operating_cf_ok": true,
@@ -2370,6 +2481,42 @@
       "chart_ric": "HPE.N"
     },
     {
+      "ticker": "MCHP",
+      "name": "Microchip Technology",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 61.68000030517578,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 40.2,
+      "target_mean_price": 86.48,
+      "target_low_price": 62.0,
+      "num_analyst_opinions": 25,
+      "pbr": 5.054909,
+      "per": 46.37594,
+      "payout_ratio": 1.3684,
+      "equity_ratio": 0.447623885707128,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": false,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 61.54 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 61.54 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "MCHP.O"
+    },
+    {
       "ticker": "META",
       "name": "Meta Platforms",
       "entry_rule": "analyst_gap_us",
@@ -2382,8 +2529,8 @@
       "target_mean_price": 850.1025,
       "target_low_price": 629.06,
       "num_analyst_opinions": 57,
-      "pbr": 5.8518114,
-      "per": 21.452013,
+      "pbr": 6.02147,
+      "per": 21.893211,
       "payout_ratio": 0.0716,
       "equity_ratio": 0.5935260545159977,
       "operating_cf_ok": true,
@@ -2406,58 +2553,22 @@
       "chart_ric": "META.O"
     },
     {
-      "ticker": "9104.T",
-      "name": "商船三井",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "1番底 59日前 / 2番底 3日前（安値 6,440.00）、ネックライン 7,672.00。ネックライン上抜け待ち",
-      "price": 6735.0,
-      "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 18.3,
-      "target_mean_price": 7965.4546,
-      "target_low_price": 4120.0,
-      "num_analyst_opinions": 11,
-      "pbr": 0.77189416,
-      "per": 8.353134,
-      "payout_ratio": 0.3108,
-      "equity_ratio": 0.482094580145566,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 59日前 / 2番底 3日前（安値 6,440.00）、ネックライン 7,672.00。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 6,560.20 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 6,560.20 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "9104.T"
-    },
-    {
-      "ticker": "TAP",
-      "name": "Molson Coors Beverage Company",
-      "entry_rule": "value_screen",
+      "ticker": "7936.T",
+      "name": "アシックス",
+      "entry_rule": "analyst_gap_jp",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 39.560001373291016,
-      "currency": "USD",
-      "as_of": "2026-11-12",
-      "gap_pct": 7.9,
-      "target_mean_price": 42.66667,
-      "target_low_price": 32.0,
-      "num_analyst_opinions": 21,
-      "pbr": 0.7171734,
-      "per": 8.637555,
-      "payout_ratio": 0.4152,
-      "equity_ratio": 0.44991292263307886,
+      "price": 4180.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 36.1,
+      "target_mean_price": 5687.6924,
+      "target_low_price": 5000.0,
+      "num_analyst_opinions": 13,
+      "pbr": 8.256823,
+      "per": 27.282814,
+      "payout_ratio": 0.2013,
+      "equity_ratio": 0.4633730050470604,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": false,
@@ -2468,14 +2579,50 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 34日前（20日以内ではない）"
+          "reason": "60日安値の更新が 40日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 34日前（20日以内ではない）"
+          "reason": "60日安値の更新が 40日前（20日以内ではない）"
         }
       },
-      "chart_ric": "TAP.N"
+      "chart_ric": "7936.T"
+    },
+    {
+      "ticker": "9104.T",
+      "name": "商船三井",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "1番底 59日前 / 2番底 4日前（安値 6,440.00）、ネックライン 7,672.00。ネックライン上抜け待ち",
+      "price": 6827.0,
+      "currency": "JPY",
+      "as_of": "2026-11-13",
+      "gap_pct": 16.7,
+      "target_mean_price": 7965.4546,
+      "target_low_price": 4120.0,
+      "num_analyst_opinions": 11,
+      "pbr": 0.7726864,
+      "per": 8.38605,
+      "payout_ratio": 0.3108,
+      "equity_ratio": 0.482094580145566,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": false,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 59日前 / 2番底 4日前（安値 6,440.00）、ネックライン 7,672.00。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 6,622.40 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 6,622.40 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "9104.T"
     },
     {
       "ticker": "5401.T",
@@ -2483,15 +2630,15 @@
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 704.5999755859375,
+      "price": 698.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 6.9,
+      "as_of": "2026-11-13",
+      "gap_pct": 7.9,
       "target_mean_price": 753.3333,
       "target_low_price": 470.0,
       "num_analyst_opinions": 9,
-      "pbr": 0.6313661,
-      "per": 10.038749,
+      "pbr": 0.6300122,
+      "per": 10.213638,
       "payout_ratio": 0.3479,
       "equity_ratio": 0.37723247431565304,
       "operating_cf_ok": true,
@@ -2504,30 +2651,66 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 22日前（20日以内ではない）"
+          "reason": "60日安値の更新が 23日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 22日前（20日以内ではない）"
+          "reason": "60日安値の更新が 23日前（20日以内ではない）"
         }
       },
       "chart_ric": "5401.T"
+    },
+    {
+      "ticker": "TAP",
+      "name": "Molson Coors Beverage Company",
+      "entry_rule": "value_screen",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 40.84000015258789,
+      "currency": "USD",
+      "as_of": "2026-11-13",
+      "gap_pct": 4.5,
+      "target_mean_price": 42.66667,
+      "target_low_price": 32.0,
+      "num_analyst_opinions": 21,
+      "pbr": 0.7403782,
+      "per": 8.878261,
+      "payout_ratio": 0.4152,
+      "equity_ratio": 0.44991292263307886,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": false,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "TAP.N"
     },
     {
       "ticker": "9101.T",
       "name": "日本郵船",
       "entry_rule": "value_screen",
       "timing": "待機中",
-      "timing_reason": "1番底 59日前 / 2番底 3日前（安値 6,400.00）、ネックライン 7,566.00。ネックライン上抜け待ち",
-      "price": 6811.0,
+      "timing_reason": "1番底 59日前 / 2番底 4日前（安値 6,490.00）、ネックライン 7,566.00。ネックライン上抜け待ち",
+      "price": 6915.0,
       "currency": "JPY",
-      "as_of": "2026-11-12",
-      "gap_pct": 1.6,
+      "as_of": "2026-11-13",
+      "gap_pct": 0.1,
       "target_mean_price": 6919.091,
       "target_low_price": 3810.0,
       "num_analyst_opinions": 11,
-      "pbr": 0.868303,
-      "per": 8.95602,
+      "pbr": 0.87259233,
+      "per": 8.987639,
       "payout_ratio": 0.3325,
       "equity_ratio": 0.5905782181491713,
       "operating_cf_ok": true,
@@ -2536,7 +2719,7 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 59日前 / 2番底 3日前（安値 6,400.00）、ネックライン 7,566.00。ネックライン上抜け待ち"
+          "reason": "1番底 59日前 / 2番底 4日前（安値 6,490.00）、ネックライン 7,566.00。ネックライン上抜け待ち"
         },
         "confirm": {
           "state": "未該当",
