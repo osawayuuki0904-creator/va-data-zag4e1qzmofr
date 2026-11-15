@@ -1,30 +1,42 @@
 {
-  "date": "2026-11-14",
-  "generated_at": "2026-11-15T10:22:08+09:00",
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T07:42:37+09:00",
   "items": [
     {
       "ticker": "6902.T",
       "name": "デンソー",
       "verdict": "headwind",
-      "summary": "4〜9月期は売上が7.0%増えた一方、営業利益は19.5%減の1701億円で市場予想（1800億円台）に届かなかった。通期の営業利益予想5000億円（前期比9.5%減）は据え置き。同時に上限2000億円の自社株買いを発表している。",
-      "why_cheap": "部材費の上昇、開発投資の拡大、前年にあった一時的な費用回収がなくなったことで減益が続いているため（10/29の決算）。",
+      "summary": "10/29発表の4〜9月期は売上収益が7.0%増の3兆8435億円だった一方、営業利益は19.5%減の1701億円だった。通期予想（営業利益5000億円、前期比9.5%減）は修正していない。同じ日に上限2000億円の自社株買いを決めている。",
+      "why_cheap": "部材費の高騰、将来に向けた開発費の増加、前年度にあった一時的な要因がなくなったことで減益が続いているため（10/29の決算短信）。11月に入って安値を付けた直接の理由は、資料では確認できていない。",
       "positives": [
-        "売上収益は3兆8435億円で前年同期比7.0%増。電動化・知能化に関連する製品が伸びた",
-        "自社株買いの枠を設定（上限1億株・2000億円、2027年3月31日まで）。発表当日の株価は前日比59.5円高で終えた",
-        "通期の営業利益予想は引き下げていない"
+        "売上収益は前年同期比7.0%増。電動化・知能化に関連する製品が増収を引っ張った",
+        "発行済み株式の3.99%・2000億円を上限とする自社株買いと、自己株式の消却を10/29に決議した",
+        "年間配当の予想は74円（前期実績67円）で、修正はない",
+        "通期の業績予想は引き下げていない"
       ],
       "negatives": [
-        "営業利益率が5.9%から4.4%に低下",
-        "4〜9月期の営業利益は市場予想を下回った",
-        "通期の会社予想も前期比で減益（営業利益9.5%減）"
+        "4〜9月期の営業利益率は前年同期の5.9%から4.4%に下がった",
+        "4〜9月期の営業利益は市場予想を下回ったと報じられている",
+        "通期の会社予想は減益（営業利益9.5%減、当期利益13.4%減の4220億円）",
+        "親会社の所有者に帰属する中間利益は8.8%減の1198億円"
       ],
       "upcoming": [
         "次の決算発表日は確認できていない"
       ],
       "sources": [
         {
+          "title": "デンソー 2027年3月期 第2四半期（中間期）決算短信〔IFRS〕（連結）",
+          "url": "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20261029/20261027556975.pdf",
+          "date": "2026-10-29"
+        },
+        {
           "title": "デンソー、売上7%増も営業利益19.5%減…第2四半期決算（レスポンス）",
           "url": "https://response.jp/article/2026/10/29/418377.html",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "デンソー、発行済み株式の3.99%・2000億円を上限に自社株買い（ロイター）",
+          "url": "https://news.yahoo.co.jp/articles/22eb766041c2e7649a4e2a815343b31257f882a9",
           "date": "2026-10-29"
         },
         {
@@ -35,78 +47,88 @@
       ]
     },
     {
-      "ticker": "FIS",
-      "name": "Fidelity National Information Services",
-      "verdict": "headwind",
-      "summary": "11/4の7〜9月期決算で、2026年通期の調整後EPS見通しを6.15〜6.24ドルから5.82〜5.89ドルへ、売上見通しも引き下げた。CFOが11/5付で退任し、株価は発表後に約24%下落した。7〜9月期の実績自体は市場予想をわずかに上回っている。",
-      "why_cheap": "通期見通しの引き下げとCFO退任。会社は理由として、顧客側の導入の遅れ、ソフトウェアライセンス需要の減少、技術・サイバーセキュリティへの投資増、取引先銀行の統合を挙げている。",
-      "positives": [
-        "7〜9月期の調整後EPSは1.61ドル（予想1.60ドル）、売上は34.54億ドル（予想34.32億ドル）で予想を上回った",
-        "通期のフリーキャッシュフロー目標（21.5〜22.5億ドル）は据え置き",
-        "会社は、遅れた案件は中止ではなく延期だと説明している"
-      ],
-      "negatives": [
-        "通期の調整後EPS見通しを引き下げ（成長率は1.2〜2.4%に）",
-        "CFOが退任し、暫定CFOが就任",
-        "会社は逆風が和らぐ時期を2028年までとしている",
-        "株主の権利に関する法律事務所の調査の告知が出ている（11/9）"
-      ],
-      "upcoming": [
-        "戦略的選択肢に関する更新を2027年初頭に予定"
-      ],
-      "sources": [
-        {
-          "title": "FIS 2026年7〜9月期決算プレスリリース（SEC Form 8-K 添付資料）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001136893/000113689326000061/q32026ex991.htm",
-          "date": "2026-11-04"
-        },
-        {
-          "title": "Fidelity National Information Slashes 2026 EPS Forecast as Technology Costs, Delays Rise（Benzinga / TradingView）",
-          "url": "https://www.tradingview.com/news/benzinga:1894969bb094b:0-fidelity-national-information-slashes-2026-eps-forecast-as-technology-costs-delays-rise/",
-          "date": ""
-        },
-        {
-          "title": "Levi & Korsinsky Notifies Investors of Pending Investigation（GlobeNewswire）",
-          "url": "https://www.globenewswire.com/news-release/2026/11/09/3398675/3080/en/levi-korsinsky-notifies-investors-of-pending-investigation-into-securities-claims-involving-fidelity-national-information-services-fis.html",
-          "date": "2026-11-09"
-        }
-      ]
-    },
-    {
       "ticker": "AXON",
       "name": "Axon Enterprise",
-      "verdict": "neutral",
-      "summary": "11/5の7〜9月期決算は売上が28%増の9.09億ドルだったが市場予想（9.36億ドル）に届かず、通期の売上成長見通しを32〜34%から約30%に下げた。株価は発表直後に18.4%下落した。一方で経常収益（ARR）は40%増、将来の契約受注額は39%増と伸びは続いている。",
-      "why_cheap": "売上と調整後EPS（1.72ドル、予想1.89ドル）が予想を下回り、10〜12月期の売上見通し（中央値10億ドル）も予想（10.7億ドル）に届かなかったため。通期のフリーキャッシュフロー見通しも4.5億ドルから3.5〜4.0億ドルに下げた。",
+      "verdict": "headwind",
+      "summary": "11/5発表の7〜9月期は売上が28%増の9億860万ドルだったが、売上・調整後1株利益とも市場予想に届かなかった。会社は2026年通期の売上の伸びの見通しを32〜34%から約30%に、フリーキャッシュフローの目標を4.5億ドルから3.5〜4.0億ドルに引き下げた。",
+      "why_cheap": "通期見通しの引き下げと予想未達を受けて、決算翌日の11/6に株価が1日で18.2%下がった。連邦政府向けの対ドローン装置（Dedrone）3件、合計約1.3億ドルの納入が年内の見通しから外れたことが引き下げの主因。",
       "positives": [
-        "ARRは17.5億ドルで前年比40%増、将来の契約受注額は158億ドルで39%増",
-        "調整後EBITDAは2.36億ドルで予想を上回り、通期のマージン見通しを約25.6%に引き上げた",
-        "売上見通しの引き下げは、連邦政府向け3件（約1.3億ドル）を見通しから外したことが理由と説明している"
+        "ソフトウェア・サービスの売上は43%増の4億3700万ドル。年間の継続収入（ARR）は40%増の17.5億ドル",
+        "契約済みで今後売上になる受注残は39%増の158億ドル",
+        "調整後EBITDAは33%増の2億3570万ドル。通期の利益率見通しは約25.6%（従来25.5%）",
+        "会社は、外した3件の納入が実現すれば見通しへの上乗せになると説明している"
       ],
       "negatives": [
-        "7〜9月期のフリーキャッシュフローはマイナス（在庫への投資約1億ドルが影響）",
-        "調整後の売上総利益率が62.7%から59.2%に低下",
-        "Skydioに12億ドルを追加投資。純負債は12億ドルに増えた",
-        "決算後に複数のアナリストが業績予想を引き下げたと報じられている"
+        "調整後1株利益は1.72ドルで市場予想（約1.89ドル）を下回り、売上も予想（9億3695万ドル）に届かなかった",
+        "機器部門の粗利率が49.9%から43.0%に低下。対ドローン装置の比率上昇とメモリー価格の上昇が理由",
+        "7〜9月期のフリーキャッシュフローは1890万ドルの赤字。在庫の積み増しが理由で、2027年1〜3月期まで続く見込み",
+        "売上の伸び（約28%）は直近5四半期で最も低いと報じられている",
+        "純有利子負債は12億ドルで、前の四半期から1億8200万ドル増えた"
       ],
       "upcoming": [
-        "会社は在庫への投資が2027年1〜3月期以降に縮小する見通しとしている"
+        "次の決算（10〜12月期）は2027年2月の見込み。2027年以降の見通しはそのとき示すと会社は説明している"
       ],
       "sources": [
         {
-          "title": "Axon 2026年7〜9月期 株主向けレター（SEC Form 8-K 添付資料）",
+          "title": "Axon Enterprise Form 8-K 添付資料 99.1（2026年7〜9月期 株主向け書簡）",
           "url": "https://www.sec.gov/Archives/edgar/data/0001069183/000162828026071086/axon-20261105xex991.htm",
           "date": "2026-11-05"
         },
         {
-          "title": "Axon (NASDAQ:AXON) reports sales below analyst estimates in Q3 2026 earnings, stock drops 18.4%（Yahoo Finance）",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/axon-nasdaq-axon-reports-sales-211550094.html",
+          "title": "Axon Enterprise Q3 2026: Missed Estimates and a Guidance Cut Explained（24/7 Wall St.）",
+          "url": "https://247wallst.com/cards/axon-enterprise-q3-2026-earnings-axon-01m6psgmwxtdc1pmwrmw60aen9",
           "date": "2026-11-05"
         },
         {
-          "title": "These Analysts Cut Their Forecasts On Axon Enterprise After Downbeat Q3 Results（Benzinga、見出しのみ確認）",
-          "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62976599/these-analysts-cut-their-forecasts-on-axon-enterprise-after-downbeat-q3-results",
-          "date": ""
+          "title": "Should Axon Stock's Drop After Earnings Worry You?（Trefis）",
+          "url": "https://www.trefis.com/stock/axon/articles/623979/should-axon-stocks-drop-after-earnings-worry-you/2026-11-10",
+          "date": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "ticker": "FIS",
+      "name": "Fidelity National Information Services",
+      "verdict": "headwind",
+      "summary": "11/4発表の7〜9月期は買収の効果で売上が27%増の34億5400万ドル、調整後1株利益が6.6%増の1.61ドルだった。一方で2026年通期の売上の伸びの見通し（買収を除いた比較）を4.5〜5%から3.1〜3.6%に引き下げ、2027年は調整後1株利益が1桁後半〜10%台前半の減少になるという暫定見通しを示した。同時に最高財務責任者（CFO）の退任も発表した。",
+      "why_cheap": "通期見通しの引き下げ、2027年の減益見通し、CFOの退任が同じ日に重なり、11/4に株価が24.06%下がって29.61ドルになったと報じられている。",
+      "positives": [
+        "調整後EBITDAは31%増の約14.8億ドル、利益率は42.9%",
+        "7〜9月期のフリーキャッシュフローは8億6200万ドル（8.0%増）。通期の目標21.5〜22.5億ドルは維持",
+        "四半期配当は続ける方針（7〜9月期の配当は2億2700万ドル）",
+        "会社は、2027年の重荷になる要因は2028年にはおおむね薄れると説明している"
+      ],
+      "negatives": [
+        "銀行向け部門の2026年の伸びの見通しを5〜5.5%から3.5〜4%に、資本市場向けを3〜3.5%から2〜2.5%に引き下げた",
+        "2027年の暫定見通しは売上が0.5%減〜1%増、フリーキャッシュフローは横ばい。一時的な収入が3.65〜4.15億ドルほど減る見込み",
+        "引き下げの理由は、大口顧客（10社未満）の導入延期、銀行の統合、ライセンス販売から月額制への移行。延期は2027年7〜9月期まで及ぶものがある",
+        "負債は208億ドル、負債倍率は3.5倍で目標の約2.8倍を上回る。返済を優先し自社株買いを一時的に絞っている",
+        "CFOのジェームズ・キーオ氏が退任し、11/5から暫定CFOが就いた。後任は選定中",
+        "複数の証券会社が投資判断や目標株価を引き下げた（11/5〜6）"
+      ],
+      "upcoming": [
+        "次の決算発表日は確認できていない"
+      ],
+      "sources": [
+        {
+          "title": "Fidelity National Information Services Form 8-K 添付資料 99.1（2026年7〜9月期 決算発表）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001136893/000113689326000061/q32026ex991.htm",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "FIS Q3 2026 slides: earnings beat overshadowed by weak 2027 outlook（Investing.com）",
+          "url": "https://www.investing.com/news/company-news/fis-q3-2026-slides-earnings-beat-overshadowed-by-weak-2027-outlook-93CH-5000588",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "FIS Slashes 2026 Outlook, Guides 2027 EPS Down High Single to Low Double Digits as CFO Departs（BigGo Finance）",
+          "url": "https://finance.biggo.com/news/US_FIS_2026-11-04",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "FIS Cuts Banking Growth Outlook Amid Project Delays（PYMNTS）",
+          "url": "https://www.pymnts.com/earnings/2026/fis-cuts-banking-growth-outlook-amid-project-delays/",
+          "date": "2026-11-04"
         }
       ]
     }
