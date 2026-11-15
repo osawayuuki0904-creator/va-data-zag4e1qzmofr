@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-15T10:22:08+09:00",
+  "items": [
+    {
+      "ticker": "6902.T",
+      "name": "デンソー",
+      "verdict": "headwind",
+      "summary": "4〜9月期は売上が7.0%増えた一方、営業利益は19.5%減の1701億円で市場予想（1800億円台）に届かなかった。通期の営業利益予想5000億円（前期比9.5%減）は据え置き。同時に上限2000億円の自社株買いを発表している。",
+      "why_cheap": "部材費の上昇、開発投資の拡大、前年にあった一時的な費用回収がなくなったことで減益が続いているため（10/29の決算）。",
+      "positives": [
+        "売上収益は3兆8435億円で前年同期比7.0%増。電動化・知能化に関連する製品が伸びた",
+        "自社株買いの枠を設定（上限1億株・2000億円、2027年3月31日まで）。発表当日の株価は前日比59.5円高で終えた",
+        "通期の営業利益予想は引き下げていない"
+      ],
+      "negatives": [
+        "営業利益率が5.9%から4.4%に低下",
+        "4〜9月期の営業利益は市場予想を下回った",
+        "通期の会社予想も前期比で減益（営業利益9.5%減）"
+      ],
+      "upcoming": [
+        "次の決算発表日は確認できていない"
+      ],
+      "sources": [
+        {
+          "title": "デンソー、売上7%増も営業利益19.5%減…第2四半期決算（レスポンス）",
+          "url": "https://response.jp/article/2026/10/29/418377.html",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "デンソーの27年3月期第2四半期累計の営業利益は市場予想下ブレ、自己株取得枠を設定（ウエルスアドバイザー）",
+          "url": "https://finance.yahoo.co.jp/news/detail/7f0ec0875b3c7e899c39352dd5e325a9f3d434bc",
+          "date": "2026-10-29"
+        }
+      ]
+    },
+    {
+      "ticker": "FIS",
+      "name": "Fidelity National Information Services",
+      "verdict": "headwind",
+      "summary": "11/4の7〜9月期決算で、2026年通期の調整後EPS見通しを6.15〜6.24ドルから5.82〜5.89ドルへ、売上見通しも引き下げた。CFOが11/5付で退任し、株価は発表後に約24%下落した。7〜9月期の実績自体は市場予想をわずかに上回っている。",
+      "why_cheap": "通期見通しの引き下げとCFO退任。会社は理由として、顧客側の導入の遅れ、ソフトウェアライセンス需要の減少、技術・サイバーセキュリティへの投資増、取引先銀行の統合を挙げている。",
+      "positives": [
+        "7〜9月期の調整後EPSは1.61ドル（予想1.60ドル）、売上は34.54億ドル（予想34.32億ドル）で予想を上回った",
+        "通期のフリーキャッシュフロー目標（21.5〜22.5億ドル）は据え置き",
+        "会社は、遅れた案件は中止ではなく延期だと説明している"
+      ],
+      "negatives": [
+        "通期の調整後EPS見通しを引き下げ（成長率は1.2〜2.4%に）",
+        "CFOが退任し、暫定CFOが就任",
+        "会社は逆風が和らぐ時期を2028年までとしている",
+        "株主の権利に関する法律事務所の調査の告知が出ている（11/9）"
+      ],
+      "upcoming": [
+        "戦略的選択肢に関する更新を2027年初頭に予定"
+      ],
+      "sources": [
+        {
+          "title": "FIS 2026年7〜9月期決算プレスリリース（SEC Form 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001136893/000113689326000061/q32026ex991.htm",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Fidelity National Information Slashes 2026 EPS Forecast as Technology Costs, Delays Rise（Benzinga / TradingView）",
+          "url": "https://www.tradingview.com/news/benzinga:1894969bb094b:0-fidelity-national-information-slashes-2026-eps-forecast-as-technology-costs-delays-rise/",
+          "date": ""
+        },
+        {
+          "title": "Levi & Korsinsky Notifies Investors of Pending Investigation（GlobeNewswire）",
+          "url": "https://www.globenewswire.com/news-release/2026/11/09/3398675/3080/en/levi-korsinsky-notifies-investors-of-pending-investigation-into-securities-claims-involving-fidelity-national-information-services-fis.html",
+          "date": "2026-11-09"
+        }
+      ]
+    },
+    {
+      "ticker": "AXON",
+      "name": "Axon Enterprise",
+      "verdict": "neutral",
+      "summary": "11/5の7〜9月期決算は売上が28%増の9.09億ドルだったが市場予想（9.36億ドル）に届かず、通期の売上成長見通しを32〜34%から約30%に下げた。株価は発表直後に18.4%下落した。一方で経常収益（ARR）は40%増、将来の契約受注額は39%増と伸びは続いている。",
+      "why_cheap": "売上と調整後EPS（1.72ドル、予想1.89ドル）が予想を下回り、10〜12月期の売上見通し（中央値10億ドル）も予想（10.7億ドル）に届かなかったため。通期のフリーキャッシュフロー見通しも4.5億ドルから3.5〜4.0億ドルに下げた。",
+      "positives": [
+        "ARRは17.5億ドルで前年比40%増、将来の契約受注額は158億ドルで39%増",
+        "調整後EBITDAは2.36億ドルで予想を上回り、通期のマージン見通しを約25.6%に引き上げた",
+        "売上見通しの引き下げは、連邦政府向け3件（約1.3億ドル）を見通しから外したことが理由と説明している"
+      ],
+      "negatives": [
+        "7〜9月期のフリーキャッシュフローはマイナス（在庫への投資約1億ドルが影響）",
+        "調整後の売上総利益率が62.7%から59.2%に低下",
+        "Skydioに12億ドルを追加投資。純負債は12億ドルに増えた",
+        "決算後に複数のアナリストが業績予想を引き下げたと報じられている"
+      ],
+      "upcoming": [
+        "会社は在庫への投資が2027年1〜3月期以降に縮小する見通しとしている"
+      ],
+      "sources": [
+        {
+          "title": "Axon 2026年7〜9月期 株主向けレター（SEC Form 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001069183/000162828026071086/axon-20261105xex991.htm",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Axon (NASDAQ:AXON) reports sales below analyst estimates in Q3 2026 earnings, stock drops 18.4%（Yahoo Finance）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/axon-nasdaq-axon-reports-sales-211550094.html",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "These Analysts Cut Their Forecasts On Axon Enterprise After Downbeat Q3 Results（Benzinga、見出しのみ確認）",
+          "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/11/62976599/these-analysts-cut-their-forecasts-on-axon-enterprise-after-downbeat-q3-results",
+          "date": ""
+        }
+      ]
+    }
+  ]
+}
