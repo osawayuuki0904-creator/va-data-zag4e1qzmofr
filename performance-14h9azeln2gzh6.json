@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-14T11:33:57+09:00",
-  "run_date": "2026-11-14",
-  "price_date": "2026-11-14",
+  "generated_at": "2026-11-16T07:18:53+09:00",
+  "run_date": "2026-11-16",
+  "price_date": "2026-11-16",
   "summary": {
     "closed": 28,
     "open": 135,
@@ -53,7 +53,7 @@
         "median": 0.48,
         "worst": -20.47,
         "best": 13.81,
-        "days_mean": 23.4,
+        "days_mean": 25.4,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -98,7 +98,7 @@
         "median": 2.69,
         "worst": 2.69,
         "best": 2.69,
-        "days_mean": 15,
+        "days_mean": 17,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -147,16 +147,16 @@
         "min_trials": 10,
         "basis_next_open": 88,
         "with_excess": 84,
-        "excess_mean": 4.56,
-        "excess_median": 4.73,
-        "excess_wins": 63,
-        "wins": 57,
-        "win_rate": 64.0,
-        "mean": 2.88,
-        "median": 3.1,
-        "worst": -20.84,
-        "best": 42.6,
-        "days_mean": 30.1,
+        "excess_mean": 4.34,
+        "excess_median": 4.63,
+        "excess_wins": 62,
+        "wins": 56,
+        "win_rate": 62.9,
+        "mean": 2.67,
+        "median": 3.06,
+        "worst": -18.78,
+        "best": 48.18,
+        "days_mean": 32.1,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -165,9 +165,9 @@
           "n": 115,
           "invested": 11500000,
           "realized": 295546,
-          "unrealized": 256058,
-          "net": 551604,
-          "net_pct": 4.8
+          "unrealized": 237464,
+          "net": 533010,
+          "net_pct": 4.63
         }
       }
     },
@@ -201,7 +201,7 @@
         "median": 0.0,
         "worst": 0.0,
         "best": 0.0,
-        "days_mean": 0,
+        "days_mean": 2,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -237,16 +237,16 @@
         "min_trials": 10,
         "basis_next_open": 5,
         "with_excess": 5,
-        "excess_mean": 0.85,
+        "excess_mean": 0.18,
         "excess_median": -1.23,
         "excess_wins": 2,
         "wins": 2,
         "win_rate": 40.0,
-        "mean": 0.27,
+        "mean": -0.4,
         "median": -0.59,
-        "worst": -5.16,
+        "worst": -8.51,
         "best": 6.48,
-        "days_mean": 13.8,
+        "days_mean": 15.8,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -255,9 +255,9 @@
           "n": 5,
           "invested": 500000,
           "realized": 0,
-          "unrealized": 1326,
-          "net": 1326,
-          "net_pct": 0.27
+          "unrealized": -2021,
+          "net": -2021,
+          "net_pct": -0.4
         }
       }
     },
@@ -282,16 +282,16 @@
         "min_trials": 10,
         "basis_next_open": 14,
         "with_excess": 14,
-        "excess_mean": 8.7,
+        "excess_mean": 8.84,
         "excess_median": 10.64,
         "excess_wins": 11,
         "wins": 11,
         "win_rate": 78.6,
-        "mean": 6.52,
+        "mean": 6.67,
         "median": 8.65,
-        "worst": -20.84,
+        "worst": -18.78,
         "best": 21.06,
-        "days_mean": 30.1,
+        "days_mean": 32.1,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -308,9 +308,9 @@
           "n": 5,
           "invested": 500000,
           "realized": 0,
-          "unrealized": -1360,
-          "net": -1360,
-          "net_pct": -0.27
+          "unrealized": 707,
+          "net": 707,
+          "net_pct": 0.14
         }
       }
     },
@@ -344,7 +344,7 @@
         "median": 0.0,
         "worst": 0.0,
         "best": 0.0,
-        "days_mean": 0,
+        "days_mean": 2,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -389,7 +389,7 @@
         "median": 1.15,
         "worst": -0.08,
         "best": 2.38,
-        "days_mean": 6,
+        "days_mean": 8,
         "exit_reasons": {},
         "with_extremes": 0
       },
@@ -405,8 +405,10 @@
       }
     }
   },
+  "by_outlook": {},
   "trades": [
     {
+      "outlook": "",
       "chart_ric": "SYK.N",
       "ticker": "SYK",
       "name": "Stryker Corporation",
@@ -431,6 +433,7 @@
       "excess_pct": 19.87
     },
     {
+      "outlook": "",
       "chart_ric": "DD.N",
       "ticker": "DD",
       "name": "DuPont",
@@ -455,6 +458,7 @@
       "excess_pct": 19.64
     },
     {
+      "outlook": "",
       "chart_ric": "5802.T",
       "ticker": "5802.T",
       "name": "住友電気工業",
@@ -479,6 +483,7 @@
       "excess_pct": -28.09
     },
     {
+      "outlook": "",
       "chart_ric": "7936.T",
       "ticker": "7936.T",
       "name": "アシックス",
@@ -503,6 +508,7 @@
       "excess_pct": 30.1
     },
     {
+      "outlook": "",
       "chart_ric": "IR.N",
       "ticker": "IR",
       "name": "Ingersoll Rand",
@@ -527,6 +533,7 @@
       "excess_pct": 21.53
     },
     {
+      "outlook": "",
       "chart_ric": "MCHP.O",
       "ticker": "MCHP",
       "name": "Microchip Technology",
@@ -551,6 +558,7 @@
       "excess_pct": -15.81
     },
     {
+      "outlook": "",
       "chart_ric": "SNPS.O",
       "ticker": "SNPS",
       "name": "Synopsys",
@@ -575,6 +583,7 @@
       "excess_pct": 28.78
     },
     {
+      "outlook": "",
       "chart_ric": "CCL.N",
       "ticker": "CCL",
       "name": "Carnival Corporation",
@@ -599,6 +608,7 @@
       "excess_pct": 36.12
     },
     {
+      "outlook": "",
       "chart_ric": "RCL.N",
       "ticker": "RCL",
       "name": "Royal Caribbean Group",
@@ -623,6 +633,7 @@
       "excess_pct": 26.92
     },
     {
+      "outlook": "",
       "chart_ric": "LII.N",
       "ticker": "LII",
       "name": "Lennox International",
@@ -647,6 +658,7 @@
       "excess_pct": -5.43
     },
     {
+      "outlook": "",
       "chart_ric": "FERG.N",
       "ticker": "FERG",
       "name": "Ferguson Enterprises",
@@ -671,6 +683,7 @@
       "excess_pct": 21.55
     },
     {
+      "outlook": "",
       "chart_ric": "MGM.N",
       "ticker": "MGM",
       "name": "MGM Resorts",
@@ -695,6 +708,7 @@
       "excess_pct": -29.68
     },
     {
+      "outlook": "",
       "chart_ric": "FIS.N",
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
@@ -719,6 +733,7 @@
       "excess_pct": -13.82
     },
     {
+      "outlook": "",
       "chart_ric": "VRSK.O",
       "ticker": "VRSK",
       "name": "Verisk Analytics",
@@ -743,6 +758,7 @@
       "excess_pct": 30.41
     },
     {
+      "outlook": "",
       "chart_ric": "XYZ.N",
       "ticker": "XYZ",
       "name": "Block, Inc.",
@@ -767,6 +783,7 @@
       "excess_pct": 21.73
     },
     {
+      "outlook": "",
       "chart_ric": "EFX.N",
       "ticker": "EFX",
       "name": "Equifax",
@@ -791,6 +808,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "CCI.N",
       "ticker": "CCI",
       "name": "Crown Castle",
@@ -815,6 +833,7 @@
       "excess_pct": 29.0
     },
     {
+      "outlook": "",
       "chart_ric": "ZTS.N",
       "ticker": "ZTS",
       "name": "Zoetis",
@@ -839,6 +858,7 @@
       "excess_pct": 25.6
     },
     {
+      "outlook": "",
       "chart_ric": "SPGI.N",
       "ticker": "SPGI",
       "name": "S&P Global",
@@ -863,6 +883,7 @@
       "excess_pct": 24.34
     },
     {
+      "outlook": "",
       "chart_ric": "OTIS.N",
       "ticker": "OTIS",
       "name": "Otis Worldwide",
@@ -887,6 +908,7 @@
       "excess_pct": 21.26
     },
     {
+      "outlook": "",
       "chart_ric": "JKHY.O",
       "ticker": "JKHY",
       "name": "Jack Henry & Associates",
@@ -911,6 +933,7 @@
       "excess_pct": 25.73
     },
     {
+      "outlook": "",
       "chart_ric": "AXON.O",
       "ticker": "AXON",
       "name": "Axon Enterprise",
@@ -935,6 +958,7 @@
       "excess_pct": -18.94
     },
     {
+      "outlook": "",
       "chart_ric": "LOW.N",
       "ticker": "LOW",
       "name": "Lowe's",
@@ -959,6 +983,7 @@
       "excess_pct": 26.69
     },
     {
+      "outlook": "",
       "chart_ric": "HD.N",
       "ticker": "HD",
       "name": "Home Depot (The)",
@@ -983,6 +1008,7 @@
       "excess_pct": 22.93
     },
     {
+      "outlook": "",
       "chart_ric": "AMT.N",
       "ticker": "AMT",
       "name": "American Tower",
@@ -1007,6 +1033,7 @@
       "excess_pct": 19.12
     },
     {
+      "outlook": "",
       "chart_ric": "WDC.O",
       "ticker": "WDC",
       "name": "Western Digital",
@@ -1031,6 +1058,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "STX.O",
       "ticker": "STX",
       "name": "Seagate Technology",
@@ -1055,6 +1083,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "CVNA.N",
       "ticker": "CVNA",
       "name": "Carvana",
@@ -1079,6 +1108,7 @@
       "excess_pct": 32.87
     },
     {
+      "outlook": "",
       "chart_ric": "4519.T",
       "ticker": "4519.T",
       "name": "中外製薬",
@@ -1091,7 +1121,7 @@
       "exit_reason": null,
       "current_price": 7181.0,
       "return_pct": 10.99,
-      "days": 59,
+      "days": 61,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 6500.0,
@@ -1103,6 +1133,7 @@
       "excess_pct": 12.74
     },
     {
+      "outlook": "",
       "chart_ric": "ALGN.O",
       "ticker": "ALGN",
       "name": "Align Technology",
@@ -1115,7 +1146,7 @@
       "exit_reason": null,
       "current_price": 168.32000732421875,
       "return_pct": 11.13,
-      "days": 59,
+      "days": 61,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 153.0,
@@ -1127,6 +1158,7 @@
       "excess_pct": 11.8
     },
     {
+      "outlook": "",
       "chart_ric": "AZO.N",
       "ticker": "AZO",
       "name": "AutoZone",
@@ -1139,7 +1171,7 @@
       "exit_reason": null,
       "current_price": 3259.699951171875,
       "return_pct": 9.89,
-      "days": 59,
+      "days": 61,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2965.52001953125,
@@ -1151,6 +1183,7 @@
       "excess_pct": 10.56
     },
     {
+      "outlook": "",
       "chart_ric": "LEN.N",
       "ticker": "LEN",
       "name": "Lennar",
@@ -1163,7 +1196,7 @@
       "exit_reason": null,
       "current_price": 83.61000061035156,
       "return_pct": 4.54,
-      "days": 59,
+      "days": 61,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 79.98999786376953,
@@ -1175,6 +1208,7 @@
       "excess_pct": 5.2
     },
     {
+      "outlook": "",
       "chart_ric": "HWM.N",
       "ticker": "HWM",
       "name": "Howmet Aerospace",
@@ -1187,7 +1221,7 @@
       "exit_reason": null,
       "current_price": 220.82000732421875,
       "return_pct": -3.64,
-      "days": 58,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 227.72999572753906,
@@ -1199,6 +1233,7 @@
       "excess_pct": -2.73
     },
     {
+      "outlook": "",
       "chart_ric": "GEV.N",
       "ticker": "GEV",
       "name": "GE Vernova",
@@ -1209,9 +1244,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 818.489990234375,
-      "return_pct": -14.92,
-      "days": 58,
+      "current_price": 803.1300048828125,
+      "return_pct": -16.52,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 925.0900268554688,
@@ -1220,9 +1255,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.91,
-      "excess_pct": -14.01
+      "excess_pct": -15.6
     },
     {
+      "outlook": "",
       "chart_ric": "ON.O",
       "ticker": "ON",
       "name": "ON Semiconductor",
@@ -1235,7 +1271,7 @@
       "exit_reason": null,
       "current_price": 71.05999755859375,
       "return_pct": -4.4,
-      "days": 58,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 73.19999694824219,
@@ -1247,6 +1283,7 @@
       "excess_pct": -3.88
     },
     {
+      "outlook": "",
       "chart_ric": "XYL.N",
       "ticker": "XYL",
       "name": "Xylem Inc.",
@@ -1259,7 +1296,7 @@
       "exit_reason": null,
       "current_price": 94.18000030517578,
       "return_pct": -13.23,
-      "days": 58,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 107.5,
@@ -1271,6 +1308,7 @@
       "excess_pct": -12.71
     },
     {
+      "outlook": "",
       "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
@@ -1283,7 +1321,7 @@
       "exit_reason": null,
       "current_price": 20.809999465942383,
       "return_pct": -6.81,
-      "days": 58,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.290000915527344,
@@ -1295,6 +1333,7 @@
       "excess_pct": -6.29
     },
     {
+      "outlook": "",
       "chart_ric": "LHX.N",
       "ticker": "LHX",
       "name": "L3Harris",
@@ -1307,7 +1346,7 @@
       "exit_reason": null,
       "current_price": 272.3500061035156,
       "return_pct": 8.91,
-      "days": 58,
+      "days": 60,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 249.66000366210938,
@@ -1319,6 +1358,7 @@
       "excess_pct": 9.43
     },
     {
+      "outlook": "",
       "chart_ric": "9202.T",
       "ticker": "9202.T",
       "name": "ＡＮＡホールディングス",
@@ -1331,7 +1371,7 @@
       "exit_reason": null,
       "current_price": 3332.0,
       "return_pct": 11.23,
-      "days": 57,
+      "days": 59,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3000.0,
@@ -1343,6 +1383,7 @@
       "excess_pct": 14.4
     },
     {
+      "outlook": "",
       "chart_ric": "8830.T",
       "ticker": "8830.T",
       "name": "住友不動産",
@@ -1355,7 +1396,7 @@
       "exit_reason": null,
       "current_price": 3591.0,
       "return_pct": 11.31,
-      "days": 57,
+      "days": 59,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3253.0,
@@ -1367,6 +1408,7 @@
       "excess_pct": 14.48
     },
     {
+      "outlook": "",
       "chart_ric": "8802.T",
       "ticker": "8802.T",
       "name": "三菱地所",
@@ -1379,7 +1421,7 @@
       "exit_reason": null,
       "current_price": 4122.0,
       "return_pct": 12.07,
-      "days": 57,
+      "days": 59,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3678.0,
@@ -1391,6 +1433,7 @@
       "excess_pct": 15.24
     },
     {
+      "outlook": "",
       "chart_ric": "7741.T",
       "ticker": "7741.T",
       "name": "ＨＯＹＡ",
@@ -1403,7 +1446,7 @@
       "exit_reason": null,
       "current_price": 23925.0,
       "return_pct": 4.82,
-      "days": 57,
+      "days": 59,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22655.0,
@@ -1415,6 +1458,7 @@
       "excess_pct": 7.99
     },
     {
+      "outlook": "",
       "chart_ric": "6146.T",
       "ticker": "6146.T",
       "name": "ディスコ",
@@ -1427,7 +1471,7 @@
       "exit_reason": null,
       "current_price": 47470.0,
       "return_pct": -9.44,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 52420.0,
@@ -1439,6 +1483,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "MPWR.O",
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
@@ -1451,7 +1496,7 @@
       "exit_reason": null,
       "current_price": 1390.5400390625,
       "return_pct": 17.29,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1169.5799560546875,
@@ -1463,6 +1508,7 @@
       "excess_pct": 18.54
     },
     {
+      "outlook": "",
       "chart_ric": "CDNS.O",
       "ticker": "CDNS",
       "name": "Cadence Design Systems",
@@ -1475,7 +1521,7 @@
       "exit_reason": null,
       "current_price": 323.010009765625,
       "return_pct": 14.57,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 280.760009765625,
@@ -1487,6 +1533,7 @@
       "excess_pct": 15.82
     },
     {
+      "outlook": "",
       "chart_ric": "GNRC.N",
       "ticker": "GNRC",
       "name": "Generac",
@@ -1499,7 +1546,7 @@
       "exit_reason": null,
       "current_price": 190.77000427246094,
       "return_pct": -8.95,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 207.22999572753906,
@@ -1511,6 +1558,7 @@
       "excess_pct": -7.7
     },
     {
+      "outlook": "",
       "chart_ric": "IP.N",
       "ticker": "IP",
       "name": "International Paper",
@@ -1523,7 +1571,7 @@
       "exit_reason": null,
       "current_price": 34.43000030517578,
       "return_pct": -0.63,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 35.54999923706055,
@@ -1535,6 +1583,7 @@
       "excess_pct": 0.61
     },
     {
+      "outlook": "",
       "chart_ric": "TJX.N",
       "ticker": "TJX",
       "name": "TJX Companies",
@@ -1547,7 +1596,7 @@
       "exit_reason": null,
       "current_price": 134.3699951171875,
       "return_pct": 6.29,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 126.55000305175781,
@@ -1559,6 +1608,7 @@
       "excess_pct": 7.54
     },
     {
+      "outlook": "",
       "chart_ric": "CASY.O",
       "ticker": "CASY",
       "name": "Casey's",
@@ -1571,7 +1621,7 @@
       "exit_reason": null,
       "current_price": 712.0800170898438,
       "return_pct": 17.09,
-      "days": 56,
+      "days": 58,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 607.4500122070312,
@@ -1583,6 +1633,7 @@
       "excess_pct": 18.33
     },
     {
+      "outlook": "",
       "chart_ric": "CRH.N",
       "ticker": "CRH",
       "name": "CRH plc",
@@ -1595,7 +1646,7 @@
       "exit_reason": null,
       "current_price": 93.16000366210938,
       "return_pct": 5.74,
-      "days": 52,
+      "days": 54,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 87.13999938964844,
@@ -1607,6 +1658,7 @@
       "excess_pct": 8.43
     },
     {
+      "outlook": "",
       "chart_ric": "CARR.N",
       "ticker": "CARR",
       "name": "Carrier Global",
@@ -1617,9 +1669,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 54.369998931884766,
-      "return_pct": -1.47,
-      "days": 52,
+      "current_price": 54.20000076293945,
+      "return_pct": -1.78,
+      "days": 54,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 54.619998931884766,
@@ -1628,9 +1680,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.69,
-      "excess_pct": 1.22
+      "excess_pct": 0.92
     },
     {
+      "outlook": "",
       "chart_ric": "TDG.N",
       "ticker": "TDG",
       "name": "TransDigm Group",
@@ -1643,7 +1696,7 @@
       "exit_reason": null,
       "current_price": 1217.280029296875,
       "return_pct": 8.74,
-      "days": 52,
+      "days": 54,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1109.6500244140625,
@@ -1655,6 +1708,7 @@
       "excess_pct": 11.43
     },
     {
+      "outlook": "",
       "chart_ric": "APTV.N",
       "ticker": "APTV",
       "name": "Aptiv",
@@ -1667,7 +1721,7 @@
       "exit_reason": null,
       "current_price": 38.75,
       "return_pct": -13.83,
-      "days": 50,
+      "days": 52,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 45.16999816894531,
@@ -1679,6 +1733,7 @@
       "excess_pct": -12.46
     },
     {
+      "outlook": "",
       "chart_ric": "BA.N",
       "ticker": "BA",
       "name": "Boeing",
@@ -1691,7 +1746,7 @@
       "exit_reason": null,
       "current_price": 171.5,
       "return_pct": -13.65,
-      "days": 50,
+      "days": 52,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 199.92999267578125,
@@ -1703,6 +1758,7 @@
       "excess_pct": -12.28
     },
     {
+      "outlook": "",
       "chart_ric": "BLDR.N",
       "ticker": "BLDR",
       "name": "Builders FirstSource",
@@ -1715,7 +1771,7 @@
       "exit_reason": null,
       "current_price": 60.68000030517578,
       "return_pct": 3.2,
-      "days": 50,
+      "days": 52,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 59.15999984741211,
@@ -1727,6 +1783,7 @@
       "excess_pct": 4.57
     },
     {
+      "outlook": "",
       "chart_ric": "1928.T",
       "ticker": "1928.T",
       "name": "積水ハウス",
@@ -1739,7 +1796,7 @@
       "exit_reason": null,
       "current_price": 3617.0,
       "return_pct": 6.7,
-      "days": 49,
+      "days": 51,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 3369.0,
@@ -1751,6 +1808,7 @@
       "excess_pct": 10.36
     },
     {
+      "outlook": "",
       "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
@@ -1763,7 +1821,7 @@
       "exit_reason": null,
       "current_price": 169.9499969482422,
       "return_pct": 2.61,
-      "days": 47,
+      "days": 49,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 165.42999267578125,
@@ -1775,6 +1833,7 @@
       "excess_pct": 4.68
     },
     {
+      "outlook": "",
       "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
@@ -1787,7 +1846,7 @@
       "exit_reason": null,
       "current_price": 159.5800018310547,
       "return_pct": -1.88,
-      "days": 47,
+      "days": 49,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 163.9499969482422,
@@ -1799,6 +1858,7 @@
       "excess_pct": 0.2
     },
     {
+      "outlook": "",
       "chart_ric": "OMC.N",
       "ticker": "OMC",
       "name": "Omnicom Group",
@@ -1811,7 +1871,7 @@
       "exit_reason": null,
       "current_price": 87.9800033569336,
       "return_pct": 16.5,
-      "days": 47,
+      "days": 49,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 76.1500015258789,
@@ -1823,6 +1883,7 @@
       "excess_pct": 18.57
     },
     {
+      "outlook": "",
       "chart_ric": "CVS.N",
       "ticker": "CVS",
       "name": "CVS Health",
@@ -1835,7 +1896,7 @@
       "exit_reason": null,
       "current_price": 89.3499984741211,
       "return_pct": -0.18,
-      "days": 47,
+      "days": 49,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 89.12999725341797,
@@ -1847,6 +1908,7 @@
       "excess_pct": 1.89
     },
     {
+      "outlook": "",
       "chart_ric": "MLM.N",
       "ticker": "MLM",
       "name": "Martin Marietta Materials",
@@ -1859,7 +1921,7 @@
       "exit_reason": null,
       "current_price": 513.6099853515625,
       "return_pct": 4.06,
-      "days": 46,
+      "days": 48,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 490.7699890136719,
@@ -1871,6 +1933,7 @@
       "excess_pct": 5.85
     },
     {
+      "outlook": "",
       "chart_ric": "TXT.N",
       "ticker": "TXT",
       "name": "Textron",
@@ -1883,7 +1946,7 @@
       "exit_reason": null,
       "current_price": 83.6500015258789,
       "return_pct": 8.28,
-      "days": 46,
+      "days": 48,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 77.37000274658203,
@@ -1895,6 +1958,7 @@
       "excess_pct": 10.08
     },
     {
+      "outlook": "",
       "chart_ric": "EXE.O",
       "ticker": "EXE",
       "name": "Expand Energy",
@@ -1905,9 +1969,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 87.80000305175781,
-      "return_pct": 2.79,
-      "days": 43,
+      "current_price": 88.52999877929688,
+      "return_pct": 3.64,
+      "days": 45,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 85.95999908447266,
@@ -1916,9 +1980,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.13,
-      "excess_pct": 4.92
+      "excess_pct": 5.77
     },
     {
+      "outlook": "",
       "chart_ric": "EQT.N",
       "ticker": "EQT",
       "name": "EQT Corporation",
@@ -1931,7 +1996,7 @@
       "exit_reason": null,
       "current_price": 52.810001373291016,
       "return_pct": 5.87,
-      "days": 43,
+      "days": 45,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 50.09000015258789,
@@ -1943,6 +2008,7 @@
       "excess_pct": 8.0
     },
     {
+      "outlook": "",
       "chart_ric": "FSLR.O",
       "ticker": "FSLR",
       "name": "First Solar",
@@ -1955,7 +2021,7 @@
       "exit_reason": null,
       "current_price": 171.38999938964844,
       "return_pct": -1.95,
-      "days": 40,
+      "days": 42,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 174.61000061035156,
@@ -1967,6 +2033,7 @@
       "excess_pct": 0.24
     },
     {
+      "outlook": "",
       "chart_ric": "PCG.N",
       "ticker": "PCG",
       "name": "PG&E Corporation",
@@ -1979,7 +2046,7 @@
       "exit_reason": null,
       "current_price": 13.25,
       "return_pct": 7.64,
-      "days": 40,
+      "days": 42,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 12.319999694824219,
@@ -1991,6 +2058,7 @@
       "excess_pct": 9.82
     },
     {
+      "outlook": "",
       "chart_ric": "CMI.N",
       "ticker": "CMI",
       "name": "Cummins",
@@ -2003,7 +2071,7 @@
       "exit_reason": null,
       "current_price": 452.17999267578125,
       "return_pct": -13.94,
-      "days": 40,
+      "days": 42,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 528.3200073242188,
@@ -2015,6 +2083,7 @@
       "excess_pct": -11.75
     },
     {
+      "outlook": "",
       "chart_ric": "HONA.O",
       "ticker": "HONA",
       "name": "Honeywell Aerospace",
@@ -2025,9 +2094,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 166.22999572753906,
-      "return_pct": 8.03,
-      "days": 40,
+      "current_price": 165.00999450683594,
+      "return_pct": 7.23,
+      "days": 42,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 154.6300048828125,
@@ -2036,9 +2105,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.19,
-      "excess_pct": 10.21
+      "excess_pct": 9.42
     },
     {
+      "outlook": "",
       "chart_ric": "6902.T",
       "ticker": "6902.T",
       "name": "デンソー",
@@ -2051,7 +2121,7 @@
       "exit_reason": null,
       "current_price": 1936.5,
       "return_pct": 4.34,
-      "days": 39,
+      "days": 41,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1842.0,
@@ -2063,6 +2133,7 @@
       "excess_pct": 9.3
     },
     {
+      "outlook": "",
       "chart_ric": "NRG.N",
       "ticker": "NRG",
       "name": "NRG Energy",
@@ -2075,7 +2146,7 @@
       "exit_reason": null,
       "current_price": 97.0999984741211,
       "return_pct": -3.86,
-      "days": 39,
+      "days": 41,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 96.80000305175781,
@@ -2087,6 +2158,7 @@
       "excess_pct": -0.73
     },
     {
+      "outlook": "",
       "chart_ric": "SBAC.O",
       "ticker": "SBAC",
       "name": "SBA Communications",
@@ -2099,7 +2171,7 @@
       "exit_reason": null,
       "current_price": 189.35000610351562,
       "return_pct": 16.52,
-      "days": 39,
+      "days": 41,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 161.82000732421875,
@@ -2111,6 +2183,7 @@
       "excess_pct": 19.65
     },
     {
+      "outlook": "",
       "chart_ric": "COF.N",
       "ticker": "COF",
       "name": "Capital One",
@@ -2123,7 +2196,7 @@
       "exit_reason": null,
       "current_price": 195.0800018310547,
       "return_pct": -0.58,
-      "days": 39,
+      "days": 41,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 195.13999938964844,
@@ -2135,6 +2208,7 @@
       "excess_pct": 2.55
     },
     {
+      "outlook": "",
       "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
@@ -2147,7 +2221,7 @@
       "exit_reason": null,
       "current_price": 1805.0,
       "return_pct": 13.02,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 1592.5,
@@ -2159,6 +2233,7 @@
       "excess_pct": 18.38
     },
     {
+      "outlook": "",
       "chart_ric": "4578.T",
       "ticker": "4578.T",
       "name": "大塚ホールディングス",
@@ -2171,7 +2246,7 @@
       "exit_reason": null,
       "current_price": 12300.0,
       "return_pct": 6.4,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 11455.0,
@@ -2183,6 +2258,7 @@
       "excess_pct": 11.75
     },
     {
+      "outlook": "",
       "chart_ric": "CBRE.N",
       "ticker": "CBRE",
       "name": "CBRE Group",
@@ -2195,7 +2271,7 @@
       "exit_reason": null,
       "current_price": 133.1199951171875,
       "return_pct": 3.11,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 130.66000366210938,
@@ -2207,6 +2283,7 @@
       "excess_pct": 6.07
     },
     {
+      "outlook": "",
       "chart_ric": "VICI.N",
       "ticker": "VICI",
       "name": "Vici Properties",
@@ -2219,7 +2296,7 @@
       "exit_reason": null,
       "current_price": 25.010000228881836,
       "return_pct": 9.98,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.729999542236328,
@@ -2231,6 +2308,7 @@
       "excess_pct": 12.95
     },
     {
+      "outlook": "",
       "chart_ric": "NOC.N",
       "ticker": "NOC",
       "name": "Northrop Grumman",
@@ -2243,7 +2321,7 @@
       "exit_reason": null,
       "current_price": 550.4299926757812,
       "return_pct": 13.59,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 483.1099853515625,
@@ -2255,6 +2333,7 @@
       "excess_pct": 16.56
     },
     {
+      "outlook": "",
       "chart_ric": "APO.N",
       "ticker": "APO",
       "name": "Apollo Global Management",
@@ -2267,7 +2346,7 @@
       "exit_reason": null,
       "current_price": 123.47000122070312,
       "return_pct": 7.92,
-      "days": 38,
+      "days": 40,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 115.94999694824219,
@@ -2279,6 +2358,7 @@
       "excess_pct": 10.89
     },
     {
+      "outlook": "",
       "chart_ric": "APP.O",
       "ticker": "APP",
       "name": "AppLovin",
@@ -2289,9 +2369,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 393.67999267578125,
-      "return_pct": 42.6,
-      "days": 37,
+      "current_price": 409.1000061035156,
+      "return_pct": 48.18,
+      "days": 39,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 281.2900085449219,
@@ -2300,9 +2380,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.79,
-      "excess_pct": 45.38
+      "excess_pct": 50.97
     },
     {
+      "outlook": "",
       "chart_ric": "9022.T",
       "ticker": "9022.T",
       "name": "東海旅客鉄道",
@@ -2315,7 +2396,7 @@
       "exit_reason": null,
       "current_price": 4473.0,
       "return_pct": 21.06,
-      "days": 36,
+      "days": 38,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3632.0,
@@ -2327,6 +2408,7 @@
       "excess_pct": 24.2
     },
     {
+      "outlook": "",
       "chart_ric": "1925.T",
       "ticker": "1925.T",
       "name": "大和ハウス工業",
@@ -2339,7 +2421,7 @@
       "exit_reason": null,
       "current_price": 2380.5,
       "return_pct": 9.95,
-      "days": 36,
+      "days": 38,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2166.0,
@@ -2351,6 +2433,7 @@
       "excess_pct": 13.1
     },
     {
+      "outlook": "",
       "chart_ric": "8801.T",
       "ticker": "8801.T",
       "name": "三井不動産",
@@ -2363,7 +2446,7 @@
       "exit_reason": null,
       "current_price": 1623.0,
       "return_pct": 12.28,
-      "days": 36,
+      "days": 38,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1425.0,
@@ -2375,6 +2458,7 @@
       "excess_pct": 15.43
     },
     {
+      "outlook": "",
       "chart_ric": "HII.N",
       "ticker": "HII",
       "name": "Huntington Ingalls Industries",
@@ -2387,7 +2471,7 @@
       "exit_reason": null,
       "current_price": 306.239990234375,
       "return_pct": 15.29,
-      "days": 36,
+      "days": 38,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 265.0199890136719,
@@ -2399,6 +2483,7 @@
       "excess_pct": 18.17
     },
     {
+      "outlook": "",
       "chart_ric": "CMG.N",
       "ticker": "CMG",
       "name": "Chipotle Mexican Grill",
@@ -2411,7 +2496,7 @@
       "exit_reason": null,
       "current_price": 35.279998779296875,
       "return_pct": 8.52,
-      "days": 36,
+      "days": 38,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 32.68000030517578,
@@ -2423,6 +2508,7 @@
       "excess_pct": 11.41
     },
     {
+      "outlook": "",
       "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
@@ -2435,7 +2521,7 @@
       "exit_reason": null,
       "current_price": 1805.0,
       "return_pct": 13.81,
-      "days": 35,
+      "days": 37,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 1580.0,
@@ -2447,6 +2533,7 @@
       "excess_pct": 17.38
     },
     {
+      "outlook": "",
       "chart_ric": "BSX.N",
       "ticker": "BSX",
       "name": "Boston Scientific",
@@ -2459,7 +2546,7 @@
       "exit_reason": null,
       "current_price": 44.34000015258789,
       "return_pct": 2.88,
-      "days": 35,
+      "days": 37,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 42.72999954223633,
@@ -2471,6 +2558,7 @@
       "excess_pct": 6.09
     },
     {
+      "outlook": "",
       "chart_ric": "KKR.N",
       "ticker": "KKR",
       "name": "KKR & Co.",
@@ -2483,7 +2571,7 @@
       "exit_reason": null,
       "current_price": 98.05000305175781,
       "return_pct": 8.2,
-      "days": 35,
+      "days": 37,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 90.94999694824219,
@@ -2495,6 +2583,7 @@
       "excess_pct": 11.42
     },
     {
+      "outlook": "",
       "chart_ric": "LVS.N",
       "ticker": "LVS",
       "name": "Las Vegas Sands",
@@ -2507,7 +2596,7 @@
       "exit_reason": null,
       "current_price": 40.38999938964844,
       "return_pct": 10.66,
-      "days": 32,
+      "days": 34,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 36.150001525878906,
@@ -2519,6 +2608,7 @@
       "excess_pct": 13.65
     },
     {
+      "outlook": "",
       "chart_ric": "WYNN.O",
       "ticker": "WYNN",
       "name": "Wynn Resorts",
@@ -2531,7 +2621,7 @@
       "exit_reason": null,
       "current_price": 85.05999755859375,
       "return_pct": 13.14,
-      "days": 31,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 75.69999694824219,
@@ -2543,6 +2633,7 @@
       "excess_pct": 15.88
     },
     {
+      "outlook": "",
       "chart_ric": "SW.N",
       "ticker": "SW",
       "name": "Smurfit Westrock",
@@ -2555,7 +2646,7 @@
       "exit_reason": null,
       "current_price": 42.349998474121094,
       "return_pct": 3.72,
-      "days": 31,
+      "days": 33,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 41.45000076293945,
@@ -2567,6 +2658,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "LEN.N",
       "ticker": "LEN",
       "name": "Lennar",
@@ -2579,7 +2671,7 @@
       "exit_reason": null,
       "current_price": 83.61000061035156,
       "return_pct": 7.34,
-      "days": 29,
+      "days": 31,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 77.69000244140625,
@@ -2591,6 +2683,7 @@
       "excess_pct": 9.71
     },
     {
+      "outlook": "",
       "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
@@ -2603,7 +2696,7 @@
       "exit_reason": null,
       "current_price": 159.5800018310547,
       "return_pct": -4.56,
-      "days": 29,
+      "days": 31,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 165.8000030517578,
@@ -2615,6 +2708,7 @@
       "excess_pct": -2.19
     },
     {
+      "outlook": "",
       "chart_ric": "TKO.N",
       "ticker": "TKO",
       "name": "TKO Group Holdings",
@@ -2627,7 +2721,7 @@
       "exit_reason": null,
       "current_price": 195.4199981689453,
       "return_pct": 10.42,
-      "days": 29,
+      "days": 31,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 176.02000427246094,
@@ -2639,6 +2733,7 @@
       "excess_pct": 12.79
     },
     {
+      "outlook": "",
       "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
@@ -2651,7 +2746,7 @@
       "exit_reason": null,
       "current_price": 20.809999465942383,
       "return_pct": 6.77,
-      "days": 28,
+      "days": 30,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 19.3799991607666,
@@ -2663,6 +2758,7 @@
       "excess_pct": 9.14
     },
     {
+      "outlook": "",
       "chart_ric": "HWM.N",
       "ticker": "HWM",
       "name": "Howmet Aerospace",
@@ -2675,7 +2771,7 @@
       "exit_reason": null,
       "current_price": 220.82000732421875,
       "return_pct": -0.07,
-      "days": 26,
+      "days": 28,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 220.9600067138672,
@@ -2687,6 +2783,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "9202.T",
       "ticker": "9202.T",
       "name": "ＡＮＡホールディングス",
@@ -2699,7 +2796,7 @@
       "exit_reason": null,
       "current_price": 3332.0,
       "return_pct": 16.5,
-      "days": 25,
+      "days": 27,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2872.0,
@@ -2711,6 +2808,7 @@
       "excess_pct": 19.01
     },
     {
+      "outlook": "",
       "chart_ric": "6146.T",
       "ticker": "6146.T",
       "name": "ディスコ",
@@ -2723,7 +2821,7 @@
       "exit_reason": null,
       "current_price": 47470.0,
       "return_pct": -12.09,
-      "days": 23,
+      "days": 25,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 53570.0,
@@ -2735,6 +2833,7 @@
       "excess_pct": -9.58
     },
     {
+      "outlook": "",
       "chart_ric": "AKAM.O",
       "ticker": "AKAM",
       "name": "Akamai Technologies",
@@ -2747,7 +2846,7 @@
       "exit_reason": null,
       "current_price": 85.4000015258789,
       "return_pct": -3.94,
-      "days": 22,
+      "days": 24,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 90.2699966430664,
@@ -2759,6 +2858,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "VRT.N",
       "ticker": "VRT",
       "name": "Vertiv",
@@ -2771,7 +2871,7 @@
       "exit_reason": null,
       "current_price": 202.07000732421875,
       "return_pct": -0.76,
-      "days": 22,
+      "days": 24,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 212.14999389648438,
@@ -2783,6 +2883,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "7203.T",
       "ticker": "7203.T",
       "name": "トヨタ自動車",
@@ -2795,7 +2896,7 @@
       "exit_reason": null,
       "current_price": 3418.0,
       "return_pct": 11.26,
-      "days": 21,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 3105.0,
@@ -2807,6 +2908,7 @@
       "excess_pct": 11.43
     },
     {
+      "outlook": "",
       "chart_ric": "WY.N",
       "ticker": "WY",
       "name": "Weyerhaeuser",
@@ -2819,7 +2921,7 @@
       "exit_reason": null,
       "current_price": 20.809999465942383,
       "return_pct": 5.15,
-      "days": 21,
+      "days": 23,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 19.81999969482422,
@@ -2831,6 +2933,7 @@
       "excess_pct": 6.14
     },
     {
+      "outlook": "",
       "chart_ric": "ANET.N",
       "ticker": "ANET",
       "name": "Arista Networks",
@@ -2841,9 +2944,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 206.6300048828125,
-      "return_pct": 14.41,
-      "days": 18,
+      "current_price": 197.2899932861328,
+      "return_pct": 9.24,
+      "days": 20,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 177.24000549316406,
@@ -2852,9 +2955,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -1.79,
-      "excess_pct": 16.2
+      "excess_pct": 11.03
     },
     {
+      "outlook": "",
       "chart_ric": "FLEX.O",
       "ticker": "FLEX",
       "name": "Flex Ltd.",
@@ -2867,7 +2971,7 @@
       "exit_reason": null,
       "current_price": 74.9800033569336,
       "return_pct": -16.22,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 83.3499984741211,
@@ -2879,6 +2983,7 @@
       "excess_pct": -13.98
     },
     {
+      "outlook": "",
       "chart_ric": "KLAC.O",
       "ticker": "KLAC",
       "name": "KLA Corporation",
@@ -2891,7 +2996,7 @@
       "exit_reason": null,
       "current_price": 152.32000732421875,
       "return_pct": -2.08,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 153.66000366210938,
@@ -2903,6 +3008,7 @@
       "excess_pct": 0.17
     },
     {
+      "outlook": "",
       "chart_ric": "LRCX.O",
       "ticker": "LRCX",
       "name": "Lam Research",
@@ -2915,7 +3021,7 @@
       "exit_reason": null,
       "current_price": 225.9199981689453,
       "return_pct": -7.79,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 240.85000610351562,
@@ -2927,6 +3033,7 @@
       "excess_pct": -5.54
     },
     {
+      "outlook": "",
       "chart_ric": "MPWR.O",
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
@@ -2939,7 +3046,7 @@
       "exit_reason": null,
       "current_price": 1390.5400390625,
       "return_pct": 13.59,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1211.8900146484375,
@@ -2951,6 +3058,7 @@
       "excess_pct": 15.84
     },
     {
+      "outlook": "",
       "chart_ric": "APTV.N",
       "ticker": "APTV",
       "name": "Aptiv",
@@ -2963,7 +3071,7 @@
       "exit_reason": null,
       "current_price": 38.75,
       "return_pct": -11.55,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 43.650001525878906,
@@ -2975,6 +3083,7 @@
       "excess_pct": -9.3
     },
     {
+      "outlook": "",
       "chart_ric": "Q.N",
       "ticker": "Q",
       "name": "Qnity Electronics",
@@ -2985,9 +3094,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 122.69000244140625,
-      "return_pct": 1.17,
-      "days": 17,
+      "current_price": 118.36000061035156,
+      "return_pct": -2.4,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 118.75,
@@ -2996,9 +3105,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.25,
-      "excess_pct": 3.42
+      "excess_pct": -0.15
     },
     {
+      "outlook": "",
       "chart_ric": "CRH.N",
       "ticker": "CRH",
       "name": "CRH plc",
@@ -3011,7 +3121,7 @@
       "exit_reason": null,
       "current_price": 93.16000366210938,
       "return_pct": 8.58,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 85.7699966430664,
@@ -3023,6 +3133,7 @@
       "excess_pct": 10.83
     },
     {
+      "outlook": "",
       "chart_ric": "TER.O",
       "ticker": "TER",
       "name": "Teradyne",
@@ -3035,7 +3146,7 @@
       "exit_reason": null,
       "current_price": 249.5500030517578,
       "return_pct": -17.55,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 323.67999267578125,
@@ -3047,6 +3158,7 @@
       "excess_pct": -15.31
     },
     {
+      "outlook": "",
       "chart_ric": "GEV.N",
       "ticker": "GEV",
       "name": "GE Vernova",
@@ -3057,9 +3169,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 818.489990234375,
-      "return_pct": -6.61,
-      "days": 17,
+      "current_price": 803.1300048828125,
+      "return_pct": -8.36,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 895.0800170898438,
@@ -3068,9 +3180,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -2.25,
-      "excess_pct": -4.36
+      "excess_pct": -6.11
     },
     {
+      "outlook": "",
       "chart_ric": "APH.N",
       "ticker": "APH",
       "name": "Amphenol",
@@ -3083,7 +3196,7 @@
       "exit_reason": null,
       "current_price": 78.2300033569336,
       "return_pct": -5.61,
-      "days": 17,
+      "days": 19,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 78.20999908447266,
@@ -3095,6 +3208,7 @@
       "excess_pct": -3.36
     },
     {
+      "outlook": "",
       "chart_ric": "5802.T",
       "ticker": "5802.T",
       "name": "住友電気工業",
@@ -3107,7 +3221,7 @@
       "exit_reason": null,
       "current_price": 1519.0,
       "return_pct": -20.47,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1861.5,
@@ -3119,6 +3233,7 @@
       "excess_pct": -19.42
     },
     {
+      "outlook": "",
       "chart_ric": "6762.T",
       "ticker": "6762.T",
       "name": "ＴＤＫ",
@@ -3131,7 +3246,7 @@
       "exit_reason": null,
       "current_price": 2310.0,
       "return_pct": -17.2,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 2790.5,
@@ -3143,6 +3258,7 @@
       "excess_pct": -16.16
     },
     {
+      "outlook": "",
       "chart_ric": "6273.T",
       "ticker": "6273.T",
       "name": "ＳＭＣ",
@@ -3155,7 +3271,7 @@
       "exit_reason": null,
       "current_price": 62320.0,
       "return_pct": -3.86,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 65750.0,
@@ -3167,6 +3283,7 @@
       "excess_pct": -2.81
     },
     {
+      "outlook": "",
       "chart_ric": "GLW.N",
       "ticker": "GLW",
       "name": "Corning Inc.",
@@ -3179,7 +3296,7 @@
       "exit_reason": null,
       "current_price": 114.08000183105469,
       "return_pct": -11.54,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 131.1999969482422,
@@ -3191,6 +3308,7 @@
       "excess_pct": -9.75
     },
     {
+      "outlook": "",
       "chart_ric": "GOOGL.O",
       "ticker": "GOOGL",
       "name": "Alphabet Inc. (Class A)",
@@ -3203,7 +3321,7 @@
       "exit_reason": null,
       "current_price": 295.7699890136719,
       "return_pct": 3.1,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 324.8900146484375,
@@ -3215,6 +3333,7 @@
       "excess_pct": 4.89
     },
     {
+      "outlook": "",
       "chart_ric": "GOOG.O",
       "ticker": "GOOG",
       "name": "Alphabet Inc. (Class C)",
@@ -3225,9 +3344,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 295.3500061035156,
-      "return_pct": 4.06,
-      "days": 16,
+      "current_price": 292.5199890136719,
+      "return_pct": 3.06,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 321.8900146484375,
@@ -3236,9 +3355,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -1.79,
-      "excess_pct": 5.85
+      "excess_pct": 4.85
     },
     {
+      "outlook": "",
       "chart_ric": "F.N",
       "ticker": "F",
       "name": "Ford Motor Company",
@@ -3251,7 +3371,7 @@
       "exit_reason": null,
       "current_price": 11.90999984741211,
       "return_pct": 1.19,
-      "days": 16,
+      "days": 18,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 11.949999809265137,
@@ -3263,6 +3383,7 @@
       "excess_pct": 2.98
     },
     {
+      "outlook": "",
       "chart_ric": "CMCSA.O",
       "ticker": "CMCSA",
       "name": "Comcast",
@@ -3275,7 +3396,7 @@
       "exit_reason": null,
       "current_price": 25.15999984741211,
       "return_pct": 10.01,
-      "days": 15,
+      "days": 17,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 22.270000457763672,
@@ -3287,6 +3408,7 @@
       "excess_pct": 10.92
     },
     {
+      "outlook": "",
       "chart_ric": "8801.T",
       "ticker": "8801.T",
       "name": "三井不動産",
@@ -3299,7 +3421,7 @@
       "exit_reason": null,
       "current_price": 1623.0,
       "return_pct": 2.69,
-      "days": 15,
+      "days": 17,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1562.5,
@@ -3311,6 +3433,7 @@
       "excess_pct": 3.83
     },
     {
+      "outlook": "",
       "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
@@ -3323,7 +3446,7 @@
       "exit_reason": null,
       "current_price": 169.9499969482422,
       "return_pct": 13.3,
-      "days": 15,
+      "days": 17,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 147.2899932861328,
@@ -3335,6 +3458,7 @@
       "excess_pct": 14.21
     },
     {
+      "outlook": "",
       "chart_ric": "MGM.N",
       "ticker": "MGM",
       "name": "MGM Resorts",
@@ -3347,7 +3471,7 @@
       "exit_reason": null,
       "current_price": 33.4900016784668,
       "return_pct": 16.16,
-      "days": 15,
+      "days": 17,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 28.829999923706055,
@@ -3359,6 +3483,7 @@
       "excess_pct": 17.07
     },
     {
+      "outlook": "",
       "chart_ric": "CTVA.N",
       "ticker": "CTVA",
       "name": "Corteva",
@@ -3369,9 +3494,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 9.1899995803833,
-      "return_pct": -20.84,
-      "days": 14,
+      "current_price": 9.430000305175781,
+      "return_pct": -18.78,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 11.640000343322754,
@@ -3380,9 +3505,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.65,
-      "excess_pct": -20.2
+      "excess_pct": -18.13
     },
     {
+      "outlook": "",
       "chart_ric": "8802.T",
       "ticker": "8802.T",
       "name": "三菱地所",
@@ -3395,7 +3521,7 @@
       "exit_reason": null,
       "current_price": 4122.0,
       "return_pct": 7.82,
-      "days": 14,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3819.0,
@@ -3407,6 +3533,7 @@
       "excess_pct": 7.48
     },
     {
+      "outlook": "",
       "chart_ric": "CTVA.N",
       "ticker": "CTVA",
       "name": "Corteva",
@@ -3417,9 +3544,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 9.1899995803833,
-      "return_pct": -20.84,
-      "days": 14,
+      "current_price": 9.430000305175781,
+      "return_pct": -18.78,
+      "days": 16,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 11.640000343322754,
@@ -3428,9 +3555,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.65,
-      "excess_pct": -20.2
+      "excess_pct": -18.13
     },
     {
+      "outlook": "",
       "chart_ric": "8830.T",
       "ticker": "8830.T",
       "name": "住友不動産",
@@ -3443,7 +3571,7 @@
       "exit_reason": null,
       "current_price": 3591.0,
       "return_pct": 10.39,
-      "days": 11,
+      "days": 13,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3235.0,
@@ -3455,6 +3583,7 @@
       "excess_pct": 10.2
     },
     {
+      "outlook": "",
       "chart_ric": "BKNG.O",
       "ticker": "BKNG",
       "name": "Booking Holdings",
@@ -3467,7 +3596,7 @@
       "exit_reason": null,
       "current_price": 159.5800018310547,
       "return_pct": 2.96,
-      "days": 11,
+      "days": 13,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 153.75,
@@ -3479,6 +3608,7 @@
       "excess_pct": 2.85
     },
     {
+      "outlook": "",
       "chart_ric": "UBER.N",
       "ticker": "UBER",
       "name": "Uber",
@@ -3491,7 +3621,7 @@
       "exit_reason": null,
       "current_price": 69.69000244140625,
       "return_pct": 4.41,
-      "days": 11,
+      "days": 13,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 66.70999908447266,
@@ -3503,6 +3633,7 @@
       "excess_pct": 4.3
     },
     {
+      "outlook": "",
       "chart_ric": "TMUS.O",
       "ticker": "TMUS",
       "name": "T-Mobile US",
@@ -3515,7 +3646,7 @@
       "exit_reason": null,
       "current_price": 169.9499969482422,
       "return_pct": 6.48,
-      "days": 11,
+      "days": 13,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 160.14999389648438,
@@ -3527,6 +3658,7 @@
       "excess_pct": 6.37
     },
     {
+      "outlook": "",
       "chart_ric": "2502.T",
       "ticker": "2502.T",
       "name": "アサヒグループホールディングス",
@@ -3539,7 +3671,7 @@
       "exit_reason": null,
       "current_price": 1805.0,
       "return_pct": 2.38,
-      "days": 8,
+      "days": 10,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 1783.5,
@@ -3551,6 +3683,7 @@
       "excess_pct": -3.56
     },
     {
+      "outlook": "",
       "chart_ric": "6902.T",
       "ticker": "6902.T",
       "name": "デンソー",
@@ -3563,7 +3696,7 @@
       "exit_reason": null,
       "current_price": 1936.5,
       "return_pct": -0.08,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1931.0,
@@ -3575,6 +3708,7 @@
       "excess_pct": -1.39
     },
     {
+      "outlook": "",
       "chart_ric": "6702.T",
       "ticker": "6702.T",
       "name": "富士通",
@@ -3587,7 +3721,7 @@
       "exit_reason": null,
       "current_price": 3455.0,
       "return_pct": -0.63,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3434.0,
@@ -3599,6 +3733,7 @@
       "excess_pct": -1.95
     },
     {
+      "outlook": "",
       "chart_ric": "MRVL.O",
       "ticker": "MRVL",
       "name": "Marvell Technology",
@@ -3611,7 +3746,7 @@
       "exit_reason": null,
       "current_price": 156.75999450683594,
       "return_pct": 4.53,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 154.60000610351562,
@@ -3623,6 +3758,7 @@
       "excess_pct": 3.88
     },
     {
+      "outlook": "",
       "chart_ric": "CIEN.N",
       "ticker": "CIEN",
       "name": "Ciena",
@@ -3635,7 +3771,7 @@
       "exit_reason": null,
       "current_price": 280.5400085449219,
       "return_pct": 6.46,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 269.3299865722656,
@@ -3647,6 +3783,7 @@
       "excess_pct": 5.82
     },
     {
+      "outlook": "",
       "chart_ric": "LITE.O",
       "ticker": "LITE",
       "name": "Lumentum",
@@ -3657,9 +3794,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 624.6500244140625,
-      "return_pct": -2.63,
-      "days": 4,
+      "current_price": 596.6199951171875,
+      "return_pct": -7.0,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 596.1599731445312,
@@ -3668,9 +3805,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.33,
-      "excess_pct": -2.3
+      "excess_pct": -6.67
     },
     {
+      "outlook": "",
       "chart_ric": "NRG.N",
       "ticker": "NRG",
       "name": "NRG Energy",
@@ -3683,7 +3821,7 @@
       "exit_reason": null,
       "current_price": 97.0999984741211,
       "return_pct": 2.33,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 97.4000015258789,
@@ -3695,6 +3833,7 @@
       "excess_pct": 1.68
     },
     {
+      "outlook": "",
       "chart_ric": "AVGO.O",
       "ticker": "AVGO",
       "name": "Broadcom",
@@ -3707,7 +3846,7 @@
       "exit_reason": null,
       "current_price": 347.010009765625,
       "return_pct": 9.57,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": true,
       "signal_price": 319.4800109863281,
@@ -3719,6 +3858,7 @@
       "excess_pct": 8.92
     },
     {
+      "outlook": "",
       "chart_ric": "COHR.N",
       "ticker": "COHR",
       "name": "Coherent Corp.",
@@ -3731,7 +3871,7 @@
       "exit_reason": null,
       "current_price": 218.14999389648438,
       "return_pct": 1.51,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 225.19000244140625,
@@ -3743,6 +3883,7 @@
       "excess_pct": 0.86
     },
     {
+      "outlook": "",
       "chart_ric": "INTC.O",
       "ticker": "INTC",
       "name": "Intel",
@@ -3755,7 +3896,7 @@
       "exit_reason": null,
       "current_price": 59.65999984741211,
       "return_pct": 2.93,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 59.369998931884766,
@@ -3767,6 +3908,7 @@
       "excess_pct": 2.29
     },
     {
+      "outlook": "",
       "chart_ric": "GNRC.N",
       "ticker": "GNRC",
       "name": "Generac",
@@ -3779,7 +3921,7 @@
       "exit_reason": null,
       "current_price": 190.77000427246094,
       "return_pct": 4.99,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 188.75,
@@ -3791,6 +3933,7 @@
       "excess_pct": 4.35
     },
     {
+      "outlook": "",
       "chart_ric": "KEYS.N",
       "ticker": "KEYS",
       "name": "Keysight Technologies",
@@ -3801,9 +3944,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 304.2300109863281,
-      "return_pct": -1.1,
-      "days": 4,
+      "current_price": 297.67999267578125,
+      "return_pct": -3.22,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 288.9700012207031,
@@ -3812,9 +3955,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.33,
-      "excess_pct": -0.77
+      "excess_pct": -2.9
     },
     {
+      "outlook": "",
       "chart_ric": "ON.O",
       "ticker": "ON",
       "name": "ON Semiconductor",
@@ -3827,7 +3971,7 @@
       "exit_reason": null,
       "current_price": 71.05999755859375,
       "return_pct": 5.43,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 69.11000061035156,
@@ -3839,6 +3983,7 @@
       "excess_pct": 4.78
     },
     {
+      "outlook": "",
       "chart_ric": "Q.N",
       "ticker": "Q",
       "name": "Qnity Electronics",
@@ -3849,9 +3994,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 122.69000244140625,
-      "return_pct": -5.16,
-      "days": 4,
+      "current_price": 118.36000061035156,
+      "return_pct": -8.51,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 125.08999633789062,
@@ -3860,9 +4005,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": -0.33,
-      "excess_pct": -4.83
+      "excess_pct": -8.18
     },
     {
+      "outlook": "",
       "chart_ric": "ECHO.O",
       "ticker": "ECHO",
       "name": "EchoStar",
@@ -3875,7 +4021,7 @@
       "exit_reason": null,
       "current_price": 100.0,
       "return_pct": -0.59,
-      "days": 4,
+      "days": 6,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 101.19000244140625,
@@ -3887,6 +4033,7 @@
       "excess_pct": -1.23
     },
     {
+      "outlook": "",
       "chart_ric": "9984.T",
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
@@ -3899,7 +4046,7 @@
       "exit_reason": null,
       "current_price": 3547.0,
       "return_pct": -1.25,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3872.0,
@@ -3911,6 +4058,7 @@
       "excess_pct": -2.57
     },
     {
+      "outlook": "",
       "chart_ric": "8035.T",
       "ticker": "8035.T",
       "name": "東京エレクトロン",
@@ -3923,7 +4071,7 @@
       "exit_reason": null,
       "current_price": 9461.0,
       "return_pct": 3.97,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 9006.0,
@@ -3935,6 +4083,7 @@
       "excess_pct": 2.65
     },
     {
+      "outlook": "",
       "chart_ric": "6501.T",
       "ticker": "6501.T",
       "name": "日立製作所",
@@ -3947,7 +4096,7 @@
       "exit_reason": null,
       "current_price": 4962.0,
       "return_pct": 0.28,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 4864.0,
@@ -3959,6 +4108,7 @@
       "excess_pct": -1.03
     },
     {
+      "outlook": "",
       "chart_ric": "6861.T",
       "ticker": "6861.T",
       "name": "キーエンス",
@@ -3971,7 +4121,7 @@
       "exit_reason": null,
       "current_price": 74580.0,
       "return_pct": -1.66,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 75200.0,
@@ -3983,6 +4133,7 @@
       "excess_pct": -2.98
     },
     {
+      "outlook": "",
       "chart_ric": "4063.T",
       "ticker": "4063.T",
       "name": "信越化学工業",
@@ -3995,7 +4146,7 @@
       "exit_reason": null,
       "current_price": 5704.0,
       "return_pct": 0.67,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 5658.0,
@@ -4007,6 +4158,7 @@
       "excess_pct": -0.65
     },
     {
+      "outlook": "",
       "chart_ric": "DVN.N",
       "ticker": "DVN",
       "name": "Devon Energy",
@@ -4019,7 +4171,7 @@
       "exit_reason": null,
       "current_price": 46.58000183105469,
       "return_pct": 5.96,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 43.40999984741211,
@@ -4031,6 +4183,7 @@
       "excess_pct": 6.29
     },
     {
+      "outlook": "",
       "chart_ric": "CSCO.O",
       "ticker": "CSCO",
       "name": "Cisco",
@@ -4043,7 +4196,7 @@
       "exit_reason": null,
       "current_price": 95.63999938964844,
       "return_pct": -4.14,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 98.1500015258789,
@@ -4055,6 +4208,7 @@
       "excess_pct": -3.81
     },
     {
+      "outlook": "",
       "chart_ric": "TRMB.O",
       "ticker": "TRMB",
       "name": "Trimble Inc.",
@@ -4067,7 +4221,7 @@
       "exit_reason": null,
       "current_price": 55.63999938964844,
       "return_pct": 1.48,
-      "days": 3,
+      "days": 5,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 54.75,
@@ -4079,6 +4233,7 @@
       "excess_pct": 1.81
     },
     {
+      "outlook": "",
       "chart_ric": "5020.T",
       "ticker": "5020.T",
       "name": "ＥＮＥＯＳホールディングス",
@@ -4091,7 +4246,7 @@
       "exit_reason": null,
       "current_price": 1249.0,
       "return_pct": -1.46,
-      "days": 2,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 1237.5,
@@ -4103,6 +4258,7 @@
       "excess_pct": -1.53
     },
     {
+      "outlook": "",
       "chart_ric": "FIS.N",
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
@@ -4115,7 +4271,7 @@
       "exit_reason": null,
       "current_price": 29.540000915527344,
       "return_pct": -2.41,
-      "days": 2,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 30.209999084472656,
@@ -4127,6 +4283,7 @@
       "excess_pct": -2.56
     },
     {
+      "outlook": "",
       "chart_ric": "5803.T",
       "ticker": "5803.T",
       "name": "フジクラ",
@@ -4139,7 +4296,7 @@
       "exit_reason": null,
       "current_price": 2906.0,
       "return_pct": -8.93,
-      "days": 2,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 3121.0,
@@ -4151,6 +4308,7 @@
       "excess_pct": -9.0
     },
     {
+      "outlook": "",
       "chart_ric": "6701.T",
       "ticker": "6701.T",
       "name": "日本電気",
@@ -4163,7 +4321,7 @@
       "exit_reason": null,
       "current_price": 4315.0,
       "return_pct": -5.14,
-      "days": 2,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 4523.0,
@@ -4175,6 +4333,7 @@
       "excess_pct": -5.22
     },
     {
+      "outlook": "",
       "chart_ric": "DELL.N",
       "ticker": "DELL",
       "name": "Dell Technologies",
@@ -4185,9 +4344,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 371.1700134277344,
-      "return_pct": 10.44,
-      "days": 2,
+      "current_price": 344.5299987792969,
+      "return_pct": 2.51,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 373.67999267578125,
@@ -4196,9 +4355,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": 0.14,
-      "excess_pct": 10.29
+      "excess_pct": 2.37
     },
     {
+      "outlook": "",
       "chart_ric": "BKR.O",
       "ticker": "BKR",
       "name": "Baker Hughes",
@@ -4211,7 +4371,7 @@
       "exit_reason": null,
       "current_price": 49.439998626708984,
       "return_pct": 0.9,
-      "days": 2,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 49.40999984741211,
@@ -4223,6 +4383,7 @@
       "excess_pct": 0.75
     },
     {
+      "outlook": "",
       "chart_ric": "FANG.O",
       "ticker": "FANG",
       "name": "Diamondback Energy",
@@ -4233,9 +4394,9 @@
       "exit_date": null,
       "exit_price": null,
       "exit_reason": null,
-      "current_price": 182.1999969482422,
-      "return_pct": 1.0,
-      "days": 2,
+      "current_price": 184.92999267578125,
+      "return_pct": 2.52,
+      "days": 4,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 180.97999572753906,
@@ -4244,9 +4405,10 @@
       "basis": "next_open",
       "bench_ticker": "^GSPC",
       "bench_return_pct": 0.14,
-      "excess_pct": 0.86
+      "excess_pct": 2.37
     },
     {
+      "outlook": "",
       "chart_ric": "FIS.N",
       "ticker": "FIS",
       "name": "Fidelity National Information Services",
@@ -4259,7 +4421,7 @@
       "exit_reason": null,
       "current_price": 29.540000915527344,
       "return_pct": 0.0,
-      "days": 0,
+      "days": 2,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 29.540000915527344,
@@ -4271,6 +4433,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "AXON.O",
       "ticker": "AXON",
       "name": "Axon Enterprise",
@@ -4283,7 +4446,7 @@
       "exit_reason": null,
       "current_price": 315.42999267578125,
       "return_pct": 0.0,
-      "days": 0,
+      "days": 2,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 315.42999267578125,
@@ -4295,6 +4458,7 @@
       "excess_pct": null
     },
     {
+      "outlook": "",
       "chart_ric": "AXON.O",
       "ticker": "AXON",
       "name": "Axon Enterprise",
@@ -4307,7 +4471,7 @@
       "exit_reason": null,
       "current_price": 315.42999267578125,
       "return_pct": 0.0,
-      "days": 0,
+      "days": 2,
       "status": "保有中",
       "held_at_entry": false,
       "signal_price": 315.42999267578125,

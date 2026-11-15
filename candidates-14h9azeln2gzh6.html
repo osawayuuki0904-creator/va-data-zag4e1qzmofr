@@ -130,6 +130,9 @@
   .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
              border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
   .chartlink:hover{background:var(--buy-bg)}
+  .tag.ok{border-color:var(--up);color:var(--up)}
+  .trend{font-size:13.5px;color:var(--muted);margin:-6px 0 14px}
+  .trend b{font-weight:700}
 
   table{min-width:980px}
   th,td{padding-left:10px;padding-right:10px}
@@ -160,6 +163,7 @@
       <dt>買い時待ち</dt><dd>条件は満たしているが、タイミングの判定がまだ成立していない（起点の安値から20日以内）</dd>
       <dt>条件のみ</dt><dd>条件は満たしているが、起点の安値から20日を超えている、または形ができていない</dd>
       <dt>タイミングの判定</dt><dd id="modeHelp"></dd>
+      <dt>業績・見通し</dt><dd>数値だけで付ける印。目標株価（平均）が14日前から1%以上下がっている／売上が前年同期より減っている／利益が減っている／予想EPSが実績を下回る、のどれかに当てはまれば「懸念あり」。判定できる項目が2つ未満なら「材料不足」。印にカーソルを合わせると内訳が出る</dd>
       <dt>目標との差</dt><dd>(目標株価の平均 − 株価) ÷ 株価。アナリストの目標株価は12か月先の予想で、平均すると高めに出やすい</dd>
       <dt>目標の最低</dt><dd>アナリスト目標株価のうち最も低い値。これが株価を上回っていることが条件</dd>
       <dt>保有中</dt><dd>実際に保有している銘柄。表示の区別だけで、候補の判定には影響しない</dd>
@@ -218,6 +222,7 @@ const MODE_HELP = {
 };
 const EXIT_LABEL = {
   target_reached: '目標到達',
+  gain_reached: '利確（+30%）',
   drawdown: '損切り（−30%）',
   target_cut: '目標引き下げ',
   time_limit: '期限（365日）',
@@ -291,6 +296,41 @@ function chartLink(x) {
   return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
 }
 
+// 業績・見通しの印（数値だけで決まる。src/outlook.py）
+const OUTLOOK = {
+  good: { label: '業績・見通し 良好', short: '良好', cls: 'ok' },
+  concern: { label: '業績・見通しに懸念', short: '懸念あり', cls: 'warn' },
+  unknown: { label: '業績・見通し 材料不足', short: '材料不足', cls: '' },
+};
+const OUTLOOK_CHECK = {
+  target_trend: '目標株価の引き下げ', revenue: '減収', earnings: '減益', forecast: '減益予想',
+};
+const outlookTitle = o => (o.checks || []).map(c =>
+  `${c.state === 'concern' ? '× ' : c.state === 'ok' ? '○ ' : '？ '}${c.detail}`).join('\n');
+// 印のタグ。懸念があるときは、どのチェックかを横に並べる
+function outlookTag(o, withReasons) {
+  if (!o || !OUTLOOK[o.state]) return '';
+  const m = OUTLOOK[o.state];
+  const why = withReasons && (o.concerns || []).length
+    ? `<span class="dim" style="font-size:12px">（${esc(o.concerns.map(k => OUTLOOK_CHECK[k] || k).join('・'))}）</span>` : '';
+  return `<span class="tag ${m.cls}" title="${esc(outlookTitle(o))}">${esc(withReasons ? m.label : m.short)}</span>${why}`;
+}
+// 成績の集計キー "analyst_gap_us [confirm] | good" → 表示
+function outlookGroupLabel(key) {
+  const i = key.lastIndexOf(' | ');
+  const mark = OUTLOOK[key.slice(i + 3)];
+  return groupLabel(key.slice(0, i)) + (mark ? ` <span class="tag ${mark.cls}">${esc(mark.short)}</span>` : '');
+}
+const TREND = { up: '上向き', down: '下向き', unknown: '記録不足' };
+function marketTrendLine(mt) {
+  const parts = Object.entries(mt || {}).map(([m, v]) => {
+    const cls = v.state === 'up' ? 'pos' : v.state === 'down' ? 'neg' : 'dim';
+    const pctText = none(v.pct) ? '' : `（${v.days}日平均より ${v.pct > 0 ? '+' : ''}${esc(v.pct.toFixed(1))}%）`;
+    return `${esc(MARKET_LABEL[m] || m)}株 <b class="${cls}">${TREND[v.state] || v.state}</b>${pctText}`;
+  });
+  return parts.length ? `市場の地合い: ${parts.join('　')}` : '';
+}
+
 // 器のみ。自分のファイル名から JSON を導くので、ランダム文字列をコードに埋め込まずに済む。
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
@@ -336,13 +376,13 @@ function modesCell(c) {
 // 列は種類ごとに分ける。目標株価の候補に PBR は要らず、割安株に目標株価は要らない
 const COLS = {
   analyst_gap: [
-    ['name', '銘柄', ''], ['market', '市場', ''], ['state', '状態', ''],
+    ['name', '銘柄', ''], ['market', '市場', ''], ['state', '状態', ''], ['outlook', '業績・見通し', ''],
     ['gap_pct', '目標との差', 'num'], ['price', '株価', 'num'], ['target_mean_price', '目標の平均', 'num'],
     ['target_low_price', '目標の最低', 'num'], ['num_analyst_opinions', 'アナリスト', 'num'],
     ['modes', 'タイミングの判定', ''],
   ],
   value_screen: [
-    ['name', '銘柄', ''], ['market', '市場', ''], ['state', '状態', ''],
+    ['name', '銘柄', ''], ['market', '市場', ''], ['state', '状態', ''], ['outlook', '業績・見通し', ''],
     ['price', '株価', 'num'], ['pbr', 'PBR', 'num'], ['per', 'PER', 'num'],
     ['payout_ratio', '配当性向', 'num'], ['equity_ratio', '自己資本比率', 'num'],
     ['operating_cf_ok', '営業CF', ''], ['modes', 'タイミングの判定', ''],
@@ -353,6 +393,8 @@ function cell(c, k) {
     case 'name': return stockCell(c);
     case 'market': return `<td class="dim">${esc(MARKET_LABEL[market(c)])}</td>`;
     case 'state': { const s = STATE[stateOf(c)]; return `<td><span class="badge ${s.cls}">${s.label}</span></td>`; }
+    case 'outlook': return `<td style="white-space:normal;min-width:110px">${outlookTag(c.outlook, false) || DASH}${
+      c.outlook && (c.outlook.concerns || []).length ? `<div class="dim" style="font-size:12px;line-height:1.4">${esc(c.outlook.concerns.map(k => OUTLOOK_CHECK[k] || k).join('・'))}</div>` : ''}</td>`;
     case 'gap_pct': return `<td class="num big">${pct(c.gap_pct)}</td>`;
     case 'price': case 'target_mean_price': case 'target_low_price':
       return `<td class="num">${price(c[k], c.currency)}</td>`;
@@ -368,7 +410,9 @@ function cell(c, k) {
 }
 function sortRows(rows, rule) {
   const { key, asc } = sort[rule];
+  const OL = { good: 0, unknown: 1, concern: 2 };
   const val = c => key === 'market' ? market(c) : key === 'state' ? STATE[stateOf(c)].order
+    : key === 'outlook' ? (OL[(c.outlook || {}).state] ?? 3)
     : key === 'modes' ? STATE[stateOf(c)].order : c[key];
   // 買いシグナル → 買い時待ち → 条件のみ の順は保ち、その中で並べ替える
   const st = c => STATE[stateOf(c)].order;
@@ -452,7 +496,8 @@ function render() {
   staleBanner(d);
   document.getElementById('meta').innerHTML =
     `<b>${esc(jpDate(d.run_date))}</b> ${esc(jpTime(d.generated_at))} 更新　株価は終値: ${dataDates(d)}`
-    + `　条件を満たす銘柄 <b>${d.candidates.length}</b>`;
+    + `　条件を満たす銘柄 <b>${d.candidates.length}</b>`
+    + (marketTrendLine(d.market_trend) ? `<br>${marketTrendLine(d.market_trend)}` : '');
   renderToolbar();
   renderContent();
 }

@@ -130,6 +130,9 @@
   .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
              border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
   .chartlink:hover{background:var(--buy-bg)}
+  .tag.ok{border-color:var(--up);color:var(--up)}
+  .trend{font-size:13.5px;color:var(--muted);margin:-6px 0 14px}
+  .trend b{font-weight:700}
 
   table{min-width:940px}
   .summary{min-width:860px}
@@ -160,7 +163,7 @@
       <dt>市場との差</dt><dd>リターンから、同じ期間の市場全体（日本株: TOPIX 連動 ETF／米国株: S&amp;P500）のリターンを引いたもの。上げ相場では何を買っても勝つので、市場に勝ったかで見る</dd>
       <dt>決済済み／保有中</dt><dd>別々に集計している。混ぜると、含み損のまま持ち続けている分が隠れて勝率だけが良く見える</dd>
       <dt>件数不足</dt><dd>決済が10件未満の方式に付く印。件数が少ないうちの勝率は、成績の評価には使えない</dd>
-      <dt>決済の理由</dt><dd>目標到達: 買った時点の目標株価の90%に届いた／損切り: 買値から −30%／目標引き下げ: 目標株価が20%以上下がった／期限: 365日たった</dd>
+      <dt>決済の理由</dt><dd>目標到達: 買った時点の目標株価の90%に届いた（目標株価との差の銘柄）／利確: 買値から +30%（割安株の銘柄）／損切り: 買値から −30%／目標引き下げ: 目標株価が20%以上下がった／期限: 365日たった</dd>
       <dt>タイミングの判定</dt><dd id="modeHelp"></dd>
     </dl>
   </details>
@@ -214,6 +217,7 @@ const MODE_HELP = {
 };
 const EXIT_LABEL = {
   target_reached: '目標到達',
+  gain_reached: '利確（+30%）',
   drawdown: '損切り（−30%）',
   target_cut: '目標引き下げ',
   time_limit: '期限（365日）',
@@ -287,6 +291,41 @@ function chartLink(x) {
   return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
 }
 
+// 業績・見通しの印（数値だけで決まる。src/outlook.py）
+const OUTLOOK = {
+  good: { label: '業績・見通し 良好', short: '良好', cls: 'ok' },
+  concern: { label: '業績・見通しに懸念', short: '懸念あり', cls: 'warn' },
+  unknown: { label: '業績・見通し 材料不足', short: '材料不足', cls: '' },
+};
+const OUTLOOK_CHECK = {
+  target_trend: '目標株価の引き下げ', revenue: '減収', earnings: '減益', forecast: '減益予想',
+};
+const outlookTitle = o => (o.checks || []).map(c =>
+  `${c.state === 'concern' ? '× ' : c.state === 'ok' ? '○ ' : '？ '}${c.detail}`).join('\n');
+// 印のタグ。懸念があるときは、どのチェックかを横に並べる
+function outlookTag(o, withReasons) {
+  if (!o || !OUTLOOK[o.state]) return '';
+  const m = OUTLOOK[o.state];
+  const why = withReasons && (o.concerns || []).length
+    ? `<span class="dim" style="font-size:12px">（${esc(o.concerns.map(k => OUTLOOK_CHECK[k] || k).join('・'))}）</span>` : '';
+  return `<span class="tag ${m.cls}" title="${esc(outlookTitle(o))}">${esc(withReasons ? m.label : m.short)}</span>${why}`;
+}
+// 成績の集計キー "analyst_gap_us [confirm] | good" → 表示
+function outlookGroupLabel(key) {
+  const i = key.lastIndexOf(' | ');
+  const mark = OUTLOOK[key.slice(i + 3)];
+  return groupLabel(key.slice(0, i)) + (mark ? ` <span class="tag ${mark.cls}">${esc(mark.short)}</span>` : '');
+}
+const TREND = { up: '上向き', down: '下向き', unknown: '記録不足' };
+function marketTrendLine(mt) {
+  const parts = Object.entries(mt || {}).map(([m, v]) => {
+    const cls = v.state === 'up' ? 'pos' : v.state === 'down' ? 'neg' : 'dim';
+    const pctText = none(v.pct) ? '' : `（${v.days}日平均より ${v.pct > 0 ? '+' : ''}${esc(v.pct.toFixed(1))}%）`;
+    return `${esc(MARKET_LABEL[m] || m)}株 <b class="${cls}">${TREND[v.state] || v.state}</b>${pctText}`;
+  });
+  return parts.length ? `市場の地合い: ${parts.join('　')}` : '';
+}
+
 const SRC = new URLSearchParams(location.search).get('src')
   || location.pathname.replace(/\.html$/, '.json').split('/').pop();
 let DATA = null, query = '', sortKey = 'entry_date', sortAsc = false;
@@ -341,6 +380,28 @@ function summaryTable(byRule) {
     勝率はまだ成績の評価に使えません。市場との差のかっこ内は「市場に勝った件数／比較できた件数」です。</div></div>`;
 }
 
+// ---------------------------------------------------------------- 業績・見通しの印ごとの成績
+function outlookTable(byOutlook) {
+  const entries = Object.entries(byOutlook || {});
+  if (!entries.length) return '';
+  const cellsOf = v => v.n
+    ? `<td class="num edge">${v.n}</td><td class="num">${v.with_return ? v.win_rate + '%' : '—'}</td>
+       <td class="num">${v.with_return ? p2(v.mean) : '—'}</td>
+       <td class="num">${v.with_excess ? p2(v.excess_mean) : DASH}</td>`
+    : `<td class="num edge">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+  const body = entries.map(([k, v]) =>
+    `<tr><td class="rule">${outlookGroupLabel(k)}</td>${cellsOf(v.closed || {})}${cellsOf(v.open || {})}</tr>`).join('');
+  return `<div class="panel"><h2>業績・見通しの印ごとの成績</h2>
+    <div class="scroll"><table class="summary"><thead>
+      <tr><th rowspan="2">種類｜判定｜印</th><th colspan="4" class="grp edge">決済済み</th>
+          <th colspan="4" class="grp edge">保有中（いまの株価で評価）</th></tr>
+      <tr><th class="num edge">件数</th><th class="num">勝率</th><th class="num">平均リターン</th><th class="num">市場との差</th>
+          <th class="num edge">件数</th><th class="num">勝率</th><th class="num">平均リターン</th><th class="num">市場との差</th></tr>
+    </thead><tbody>${body}</tbody></table></div>
+    <div class="note">買いシグナルが成立した時点の印（良好／懸念あり／材料不足）で分けた成績です。
+    印の記録は 2026-11-16 からで、それより前の建玉は入っていません。件数が少ないうちは比較に使えません。</div></div>`;
+}
+
 // ---------------------------------------------------------------- 均等額で買った場合の試算
 const yen = v => none(v) ? DASH
   : `<span class="${v < 0 ? 'neg' : (v > 0 ? 'pos' : '')}">${v > 0 ? '+' : ''}${esc(Math.round(v).toLocaleString('ja-JP'))}円</span>`;
@@ -384,6 +445,7 @@ function row(t) {
   const closed = t.status === '決済済み';
   return `<tr>
     <td><div class="stock"><span class="nm">${esc(t.name || t.ticker)}</span><span class="cd">${esc(t.ticker)}${chartLink(t)}${
+      t.outlook && OUTLOOK[t.outlook] ? ` <span class="tag ${OUTLOOK[t.outlook].cls}" title="成立時点の業績・見通しの印">${OUTLOOK[t.outlook].short}</span>` : ''}${
       t.held_at_entry ? ' <span class="tag held" title="シグナルの時点で実際に保有していた">保有中</span>' : ''}</span></div></td>
     <td class="dim">${esc(RULE_SHORT[t.entry_rule] || t.entry_rule)}${t.timing_mode ? ` <span class="tag">${esc(modeLabel(t.timing_mode))}</span>` : ''}</td>
     <td><span class="badge ${closed ? 'b-ok' : 'b-wait'}">${esc(t.status)}</span></td>
@@ -445,6 +507,7 @@ function renderContent() {
   const rows = sortRows((d.trades || []).filter(visible));
   document.getElementById('content').innerHTML =
     summaryTable(d.by_rule)
+    + outlookTable(d.by_outlook)
     + fixedTable(d.by_rule)
     + (d.trades && d.trades.length ? tradesTable(rows)
        : `<div class="panel"><div class="empty">記録がまだありません。買いシグナルが成立するとここに積まれます。</div></div>`)

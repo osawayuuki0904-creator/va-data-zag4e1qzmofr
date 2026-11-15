@@ -130,6 +130,9 @@
   .chartlink{display:inline-block;font-size:12px;font-weight:600;color:var(--buy);text-decoration:none;
              border:1px solid var(--buy);border-radius:5px;padding:0 6px;line-height:1.6;margin-left:6px;white-space:nowrap}
   .chartlink:hover{background:var(--buy-bg)}
+  .tag.ok{border-color:var(--up);color:var(--up)}
+  .trend{font-size:13.5px;color:var(--muted);margin:-6px 0 14px}
+  .trend b{font-weight:700}
 
   /* ---- 今日のシグナル */
   .signals{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
@@ -150,6 +153,15 @@
   .item .key{font-size:14px;font-variant-numeric:tabular-nums}
   .item .key b{font-size:16px}
   .item .why{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.55}
+  .memo{margin-top:8px;border:1px solid var(--line);border-radius:8px;background:var(--hover)}
+  .memo summary{cursor:pointer;padding:8px 12px;font-size:13.5px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+  .memo .sum{color:var(--ink)}
+  .memo .body{padding:2px 12px 12px;font-size:13px;line-height:1.7}
+  .memo h4{margin:10px 0 2px;font-size:12.5px;color:var(--muted);font-weight:700}
+  .memo ul{margin:0;padding-left:18px}
+  .memo .src a{word-break:break-all}
+  .v-tailwind{background:var(--up-bg);color:var(--up)} .v-headwind{background:var(--sell-bg);color:var(--sell)}
+  .v-neutral,.v-unknown{background:var(--off-bg);color:var(--off)}
   .sig h3{margin:0;padding:9px 16px;font-size:13px;color:var(--muted);font-weight:600;
           background:var(--hover);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .recent{width:100%}
@@ -199,7 +211,10 @@
     <summary>この画面の読み方</summary>
     <dl>
       <dt>買いシグナル</dt><dd>購入候補の条件を満たし、買うタイミングの判定が今回の更新で成立した銘柄。ペーパートレードでは次の営業日の始値で買った想定で記録している</dd>
-      <dt>売りシグナル</dt><dd>保有銘柄のうち、売却条件に当てはまった銘柄。条件は2つ: 取得価格から −30% 以下／目標株価を根拠に買った銘柄は、アナリストの目標株価（平均）が買った時点から −20% 以下</dd>
+      <dt>業績・見通しの印</dt><dd>買いシグナルに付く印。数値だけで決まる: 目標株価（平均）が14日前から1%以上下がっていないか／売上・利益が前年同期より伸びているか／予想EPSが実績を下回っていないか。1つでも当てはまれば「懸念」、判定できる項目が2つ未満なら「材料不足」。印が付いてもシグナルは消さない</dd>
+      <dt>AI調査</dt><dd>買いシグナルが出た銘柄について、AIがニュース・決算・開示資料を調べ、業績や外部環境が追い風か向かい風かをまとめたメモ。平日の朝、更新の少し後に追加される。シグナルの判定には使っていない参考情報で、誤りを含むことがある</dd>
+      <dt>市場の地合い</dt><dd>市場全体（日本株: TOPIX 連動 ETF／米国株: S&amp;P500）の終値が、直近20営業日の平均より上か下か</dd>
+      <dt>売りシグナル</dt><dd>保有銘柄のうち、売却条件に当てはまった銘柄。条件は3つ: 取得価格から −30% 以下／目標株価を根拠に買った銘柄は、アナリストの目標株価（平均）が買った時点から −20% 以下／このサイトの買いシグナルで買った割安株は、取得価格から +30% 以上</dd>
       <dt>シグナルの位置づけ</dt><dd>あらかじめ決めた条件に当てはまったことを知らせる合図で、売買の指示ではない。最終判断は自分で行う</dd>
       <dt>取得価格比</dt><dd>取得価格からの騰落率。保有期間中の最大下落率ではない。通貨は建値のままで為替は含まない</dd>
       <dt>前日比</dt><dd>前回の更新時の終値との比較。更新が1日飛んでいれば2日分になる</dd>
@@ -259,6 +274,7 @@ const MODE_HELP = {
 };
 const EXIT_LABEL = {
   target_reached: '目標到達',
+  gain_reached: '利確（+30%）',
   drawdown: '損切り（−30%）',
   target_cut: '目標引き下げ',
   time_limit: '期限（365日）',
@@ -332,6 +348,41 @@ function chartLink(x) {
   return u ? `<a class="chartlink" href="${esc(u)}" target="_blank" rel="noopener" title="楽天証券の銘柄ページを新しいタブで開く">チャート</a>` : '';
 }
 
+// 業績・見通しの印（数値だけで決まる。src/outlook.py）
+const OUTLOOK = {
+  good: { label: '業績・見通し 良好', short: '良好', cls: 'ok' },
+  concern: { label: '業績・見通しに懸念', short: '懸念あり', cls: 'warn' },
+  unknown: { label: '業績・見通し 材料不足', short: '材料不足', cls: '' },
+};
+const OUTLOOK_CHECK = {
+  target_trend: '目標株価の引き下げ', revenue: '減収', earnings: '減益', forecast: '減益予想',
+};
+const outlookTitle = o => (o.checks || []).map(c =>
+  `${c.state === 'concern' ? '× ' : c.state === 'ok' ? '○ ' : '？ '}${c.detail}`).join('\n');
+// 印のタグ。懸念があるときは、どのチェックかを横に並べる
+function outlookTag(o, withReasons) {
+  if (!o || !OUTLOOK[o.state]) return '';
+  const m = OUTLOOK[o.state];
+  const why = withReasons && (o.concerns || []).length
+    ? `<span class="dim" style="font-size:12px">（${esc(o.concerns.map(k => OUTLOOK_CHECK[k] || k).join('・'))}）</span>` : '';
+  return `<span class="tag ${m.cls}" title="${esc(outlookTitle(o))}">${esc(withReasons ? m.label : m.short)}</span>${why}`;
+}
+// 成績の集計キー "analyst_gap_us [confirm] | good" → 表示
+function outlookGroupLabel(key) {
+  const i = key.lastIndexOf(' | ');
+  const mark = OUTLOOK[key.slice(i + 3)];
+  return groupLabel(key.slice(0, i)) + (mark ? ` <span class="tag ${mark.cls}">${esc(mark.short)}</span>` : '');
+}
+const TREND = { up: '上向き', down: '下向き', unknown: '記録不足' };
+function marketTrendLine(mt) {
+  const parts = Object.entries(mt || {}).map(([m, v]) => {
+    const cls = v.state === 'up' ? 'pos' : v.state === 'down' ? 'neg' : 'dim';
+    const pctText = none(v.pct) ? '' : `（${v.days}日平均より ${v.pct > 0 ? '+' : ''}${esc(v.pct.toFixed(1))}%）`;
+    return `${esc(MARKET_LABEL[m] || m)}株 <b class="${cls}">${TREND[v.state] || v.state}</b>${pctText}`;
+  });
+  return parts.length ? `市場の地合い: ${parts.join('　')}` : '';
+}
+
 // この HTML は器のみ。中身は読み込み時に JSON を取得して描画する。
 // 保有は latest.json（?src= で差し替え可）。購入候補・ペーパー成績はナビのリンク先から導く。
 const SRC = new URLSearchParams(location.search).get('src') || 'latest.json';
@@ -340,7 +391,7 @@ const STATUS = {
   UNKNOWN: { label: '判定不能', cls: 'b-wait', order: 1 },
   CLEAR: { label: '問題なし', cls: 'b-ok', order: 2 },
 };
-let HOLD = null, CAND = null, PERF = null;
+let HOLD = null, CAND = null, PERF = null, RES = null;
 let sortKey = 'drawdown_pct', sortAsc = true, query = '';
 const show = { ALERT: true, UNKNOWN: true, CLEAR: true };
 const linkOf = page => { const a = document.querySelector(`#nav a[data-page="${page}"]`); return a ? a.getAttribute('href') : null; };
@@ -377,6 +428,32 @@ function keyLine(c) {
   }
   return `PBR <b>${n2(c.pbr)}</b>　PER <b>${n2(c.per, 1)}</b>　自己資本比率 ${ratio(c.equity_ratio)}`;
 }
+const VERDICT = { tailwind: '追い風', neutral: '中立', headwind: '向かい風', unknown: '判定できず' };
+function memoOf(ticker) {
+  // その日の買いシグナルについての調査メモだけを出す（前日のメモを今日の銘柄に付けない）
+  if (!RES || !CAND || RES.date !== CAND.run_date) return null;
+  return (RES.items || []).find(m => m.ticker === ticker) || null;
+}
+function memoBlock(c) {
+  const m = memoOf(c.ticker);
+  if (!m) return '';
+  const list = (title, xs) => (xs || []).length
+    ? `<h4>${title}</h4><ul>${xs.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+  const src = (m.sources || []).map(s => {
+    const ok = /^https?:\/\//.test(s.url || '');
+    return `<li>${ok ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title)}${
+      s.date ? ` <span class="dim">${esc(s.date)}</span>` : ''}</li>`;
+  }).join('');
+  return `<details class="memo"><summary>
+      <span class="badge v-${esc(m.verdict)}">AI調査: ${esc(VERDICT[m.verdict] || m.verdict)}</span>
+      <span class="sum">${esc(m.summary)}</span></summary>
+    <div class="body">
+      ${m.why_cheap ? `<h4>売られている理由</h4><div>${esc(m.why_cheap)}</div>` : ''}
+      ${list('プラスの材料', m.positives)}${list('マイナスの材料', m.negatives)}${list('今後の予定', m.upcoming)}
+      ${src ? `<h4>出所</h4><ul class="src">${src}</ul>` : ''}
+      <div class="dim" style="margin-top:8px">AIがニュースや決算資料を調べてまとめたメモです。誤りを含むことがあります。出所を確認してください。</div>
+    </div></details>`;
+}
 function buyItem(s) {
   const c = s.c;
   return `<div class="item">
@@ -387,7 +464,9 @@ function buyItem(s) {
       ${s.nearLow ? '<span class="tag paper">安値近く</span>' : ''}
       ${c.held ? '<span class="tag held">保有中</span>' : ''}</div>
     <div class="key">${keyLine(c)}</div>
-    <div class="why">${esc(s.reason)}</div></div>`;
+    ${c.outlook ? `<div class="tags" style="margin:6px 0 0">${outlookTag(c.outlook, true)}</div>` : ''}
+    <div class="why">${esc(s.reason)}</div>
+    ${memoBlock(c)}</div>`;
 }
 function recentSignals(d) {
   // 成立は当日だけで、翌日には待機中に戻る。直近の成立をペーパートレードの記録から拾う
@@ -431,7 +510,7 @@ function buyPanel() {
 }
 
 // ---------------------------------------------------------------- 売りシグナル
-const ALERT_LABEL = { drawdown: '取得価格比', target_cut: '目標引き下げ' };
+const ALERT_LABEL = { drawdown: '取得価格 −30%', target_cut: '目標引き下げ', gain_exit: '取得価格 +30%' };
 function sellWhy(h) {
   // reason は "drawdown=-0.3181 <= -0.3 / target_change=-0.22 <= -0.2" の形。基準値だけ取り出す
   const th = (name, fallback) => {
@@ -441,6 +520,10 @@ function sellWhy(h) {
   const rules = h.alert_rules || ['drawdown'];
   const out = [];
   if (rules.includes('drawdown')) out.push(`取得価格から ${th('drawdown', '−30%')} 以下`);
+  if (rules.includes('gain_exit')) {
+    const m = /gain=-?[\d.]+ >= (-?[\d.]+)/.exec(h.reason || '');
+    out.push(`取得価格から +${m ? Math.round(Number(m[1]) * 100) : 30}% 以上`);
+  }
   if (rules.includes('target_cut')) out.push(`アナリストの目標株価が買った時点から ${th('target_change', '−20%')} 以下`);
   return `売却条件（${out.join('／')}）に当てはまっています`;
 }
@@ -496,8 +579,9 @@ function overview() {
     ${cand}${perf}</div>`;
 }
 function renderToday() {
+  const trend = CAND ? marketTrendLine(CAND.market_trend) : '';
   document.getElementById('view-today').innerHTML =
-    `<div class="signals">${buyPanel()}${sellPanel()}</div>${overview()}`;
+    `${trend ? `<div class="trend">${trend}</div>` : ''}<div class="signals">${buyPanel()}${sellPanel()}</div>${overview()}`;
 }
 
 // ---------------------------------------------------------------- 保有銘柄
@@ -609,8 +693,10 @@ window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); })
 route();
 
 const optional = page => { const j = jsonOf(page); return j ? loadJson(j).catch(() => null) : Promise.resolve(null); };
-Promise.all([loadJson(SRC), optional('candidates'), optional('performance')])
-  .then(([h, c, p]) => { HOLD = h; CAND = c; PERF = p; render(); })
+// 調査メモは候補と同じランダム文字列のファイル名（先頭の語だけが違う）
+const researchJson = () => { const j = jsonOf('candidates'); return j ? loadJson(j.replace(/^[a-z]+-/, 'research-')).catch(() => null) : Promise.resolve(null); };
+Promise.all([loadJson(SRC), optional('candidates'), optional('performance'), researchJson()])
+  .then(([h, c, p, r]) => { HOLD = h; CAND = c; PERF = p; RES = r; render(); })
   .catch(e => showError(e, SRC));
 </script>
 </body>
