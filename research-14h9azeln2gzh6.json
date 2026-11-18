@@ -1,107 +1,464 @@
 {
-  "date": "2026-11-17",
-  "generated_at": "2026-11-17T07:43:33+09:00",
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T07:47:00+09:00",
   "items": [
     {
-      "ticker": "UBER",
-      "name": "Uber",
+      "ticker": "6762.T",
+      "name": "ＴＤＫ",
       "verdict": "neutral",
-      "summary": "11/4発表の7〜9月期は、取扱高（グロス・ブッキング）が20%増の598億ドル、売上が10%増の148億ドル、調整後EBITDAが31%増の30億ドルだった。売上と調整後の1株利益は市場予想をわずかに上回ったと報じられている。一方、配車事業の伸びは会社の想定を1〜2ポイント下回り、純利益は一時要因で92%減だった。",
-      "why_cheap": "決算前の10/28に52週安値を付けた。報道では、Waymoやテスラなどの自動運転タクシーとの競争で利用を奪われる、あるいは料金を下げざるを得なくなるという懸念が続いていたとされる。決算では、燃料高と運転手不足で配車事業が想定を下回り、売上の伸びも鈍った。",
+      "summary": "業績は良く通期予想も引き上げたが、AI・半導体関連の売りの原因（米国のAI規制への懸念、11/16の輸出規制）が収まったと言える資料がなく、保留とした。10/30発表の4〜9月期は売上31.9%増、営業利益41.0%増。一方、会社はスマートフォン向けの前提を下げ、10〜12月期の売上は7〜9月期より2〜5%減ると見ている。",
+      "why_cheap": "2段階で下げた。まず10/30の決算後、通期予想と配当を引き上げたのに買いが限られたと報じられた（11/2）。会社がスマートフォンの生産前提を下げ、下期の利益が上期より少ない計画だったことが背景にある。次に11/4〜11/6、米中間選挙を受けたAI規制への懸念で日経平均が大きく下げ（11/6は3,643円安）、電子部品株もまとめて売られた。",
       "positives": [
-        "取扱高は20%増で、5四半期続けて20%以上の伸び。利用回数は16%増、月間利用者は14%増の2.15億人",
-        "営業利益は30%増の14億ドル、フリーキャッシュフローは14%増の25億ドル",
-        "10〜12月期の会社見通しは取扱高632.5億〜652.5億ドル（為替の影響を除き18〜22%増）、調整後1株利益0.95〜0.99ドルで、市場予想とほぼ同じ水準と報じられている",
-        "会社は10月に入って配車事業の動きが改善したと説明している",
-        "完全無人の車両を2026年末に約700台、2027年末に2000台超、自社のサービスで走らせる計画を示した"
+        "4〜9月期は売上1兆5,605億円（31.9%増）、営業利益2,081億円（41.0%増）、純利益1,764億円（58.4%増）",
+        "通期予想を引き上げ。売上2兆5,800億円→3兆500億円、営業利益2,950億円→3,650億円、純利益2,250億円→2,800億円。前期実績（営業利益2,724億円）を上回る計画",
+        "年間配当の予想を40円→50円に引き上げ（前期36円）",
+        "会社はAIデータセンター向けの需要が強いと説明。HDD用ヘッドの部門は売上52.8%増",
+        "直近4週間の目標株価は引き上げ3件（野村4,500→4,700円、ゴールドマン4,900→5,000円、マッコーリー4,800→5,200円）。投資判断の引き下げは見つからなかった",
+        "数値の印にある「予想EPSが実績から45%減」は、会社予想（1株利益147.50円、前期103.09円）とは合わない。原因は確認できていない"
       ],
       "negatives": [
-        "配車事業の伸びは会社の想定を1〜2ポイント下回った。燃料高と運転手不足が理由で、インド・ブラジル・カナダで運転手が足りていない",
-        "売上の伸びは1〜3月期14%、4〜6月期12%、7〜9月期10%と鈍っている。英国での事業の形の変更が約8ポイント押し下げており、10〜12月期も同程度の影響が続く見込み",
-        "純利益は5.12億ドルで前年の66億ドルから92%減。今期は保有株の評価替えで4.76億ドルの損、前年は税の一時的な利益49億ドルなどがあった",
-        "中東の紛争が取扱高の伸びを0.75ポイント押し下げた。10〜12月期は1ポイントの押し下げを見込む",
-        "運転手を増やすための費用を積み増している。10〜12月期には英国の付加価値税 約15億ドルの支払いを見込む"
+        "米国のAI規制への懸念と、11/16に発表された先端AI半導体の輸出規制は解消したと報じられていない。11/18の東京市場は反発したが、値上がりはプライム市場の25.8%にとどまった",
+        "会社はスマートフォンの生産前提を4月時点から引き下げ、前期比で大幅な減少を見込む",
+        "10〜12月期の売上は7〜9月期比で2〜5%減の見通し。電池の部門は4〜7%減（小型電池の販売減）",
+        "通期予想から逆算すると、下期の営業利益は約1,568億円で上期より約25%少ない（会社公表値からの計算）",
+        "電池の部門の利益率は17.3%で、前年同期の21.2%から下がった",
+        "目標株価の引き下げも2件（UBS 4,950→4,360円、BofA 4,100→3,700円）。理由は確認できていない"
       ],
       "upcoming": [
-        "10〜12月期の決算発表は2027年2月の見込み（日付は確認できていない）",
-        "Zooxの無人車両を11月中にラスベガスで開始する予定（会社説明）"
+        "10〜12月期の決算発表日は会社の予定表に未掲載（確認できていない）",
+        "中間配当25円の支払い開始 2026-12-02"
       ],
       "sources": [
         {
-          "title": "Uber Announces Results for Third Quarter 2026（SEC 8-K 添付資料）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001543151/000154315126000039/uberq326earningspressrelea.htm",
-          "date": "2026-11-04"
+          "title": "TDK 2027年3月期 中間期 決算短信（英文、会社資料）",
+          "url": "https://www.tdk.com/system/files/2026103000_1i3qdleu_en.pdf",
+          "date": "2026-10-30"
         },
         {
-          "title": "Uber Q3 2026 Prepared Remarks（会社資料）",
-          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
-          "date": "2026-11-04"
+          "title": "Notice regarding Revision of Projections for Consolidated Financial Results（TDK 会社発表）",
+          "url": "https://www.tdk.com/en/news_center/press/20261030_10.html",
+          "date": "2026-10-30"
         },
         {
-          "title": "Uber's Revenue Growth Slows Amid Headwinds from Fuel Prices, Tighter Driver Supply（Dow Jones / MarketScreener）",
-          "url": "https://www.marketscreener.com/news/uber-s-revenue-growth-slows-amid-headwinds-from-fuel-prices-tighter-driver-supply-ce785fdfdb8af320",
-          "date": "2026-11-04"
+          "title": "2027年3月期 中間期決算説明会（TDK 会社資料）",
+          "url": "https://www.tdk.com/system/files/20272q_1i3qdleu_ja.pdf",
+          "date": "2026-10-30"
         },
         {
-          "title": "UBER Stock Hits Fresh 52-Week Low Ahead Of Earnings As Robotaxi Fears Linger（Yahoo Finance）",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/uber-stock-hits-fresh-52-173541583.html",
-          "date": "2026-10-28"
+          "title": "ＴＤＫは安い、通期業績・配当予想を上方修正も買い向かう姿勢限定的（みんかぶ）",
+          "url": "https://minkabu.jp/news/4648040",
+          "date": "2026-11-02"
         },
         {
-          "title": "Uber Stock Has One Thing Left To Prove（Trefis）",
-          "url": "https://www.trefis.com/stock/uber/articles/625228/uber-stock-has-one-thing-left-to-prove/2026-11-16",
-          "date": "2026-11-16"
+          "title": "日経平均は大幅続落、米AI規制懸念で幅広い銘柄に売り（財経新聞）",
+          "url": "https://www.zaikei.co.jp/article/20261106/876487.html",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "半導体やAI関連株の下げ止まりを見極め／東京株オープニングコメント（財経新聞）",
+          "url": "https://www.zaikei.co.jp/article/20261117/877921.html",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "日経平均は反発、エヌビディア好決算で半導体株に買い戻し（財経新聞）",
+          "url": "https://www.zaikei.co.jp/article/20261118/878242.html",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "TDK (6762) レーティング・目標株価の一覧（株価予報サイト kabuka.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6762.html",
+          "date": ""
         }
       ]
     },
     {
-      "ticker": "6702.T",
-      "name": "富士通",
+      "ticker": "AVGO",
+      "name": "Broadcom",
       "verdict": "headwind",
-      "summary": "10/29発表の4〜9月期は売上収益が3.8%増の1兆6263億円、調整後営業利益が6.1%減の1139億円だった。7〜9月期だけでは調整後営業利益が31.6%減の590億円で、市場予想の約770億円を大きく下回ったと報じられている。通期予想（調整後営業利益4250億円）は据え置いた。",
-      "why_cheap": "決算翌日の10/30に一時16%超下げ、その週は前週末比19.1%安だった。報道では、メモリーなど部材の値上がりと開発投資の増加による減益、7〜9月期の利益が市場予想を大きく下回ったことが理由とされる。11月に入って安値を更新した直接の理由は、資料では確認できていない。",
+      "summary": "直近1週間で投資判断の引き下げ1件と目標株価の引き下げ2件が続き、半導体株全体の売りの原因も解消していないため、向かい風とした。9/2発表の5〜7月期は売上86%増と好調だが、その後の新しい決算はまだ無い（次は12/9）。会社がAnthropic向けの設備リースで最大約430億ドルを保証していることも、格下げの理由に挙げられている。",
+      "why_cheap": "11/5に10.4%下げて291.53ドルで引けた。この日は会社からの発表は無く、米中間選挙の結果を受けてデータセンター建設の制限やAI規制が強まるとの懸念で、半導体株全体が売られた（半導体株指数は12%超の下落）。10月末には、Anthropic向けリースの保証（最大約430億ドル）の開示と半導体株安が重なり5.5%下げていた。",
       "positives": [
-        "主力のサービス事業は4〜9月期の売上が5.9%増、調整後営業利益が11.8%増の1337億円",
-        "Uvanceの売上は26.5%増の3934億円、受注は22%増。モダナイゼーションの受注は56%増",
-        "通期予想は据え置き。調整後営業利益4250億円は前年比8.8%増にあたる",
-        "会社は、新しい契約では直近の部材費の変動を価格に反映できるようにしたと説明している"
+        "5〜7月期（9/2発表）は売上295.9億ドルで86%増、純利益130.9億ドル。AI向け半導体の売上は167億ドルで221%増",
+        "8〜10月期の会社見通しは売上 約348億ドル、AI向け半導体217億ドル（236%増）。その後の修正は見つからなかった",
+        "売上・1株利益とも市場予想をわずかに上回ったと報じられている（売上295.9億ドル対294.4億ドル）",
+        "11/18はエヌビディアの決算後、半導体株指数が0.1%高、同社株は3.65%高だった"
       ],
       "negatives": [
-        "ハードウェア事業の4〜9月期の調整後営業利益は64.0%減の45億円。メモリーなど部材費の上昇が主因",
-        "4〜9月期の調整後営業利益1139億円は通期予想4250億円の約27%で、達成には下期の大幅な増益が必要と報じられている",
-        "報道では、不採算案件の損失でサービス事業の採算の改善が市場の期待に届かなかったとみられている",
-        "パソコンなどの事業は前年の買い替え需要の反動で売上が20.6%減、調整後営業利益が38.3%減",
-        "次世代CPUや量子コンピューターなどの開発投資が増え、全社費用が377億円（前年325億円）に膨らんだ",
-        "事業からの現金収入（コア・フリー・キャッシュ・フロー）は949億円で前年の1642億円から減った。メモリーとCPUの在庫を積み増したため"
+        "11/13 ロスチャイルド・レッドバーンが投資判断を引き下げ、目標株価を595→398ドルに。AnthropicやOpenAIへの依存と資金面の支援、グーグルの内製化を理由に挙げた",
+        "目標株価の引き下げが続く。TDコーエン475→425ドル（11/16）、ゴールドマン540→460ドル（11/18、同業の評価倍率の低下が理由）。直近4週間で引き上げは見つからなかった",
+        "Anthropic向けの設備リース630億ドルについて最大約430億ドルを保証していると報じられている（開示資料そのものは確認できていない）",
+        "半導体株指数は11/16時点で6月の高値から34.3%安。10月は15.36%安、11月も11/16までで10.09%安",
+        "売りの原因とされる輸出規制の強化、利上げ観測、データセンター建設への政治的な制限、エヌビディアの経営トップ交代は、どれも解消したと報じられていない",
+        "エヌビディアは好決算でも11/18に2.9%安。「安心するのはまだ早い」との証券会社の見方が報じられた"
       ],
       "upcoming": [
-        "次の決算発表日は確認できていない"
+        "8〜10月期・通期の決算発表 2026-12-09（米国時間の取引終了後）",
+        "米連邦公開市場委員会 2026-12-08〜09"
       ],
       "sources": [
         {
-          "title": "富士通 2026年度 第2四半期 決算概要（会社資料）",
-          "url": "https://resources.global.fujitsu/prir/2026/10/2026Q2-Financial-Summary-ja.pdf",
+          "title": "Broadcom Inc. Third Quarter Fiscal Year 2026 Financial Results（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000076/avgo-08022026x8kxex99.htm",
+          "date": "2026-09-02"
+        },
+        {
+          "title": "Broadcom Inc. to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on Wednesday, December 9, 2026（会社発表）",
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announce-fourth-quarter-and-fiscal-year-2026",
+          "date": "2026-11-09"
+        },
+        {
+          "title": "Broadcom's Q3 Beats the Street — But Only Just Barely（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/09/03/broadcoms-q3-beats-the-street-but-only-just-barely/",
+          "date": "2026-09-03"
+        },
+        {
+          "title": "What Just Happened To Broadcom Stock?（Trefis）",
+          "url": "https://www.trefis.com/stock/avgo/articles/623354/what-just-happened-to-broadcom-stock/2026-11-06",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Is Rothschild & Co Redburn Wrong to Give Up on Broadcom? Wall Street Still Sees $533（Yahoo Finance）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rothschild-co-redburn-wrong-broadcom-171032060.html",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Broadcom Sinks 5.5% as Its $43 Billion Anthropic Backstop Meets an Intel-Led Chip Rout（TIKR）",
+          "url": "https://www.tikr.com/blog/broadcom-sinks-5-5-as-its-43-billion-anthropic-backstop-meets-an-intel-led-chip-rout",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "Broadcom price target lowered to $425 from $475 at TD Cowen（The Fly / TipRanks）",
+          "url": "https://www.tipranks.com/news/the-fly/broadcom-price-target-lowered-to-425-from-475-at-td-cowen-thefly-news",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Broadcom price target lowered to $460 from $540 at Goldman Sachs（The Fly / TipRanks）",
+          "url": "https://www.tipranks.com/news/the-fly/broadcom-price-target-lowered-to-460-from-540-at-goldman-sachs-thefly-news",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "Chip Stocks Are Having Their Worst Two Months Since 2008（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/11/17/chip-stocks-are-having-their-worst-two-months-since-2008/",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Stock market today: Dow, S&P 500 slip ahead of Anthropic IPO, Nvidia stock extends decline（Yahoo Finance）",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-18-dow-sp-500-nasdaq-nvidia-earnings-anthropic-ipo-143530588.html",
+          "date": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "ticker": "APTV",
+      "name": "Aptiv",
+      "verdict": "headwind",
+      "summary": "11/3の決算で示した来期の見方が「売上は横ばい〜微増」と弱く、その後に目標株価の引き下げが7件、投資判断の引き下げが2件続いたため、向かい風とした。7〜9月期は売上2%増、調整後の1株利益は1.42ドル（前年1.48ドル）で市場予想は上回った。半導体メモリーの値上がりによる約7億ドルの費用増が2027年にかかる見込みで、業界の逆風が和らいだと言える資料は無い。",
+      "why_cheap": "主に会社固有の理由。11/3の決算当日に約6%下げた。10〜12月期の1株利益の見通しが市場予想を下回ったと報じられ、2027年の売上の見方も長期目標（年4〜7%増）より弱かった。その後、証券各社の目標株価引き下げと格下げ（11/6 HSBC、11/13 大和）が続いた。11/16には米国株全体の下げも重なった。なお2026年4月に配線事業を分離しており、それ以前の株価とは比べられない。",
+      "positives": [
+        "7〜9月期は売上31.99億ドルで2%増。調整後の1株利益1.42ドルは会社の事前の見通し（1.25〜1.35ドル）と市場予想（1.33ドル）を上回った",
+        "2026年通期の調整後1株利益（5.60〜5.80ドル）と調整後EBITDA（23.1億〜23.7億ドル）の見通しは据え置き",
+        "部品の部門は売上7%増。受注は7〜9月期 約40億ドル、年初から130億ドル超で、通期目標200億ドルを維持したと報じられている",
+        "少なくとも2027年末まで、フリーキャッシュフローの全額を株主に還元する方針（決算説明会）"
+      ],
+      "negatives": [
+        "2027年の売上の見方は「横ばい〜微増」。世界の自動車生産を横ばい〜2%減と置いている。正式な見通しは次の決算で示す（決算説明会）",
+        "半導体（主にメモリー）の値上がりで2027年に約7億ドルの費用増。会社は吸収できないとして顧客への転嫁を交渉中（決算説明会）",
+        "ドイツの高級車メーカー2社向けで、2027年に2.5億〜3億ドルの減収要因（決算説明会）",
+        "調整後EBITDAは5.67億ドルで前年の5.98億ドルから減少、利益率は19.1%→17.7%。先進安全・ソフトの部門は売上3%減、欧州・中東・アフリカは5%減",
+        "11/4〜11/6に目標株価の引き下げ7件（例: モルガン・スタンレー55→45ドル、RBC 77→64ドル、ゴールドマン61→54ドル）。HSBCと大和（目標41ドル）は投資判断を引き下げ",
+        "通期のフリーキャッシュフロー見通しの上限を引き下げ（6.25億〜7.25億ドル→6.25億〜6.75億ドル）。車載メモリーの不足と値上がりは2027年も続くとの調査会社の見方が報じられている"
+      ],
+      "upcoming": [
+        "10〜12月期の決算と2027年の正式な見通しは2027年2月ごろの見込み（日付は確認できていない）",
+        "事業構成の見直しについて2027年1〜3月に説明する予定（決算説明会）"
+      ],
+      "sources": [
+        {
+          "title": "Aptiv Reports Third Quarter 2026 Financial Results（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001521332/000152133226000071/aptvq32026ex991.htm",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Aptiv Reports Second Quarter 2026 Financial Results（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001521332/000152133226000057/aptvq22026ex991.htm",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "Aptiv PLC Form 8-K（Versigent の分離完了）",
+          "url": "https://www.sec.gov/Archives/edgar/data/1521332/000119312526138225/d110967d8k.htm",
+          "date": "2026-04-01"
+        },
+        {
+          "title": "Aptiv Q3 2026 Earnings Call Transcript（Benzinga / Webull）",
+          "url": "https://www.webull.com/news/15860220633717760",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Aptiv clears a lowered bar but a flat 2027 preview shows auto headwinds outlasting the beat（Earnings Whispers / Finviz）",
+          "url": "https://finviz.com/news/414425/aptiv-clears-a-lowered-bar-but-a-flat-2027-preview-shows-auto-headwinds-outlasting-the-beat",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Aptiv: Prognose fürs Schlussquartal enttäuscht（trading-treff.de）",
+          "url": "https://trading-treff.de/trading/aptiv-prognose-fuers-schlussquartal-enttaeuscht",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "American Analyst Updates: Nov 4th, 2026（Stock Target Advisor）",
+          "url": "https://www.stocktargetadvisor.com/blog/american-analyst-updates-nov-4th-2026/",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Aptiv (NYSE:APTV) Stock Dropped to Neutral by Daiwa Securities Group（Daily Political）",
+          "url": "https://www.dailypolitical.com/2026/11/14/aptiv-nyseaptv-stock-dropped-to-neutral-by-daiwa-securities-group.html",
+          "date": "2026-11-14"
+        },
+        {
+          "title": "Indian auto companies face cost pressures amid AI-led chip shortage（Business Standard）",
+          "url": "https://www.business-standard.com/industry/auto/indian-auto-companies-face-cost-pressures-amid-ai-led-chip-shortage-126111500772_1.html",
+          "date": "2026-11-15"
+        },
+        {
+          "title": "Automakers head into 2027 leaning on cost discipline as production stays flat（MarketScale）",
+          "url": "https://www.marketscale.com/industries/transportation/automakers-2027-cost-discipline-flat-production",
+          "date": "2026-11-06"
+        }
+      ]
+    },
+    {
+      "ticker": "GNRC",
+      "name": "Generac",
+      "verdict": "neutral",
+      "summary": "業績は良く通期の利益率見通しも引き上げたが、AI・データセンター関連株の売りの原因（建設制限への懸念、輸出規制、利上げ観測）が収まったと言える資料がなく、保留とした。10/28発表の7〜9月期は売上16%増の12.9億ドルで過去最高、データセンター向けの受注残は約45億ドル。一方、売上は市場予想に届かず、11/4に約11%下げた理由は確認できていない。",
+      "why_cheap": "会社固有の材料と業界全体の売りが重なった。10/23に、外国製の電力設備を制限する大統領令への懸念でパイパー・サンドラーが目標株価を下げた。10/28の決算は売上が市場予想に届かず、売りが出た。11/4に約11%下げ（理由は確認できていない）、11/5には中間選挙後のデータセンター建設制限への懸念でAI・電力関連株がまとめて売られた。",
+      "positives": [
+        "7〜9月期は売上12.9億ドル（16%増）、純利益1.09億ドル（前年0.66億ドル）、調整後EBITDA 2.56億ドル（利益率17.3%→19.8%）",
+        "産業・商業向けは約28%増で、主にデータセンター向けが伸びた。住宅向けは約9%増",
+        "データセンター向けの受注残は約45億ドル。アマゾンとの長期供給契約は、2027〜2028年の当初の納入が合計24億ドルの見込み",
+        "2026年通期の調整後EBITDA利益率の見通しを20.0〜21.0%→20.5〜21.0%に引き上げ。売上成長率の見通しは据え置き",
+        "決算後、目標株価の引き上げが4件（スティーフェル290→325ドル、ニーダム283→288ドルなど）。直近4週間で投資判断の引き下げは見つからなかった",
+        "調整後の1株利益2.54ドルは市場予想（2.38〜2.43ドル）を上回った"
+      ],
+      "negatives": [
+        "売上12.9億ドルは市場予想（13.1億〜13.2億ドル）に届かなかった",
+        "パイパー・サンドラーが目標株価を2回引き下げ（10/23 303→279ドル、11/9ごろ 279→266ドル）。1回目は大統領令による規制の不透明さが理由",
+        "10〜12月期の粗利益率は約37〜38%に下がる見通し（7〜9月期は39.9%）。データセンター向けの比率が上がるため（決算説明会）",
+        "AI・データセンター関連の売りは続いている。11/16はS&P500が1.92%安。11/17の調査では、半年以内に大手の設備投資削減を見込む運用担当者が52%（10月は30%）",
+        "中間選挙後、データセンター建設を制限する住民投票が45件中44件で可決されたと報じられた。大統領令の最終的な内容は12月に出る見込み",
+        "米10年債利回りは約5.1%、12月の利上げ観測が強い。会社は金利高が太陽光・蓄電池の需要を抑えていると説明。住宅市場の指数は2012年以来の低さ"
+      ],
+      "upcoming": [
+        "10〜12月期の決算発表は2027年2月中旬の見込み（日付は確認できていない）",
+        "外国製電力設備に関する大統領令の最終的な内容 2026年12月の見込み",
+        "米連邦公開市場委員会 2026年12月"
+      ],
+      "sources": [
+        {
+          "title": "Generac Reports Third Quarter 2026 Results（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001474735/000143774926033685/ex_1032565.htm",
+          "date": "2026-10-28"
+        },
+        {
+          "title": "Generac Q3 Earnings Beat Estimates on C&I Strength, Revenues Miss（Zacks）",
+          "url": "https://www.zacks.com/stock/news/3017552/generac-q3-earnings-beat-estimates-on-c-i-strength-revenues-miss",
+          "date": "2026-10-28"
+        },
+        {
+          "title": "Generac Holdings Inc (GNRC) Q3 2026 Earnings Call Highlights（GuruFocus / Yahoo Finance）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/generac-holdings-inc-gnrc-q3-010358216.html",
           "date": "2026-10-29"
         },
         {
-          "title": "富士通2026年度上期は増収減益、Uvance・モダナイゼーションは引き続き好調（マイナビ TECH+）",
-          "url": "https://news.mynavi.jp/techplus/article/20261029-5217724/",
+          "title": "Piper Sandler lowers Generac stock price target on regulatory uncertainty（Investing.com）",
+          "url": "https://www.investing.com/news/analyst-ratings/piper-sandler-lowers-generac-stock-price-target-on-regulatory-uncertainty-93CH-4969849",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Needham raises Generac stock price target on data center growth（Investing.com）",
+          "url": "https://ca.investing.com/news/stock-market-news/needham-raises-generac-stock-price-target-on-data-center-growth-93CH-4913043",
           "date": "2026-10-29"
         },
         {
-          "title": "富士通 大幅続落、7-9月期業績は市場想定を大きく下振れ（財経新聞）",
-          "url": "https://www.zaikei.co.jp/article/20261030/875573.html",
-          "date": "2026-10-30"
+          "title": "Piper Sandler maintains Generac Holdings at Overweight, lowers price target to $266 from $279（TradingView）",
+          "url": "https://www.tradingview.com/news/tradingview:33ae58e5b00ee:0-piper-sandler-maintains-generac-holdings-at-overweight-lowers-price-target-to-266-from-279/",
+          "date": ""
         },
         {
-          "title": "富士通株が16%急落、上期減益を嫌気 半導体コスト上昇が重荷（Investing.com）",
-          "url": "https://jp.investing.com/news/stock-market-news/article-1733903",
-          "date": "2026-10-30"
+          "title": "AI, data-center stocks slump as Democratic sweep clouds expansion plans（Reuters / Devdiscourse）",
+          "url": "https://www.devdiscourse.com/article/international/4002189-ai-data-center-stocks-slump-as-democratic-sweep-clouds-expansion-plans",
+          "date": "2026-11-05"
         },
         {
-          "title": "富士通ショック、サイバーセキュリティ株が総崩れの中…（楽天証券 トウシル）",
-          "url": "https://media.rakuten-sec.net/articles/-/53925",
+          "title": "AI stocks suffer their biggest sell-off in months as data centre backlash reaches Washington（The Next Web）",
+          "url": "https://thenextweb.com/news/ai-stocks-sell-off-nasdaq-correction",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Why Is the Stock Market Down Today? 17 November 2026（Admiral Markets）",
+          "url": "https://admiralmarkets.com/analytics/traders-blog/why-is-the-stock-market-down-today-17-november-2026",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Market Review: November 17, 2026（Investrade）",
+          "url": "https://investrade.com/market-review-november-17-2026/",
+          "date": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "ticker": "WYNN",
+      "name": "Wynn Resorts",
+      "verdict": "headwind",
+      "summary": "11/5発表の7〜9月期は4つの施設すべてで減収となり、市場予想を大きく下回り、決算後に目標株価の引き下げが8件続いたため、向かい風とした。売上は16.9億ドル（前年18.3億ドル）、純利益は1,730万ドル（前年8,830万ドル）。マカオのカジノ収入は10月に前年比10.0%減で5か月続けて減っており、底を打ったと言える資料は無い。",
+      "why_cheap": "10/28に52週安値（70.79ドル）を付けた。決算発表より前で、10月中旬に証券各社が決算を前に目標株価を相次いで下げていた。背景はマカオのカジノ収入の減少（9月まで4か月連続の前年割れ）、ラスベガスの客室単価の下落、9月からのボストンの施設でのストライキ、UAEの新施設の開業延期と予算増（8月）、中東の紛争。会社固有というより、マカオとラスベガスの業界全体の弱さが大きい。",
+      "positives": [
+        "ラスベガスは10月に入って客室単価などが前年を上回り、2027年の団体・会議の予約も前年を上回るペースと会社が説明（報道）",
+        "ボストンの施設のストライキは11/5に労働組合が新しい協約を承認して終結した（報道）",
+        "UAEの新施設は2027年9月の開業予定を維持。費用はほぼ確定したと会社が説明（報道）",
+        "決算後の目標株価引き下げは8件とも投資判断は据え置き。決算翌日の11/6に株価は4.78%上げた",
+        "ラスベガスの不振の一部は勝率の低さ（18.9%、想定は22〜26%）によるもので、約2,400万ドルの押し下げと報じられている"
+      ],
+      "negatives": [
+        "7〜9月期の売上は16.9億ドルで前年の18.3億ドルから減少。純利益は1,730万ドル（前年8,830万ドル）、施設ベースの調整後EBITDARは4.642億ドル（前年5.701億ドル）",
+        "調整後の1株利益0.33ドルは市場予想0.58ドルを大きく下回った。売上も4施設すべてで予想に届かなかった（Zacks）",
+        "11/6に目標株価の引き下げ8件（ゴールドマン102→93ドル、スティーフェル120→110ドルなど）。10月中旬にも9社が引き下げていた",
+        "マカオ全体のカジノ収入は10月に前年比10.0%減で、予想の範囲をすべて下回った。5か月続けての前年割れ。11月も6.1%減との予想が報じられている",
+        "勝率の影響を除いてもラスベガスの利益は約10%減。ラスベガス全体でも9月の客室単価は約11%下落",
+        "有利子負債は107.3億ドル。米国は12月の利上げ観測が強い。中東の紛争は停戦に至っておらず、UAEの新施設は8月に開業延期と約6億ドルの予算増を発表済み"
+      ],
+      "upcoming": [
+        "10〜12月期の決算発表日は確認できていない",
+        "マカオの11月のカジノ収入の発表は12月初めの見込み（日付は確認できていない）",
+        "UAEの新施設（Wynn Al Marjan Island）の開業 2027年9月の予定"
+      ],
+      "sources": [
+        {
+          "title": "Wynn Resorts, Limited Reports Third Quarter 2026 Results（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001174922/000117492226000078/ex991wrlq32026pressrelease.htm",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Wynn Resorts Q3 Earnings Miss Estimates on Weak Gaming Results（Zacks）",
+          "url": "https://zacks.com/stock/news/3025772/wynn-resorts-q3-earnings-miss-estimates-on-weak-gaming-results",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Wynn Resorts Misses Badly as Las Vegas Margins Slide and Macau Demand Cools（Earnings Whispers / Finviz）",
+          "url": "https://finviz.com/news/418084/wynn-resorts-misses-badly-as-las-vegas-margins-slide-and-macau-demand-cools-management-leans-on-october-and-2027-pacing",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Wynn Resorts (WYNN) Analyst Ratings（Stock Analysis）",
+          "url": "https://stockanalysis.com/stocks/wynn/ratings/",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Wynn Resorts stock price target lowered to $93 by Goldman Sachs（Investing.com）",
+          "url": "https://www.investing.com/news/analyst-ratings/wynn-resorts-stock-price-target-lowered-to-93-by-goldman-sachs-93CH-5006859",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Analysts lower expectations for third-quarter earnings（CDC Gaming）",
+          "url": "https://cdcgaming.com/analysts-lower-expectations-for-third-quarter-earnings/",
+          "date": "2026-10-20"
+        },
+        {
+          "title": "Macau October GGR falls 10% to MOP21.68 billion despite Golden Week（Asia Gaming Brief）",
+          "url": "https://agbrief.com/news/macau/01/11/2026/macau-october-ggr-falls-10-to-mop21-68-billion-despite-golden-week/",
+          "date": "2026-11-01"
+        },
+        {
+          "title": "Macau Casino Slump Continues Despite Boost From Golden Week（Casino.org）",
+          "url": "https://www.casino.org/news/macau-casino-slump-continues-despite-boost-from-golden-week/",
           "date": "2026-11-02"
+        },
+        {
+          "title": "Wynn, Encore Boston Harbor workers reach agreement（Hotel Dive）",
+          "url": "https://www.hoteldive.com/news/wynn-encore-boston-harbor-workers-agreement-q3-2026-earnings/873989/",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "Wynn Resorts pushes back opening of Al Marjan resort to Sept. 2027, increases budget by $600 million（CDC Gaming）",
+          "url": "https://cdcgaming.com/wynn-resorts-pushes-back-opening-of-al-marjan-resort-to-sept-2027-increases-budget-by-600-million/",
+          "date": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "verdict": "neutral",
+      "summary": "11/12の決算は増収増益で通期見通しも引き上げたが、決算の前後に目標株価の引き下げが4件続き、AI関連株の売りの原因も解消していないため、保留とした。8〜10月期は売上24%増の185億ドル、調整後の1株利益は40%増の1.40ドルで市場予想を上回った。一方、粗利益率はメモリーの値上がりで下がり、受注の伸びは前の四半期より鈍った。",
+      "why_cheap": "11/5に約8%下げた。この日はモルガン・スタンレーが投資判断を引き下げ（目標135→120ドル）、同時に米中間選挙後のデータセンター建設制限への懸念でAI関連株全体が売られた（S&P500は4.4%安）。決算翌日の11/13にも6.2%下げた。粗利益率の低下と受注の伸びの鈍化に加え、同業の通信機器株も大半が下げており、業界全体の売りの面が大きいと報じられている。",
+      "positives": [
+        "8〜10月期は売上185億ドル（24%増）、調整後の1株利益1.40ドル（40%増）。市場予想（売上 約181億ドル、1株利益1.30〜1.33ドル）を上回った",
+        "2027年7月期の見通しを引き上げ。売上748億〜758億ドル、調整後1株利益5.47〜5.53ドル（従来は売上722億〜734億ドル、1株利益5.05〜5.11ドルと報じられている）",
+        "大手クラウド事業者向けのAI関連売上の見込みを今期90億ドルに引き上げ（従来75億ドルと報じられている）。前期実績の2倍超",
+        "製品の受注は全体で21%増。企業向け15%増、公共向け13%増（会社資料）",
+        "バークレイズは粗利益率を「懸念されたより持ちこたえている」と評価（目標株価は引き下げ）"
+      ],
+      "negatives": [
+        "目標株価の引き下げが続いた。モルガン・スタンレー（11/5、判断も引き下げ）、シティ139→120ドル、バークレイズ123→109ドル、ウェルズ・ファーゴ150→130ドル（いずれも11/13）",
+        "調整後の粗利益率は65.6%で前年の68.1%から低下。会社はメモリー費用の上昇を理由に挙げた（値上げなどで一部を相殺）",
+        "受注の伸びは21%で、前の2四半期の各35%から鈍った。通信・クラウド事業者向けは47%増（前の四半期は95%増）と報じられている",
+        "11〜1月期の売上見通し（180億〜182億ドル）は8〜10月期を下回る。シティは「成長は10月までの四半期がピーク」と指摘",
+        "AI関連株の売りの原因（エヌビディアの経営トップ交代、11/16の輸出規制、利上げ観測、データセンター建設への制限）は解消したと報じられていない。11/16は半導体株指数が4.6%安",
+        "決算翌日の11/13に6.2%下げ、95.64ドルで引けた（6月の高値130ドルから約26%安）"
+      ],
+      "upcoming": [
+        "11〜1月期の決算説明会 2027-02-10（会社資料）",
+        "米連邦公開市場委員会 2026-12-08〜09"
+      ],
+      "sources": [
+        {
+          "title": "Cisco Reports First Quarter Earnings（SEC 8-K 添付資料）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000858877/000085887726000170/exhibit991pressrelease-q1f.htm",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Cisco Q1 FY27 Prepared Remarks（会社資料）",
+          "url": "https://s21.q4cdn.com/812015656/files/doc_earnings/2027/q1/transcript/Q1FY27-Prepared-Remarks.pdf",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Cisco Q1 FY2027 earnings article（Earnings Whispers）",
+          "url": "https://www.earningswhispers.com/article/CSCO/r2701",
+          "date": "2026-11-12"
+        },
+        {
+          "title": "Cisco Q1 FY 2027: Silicon One Wins Expand AI Networking Reach（Futurum）",
+          "url": "https://futurumgroup.com/?p=97973",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Cisco's Growth May Have Peaked Despite Raised AI Revenue Outlook, Says Citi — Barclays Sees Margins Holding Up（Stocktwits）",
+          "url": "https://stocktwits.com/news-articles/markets/equity/cisco-s-growth-may-have-peaked-despite-raised-ai-revenue-outlook-says-citi-barclays-sees-margins-holding-up/cNbRTvGR9fO",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Cisco Systems Aktie: Morgan Stanley senkt Rating und Kursziel wegen KI-Margenrisiken（goldesel.de）",
+          "url": "https://goldesel.de/aktien/news/cisco-systems-aktie-morgan-stanley-senkt-rating-und-kursziel-wegen-ki-margenrisiken",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "What Is Behind The Move In Cisco Stock?（Trefis）",
+          "url": "https://www.trefis.com/stock/csco/articles/625275/what-is-behind-the-move-in-cisco-stock/2026-11-16",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Arista Sinks 11%, Ciena Down 15% as AI Selloff Deepens After Democratic Sweep（TIKR）",
+          "url": "https://www.tikr.com/blog/arista-sinks-11-ciena-down-15-as-ai-selloff-deepens-after-democratic-sweep",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "Wall Street slumps on AI jitters ahead of Nvidia results, Anthropic IPO（Reuters / Korea Times）",
+          "url": "https://www.koreatimes.co.kr/world/20261117/wall-street-slumps-on-ai-jitters-ahead-of-nvidia-results-anthropic-ipo",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Trading Day: Markets mixed in a Nvidia, Anthropic, minutes swirl（Reuters / MarketScreener）",
+          "url": "https://www.marketscreener.com/news/trading-day-markets-mixed-in-a-nvidia-anthropic-minutes-swirl-ce785edddf8bf621",
+          "date": "2026-11-18"
         }
       ]
     }
