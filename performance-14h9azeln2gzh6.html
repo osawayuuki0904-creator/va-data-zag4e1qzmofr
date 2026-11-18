@@ -297,6 +297,18 @@ const OUTLOOK = {
   concern: { label: '業績・見通しに懸念', short: '懸念あり', cls: 'warn' },
   unknown: { label: '業績・見通し 材料不足', short: '材料不足', cls: '' },
 };
+// 調査メモの見立て → 判定（src/research.py。tailwind が買い判定。2026-11-18 から）
+const RESEARCH = {
+  tailwind: { label: '買い判定（調査: 追い風）', short: '買い判定', cls: 'ok' },
+  neutral: { label: '保留（調査: 中立）', short: '保留', cls: '' },
+  unknown: { label: '保留（調査: 判定できず）', short: '保留', cls: '' },
+  headwind: { label: '見送り（調査: 向かい風）', short: '見送り', cls: 'warn' },
+};
+function researchGroupLabel(key) {
+  const i = key.lastIndexOf(' | ');
+  const mark = RESEARCH[key.slice(i + 3)];
+  return groupLabel(key.slice(0, i)) + (mark ? ` <span class="tag ${mark.cls}" title="${esc(mark.label)}">${esc(mark.label)}</span>` : '');
+}
 const OUTLOOK_CHECK = {
   target_trend: '目標株価の引き下げ', revenue: '減収', earnings: '減益', forecast: '減益予想',
 };
@@ -402,6 +414,29 @@ function outlookTable(byOutlook) {
     印の記録は 2026-11-16 からで、それより前の建玉は入っていません。件数が少ないうちは比較に使えません。</div></div>`;
 }
 
+// ---------------------------------------------------------------- 調査の判定ごとの成績
+function researchTable(byResearch) {
+  const entries = Object.entries(byResearch || {});
+  if (!entries.length) return '';
+  const cellsOf = v => v.n
+    ? `<td class="num edge">${v.n}</td><td class="num">${v.with_return ? v.win_rate + '%' : '—'}</td>
+       <td class="num">${v.with_return ? p2(v.mean) : '—'}</td>
+       <td class="num">${v.with_excess ? p2(v.excess_mean) : DASH}</td>`
+    : `<td class="num edge">0</td><td class="num dim">—</td><td class="num dim">—</td><td class="num dim">—</td>`;
+  const body = entries.map(([k, v]) =>
+    `<tr><td class="rule">${researchGroupLabel(k)}</td>${cellsOf(v.closed || {})}${cellsOf(v.open || {})}</tr>`).join('');
+  return `<div class="panel"><h2>調査の判定ごとの成績</h2>
+    <div class="scroll"><table class="summary"><thead>
+      <tr><th rowspan="2">種類｜判定｜調査</th><th colspan="4" class="grp edge">決済済み</th>
+          <th colspan="4" class="grp edge">保有中（いまの株価で評価）</th></tr>
+      <tr><th class="num edge">件数</th><th class="num">勝率</th><th class="num">平均リターン</th><th class="num">市場との差</th>
+          <th class="num edge">件数</th><th class="num">勝率</th><th class="num">平均リターン</th><th class="num">市場との差</th></tr>
+    </thead><tbody>${body}</tbody></table></div>
+    <div class="note">買いシグナルが成立した日に AI が情勢・会社の状況を調べ、追い風なら「買い判定」、向かい風なら「見送り」、
+    それ以外は「保留」としています。見送りもペーパーには記録し、判定ごとの成績を比べます。
+    記録はその日に調べた分だけで（2026-11-14 から）、過去にさかのぼって判定していません。件数が少ないうちは比較に使えません。</div></div>`;
+}
+
 // ---------------------------------------------------------------- 均等額で買った場合の試算
 const yen = v => none(v) ? DASH
   : `<span class="${v < 0 ? 'neg' : (v > 0 ? 'pos' : '')}">${v > 0 ? '+' : ''}${esc(Math.round(v).toLocaleString('ja-JP'))}円</span>`;
@@ -446,6 +481,7 @@ function row(t) {
   return `<tr>
     <td><div class="stock"><span class="nm">${esc(t.name || t.ticker)}</span><span class="cd">${esc(t.ticker)}${chartLink(t)}${
       t.outlook && OUTLOOK[t.outlook] ? ` <span class="tag ${OUTLOOK[t.outlook].cls}" title="成立時点の業績・見通しの印">${OUTLOOK[t.outlook].short}</span>` : ''}${
+      t.research && RESEARCH[t.research] ? ` <span class="tag ${RESEARCH[t.research].cls}" title="${esc(RESEARCH[t.research].label)}">${RESEARCH[t.research].short}</span>` : ''}${
       t.held_at_entry ? ' <span class="tag held" title="シグナルの時点で実際に保有していた">保有中</span>' : ''}</span></div></td>
     <td class="dim">${esc(RULE_SHORT[t.entry_rule] || t.entry_rule)}${t.timing_mode ? ` <span class="tag">${esc(modeLabel(t.timing_mode))}</span>` : ''}</td>
     <td><span class="badge ${closed ? 'b-ok' : 'b-wait'}">${esc(t.status)}</span></td>
@@ -507,6 +543,7 @@ function renderContent() {
   const rows = sortRows((d.trades || []).filter(visible));
   document.getElementById('content').innerHTML =
     summaryTable(d.by_rule)
+    + researchTable(d.by_research)
     + outlookTable(d.by_outlook)
     + fixedTable(d.by_rule)
     + (d.trades && d.trades.length ? tradesTable(rows)
