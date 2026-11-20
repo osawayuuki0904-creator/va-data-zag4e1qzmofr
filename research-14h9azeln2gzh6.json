@@ -473,6 +473,238 @@
           "date": "2026-11-20"
         }
       ]
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "verdict": "neutral",
+      "summary": "会社の業績と見通しは良いが、AI・メモリ・ストレージ関連株の売りが11/19時点でも続き、原因も収まっていないため追い風とは言えない。10/22発表の7〜9月期は売上43.8億ドル（前年比+55%）で会社見通しの上限を上回り、次の四半期も前年比+66〜72%の見通し。一方で東芝の増産報道を受けた供給増の懸念と、目標株価の引き下げも出ている。",
+      "why_cheap": "会社固有の悪材料より、業界・市場全体の売りが主因と報じられている。10月に東芝がHDD生産能力を倍増する方針と伝わり、品薄が緩む懸念でWDCとSTXが急落。11/4は中間選挙後のデータセンター関連売りとメモリ価格の懸念で約7%安。株価は9/30から11/16までに38.2%下落した。",
+      "positives": [
+        "10/22発表の2027年6月期第1四半期は売上43.81億ドル（前年比+55%）、非GAAPの1株利益4.64ドル（同+161%）。いずれも会社見通しの上限と市場予想を上回った（会社発表・SEC 8-K）。",
+        "次の四半期（10〜12月期）の売上見通しは前年比+66〜72%。報道では市場予想を10%超上回った。",
+        "7〜9月期の営業キャッシュフローは16.0億ドル、フリーキャッシュフローは13.8億ドル。非GAAPの粗利益率は58.1%（前年比+14.2ポイント）。",
+        "Morgan Stanleyは10月に目標株価を下げつつも、売られすぎとして強気を維持。HDD需要は加速しているとした。",
+        "11/13に15億ドルの融資枠契約（Bank of America ほか）を結んだ。配当は1株0.175ドル（権利落ち12/4）。"
+      ],
+      "negatives": [
+        "10月、東芝がAIデータセンター向けにHDD生産能力を倍増する方針と報じられ、品薄が緩むとの懸念でWDCは7%安。会社がよい決算を出した後も株価の重荷として残っている。",
+        "目標株価の引き下げが出ている。Wells Fargoは10月に450ドルへ38%引き下げ、Morgan Stanleyは676→643ドル。調べた範囲で11月以降の引き上げは見つからなかった。",
+        "11/4は中間選挙後のデータセンター関連売りとメモリ価格上昇の懸念で約7%安。HDDにもDRAM・NANDを使うため、メモリ高はコスト要因になるとCFOが述べている。",
+        "11/19の米国株はS&P500が2.02%安、ナスダックが2.25%安。アンソロピック上場後もAI関連・半導体株の売りは止まらなかった。",
+        "7〜9月期決算の発表日は好決算でも株価が6.43%下落、時間外でさらに4.85%下落した。業績と株価の向きが一致していない。"
+      ],
+      "upcoming": [
+        "2026-12-04 配当の権利落ち（1株0.175ドル）",
+        "次の決算（2027年6月期第2四半期）: 日付は確認できていない",
+        "12月の米FOMC（利上げ観測）",
+        "東芝のHDD増産の具体的な時期・規模"
+      ],
+      "sources": [
+        {
+          "title": "WD Reports Fiscal First Quarter 2027 Financial Results（SEC Form 8-K Exhibit 99.1）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000106040/000162828026066882/a4ex991-pressreleaseq127.htm",
+          "date": "2026-10-22"
+        },
+        {
+          "title": "Western Digital Quarterly Revenue Soars 55% to $4.38 Billion, Next-Quarter Guidance Tops Estimates by More Than 10%（BigGo Finance）",
+          "url": "https://finance.biggo.com/news/4fa3ee5f-8a05-4088-bd4e-3951885e70ff",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Western Digital Q1FY27 slides: margins surge as cloud revenue hits 88%（Investing.com）",
+          "url": "https://www.investing.com/news/company-news/western-digital-q1fy27-slides-margins-surge-as-cloud-revenue-hits-88-93CH-4967696",
+          "date": "2026-10-23"
+        },
+        {
+          "title": "Western Digital Plummted 20% in The Last 3 Months（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/10/29/western-digital-plummted-20-in-the-last-3-months-two-wall-street-ratings-firms-expect-nearly-130-returns-within-12-months/",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "Storage Stocks WDC and STX Fall as Wells Fargo Slashes Price Targets Ahead of Q1 Earnings（TipRanks）",
+          "url": "https://www.tipranks.com/news/storage-stocks-wdc-and-stx-fall-as-wells-fargo-slashes-price-targets-ahead-of-q1-earnings-heres-why",
+          "date": "2026-10-17"
+        },
+        {
+          "title": "Morgan Stanley cuts Western Digital target, raises Seagate amid HDD selloff（Yahoo Finance／Investing.com）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-cuts-western-digital-131313137.html",
+          "date": "2026-10-21"
+        },
+        {
+          "title": "SanDisk Retreats 9%, Micron and Western Digital Fall 7% as Election and Memory Price Worries Weigh（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/11/04/sandisk-slides-5-micron-and-western-digital-fall-3-as-election-and-memory-price-worries-weigh/",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Stanley Druckenmiller Nearly Tripled His Seagate Stake, Bought Western Digital（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/11/17/stanley-druckenmiller-nearly-tripled-his-seagate-stake-bought-western-digital-and-sold-all-of-his-sandisk-all-three-stocks-have-fallen-since/",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Western Digital Corporation (WDC) Stock Historical Prices & Data（Yahoo Finance）",
+          "url": "https://finance.yahoo.com/quote/WDC/history/",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor（Investing.com／Reuters）",
+          "url": "https://www.investing.com/news/stock-market-news/wall-street-ends-sharply-lower-asanthropics-debut-fails-to-revive-ai-fervor-5040108",
+          "date": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "verdict": "neutral",
+      "summary": "会社の業績と見通しは良いが、AI・ストレージ関連株の売りが11/19時点でも続き、原因も収まっていないため追い風とは言えない。10/27発表の7〜9月期は売上42.3億ドル（前年比+61%）、非GAAPの1株利益7.68ドルで会社見通しを上回り、10〜12月期も売上48億ドル前後を見込む。一方で直近もCitiとMorgan Stanleyが目標株価を下げている。",
+      "why_cheap": "会社固有の悪材料は見当たらず、業界・市場全体の売りが主因と報じられている。10月の東芝の増産報道でHDD株が急落、11/4は会社のニュースがない中で中間選挙後のデータセンター関連売りで8%安。11/16の5.5%安も個別の材料は示されていない。株価は9/30から11/16までに45.9%下落した。",
+      "positives": [
+        "10/27発表の2027年6月期第1四半期は売上42.33億ドル（前年同期26.29億ドル）、非GAAPの粗利益率57.8%（前年40.1%）、非GAAPの1株利益7.68ドル（同+194%）。会社見通しと市場予想を上回った（会社発表・SEC）。",
+        "10〜12月期の会社見通しは売上48億ドル±1億ドル、非GAAPの1株利益9.20ドル±0.20ドル。",
+        "7〜9月期のフリーキャッシュフローは15億ドル。12億ドルの借入金を返済し、配当を約3%増の1株0.76ドルにした。",
+        "データセンター向け売上は34億ドル（前年比+63%）で売上の81%。ドライブの供給の大半は2028年まで契約で割り当て済みと報じられている。",
+        "市場予想の平均は「やや強気」、平均目標株価1,000.88ドル（MarketBeat、11/16時点）。BofAは10/21に1,200ドルへ引き上げ。"
+      ],
+      "negatives": [
+        "直近も目標株価の引き下げがある。11/16時点でCitiとMorgan Stanleyが引き下げたと報じられた（MarketBeat）。Wells Fargoも10月に865ドルへ27%引き下げた。",
+        "10月、東芝がHDD生産能力を倍増する方針と報じられ、STXは10%安。品薄による値上げ力が弱まる懸念が残っている。",
+        "11/4は会社のニュースがない中で8%安。中間選挙後にデータセンター・ストレージ関連がまとめて売られた。",
+        "11/19の米国株はS&P500が2.02%安、ナスダックが2.25%安。アンソロピック上場後もAI関連・半導体株の売りは止まらなかった。",
+        "株価は9/30の922.34ドルから11/16の499.00ドルまで45.9%下落。52週高値は1,145ドルで、値動きの振れが大きい（ベータ2.16）。"
+      ],
+      "upcoming": [
+        "次の決算（2027年6月期第2四半期）: 日付は確認できていない",
+        "12月の米FOMC（利上げ観測）",
+        "東芝のHDD増産の具体的な時期・規模",
+        "会社は2027年に自社株買いを増やす方針"
+      ],
+      "sources": [
+        {
+          "title": "Seagate Technology Reports Fiscal First Quarter 2027 Financial Results（SEC 提出の会社発表）",
+          "url": "https://www.sec.gov/Archives/edgar/data/1137789/000113778926000300/stxq12027pressreleasefinan.htm",
+          "date": "2026-10-27"
+        },
+        {
+          "title": "Seagate Technology Reports Fiscal First Quarter 2027 Financial Results（Seagate IR）",
+          "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-First-Quarter-2027-Financial-Results/default.aspx",
+          "date": "2026-10-27"
+        },
+        {
+          "title": "Seagate Technology Q1 Earnings Call Highlights（MarketBeat）",
+          "url": "https://marketbeat.com/instant-alerts/transcript-seagate-technology-q1-earnings-call-highlights-2026-10-27/?amp=",
+          "date": "2026-10-27"
+        },
+        {
+          "title": "Seagate (STX) Q1 2027 Earnings Call Transcript（The Motley Fool）",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/seagate-stx-q1-2027-earnings-call-transcript/",
+          "date": "2026-10-28"
+        },
+        {
+          "title": "Seagate Sinks 8%, Western Digital Down 6% on Election, Memory Price Worries（TIKR）",
+          "url": "https://www.tikr.com/blog/seagate-sinks-8-western-digital-down-6-on-election-memory-price-worries",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Seagate Tumbles 10%, Western Digital Drops 7% as Toshiba Moves to Double Hard Disk Output（Yahoo Finance）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/seagate-tumbles-10-western-digital-125250923.html",
+          "date": "2026-10-03"
+        },
+        {
+          "title": "Storage Stocks WDC and STX Fall as Wells Fargo Slashes Price Targets Ahead of Q1 Earnings（TipRanks）",
+          "url": "https://www.tipranks.com/news/storage-stocks-wdc-and-stx-fall-as-wells-fargo-slashes-price-targets-ahead-of-q1-earnings-heres-why",
+          "date": "2026-10-17"
+        },
+        {
+          "title": "Stanley Druckenmiller Nearly Tripled His Seagate Stake, Bought Western Digital（24/7 Wall St.）",
+          "url": "https://247wallst.com/investing/2026/11/17/stanley-druckenmiller-nearly-tripled-his-seagate-stake-bought-western-digital-and-sold-all-of-his-sandisk-all-three-stocks-have-fallen-since/",
+          "date": "2026-11-17"
+        },
+        {
+          "title": "Wall Street ends sharply lower as Anthropic's debut fails to revive AI fervor（Investing.com／Reuters）",
+          "url": "https://www.investing.com/news/stock-market-news/wall-street-ends-sharply-lower-asanthropics-debut-fails-to-revive-ai-fervor-5040108",
+          "date": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "ticker": "6920.T",
+      "name": "レーザーテック",
+      "verdict": "neutral",
+      "summary": "受注の見通しは大きく引き上げられたが、足元の決算は減収減益で市場予想を下回り、半導体株の売りも11/19時点で収まっていないため、材料が混在していると判断した。10/30発表の7〜9月期は売上高403億6,900万円（前年同期比25.5%減）、営業利益157億6,900万円（同41.0%減）。一方、2027年6月期の受注見通しを3,000〜4,000億円から4,000〜5,000億円に引き上げた。",
+      "why_cheap": "業界全体の売りと会社の決算の両方。11/5に14.21%安、11/16に12.84%安と急落した日は、米国のAI・半導体関連売り（中間選挙後のデータセンター規制懸念、11/16の先端AI半導体の輸出規制強化）と重なる。10/30の決算は営業利益が市場予想を100億円程度下回った。",
+      "positives": [
+        "2027年6月期の受注見通しを従来の3,000〜4,000億円から4,000〜5,000億円に引き上げた。EUV向け検査装置「ACTIS A200HiT」の量産向けリピート受注が堅調と会社が説明。",
+        "第1四半期の減益について、市場では売上計上の時期の問題とみられ、過度に悪くは受け止められていないと報じられた。",
+        "11/17に米系大手証券が強気を継続し、目標株価を53,000円に引き上げた。システムの集計でも目標株価（平均）は14日前から+0.4%で、引き下げは続いていない。",
+        "2027年6月期の会社計画は売上高2,900億円（前期比25.8%増）、営業利益1,250億円（同18.8%増）で、過去最高を見込む（8月時点）。",
+        "自己資本比率73.3%（松井証券、11/10時点）。"
+      ],
+      "negatives": [
+        "10/30発表の7〜9月期は売上高403億6,900万円（前年同期比25.5%減）、営業利益157億6,900万円（同41.0%減）、純利益107億3,400万円（同43.7%減）。営業利益は市場予想を100億円程度下回った。",
+        "11/16は前日比12.84%安の31,490円、11/5も14.21%安。半導体株の売りの日に下げ幅が大きい。",
+        "11/16に米商務省が先端AI半導体の輸出規制強化を発表。11/19の米国市場でも半導体株指数は2.4%安で、売りの原因は収まっていない。",
+        "株価は6/19の年初来高値58,580円から11/18の32,590円まで大きく下げている（日本経済新聞の株価データ）。",
+        "ACTIS A200HiT の受注は顧客の評価が終わる前から入っていると会社が説明しており、評価結果しだいで見通しが変わる余地がある。"
+      ],
+      "upcoming": [
+        "次の決算（2027年6月期第2四半期）: 日付は確認できていない",
+        "ACTIS A200HiT の顧客評価の結果",
+        "12月の米FOMC（利上げ観測）",
+        "11/16発表の米国の先端AI半導体規制の続報"
+      ],
+      "sources": [
+        {
+          "title": "レーザーテック---大幅反発、受注高見通しを大幅に引き上げ（株探／フィスコ）",
+          "url": "https://kabutan.jp/news/marketnews/?b=n202611020678",
+          "date": "2026-11-02"
+        },
+        {
+          "title": "話題株ピックアップ【夕刊】（2）：レーザーテク、サッポロ、Ｇｅｎｋｙ（株探）",
+          "url": "https://kabutan.jp/news/marketnews/?b=n202611020847",
+          "date": "2026-11-02"
+        },
+        {
+          "title": "レーザーテック、売上減少も通期受注見通しを上方修正（Investing.com）",
+          "url": "https://jp.investing.com/news/earnings/article-93CH-1734596",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "レーザーテックは上昇、受注見通しの上方修正で株価急反発!（EBC）",
+          "url": "https://www.ebc.com/jp/forex/317351.html",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "決算レポート：レーザーテック（2027年6月期受注高は大幅増へ）（楽天証券 トウシル）",
+          "url": "https://media.rakuten-sec.net/articles/-/53216",
+          "date": "2026-08-18"
+        },
+        {
+          "title": "レーザーテック(株)【6920】：株価・株式情報（Yahoo!ファイナンス）",
+          "url": "https://finance.yahoo.co.jp/quote/6920.T",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "レーザーテック(6920) 日足四本値（株探）",
+          "url": "https://kabutan.jp/stock/kabuka?code=6920&ashi=day",
+          "date": "2026-11-06"
+        },
+        {
+          "title": "【レーザーテック】[6920] 過去10年間の株価推移（日本経済新聞）",
+          "url": "https://www.nikkei.com/nkd/company/history/yprice/?scode=6920",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "6920 株価：レーザーテック（松井証券）",
+          "url": "https://finance.matsui.co.jp/stock/6920/index",
+          "date": "2026-11-10"
+        },
+        {
+          "title": "Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China（Stocktwits）",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA",
+          "date": "2026-11-16"
+        }
+      ]
     }
   ]
 }
