@@ -1,735 +1,777 @@
 {
-  "date": "2026-11-24",
-  "generated_at": "2026-11-24T07:49:00+09:00",
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T07:50:15+09:00",
   "items": [
     {
-      "ticker": "MRVL",
-      "name": "Marvell Technology",
-      "verdict": "headwind",
-      "summary": "11/2に発表したルメンタムの全額株式交換での買収をきっかけに投資判断の引き下げが2件出て、目標株価の引き下げが11/23まで続いていることが決め手。11/23の上昇（18.37%高）はエヌビディアのCEO復帰を受けた市場全体の反発と同じ日の動きで、会社固有の新しい材料は見つからなかった。AI関連の売りの原因（SECによるエヌビディアの会計調査の報道、12月の米利上げ観測、データセンター建設の規制懸念）も残っている。",
-      "why_cheap": "会社固有の要因と業界全体の売りが重なっている。会社側では、11/2にルメンタムを全額株式交換（ルメンタム1株につきマーベル4.5株、企業価値1,150億ドル）で買収すると発表し、希薄化への懸念からその日に12.72%下げた。業界側では、11/3の米中間選挙後にデータセンター建設の一時停止を掲げる州が出て11/5に約13〜16%下げ、11/16も会社のニュースがないまま7.3%下げた。11/20は半導体株指数が10.73%下げた日で、きっかけはSEC職員がエヌビディアの会計を調べているとの報道だった。",
-      "positives": [
-        "直近の決算（5〜7月期、8/27発表）は売上高27.39億ドルで前年同期比37%増、調整後1株利益は0.94ドル（前年0.67ドル）。データセンター向けの伸びは46%に加速した。",
-        "11/2の発表で、8〜10月期の売上高（速報）は従来の見通し（31.5億ドル）に沿うとし、幅を±5%から±2%に狭めた。引き下げではない。",
-        "サスケハナは11/23に目標株価を下げたが強気の判断は維持し、次の決算と見通しは予想を「やや上回る」とみている。アマゾンの7〜9月期の設備投資が予想を上回った点も挙げた。",
-        "調査会社ライスタッドは、中間選挙はデータセンター建設の条件を変えるがペースは変えないとみる。認可がまだ必要なのは見込み容量の16%にとどまるという。"
-      ],
-      "negatives": [
-        "11/3にTDコーウェンが買い→中立（目標株価350→175ドル）、バンク・オブ・アメリカが買い→中立（400→225ドル）に引き下げた。理由はルメンタム買収による希薄化と時期。",
-        "目標株価の引き下げが続く。B.ライリーは11/3に365→275ドル、11/9に250ドルへ。サスケハナは11/23に300→225ドル（理由は業界全体の株価水準の低下）。この期間に引き上げは見つからなかった。",
-        "ルメンタム買収の完了は2028年前半の見込みで、米国・EU・中国の審査が必要。規制を理由に不成立となった場合、マーベルは32億ドルの違約金を支払う。",
-        "8〜10月期の調整後粗利益率の見通しは57.5〜58.5%で、前の期の58.9%を下回る（カスタムチップの比率上昇のため）。",
-        "11/23の反発について、野村のマケリゴット氏は売り方の買い戻しによる部分が大きく「何も保証しない」と述べた。SECの会計調査とエヌビディア社内の調査は続いている。"
-      ],
-      "upcoming": [
-        "8〜10月期決算の発表と説明会 2026-12-01（米太平洋時間 13:30）",
-        "米FOMC 2026-12-08〜09（0.25%の利上げの織り込みは約96%）",
-        "ルメンタム買収の完了見込み 2028年前半"
-      ],
-      "sources": [
-        {
-          "title": "Marvell 8-K Ex. 99.1（2027年度 第2四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000022/q227_8kx812026ex-991.htm",
-          "date": "2026-08-27"
-        },
-        {
-          "title": "Marvell and Lumentum to Combine（Marvell 発表）",
-          "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "MRVL Stock Price Target Slashed In Half（Stocktwits）",
-          "url": "https://stocktwits.com/news-articles/markets/equity/mrvl-stock-price-target-slashed-in-half-material-headwinds-after-lumentum-deal-td-cowen-says-in-downgrade/cNGXRDdR95k",
-          "date": "2026-11-03"
-        },
-        {
-          "title": "Marvell Aktie: Abstufungs-Welle?（Börse Global）",
-          "url": "https://www.boerse-global.de/marvell-aktie-abstufungs-welle/841171",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Even after a cut, B. Riley's $250 target says Marvell's selloff went too far（TIKR）",
-          "url": "https://www.tikr.com/de/blog/even-after-a-cut-b-rileys-250-target-says-marvells-selloff-went-too-far",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Why Did Marvell Stock Fall Over 7%?（Trefis）",
-          "url": "https://www.trefis.com/stock/mrvl/articles/625792/why-did-marvell-stock-fall-over-7/2026-11-17",
-          "date": "2026-11-17"
-        },
-        {
-          "title": "Marvell Announces Conference Call to Review Q3 FY2027 Results（Marvell 発表）",
-          "url": "https://investor.marvell.com/news-events/press-releases/detail/1041/marvell-technology-inc-announces-conference-call-to-review-third-quarter-of-fiscal-year-2027-financial-results",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Blue wave likely to change terms of US data center growth, but not the pace（Rystad Energy）",
-          "url": "https://www.rystadenergy.com/insights/blue-wave-likely-to-change-terms-of-us-data-center-growth-but-not-the-pace",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Stock market today: Nvidia reinstates Jensen Huang（Yahoo Finance ライブ）",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html",
-          "date": "2026-11-23"
-        }
-      ]
-    },
-    {
-      "ticker": "FLEX",
-      "name": "Flex Ltd.",
+      "ticker": "6762.T",
+      "name": "ＴＤＫ",
       "verdict": "neutral",
-      "summary": "10/28の決算は予想を上回り通期見通しも引き上げたが、その後に確認できたアナリストの動きは目標株価の引き下げだけで、AI・データセンター関連の売りの原因も残っているため、材料が混在している。11/20の下げ（8.46%安）は会社固有のニュースがなく、ハイテク株全体の下げに連動したものと報じられた。11/23の市場の反発は、売り方の買い戻しによる部分が大きいとの見方がある。",
-      "why_cheap": "10月は会社固有の要因で下げた。10/13にデータセンター向け事業（Axiom）の分離の条件（20億ドルの転換優先株、2027年末までに分離できない場合はフレックスが償還を保証）が嫌われて6.9%安、10/22には44億ドルのEPCパワー買収と11億ドルのつなぎ融資、内部者の売りへの懸念で8.5%安となった。11月は業界全体の売りで、11/20はハイテク株の急落（SECがエヌビディアの会計を調べているとの報道がきっかけ）に連動して8.46%下げ、67.94ドルで終えた。",
+      "summary": "10/30の決算は過去最高で通期見通しも大きく引き上げたが、11月に入って目標株価の引き下げが2件続き（11/12、11/19）、AI・半導体株の売りの原因も収まっていないため、材料が混在している。11/24の反発はエヌビディアのCEO復帰を受けた市場全体の買い戻しと同じ日の動きで、会社固有の新しい材料は見つからなかった。11/24の米国市場では半導体株が再び売られている。",
+      "why_cheap": "会社固有の要因と業界全体の売りが重なっている。会社側では、10/30に通期見通しと配当を引き上げたのに、決算後に株価は7.2%下げた。フリーキャッシュフローの見通しが赤字（−500億円）に変わったことや設備投資の増額、スマートフォン生産の落ち込みが理由に挙げられている。業界側では、11/3の米中間選挙後にデータセンター規制の懸念でAI・半導体株が売られ、11/16〜20の週に米半導体株指数が約17%下げた。日経平均が5.06%下げた11/20には、ＴＤＫも6.91%下げて2,116.5円で終えた。",
       "positives": [
-        "7〜9月期（10/28発表）の売上高は84.91億ドルで前年同期比25%増。調整後1株利益は1.18ドル（前年0.79ドル）で、予想の1.05ドルを12.4%上回った。",
-        "通期見通しを引き上げた。売上高337〜352億ドル→349〜359億ドル、調整後1株利益4.42〜4.74ドル→4.84〜5.16ドル、調整後営業利益率7.0〜7.2%→7.6〜7.8%。",
-        "クラウド・電源インフラ部門の売上高は25.1億ドル（前年16.3億ドル）で、調整後営業利益率は10.7%。通期の伸びは75〜85%を見込む。",
-        "Axiomの説明資料（11/10提出）では、2027年の売上高見通し200〜210億ドルに対し、見込み額の95%が確保済みとしている。",
-        "11/2の臨時株主総会でAxiomの分離が承認された（賛成3億1,030万、反対20万）。"
+        "上期（4〜9月、10/30発表）は売上高1兆5,606億円（前年同期比31.9%増）、営業利益2,082億円（同41.0%増）。7〜9月期は売上高8,196億円（同26.6%増）、営業利益1,218億円（同33.6%増）で、どちらも過去最高。",
+        "通期見通しを引き上げた。売上高2兆5,800億円→3兆500億円、営業利益2,950億円→3,650億円、純利益2,250億円→2,800億円。年間配当も40円→50円。為替の前提は1ドル150円→157円。",
+        "AIデータセンター向けが伸びている。上期のHDD関連（磁気応用製品）は売上高52.8%増・営業利益178.1%増、受動部品は営業利益167.9%増。AI関連の売上は前年同期の約1.7倍で、期初の想定（約1.2倍）を上回った。",
+        "決算の後、ゴールドマン・サックスが目標株価を4,900→5,000円（11/2）、マッコーリーが4,800→5,200円（11/4）に引き上げた。11月に目標株価を下げた2社も、強気の判断は変えていない。",
+        "11/24の前場は、エヌビディアのCEO復帰を受けたAI・半導体株の買い戻しの中で、ＴＤＫも上昇銘柄に挙げられた。"
       ],
       "negatives": [
-        "確認できた目標株価の変更は引き下げだけ。キーバンク180→128ドル（11/12）、バークレイズ144→128ドル（10/29）、ベアード142→135ドル（10/20）、ゴールドマン154→145ドル（10/16）。引き上げは見つからなかった。",
-        "Axiomの売上は大口のクラウド事業者2社への依存が大きい（説明資料に「ハイパースケーラー1」で30超、「同2」で15超の案件と記載）。データセンター投資が鈍ると影響を受けやすい。",
-        "11/20の市場解説は、半導体の輸出規制の強化と、データセンター投資の減速の可能性をリスクに挙げた。データセンター建設の規制懸念（テキサス州など）も解消していない。",
-        "11/23の反発について、野村のマケリゴット氏は売り方の買い戻しによる部分が大きいと述べ、ローゼンバーグ氏は一時的な戻りと評した。SECによるエヌビディアの会計調査は続いている。"
+        "11月に入り目標株価の引き下げが2件続いた。バンク・オブ・アメリカ4,100→3,700円（11/12）、シティグループ4,500→3,500円（11/19）。その後の引き上げは見つからなかった。集計サイトの平均は3,930円（11/20時点）。",
+        "会社は10〜12月期の売上高を前の四半期より2〜5%減と見込む。スマートフォン向け小型電池（4〜7%減）とセンサ（7〜10%減）が減る見通し。今期のスマートフォン生産台数の前提も前期比10%減→15%減に下げた。",
+        "通期のフリーキャッシュフロー見通しは600億円の黒字→500億円の赤字に変わった。設備投資を3,700億円→4,000億円に増やすためで、主にAIデータセンター向けHDD部品の増産に充てる。AI需要が鈍ると影響を受けやすい。",
+        "売りの原因は残っている。エヌビディアはCEOが復帰したが、SECの会計調査（初期段階と報道）は続き、12/3に議会証言がある。米国の対中関税引き上げ観測と輸出規制の強化も警戒されている。",
+        "11/24の米国市場ではエヌビディアやマイクロンなど半導体株が再び売られた。12月の米利上げは織り込み済みで、0.5%の利上げを求めるFRB理事の発言もある。",
+        "11/24の日経平均（58,644円）は25日・75日・200日移動平均をすべて下回っており、反発は一時的な戻りの可能性があるとの見方が出ている。"
       ],
       "upcoming": [
-        "Axiomの分離は2027年1〜3月を目標（基準日は未定）",
-        "次の決算（10〜12月期）は外部の予定表では 2027-02-02。会社の発表は確認できていない",
-        "米FOMC 2026-12-08〜09（0.25%の利上げの織り込みは約96%）"
+        "エヌビディアCEOの米議会証言 2026-12-03",
+        "米FOMC 2026-12-09（12月利上げの織り込みは11/12時点で100%）",
+        "次の決算（10〜12月期）の発表日は確認できなかった",
+        "次期中期経営計画の説明会 2027年5月（会社資料）"
       ],
       "sources": [
         {
-          "title": "Flex Reports Second Quarter Fiscal 2027 Results（Flex 発表／Finviz 掲載）",
-          "url": "https://finviz.com/news/409832/flex-reports-second-quarter-fiscal-2027-results",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Flex Q2 Earnings Beat Estimates on CPI Strength, Outlook Raised（Zacks）",
-          "url": "https://www.zacks.com/stock/news/3017125/flex-q2-earnings-beat-estimates-on-cpi-strength-outlook-raised",
-          "date": "2026-10-28"
-        },
-        {
-          "title": "Flex Stock Gets Price Target Reduction from KeyCorp（MarketBeat）",
-          "url": "https://www.marketbeat.com/instant-alerts/analyst-flex-nasdaq-flex-stock-gets-price-target-reduction-from-keycorp-2026-11-12/",
-          "date": "2026-11-12"
-        },
-        {
-          "title": "Flex falls 8% amid tech sector pullback（Seeking Alpha）",
-          "url": "https://seekingalpha.com/news/4675277-flex-falls-8-percent-amid-tech-sector-pullback",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "Flex Stock Falls 8.5%（MarketBeat）",
-          "url": "https://www.marketbeat.com/instant-alerts/price-flex-nasdaq-flex-stock-falls-85-heres-what-happened-2026-10-22/",
-          "date": "2026-10-22"
-        },
-        {
-          "title": "Flex Form 8-K Exhibit 99.2（Axiom 説明資料）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000119312526454502/d150156dex992.htm",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Flex Form 8-K Item 5.07（臨時株主総会の結果）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000866374/000086637426000045/flex-20261102.htm",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Stock Market Today, Nov. 20（Motley Fool）",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-nvidia-s-usd2-5-trillion-rout-deepens-as-sec-accounting-probe-adds-to-wall-street-s-ai-sell-off/",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "AI stocks roar back...（AOL）",
-          "url": "https://www.aol.com/articles/ai-stocks-roar-back-brutal-145142000.html",
-          "date": "2026-11-23"
-        }
-      ]
-    },
-    {
-      "ticker": "CIEN",
-      "name": "Ciena",
-      "verdict": "neutral",
-      "summary": "会社の業績と見通しは良い（来期売上高は30%以上の伸びを見込む）が、株価を下げたAI関連の売りの原因がまだ収まっておらず、12/10に決算発表を控えているため、材料が混在している。11/5の下げ（15%安）は会社固有のニュースがなく、米中間選挙後にAI向け設備投資のペースが疑われたことによる光通信・ネットワーク株全体の売りだった。目標株価は11/16に1件の引き下げがあった。",
-      "why_cheap": "主に業界全体の売り。11/5、民主党が上下両院を制した中間選挙の結果を受けてAI向け設備投資のペースへの疑問が広がり、光通信・ネットワーク株がまとめて売られ、シエナは15%安の230.81ドルで終えた。この日はシエナに関するアナリストの動きや会社のニュースは挙がっていない。11/4までの1か月でも38.6%下げており、会社側のリスクとして、粗利益率の見通しが前の期を下回ること、カナダ関税（四半期あたり約1,000万ドル）、部品の供給制約が挙げられていた。",
-      "positives": [
-        "5〜7月期（9/3発表）の売上高は16.711億ドルで前年同期比37.0%増。調整後1株利益は2.11ドル（前年0.67ドル）で、予想の1.74ドルを上回った。調整後粗利益率は46.4%（前年41.9%）。",
-        "2026年度の売上高見通しの中心値を1.2億ドル引き上げ、64.2億ドル±0.5億ドルとした。受注残は85億ドル。",
-        "2027年度は売上高83〜84億ドル（30%以上の伸び）、調整後営業利益率25〜27%を見込み、受注残は期末に100億ドルを超える見通し。",
-        "大手クラウド5社の2026年の設備投資は8,030〜8,280億ドルの見込みで、アマゾンとアルファベットは2027年の増額を示唆した（10/30時点）。",
-        "バーンスタインは11/16に目標株価440ドル・買いを維持した。11/9にはアリスタの決算を受けた業界の持ち直しで約10%上げた。"
-      ],
-      "negatives": [
-        "TDコーウェンが11/16に目標株価を400→375ドルに下げた（買いは維持）。Zacksの格付けは11/6の「買い」から11/23には「中立」になった。",
-        "顧客が集中している。上位2社で5〜7月期の売上高の41.7%、クラウド事業者への直接販売が53%を占め、データセンター投資の変化の影響を受けやすい。",
-        "8〜10月期の調整後粗利益率の見通しは45%±0.5ポイントで、前の期の46.4%を下回る。供給制約は2027年、場合によっては2028年まで続く見込み。",
-        "マイクロソフトは外部の設備の遅れを理由に2026年の設備投資額を下げた。テキサス州などのデータセンター建設の規制懸念は解消していない。",
-        "11/23の市場の反発について、野村のマケリゴット氏は売り方の買い戻しによる部分が大きいと述べた。SECによるエヌビディアの会計調査は続いている。"
-      ],
-      "upcoming": [
-        "8〜10月期・通期決算の発表 2026-12-10（米国の取引開始前。説明会は米東部時間 8:30）",
-        "米FOMC 2026-12-08〜09（0.25%の利上げの織り込みは約96%）"
-      ],
-      "sources": [
-        {
-          "title": "Ciena 8-K Ex. 99.1（2026年度 第3四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000936395/000162828026060245/ex9912026q3earningspressre.htm",
-          "date": "2026-09-03"
-        },
-        {
-          "title": "CIEN Falls 15.2% in a Week as AI Growth Faces Persistent Supply Risks（Zacks）",
-          "url": "https://www.zacks.com/stock/news/2988629/cien-falls-15.2-in-a-week-as-ai-growth-faces-persistent-supply-risks",
-          "date": "2026-09-11"
-        },
-        {
-          "title": "Ciena Eyes 30% Revenue Growth in FY27（Zacks）",
-          "url": "https://zacks.com/stock/news/3025356/ciena-eyes-30-revenue-growth-in-fy27-can-strong-demand-sustain-it",
-          "date": "2026-11-06"
-        },
-        {
-          "title": "Cisco Falls 7% on Morgan Stanley Downgrade; Ciena Plunges 15%（24/7 Wall St.）",
-          "url": "https://247wallst.com/investing/2026/11/05/cisco-falls-7-on-morgan-stanley-downgrade-ciena-plunges-15-arista-networks-tumbles-10/",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Can Ciena Stock Fall 40%?（Yahoo Finance）",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ciena-stock-fall-40-103553100.html",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Ciena (CIEN) Stock Forecast（TipRanks）",
-          "url": "https://www.tipranks.com/stocks/cien/forecast",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "Ciena vs. Cisco: Which Optical Networking Stock is the Better Buy?（Yahoo Finance／Zacks）",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ciena-vs-cisco-optical-networking-130300028.html",
-          "date": "2026-11-23"
-        },
-        {
-          "title": "AI hyperscalers are expected to finish the year spending a whopping $828 billion on capex（Hargreaves Lansdown）",
-          "url": "https://www.hl.co.uk/news/ai-hyperscalers-are-expected-to-finish-the-year-spending-a-whopping-828-billion-on-capex",
+          "title": "2027年3月期 中間期決算説明会資料（TDK 発表）",
+          "url": "https://www.tdk.com/system/files/20272q_1i3qdleu_ja.pdf",
           "date": "2026-10-30"
         },
         {
-          "title": "Ciena Announces Reporting Date and Web Broadcast（Ciena 発表／Finviz 掲載）",
-          "url": "https://finviz.com/news/421814/ciena-announces-reporting-date-and-web-broadcast-for-fiscal-fourth-quarter-and-year-end-2026-results",
-          "date": "2026-11-12"
+          "title": "TDK、2026年度上半期に過去最高益を記録するも株価は7.2%下落（Investing.com）",
+          "url": "https://jp.investing.com/news/transcripts/article-93CH-1735908",
+          "date": "2026-11-01"
         },
         {
-          "title": "Stock market today: Nvidia reinstates Jensen Huang（Yahoo Finance ライブ）",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html",
-          "date": "2026-11-23"
-        }
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum",
-      "verdict": "neutral",
-      "summary": "会社自身の業績と見通しは強い（7〜9月期の売上高は前年の約2.4倍、次の四半期の見通しも予想超え）が、マーベルによる株式交換での買収が決まっているため株価はマーベル株に連動しやすく、そのマーベルで目標株価の引き下げが続いていることから、材料が混在している。11/23の上昇（18.20%高）はマーベル（18.37%高）とほぼ同じで、エヌビディアのCEO復帰を受けた市場全体の反発の日だった。",
-      "why_cheap": "会社固有の要因（買収の条件）と業界全体の売りが重なっている。11/2にマーベルが、ルメンタム1株につきマーベル4.5株の株式交換（下限の取り決めなし）で買収すると発表した。マーベル株の下落に伴い、計算上の買収額は10/28時点の約1,132ドルから11/4には約719ドル、11/6には約635ドルに縮んだ。業界側では11/5の中間選挙後のAI関連の売りで15%下げ、11/20もハイテク株全体の下げの中で約10%下げた（会社固有のニュースは挙がっていない）。",
-      "positives": [
-        "7〜9月期（11/2発表）の売上高は12.626億ドル（前年同期5.338億ドル、前の期10.063億ドル）。調整後1株利益は4.57ドル（前年1.10ドル）で、予想の4.21ドルを上回った。",
-        "10〜12月期の見通しは売上高15.75〜16.25億ドル、調整後1株利益5.90〜6.20ドル。売上高はアナリスト予想の14.8億ドルを上回る。",
-        "光電融合（CPO）向けの2件目の採用で、50億ドルを超える購入の約束を得ている。CEOは11/6に「需要はこれ以上ないほど強い」と述べ、部品は2029年初めまで売り切れと報じられた。",
-        "米政府が中国製の新しい光トランシーバーの輸入制限を進めていると11/17に報じられ、株価は約8%上げた（規則は未確定）。"
-      ],
-      "negatives": [
-        "買収の対価はマーベル株だけで下限がないため、株価はマーベル次第になりやすい。マーベルでは11/3に投資判断の引き下げが2件あり、11/23にもサスケハナが目標株価を300→225ドルに下げた。",
-        "バーンスタインは11/9に目標株価を900→635ドルに下げた（強気は維持）。B.ライリー（中立）の11/17〜18の目標株価変更は、資料によって方向が食い違っており確認できていない。",
-        "買収の完了は2028年前半の見込みで、株主と各国（中国を含む）の承認が必要。完了まで不確かさが長く残る。",
-        "中国製品の輸入制限に対し、中国がインジウムリン（レーザーの材料）の輸出制限で対抗するおそれがあると業界が警告している。",
-        "CEOと部門責任者が11月半ばに約87万ドル分の自社株を売った（事前に決めた計画に基づく売却）。",
-        "11/23の市場の反発は売り方の買い戻しによる部分が大きいとの見方がある。SECによるエヌビディアの会計調査は続いている。"
-      ],
-      "upcoming": [
-        "マーベルの決算発表 2026-12-01",
-        "ルメンタムの10〜12月期決算は2027年2月の見込み（日付は確認できていない）",
-        "マーベルによる買収の完了見込み 2028年前半",
-        "米FOMC 2026-12-08〜09"
-      ],
-      "sources": [
-        {
-          "title": "Lumentum 8-K Ex. 99.1（2027年度 第1四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001633978/000162828026068655/lite_ex991xq1fy27.htm",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "Why Lumentum Stock Fell 14.9% Today（Motley Fool）",
-          "url": "https://www.fool.com/investing/2026/11/02/why-lumentum-stock-fell-14-9-today/",
-          "date": "2026-11-02"
-        },
-        {
-          "title": "Lumentum Sinks 15% as AI Chip Selloff Deepens（TIKR）",
-          "url": "https://www.tikr.com/blog/lumentum-sinks-15-as-ai-chip-selloff-deepens",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Lumentum Sinks 11% in a Week as Marvell's All-Stock Offer Shrinks（TIKR）",
-          "url": "https://www.tikr.com/blog/lumentum-sinks-13-in-a-week-as-marvells-all-stock-offer-shrinks-our-demand-couldnt-be-stronger",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Why is Lumentum stock sliding today?（Investing.com）",
-          "url": "https://in.investing.com/news/stock-market-news/why-is-lumentum-stock-sliding-today-93CH-5713055",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "Lumentum Stock: B. Riley cuts price target to USD 659（ad-hoc-news）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/lumentum-stock-b-riley-cuts-price-target-to-usd-659/70527698",
-          "date": "2026-11-17"
-        },
-        {
-          "title": "Lumentum retreats 10% as tech suffers pullback（Seeking Alpha）",
-          "url": "https://seekingalpha.com/news/4675217-lumentum-retreats-10-as-tech-suffers-pullback",
+          "title": "TDK (6762) レーティング・目標株価の一覧（kabuka.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6762.html",
           "date": "2026-11-20"
         },
         {
-          "title": "Why Lumentum Holdings Stock Trounced the Market Today（Motley Fool）",
-          "url": "https://www.fool.com/investing/2026/11/23/why-lumentum-holdings-stock-trounced-the-market-today/",
-          "date": "2026-11-23"
+          "title": "【アナリスト評価】ＴＤＫ、レーティング強気を継続、目標株価5,200円に引上げ（アイフィス株予報／Yahoo!ファイナンス）",
+          "url": "https://finance.yahoo.co.jp/news/detail/60ead347632d2fae065dafd55ace2c9a639fbe4f",
+          "date": "2026-11-02"
+        },
+        {
+          "title": "【日本株】エヌビディアCEO復帰で株価は急反発したものの下落基調は継続!?（ザイ・オンライン、藤井英敏）",
+          "url": "https://diamond.jp/zai/articles/-/1076019",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "日経平均は大幅反発、エヌビディアCEO復帰でAI関連株に買い戻し（フィスコ／Investing.com 掲載）",
+          "url": "https://jp.investing.com/news/stock-market-news/article-1768552",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "Rubber Band Market Snaps Back, Dragged by Nvidia（Charles Schwab Market Update）",
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "早朝版・11月25日の株式市場を前に。（ラジオNIKKEI マーケットプレス）",
+          "url": "https://www.radionikkei.jp/marketpress/post_16322.html",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "Nvidia Faces an SEC Probe, According to Press Reports（Motley Fool）",
+          "url": "https://www.fool.com/investing/2026/11/24/nvidia-faces-an-sec-probe-according-to-press-reports-should-you-still-buy-the-stock/",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "There's Now a 100% Chance of a Fed Rate Hike in December（Motley Fool／Mitrade 掲載）",
+          "url": "https://www.mitrade.com/insights/news/live-news/article-8-2256575-20261116",
+          "date": "2026-11-16"
         }
       ]
     },
     {
-      "ticker": "VRT",
-      "name": "Vertiv",
+      "ticker": "FSLR",
+      "name": "First Solar",
       "verdict": "headwind",
-      "summary": "11/23にベアードが投資判断を引き下げ（目標株価320→200ドル）、その前の週にはバンク・オブ・アメリカが推奨リストから外すなど、弱気の変更が続いていることが決め手。業績は強く通期見通しも10/28に引き上げたが、売りの原因であるデータセンター建設の規制懸念（テキサス州など）は解消していない。11/23の上昇はエヌビディアのCEO復帰を受けた市場全体の反発によるもので、会社固有の材料ではない。",
-      "why_cheap": "主に業界全体の売りで、会社固有の悪材料は見つからなかった。10/28の好決算で上げた分を、11/3の米中間選挙後の約1週間で失った。テキサス州知事に当選したヒノホサ氏がデータセンター建設の一時停止を公約しており、投票後の1週間で11%下げた。その後も、エヌビディアのCEO辞任（11/12）やSECの会計調査の報道（11/20）でAI関連株がまとめて売られ、11/16〜20の週はS&P500が8.6%、ナスダックが10.0%下げた。",
+      "summary": "10/29発表の7〜9月期決算で2026年通期の売上高・販売量・調整後EBITDAの見通しを引き下げ、その後に投資判断の引き下げ1件と目標株価の引き下げが複数続いたことが決め手。株価の下げは会社固有の要因（受注の鈍さ）が中心で、金利上昇による太陽光株全体の売りも重なった。11/20前後の安値と反発を説明する新しい材料は見つからなかった。",
+      "why_cheap": "会社固有の要因が中心で、業界の売りが重なっている。10/29の決算で売上高が予想に届かず、通期の売上高見通しを下げた。受注は前回の説明会以降1.4GWにとどまり、関税（通商拡大法232条）後の値上げをした価格での契約はまだ結べていないと指摘された。中間選挙後の11/4に10%近く上げたが、その後は7営業日続けて下げ（合計23.9%安）、11/17の終値152.97ドルは過去1年で最も低かった。この間、長期金利の上昇（10年債利回りは11/13に5.15%）で太陽光株がまとめて売られた。",
       "positives": [
-        "7〜9月期（10/28発表）の売上高は43.13億ドルで前年同期比61%増。調整後1株利益は2.21ドル（78%増）で、予想の1.82ドルを上回った。調整後営業利益率は25.2%。",
-        "受注は前年同期比で100%を超える伸び（為替・買収の影響を除く）。調整後フリーキャッシュフローは6.52億ドルで50%増。",
-        "2026年通期の見通しを全項目で引き上げた（売上高は6.5億ドル増の144.5〜148.5億ドル、調整後1株利益7.10〜7.20ドル）。10〜12月期の見通しも予想を上回る。",
-        "テキサス州の環境当局は11/16〜17にデータセンターの許可審査を再開した。",
-        "ベアードは引き下げについて、目先の業績への見方ではないと説明している。バーンスタインは強気・目標株価376ドルを維持（11/11時点）。"
+        "7〜9月期の純利益は5.71億ドル、1株利益は5.30ドル（前年同期4.24ドル、25%増）で、予想の4.64ドルを上回った。粗利益率は約58%。",
+        "受注残は9/30時点で44.0GW、約135億ドル分あり、納入は2030年まで続く。5億ドルの自社株買いの枠を新たに決めた。",
+        "11/3の中間選挙で民主党が上下両院を制し、再生可能エネルギーの優遇策がこれ以上削られにくくなったとの見方がある。製造向けの税額控除（45X）は現行法で残っており、縮小が始まるのは2030年。",
+        "決算後、みずほが目標株価を328ドルに上げ、ウィリアム・ブレアは選挙結果を理由に投資判断を引き上げた。UBSは目標株価を下げたが買いを維持し、2027〜28年の利益予想は上げた。",
+        "輸入パネルへの関税（232条）と最低輸入価格について、CEOは米国の太陽光製造の「構造的な変化」と述べ、新規案件の提示価格を上げている。"
       ],
       "negatives": [
-        "ベアードが11/23に強気→中立、目標株価320→200ドルに引き下げた。AIデータセンターへの見方が改善するまで買い手が戻らないとし、アジア太平洋と輸出規制のリスクも挙げた。",
-        "バンク・オブ・アメリカは11/23の前の週に推奨リスト（US 1 List）から外した。JPモルガンは中立・240ドルで調査を再開。目標株価の平均は7月半ばの381ドルから338ドルに下がった（11/11時点）。",
-        "テキサス州の送電網運営者（ERCOT）は新しい大口需要の接続の停止を続けている。ヒノホサ氏は11/19に新規データセンター許可の禁止を改めて求めた（就任は2027-01-19）。",
-        "11/16に米商務省が先端半導体の輸出に許可を求める国を5か国（インドネシア、マレーシア、シンガポール、タイ、ブラジル）増やす規則を出した。",
-        "11/23の市場の反発は売り方の買い戻しによる部分が大きいとの見方がある。12月の米利上げの織り込みは約96%。"
+        "2026年通期の見通しを下げた。売上高49〜52億ドル→46〜49億ドル、販売量17〜18.2GW→16〜17GW、調整後EBITDA 26〜28億ドル→25.5〜27.5億ドル。7〜9月期の売上高12.3億ドル（前年同期比23%減）は予想の13.1億ドルに届かなかった。",
+        "GLJリサーチが10/30に買い→中立（目標株価161ドル）に下げた。値上げ後の価格での契約がまだなく、2029〜30年分の受注が薄いことを理由に挙げた。",
+        "目標株価の引き下げが続いた。UBS 330→295ドル（11/10）、サスケハナ270→246ドル、フリーダム280→248ドル、ニーダム236ドルへ、BMO 255ドルへ（いずれも決算後）。",
+        "開発業者が2029〜30年向けの発注を先送りしている。理由は送電網への接続の遅れ、資金調達の費用、データセンター計画への地元の反対、関税の運用の不透明さ。州の建設停止措置で2GWの契約見込みが崩れた。",
+        "中間選挙ではデータセンター建設を制限する住民投票41件のうち40件が可決された。太陽光の伸びの一部はデータセンター向けの電力需要に結びついており、建設が遅れると影響を受けるとの指摘がある。",
+        "2026年は3四半期続けてフリーキャッシュフローが赤字（合計8.37億ドルの流出）。金利面でも、12月の米利上げ（0.25%）の織り込みは約95%（11/24時点）。"
       ],
       "upcoming": [
-        "ERCOTの監査報告 2026-12-10（目標）、テキサス州公益事業委員会の会合 2026-12-17（見込み）",
-        "テキサス州議会の開会 2027-01-12、新知事の就任 2027-01-19",
-        "10〜12月期決算と2027年見通しは 2027-02-10 と報じられている（会社の発表は確認できていない）",
-        "米FOMC 2026-12-08〜09"
+        "輸入太陽光パネルへの関税・最低輸入価格（232条）の発効 2026年12月初め",
+        "米FOMC 2026年12月（0.25%の利上げの織り込みは約95%）",
+        "次の決算（10〜12月期、新規受注の開示）は2027年2月の見込み（日付は確認できていない）",
+        "マレーシア工場（年1.8GW）を続けるか閉じるかの判断 2027年前半"
       ],
       "sources": [
         {
-          "title": "Vertiv Form 8-K Ex. 99.1（2026年 第3四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026067707/q32026exhibit991vrt10282026.htm",
-          "date": "2026-10-28"
+          "title": "First Solar sales down 23% year-on-year, cuts full-year revenue guidance（PV Tech）",
+          "url": "https://www.pv-tech.org/first-solar-sales-down-23-year-on-year-cuts-full-year-revenue-guidance/",
+          "date": "2026-10-30"
         },
         {
-          "title": "Earnings Whispers VRT（予想との比較）",
-          "url": "https://www.earningswhispers.com/epsdetails/VRT/202609",
-          "date": "2026-10-28"
+          "title": "FSLR Q3 Earnings Call Highlights Pricing Shift and Outlook Cut（Zacks）",
+          "url": "https://zacks.com/stock/news/3019673/fslr-q3-earnings-call-highlights-pricing-shift-and-outlook-cut",
+          "date": "2026-10-30"
         },
         {
-          "title": "Why Is Vertiv Stock (VRT) Rallying Today Despite Baird's Downgrade?（TipRanks）",
-          "url": "https://www.tipranks.com/news/why-is-vertiv-stock-vrt-rallying-today-despite-bairds-downgrade",
-          "date": "2026-11-23"
+          "title": "GLJ Research downgrades First Solar stock rating on pricing concerns（Investing.com）",
+          "url": "https://www.investing.com/news/analyst-ratings/glj-research-downgrades-first-solar-stock-rating-on-pricing-concerns-93CH-4987983",
+          "date": "2026-10-30"
         },
         {
-          "title": "Vertiv Beat Big, Then Got Crushed by the Midterms（TIKR）",
-          "url": "https://www.tikr.com/blog/vertiv-beat-big-then-got-crushed-by-the-midterms-why-bernstein-sees-82-upside",
-          "date": "2026-11-11"
-        },
-        {
-          "title": "Vertiv Sinks 11% in a Week as Midterm Sweep Hits Data Center Stocks（TIKR）",
-          "url": "https://www.tikr.com/blog/vertiv-sinks-11-in-a-week-as-midterm-sweep-hits-data-center-stocks",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Texas Data Center Critical Dates and Procedures Following the 2026 Elections（Gibson Dunn）",
-          "url": "https://www.gibsondunn.com/texas-data-center-critical-dates-and-procedures-following-the-2026-elections/",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "Hinojosa calls for data center moratorium, Perry files Senate bill（KCBD）",
-          "url": "https://www.kcbd.com/2026/11/20/hinojosa-calls-data-center-moratorium-perry-files-senate-bill/",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "'AI Diffusion' 2.0: BIS Introduces New Export Controls（Skadden）",
-          "url": "https://www.skadden.com/insights/publications/2026/11/ai-diffusion-2-bis-introduces-new-export-controls",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "US stocks rebound as battered AI and chip stocks rally after correction（Fox Business）",
-          "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026",
-          "date": "2026-11-23"
-        }
-      ]
-    },
-    {
-      "ticker": "AXON",
-      "name": "Axon Enterprise",
-      "verdict": "headwind",
-      "summary": "11/5発表の7〜9月期決算で売上高・利益とも市場予想に届かず、通期の売上高の伸びの見通しを32〜34%から約30%に下げ、その後に目標株価の引き下げが5件以上続いたことが決め手。株価の下げは会社固有の要因が中心で、決算翌日の11/6に18.2%下げた。11/20以降の新しい材料や、引き上げ方向の変更は見つからなかった。",
-      "why_cheap": "会社固有の要因が中心。11/5の決算で1株利益（調整後1.72ドル、予想1.90ドル）と売上高（9.09億ドル、予想9.31億ドル）が予想に届かず、連邦政府向けのドローン対策（Dedrone）3案件（約1.3億ドル）が2026年の予想から外れて通期見通しを下げた。粗利益率も下がり（経営陣は半導体メモリーの値上がりと製品構成を理由に挙げた）、7〜9月期のフリーキャッシュフローは1,900万ドルの流出だった。株価は11/6に18.2%下げ、8/14から11/12までに49.9%下げた（同じ期間のS&P500は2.2%安）。",
-      "positives": [
-        "7〜9月期の売上高は9.086億ドルで前年同期比28%増。最終損益は5,700万ドルの黒字（前年同期は220万ドルの赤字）。調整後EBITDAは2.357億ドルで33%増。",
-        "将来の契約済み受注は158億ドルで39%増。年間の継続収入は17.5億ドルで40%増、既存顧客の売上維持率は126%。",
-        "RBCは連邦政府向け案件について、調達の時期と選挙の影響による「取り消しではなく遅れ」とみている。",
-        "目標株価を下げた各社（RBC、ニーダム、ノースランド、バークレイズ、レイモンド・ジェームズ）は、いずれも強気の投資判断を維持した。"
-      ],
-      "negatives": [
-        "1株利益は予想を9.5%、売上高は2.4%下回った。調整後粗利益率は59.2%（前年62.7%）に低下し、ソフト・サービス部門では44.6%（前年52.1%）だった。",
-        "通期見通しを下げた。売上高の伸び32〜34%→約30%（36.1〜36.3億ドル）、フリーキャッシュフロー4.5億ドル→3.5〜4.0億ドル。",
-        "目標株価の引き下げが続いた。RBC 735→615ドル、ノースランド800→540ドル（ともに11/6）、ニーダム750→500ドル、バークレイズ688→507ドル、レイモンド・ジェームズ675→475ドル。",
-        "目標株価の平均は10月下旬の680ドルから541ドルに下がった（11/10時点）。11/5以降の引き上げは見つからなかった。",
-        "ドローン企業Skydioへの12億ドルの出資で、現金で払う割合が約60%から約90%に変わった（11/18提出）。負債29.69億ドルに対し現金は16.55億ドル。9月には10億ドルの転換社債も発行している。"
-      ],
-      "upcoming": [
-        "10〜12月期決算と2027年見通しは2027年2月下旬の見込み（日付は確認できていない）",
-        "Skydioへの出資の実行は2026年10〜12月期と2027年1〜3月期の見込み"
-      ],
-      "sources": [
-        {
-          "title": "Axon Reports Record Q3 2026 Revenue of $909 Million（Axon 発表／Finviz 掲載）",
-          "url": "https://finviz.com/news/417562/axon-reports-record-q3-2026-revenue-of-909-million-up-28-year-over-year",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Axon Q3 Earnings Miss Estimates as Margins Narrow（Zacks）",
-          "url": "https://zacks.com/stock/news/3025433/axon-enterprise-q3-earnings-miss-estimates-as-margins-narrow",
+          "title": "Democratic sweep in US midterms brings reprieve for solar but federal gridlock persists（PV Tech）",
+          "url": "https://www.pv-tech.org/democratic-sweep-in-us-midterms-brings-reprieve-for-solar-but-federal-gridlock-persists/",
           "date": "2026-11-06"
         },
         {
-          "title": "Axon Is Down 52% From Its August High. Northland Still Sees $540（TIKR）",
-          "url": "https://www.tikr.com/blog/axon-is-down-52-from-its-august-high-northland-still-sees-540",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Axon Sinks 27% in a Week to a New 52-Week Low（TIKR）",
-          "url": "https://www.tikr.com/blog/axon-sinks-27-in-a-week-to-a-new-52-week-low-is-the-selling-overdone",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Axon Stock After Q3 2026（Top1 Markets）",
-          "url": "https://www.top1markets.com/news/axon-stock-q3-2026-dedrone-delay-skydio-free-cash-flow",
-          "date": "2026-11-08"
-        },
-        {
-          "title": "Why Did Axon Stock Fall?（Trefis）",
-          "url": "https://www.trefis.com/stock/axon/articles/624968/why-did-axon-stock-fall/2026-11-13",
+          "title": "US midterms: data centre backlash could slow solar's AI boom（PV Tech）",
+          "url": "https://www.pv-tech.org/us-midterms-data-centre-backlash-could-slow-solars-ai-boom/",
           "date": "2026-11-13"
         },
         {
-          "title": "Is It Too Early To Buy Axon Enterprise Stock?（Trefis）",
-          "url": "https://www.trefis.com/stock/axon/articles/626863/is-it-too-early-to-buy-axon-enterprise-stock/2026-11-19",
-          "date": "2026-11-19"
+          "title": "How Low Can First Solar Stock Go?（Trefis）",
+          "url": "https://www.trefis.com/stock/fslr/articles2/624933/how-low-can-first-solar-stock-go/2026-11-13",
+          "date": "2026-11-13"
         },
         {
-          "title": "Axon Form 8-K（Skydio 出資条件の変更）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001069183/000162828026074663/axon-20261113.htm",
+          "title": "First Solar and Enphase Fall 5% as Solar Selloff Stretches On; SolarEdge Drops 4%（24/7 Wall St.／now.solar 掲載）",
+          "url": "https://now.solar/2026/11/18/first-solar-and-enphase-fall-5-as-solar-selloff-stretches-on-solaredge-drops-4-24-7-wall-st/",
           "date": "2026-11-18"
+        },
+        {
+          "title": "Stock market today: Dow rises, S&P 500 and Nasdaq decline as chip sector tumbles（Yahoo Finance ライブ）",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html",
+          "date": "2026-11-24"
         }
       ]
     },
     {
-      "ticker": "DELL",
-      "name": "Dell Technologies",
-      "verdict": "neutral",
-      "summary": "8〜10月期決算の発表が11/24の米国市場の取引終了後に控えており、結果がまだ出ていないため判断の材料がそろっていない。前回（9/1）は通期見通しを大きく引き上げたが、11月はAI関連の売りで会社のニュースがないまま下げ、目標株価は引き下げが多い（引き上げは1件）。11/23の約23%の上昇はエヌビディアのCEO復帰を受けた市場全体の反発によるもの。",
-      "why_cheap": "主に業界全体の売りで、11月の下げの日に会社固有のニュースは挙がっていない。11/4（8%安）と11/5（11%安）は米中間選挙後のハイテク株の売り、11/13（7.2%安）と11/16（7.0%安）はエヌビディアのCEO辞任（11/12）の後の下げだった。11/20はSECがエヌビディアの会計を調べているとの報道で日中に10%下げ、9/17の最高値（終値588.40ドル）から52%低い水準になった。会社側では10/14に、半導体メモリーの値上がりを理由にバークレイズが投資判断を下げ、11.4%下げている。",
+      "ticker": "6146.T",
+      "name": "ディスコ",
+      "verdict": "headwind",
+      "summary": "10/22の決算は会社計画と市場予想を上回ったが、その後も目標株価の引き下げが続き（11/17に岡三、11/24にゴールドマン・サックスが105,000→72,000円）、10〜12月期の会社見通しも市場予想を下回ったことが決め手。AI・半導体株の売りの原因も収まっておらず、11/24の米国市場では半導体株が再び売られた。11/24の上昇（7.98%高）はエヌビディアのCEO復帰を受けた市場全体の買い戻しと同じ日の動きで、会社固有の新しい材料は見つからなかった。",
+      "why_cheap": "会社の見通しへの失望と業界全体の売りが重なっている。10/15に8.47%下げ、決算前の5営業日（10/15〜22）で11.8%下げて51,230円になった。10/22の決算は良かったが、10〜12月期の営業利益見通し（581億円）が市場予想を100億円弱下回り、翌10/23も続落して取引時間中に年初来安値を付けた。11月は、米中間選挙（11/3）後のデータセンター規制の懸念と、11/16〜20の週の世界的な半導体株安（米半導体株指数が約17%安、日経平均は11/20に5.06%安）で売られた。",
       "positives": [
-        "5〜7月期（9/1発表）の売上高は469.71億ドルで前年同期比58%増、調整後1株利益は7.04ドルで203%増。AIサーバーの受注は609億ドル、受注残は950億ドルでともに過去最高。",
-        "9/1に通期見通しを引き上げた。売上高1,670億ドル→1,920億ドル、AIサーバー売上高600億ドル→740億ドル、調整後1株利益17.90ドル→25.50ドル。",
-        "ゴールドマン・サックスは11月に目標株価を570→590ドルに上げた（買い）。バーンスタインは強気・650ドルを維持（11/18時点）。",
-        "調査会社トレンドフォース（11/19）は、NAND型メモリーの契約価格が2027年1〜3月期に0〜5%下がると予想している（2026年10〜12月期は8〜13%上昇の予想）。"
+        "上期（4〜9月、10/22発表）は売上高2,570.58億円（前年同期比32.1%増）、営業利益1,166.39億円（同47.9%増）、純利益803.66億円（同43.7%増）。出荷額は2,845.84億円（同37.2%増）。",
+        "7〜9月期は売上高1,428億円（市場予想1,418億円）、営業利益676億円（同649億円）で、会社の計画（1,284億円、558億円）も上回った。消耗品が前の四半期より24%増え、粗利益率は71.7%だった。",
+        "会社は10〜12月期の出荷額を1,496億円（前の四半期比1%増）と見込み、5四半期続けて増える計画。生成AI向けの先端ロジックやHBM向けの需要は高い水準が続いているとしている。",
+        "会社の見通しは控えめになる傾向が強く、10〜12月期の見通しが市場予想を下回ったことの意外性は大きくないとの評価がある（フィスコ）。",
+        "目標株価を下げた証券会社の多くは強気の判断を変えていない（11/17の岡三、11/24のゴールドマン・サックスなど）。集計サイトの目標株価の平均は71,194円（11/24時点）。"
       ],
       "negatives": [
-        "目標株価の引き下げが続いた。モルガン・スタンレー511→403ドル（中立、11/16）、シティ600→550ドル（買い、11/16）、広発証券497→341ドル（11/17）。",
-        "広発証券は、従来型サーバーの需要の弱さ、パソコン事業への圧力、スペースX向けの受注の一部を鴻海に奪われたことを理由に挙げた。",
-        "シティは投資家の懸念として、AI需要のピーク、受注の前倒し、メモリー価格、パソコンの弱さを挙げた。目標株価の平均は10/27の595ドルから584ドルに下がった（11/18時点）。",
-        "11/16の輸出規則で、インドネシア、マレーシア、シンガポール、タイ、ブラジル向けの先端GPUの出荷に許可が必要になった（米国に本社のある利用者には例外あり）。",
-        "決算を前に、オプション市場は約±17%の値動きを織り込んでいる。11/23の市場の反発は売り方の買い戻しによる部分が大きいとの見方もある。"
+        "目標株価の引き下げが続く。岡三79,000→65,000円（11/17）、ゴールドマン・サックス105,000→72,000円（11/24）。決算後もBofA、マッコーリー、UBS、岩井コスモ、シティが下げた。9月以降の引き上げは13件中2件。",
+        "10〜12月期の会社見通しは営業利益581億円で、市場予想を100億円弱下回る。4〜12月の累計見通しから逆算すると、7〜9月期（676億円）より約14%少ない。",
+        "7/23の4〜6月期決算でも次の四半期の見通しが市場予想を下回って売られており、見通しが予想に届かない決算が2回続いた。",
+        "売りの原因は残っている。エヌビディアはCEOが復帰したが、同社を巡る報道と輸出規制の強化の可能性が引き続きリスクに挙げられ、12/3にCEOの議会証言がある。米国の対中関税引き上げ観測も警戒されている。",
+        "11/24の米国市場ではエヌビディアやマイクロンなど半導体株が再び売られた。メモリー価格が2028年に下がるとのゴールドマンの予測も重しになった。12月の米利上げは織り込み済み。",
+        "11/24の日経平均（58,644円）は25日・75日・200日移動平均をすべて下回っており、反発は一時的な戻りの可能性があるとの見方が出ている。"
       ],
       "upcoming": [
-        "8〜10月期決算の発表 2026-11-24（米国の取引終了後。説明会は米東部時間 16:30）。会社の見通しは売上高490億ドル、調整後1株利益6.50ドル。市場予想は493.2億ドル、6.62ドル",
-        "米国の10月の個人消費支出（PCE）物価 2026-11-25",
-        "米FOMC 2026-12-08〜09（0.25%の利上げの織り込みは約96%）"
+        "エヌビディアCEOの米議会証言 2026-12-03",
+        "米FOMC 2026年12月（市場は利上げを織り込んでいる。日付は今回の資料では未確認）",
+        "次の決算（10〜12月期）の発表日は確認できなかった"
       ],
       "sources": [
         {
-          "title": "Dell Form 8-K Ex. 99.1（2027年度 第2四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001571996/000157199626000039/exhibit991earnings8kq2fy27.htm",
-          "date": "2026-09-01"
-        },
-        {
-          "title": "Dell Stock Plunges 10% in the AI Selloff... Earnings Are Tuesday（24/7 Wall St.）",
-          "url": "https://247wallst.com/investing/2026/11/20/dell-stock-plunges-10-in-the-ai-selloff-and-heads-for-its-worst-month-since-its-2018-return-to-the-stock-market-earnings-are-tuesday/",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "Dell Stock Could Move 17% After Q3 Earnings, Say Options Traders（TipRanks）",
-          "url": "https://www.tipranks.com/news/dell-stock-could-move-17-after-q3-earnings-say-options-traders",
-          "date": "2026-11-23"
-        },
-        {
-          "title": "Dell Technologies Stock: GF Securities Cuts Target Ahead of Earnings（ad-hoc-news）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/dell-technologies-stock-gf-securities-cuts-target-ahead-of-earnings/70542066",
-          "date": "2026-11-21"
-        },
-        {
-          "title": "Dell Has Tumbled Since September. Why Bernstein Still Sees 103% Upside（TIKR）",
-          "url": "https://www.tikr.com/blog/dell-has-tumbled-since-september-why-bernstein-still-sees-103-upside",
-          "date": "2026-11-18"
-        },
-        {
-          "title": "Why Dell's stock was one of the S&P 500's biggest laggards on Wednesday（MarketWatch／Morningstar）",
-          "url": "https://www.morningstar.com/news/marketwatch/20261014203/why-dells-stock-was-one-of-the-sp-500s-biggest-laggards-on-wednesday",
-          "date": "2026-10-14"
-        },
-        {
-          "title": "Dell Sinks Another 11% as Post-Midterm Tech Sell-Off Deepens（TIKR）",
-          "url": "https://www.tikr.com/blog/dell-sinks-another-11-as-post-midterm-tech-sell-off-deepens",
-          "date": "2026-11-05"
-        },
-        {
-          "title": "Why Did Dell Stock Fall 7%?（Trefis）",
-          "url": "https://www.trefis.com/stock/dell/articles/625803/why-did-dell-stock-fall-7/2026-11-17",
-          "date": "2026-11-17"
-        },
-        {
-          "title": "TrendForce: NAND prices turn down in Q1 after an 8-13% rise（FourWeekMBA）",
-          "url": "https://fourweekmba.com/ai-trendforce-nand-prices-turn-down-in-q1-after-an-8-13-rise/",
-          "date": "2026-11-19"
-        },
-        {
-          "title": "Dell Stock Surges 23% Ahead of Earnings as AI Server Demand Faces Major Test（Coinpaper）",
-          "url": "https://coinpaper.com/39305/dell-stock-surges-23-ahead-of-earnings-as-ai-server-demand-faces-major-test",
-          "date": "2026-11-23"
-        }
-      ]
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "verdict": "neutral",
-      "summary": "業績は良い（7〜9月期の売上高は前年同期比54%増）が、10/21の決算以降に確認できたアナリストの動きは目標株価の引き下げだけで、半導体株全体の売りの原因も残っているため、材料が混在している。11/20の10.0%安は会社のニュースがなく、同業15社がそろって5%以上下げた日だった。11/23の上昇（14.19%高）はエヌビディアのCEO復帰を受けた市場全体の反発と同じ日の動き。",
-      "why_cheap": "会社固有の要因と業界全体の売りの両方。会社側では、10/21の決算で次の四半期の見通しが予想並みにとどまり、部品不足で一部の出荷が翌年1〜3月期にずれるとされ、翌日に12%下げた。業界側では、10月半ばからのAI投資への疑問に加え、11/16（6.7%安）、11/20（10.0%安、終値183.27ドル）と会社のニュースがないまま半導体株がまとめて売られた。8/24から11/20までの下げは40.9%で、11/20は同業のアプライド・マテリアルズが10.7%安、KLAが10.3%安だった。",
-      "positives": [
-        "7〜9月期（10/21発表）の売上高は82.19億ドル（前年同期53.24億ドル、前の期67.22億ドル）。1株利益は2.19ドル（前年1.24ドル）。売上高・調整後1株利益とも予想を約1%上回った。",
-        "10〜12月期の見通しは売上高86.0億ドル±4億ドル、1株利益2.33ドル±0.15ドル、粗利益率52.5%±1ポイント。",
-        "会社は半導体製造装置の市場規模を2026年に1,500億ドル台半ば、2027年に2,000億ドル超と見込む。バンク・オブ・アメリカは「需要ではなく供給が制約」と表現した。",
-        "同業のアプライド・マテリアルズは11/12ごろ、2027年の装置市場の伸びを30%超と見込み、装置の納入を遅らせたいという顧客はいないと述べた。",
-        "目標株価を下げた各社（シティ、バンク・オブ・アメリカ、モルガン・スタンレー、バーンスタイン、B.ライリーなど）は強気の投資判断を維持している。"
-      ],
-      "negatives": [
-        "決算後の目標株価の変更は引き下げだけ。10/22にニーダム390→290ドル、モルガン・スタンレー385→339ドル、バンク・オブ・アメリカ385→345ドルなど5社、11/2にバーンスタイン385→350ドル、11/9ごろB.ライリー338→310ドル。",
-        "バンク・オブ・アメリカは11/10に推奨リスト（US 1 List）から外した（買いは維持、理由は示されていない）。",
-        "中国向けは7〜9月期の売上高の35%（4〜6月期は26%）。会社は10〜12月期に中国向けが「大きく減る」と見込んでいる。",
-        "部品不足で出荷が3〜4億ドル抑えられた可能性があると報じられた。モルガン・スタンレーは10〜12月期の見通しが期待に届かなかった点を「明らかにマイナス」と評した。",
-        "半導体株の売りの原因は残る。SECによるエヌビディアの会計調査、12月の米利上げ観測（織り込み約96%）、データセンター建設の規制懸念。11/23の反発は買い戻し主導との見方がある。"
-      ],
-      "upcoming": [
-        "10〜12月期決算は2027年1月下旬の見込み（日付は確認できていない）",
-        "米FOMC 2026-12-08〜09"
-      ],
-      "sources": [
-        {
-          "title": "Lam Research 8-K Ex. 99.1（2026年9月期 四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000707549/000070754926000052/lrcx_exhibitx991xq1x2027.htm",
-          "date": "2026-10-21"
-        },
-        {
-          "title": "LRCX Stock Sinks As Analysts Trim Targets（Stocktwits）",
-          "url": "https://stocktwits.com/news-articles/markets/equity/lrcx-stock-sinks-as-analysts-trim-targets-see-supply-constraints-but-longer-term-bull-case-remains/cZxwBbwRBww",
+          "title": "2027年3月期 第2四半期（中間期）決算短信（ディスコ 発表）",
+          "url": "https://www.disco.co.jp/jp/ir/library/doc/fr/fr20261022.pdf",
           "date": "2026-10-22"
         },
         {
-          "title": "Lam Research Q1 Earnings Call Highlights（MarketBeat）",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-lam-research-q1-earnings-call-highlights-2026-10-21/",
-          "date": "2026-10-21"
+          "title": "ディスコ、第2四半期業績がガイダンスを上回る（Investing.com）",
+          "url": "https://jp.investing.com/news/earnings/article-93CH-1721339",
+          "date": "2026-10-22"
         },
         {
-          "title": "Lam Research lost 34% in a month; Bernstein sees 53% upside from here（TIKR）",
-          "url": "https://www.tikr.com/zh/blog/lam-research-lost-34-in-a-month-bernstein-sees-53-upside-from-here",
-          "date": "2026-11-03"
+          "title": "ディスコ---大幅続落、10-12月期ガイダンスは市場予想を下振れ（フィスコ／Investing.com 掲載）",
+          "url": "https://jp.investing.com/news/stock-market-news/article-1722776",
+          "date": "2026-10-23"
         },
         {
-          "title": "B. Riley Financial Has Lowered Expectations for Lam Research（MarketBeat）",
-          "url": "https://www.marketbeat.com/instant-alerts/analyst-b-riley-financial-has-lowered-expectations-for-lam-research-nasdaq-lrcx-stock-price-2026-11-09/",
-          "date": "2026-11-09"
+          "title": "ディスコ (6146) レーティング・目標株価の一覧（kabuka.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6146.html",
+          "date": "2026-11-24"
         },
         {
-          "title": "BofA removes Nvidia, Micron, Lam Research from US 1 list（American Bazaar）",
-          "url": "https://americanbazaaronline.com/2026/11/10/bofa-removes-nvidia-micron-lam-research-us-1-list-491964/",
-          "date": "2026-11-10"
+          "title": "「ディスコ株が決算翌日に年初来安値、上期営業利益47.9％増なのになぜ？」（ゆるっと資産生活）",
+          "url": "https://masaa0523.hatenablog.com/entry/2026/10/24/%E3%80%8C%E3%83%87%E3%82%A3%E3%82%B9%E3%82%B3%E6%A0%AA%E3%81%8C%E6%B1%BA%E7%AE%97%E7%BF%8C%E6%97%A5%E3%81%AB%E5%B9%B4%E5%88%9D%E6%9D%A5%E5%AE%89%E5%80%A4%E3%80%81%E4%B8%8A%E6%9C%9F%E5%96%B6%E6%A5%AD",
+          "date": "2026-10-24"
         },
         {
-          "title": "What Is Driving Lam Research Stock?（Trefis）",
-          "url": "https://www.trefis.com/stock/lrcx/articles/627786/what-is-driving-lam-research-stock/2026-11-23",
-          "date": "2026-11-23"
+          "title": "ディスコ：今の株価の理由は？（Yahoo!ファイナンス）",
+          "url": "https://finance.yahoo.co.jp/quote/6146.T/ai-topics",
+          "date": "2026-10-22"
         },
         {
-          "title": "Applied Materials edges past consensus but misses the whisper（Finviz 掲載）",
-          "url": "https://finviz.com/news/422355/applied-materials-edges-past-consensus-but-misses-the-whisper-as-its-ai-driven-outlook-keeps-rising",
-          "date": "2026-11-12"
+          "title": "ディスコの株価はなぜ下がる？決算後の急落理由（カブリサ！）",
+          "url": "https://www.tousaiblog.org/disco-geraku",
+          "date": "2026-07-24"
         },
         {
-          "title": "LRCX Moved Up by 14.19% on Nov 23（TradingKey）",
-          "url": "https://www.tradingkey.com/news/market-movers/262318677-market-movers-lrcx-20261123",
-          "date": "2026-11-23"
+          "title": "【日本株】エヌビディアCEO復帰で株価は急反発したものの下落基調は継続!?（ザイ・オンライン、藤井英敏）",
+          "url": "https://diamond.jp/zai/articles/-/1076019",
+          "date": "2026-11-24"
         },
         {
-          "title": "US stocks rebound as battered AI and chip stocks rally after correction（Fox Business）",
-          "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026",
-          "date": "2026-11-23"
+          "title": "Rubber Band Market Snaps Back, Dragged by Nvidia（Charles Schwab Market Update）",
+          "url": "https://www.schwab.com/learn/story/stock-market-update-open",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "早朝版・11月25日の株式市場を前に。（ラジオNIKKEI マーケットプレス）",
+          "url": "https://www.radionikkei.jp/marketpress/post_16322.html",
+          "date": "2026-11-25"
         }
       ]
     },
     {
-      "ticker": "COHR",
-      "name": "Coherent Corp.",
+      "ticker": "8035.T",
+      "name": "東京エレクトロン",
       "verdict": "neutral",
-      "summary": "11/4の決算は予想を上回り見通しも強いが、決算後の目標株価は引き上げと引き下げが混在し、AI・光通信株の売りの原因も残っているため、材料が混在している。11/20の15.05%安は会社固有のニュースがなく、SECがエヌビディアの会計を調べているとの報道で光通信株がまとめて売られた。11/18に最大20億ドルの自社株買いの枠を決めている。",
-      "why_cheap": "会社固有の要因と業界全体の売りの両方。11/5は、決算が予想を上回ったにもかかわらず約14%下げた。理由として、営業キャッシュフローの赤字（−9,270万ドル）、設備投資の急増（7.76億ドル、前年1.04億ドル）、在庫の増加（33.4億ドル）と、中間選挙後のデータセンター投資への懸念による光通信株の売りが挙げられた。11/20は会社固有のニュースがないまま15.05%安の182.59ドルで終え、ルメンタムなど同業も下げた。",
+      "summary": "会社の業績と見通しは強い（7〜9月期の売上高は前年同期比48.4%増、通期は営業利益87.1%増を見込む）が、株価を下げた半導体株全体の売りの原因が収まっておらず、11/24の米国市場でも半導体株が再び売られたため、材料が混在している。11月の下げに会社固有の悪材料は見つからなかった。11月の目標株価の変更は、水準は確認できたが引き上げか引き下げかを確認できていない。",
+      "why_cheap": "主に業界全体の売りで、会社固有の悪材料は見つからなかった。米中間選挙後にAIデータセンター建設への反対が強まる懸念で半導体株が売られ、11/17は米商務省の先端AI半導体の輸出規制強化とエヌビディアの経営を巡る不透明感で下げた。11/20は米国でSECがエヌビディアの会計を調べているとの報道や利上げ観測で株価指数が急落し、東京エレクトロンは前場に599円安の8,341円を付けた。11/24はエヌビディアのCEO復帰を受けた買い戻しで反発した。なお、2026年10月1日付で1株を5株に分割しており、現在の株価水準は分割後のもの。",
       "positives": [
-        "7〜9月期（11/4発表）の売上高は23.703億ドルで前年同期比49.9%増。調整後1株利益は2.09ドル（前年1.16ドル）で予想の2.00ドルを上回り、売上高も予想を2.2%上回った。",
-        "10〜12月期の見通しは売上高25.5〜27.5億ドル、調整後1株利益2.28〜2.48ドル。通期の伸びは60%超を見込み、長期の粗利益率の目標を42%超から45%超に上げた。",
-        "決算後、シティが目標株価を420→440ドル（11/6）、スティーフェルが420→450ドルに上げた。バーンスタインは11/10に強気・350ドルを維持した。",
-        "取締役会は11/18に最大20億ドルの自社株買いを承認した（期限なし）。",
-        "米政府が中国製の新しい光トランシーバーの輸入制限を進めていると11/17に報じられ、株価は10%上げた（規則は未確定で、大手クラウド各社は反対している）。"
+        "7〜9月期（10/30発表）の売上高は9,350億円で前年同期比48.4%増、営業利益は2,953億円で86.4%増、純利益は2,125億円で71.7%増。営業利益率は31.6%（前年同期から6.5ポイント上昇）。",
+        "4〜9月期の実績は7/30時点の会社予想を上回った（売上高は2.9%、営業利益は10.6%、純利益は8.0%）。売上高・営業利益とも半期として過去最高。",
+        "未定としていた通期予想を10/30に初めて示した。売上高3兆7,000億円（前期比51.4%増）、営業利益1兆1,690億円（87.1%増）、純利益8,650億円（50.6%増）。下期の売上高は2兆325億円を見込む。",
+        "上限1,500億円・2,500万株（発行済株式の1.1%）の自社株買いを決めた（期間は2026-11-01〜2027-03-31）。年間配当の予想は分割後で191円（前期は125円60銭）。",
+        "会社は半導体製造装置の市場規模を2026年に約1,600億ドル、2027年に2,100億ドル以上と見込む。",
+        "IFISの集計（11/20時点）では投資判断は強気13人・やや強気1人・中立1人で、今期の経常利益の予想平均は11/17と11/18に前週比で上がった。野村は11/18に買いを維持し、目標株価を12,600円とした。"
       ],
       "negatives": [
-        "目標株価の引き下げもある。ローゼンブラット500→400ドル（11/5、買い維持、理由は業界全体の株価水準の低下）、バンク・オブ・アメリカ400→240ドル、ニーダム380→340ドル。平均は8/19の416ドルから372ドルに下がった。",
-        "7〜9月期の営業キャッシュフローは9,270万ドルの赤字。設備投資は7.76億ドル（前年1.04億ドル）、在庫は33.4億ドルに増えた。",
-        "顧客1社が2026年度の売上高の20%を占める。データセンター投資の変化の影響を受けやすい。",
-        "データセンター・通信向けの売上高は19.517億ドル（前年10.900億ドル）と伸びた一方、産業向けは4.186億ドル（前年4.914億ドル）に減った。",
-        "売りの原因は残る。SECによるエヌビディアの会計調査とカリフォルニア州の召喚状は続いており、エヌビディアは11/25に輸出規制に関する期限を迎える。"
+        "半導体株の売りは収まっていない。11/24の米国市場ではエヌビディアが5.86%安、AMDが8.86%安、ナスダック総合指数が約1.5%安となり、前日の急反発の一部を失った。",
+        "売りの原因が残る。SECによるエヌビディアの会計調査の報道、12月の米利上げ観測（11/20時点の織り込みは92%）、AI投資の資金繰りへの疑問、半導体の輸出規制が広がる懸念が挙げられている。",
+        "中国向けが7〜9月期の売上高の約36%（3,399億円）を占め、前の四半期の約30%から上がった。輸出規制が強まると影響を受けやすい。",
+        "11/24の東京市場の反発は前週末の大幅安の反動で、日中に上げ幅を縮めた。フィスコは、AI投資の収益性や信用リスクへの懸念、米国の追加利上げへの警戒が上値を抑えると指摘した。",
+        "通期予想は下期の加速が前提で、下期の営業利益は6,622億円と上期の5,067億円を上回る水準を見込んでいる。",
+        "11月の目標株価の変更（野村12,600円、日系中堅証券11,400円、ともに11/18）は、変更前の水準を確認できず、引き上げか引き下げかが分からない。"
       ],
       "upcoming": [
-        "10〜12月期決算は2027年2月上旬の見込み（日付は確認できていない）",
-        "エヌビディアの輸出規制に関する期限 2026-11-25",
-        "米FOMC 2026-12-08〜09"
+        "10〜12月期決算の発表は 2027-02-05 と報じられている（会社の発表は確認できていない）",
+        "自社株買いの期間 2026-11-01〜2027-03-31",
+        "米国の10月の個人消費支出（PCE）物価とGDP 2026-11-25（米国時間）",
+        "12月の米FOMC（11/20時点で利上げの織り込みは92%。日付は今回確認できていない）"
       ],
       "sources": [
         {
-          "title": "Coherent Corp. Reports First Quarter Fiscal 2027 Results（Coherent 発表／Finviz 掲載）",
-          "url": "https://finviz.com/news/415844/coherent-corp-reports-first-quarter-fiscal-2027-results",
-          "date": "2026-11-04"
+          "title": "2027年3月期 第2四半期（中間期）決算短信（東京エレクトロン）",
+          "url": "https://www.tel.co.jp/ir/library/report/kuoaek00000000iu-att/fy27q2tanshin-j.pdf",
+          "date": "2026-10-30"
         },
         {
-          "title": "Coherent accelerates and raises its targets but a capex heavy buildout meets a stock that has lost 40%（Finviz 掲載）",
-          "url": "https://finviz.com/news/416320/coherent-accelerates-and-raises-its-targets-but-a-capex-heavy-buildout-meets-a-stock-that-has-lost-40",
-          "date": "2026-11-04"
+          "title": "2027年3月期 第2四半期 決算説明会資料（東京エレクトロン）",
+          "url": "https://www.tel.co.jp/ir/library/report/kuoaek00000000iu-att/fy27q2presentations-j2.pdf",
+          "date": "2026-10-30"
         },
         {
-          "title": "Coherent Soars 13% as Citi Lifts Target to $440（TIKR）",
-          "url": "https://www.tikr.com/blog/coherent-soars-13-as-citi-lifts-target-to-440-lumentum-up-3-in-ai-optics-rebound",
-          "date": "2026-11-06"
+          "title": "東エレク、未定だった27年3月期予想は最終益51％増 上限1.1％の自社株買いも（みんかぶ）",
+          "url": "https://minkabu.jp/news/4647608",
+          "date": "2026-10-30"
         },
         {
-          "title": "Rosenblatt cuts Coherent stock price target on lower multiples（Investing.com）",
-          "url": "https://www.investing.com/news/analyst-ratings/rosenblatt-cuts-coherent-stock-price-target-on-lower-multiples-93CH-5003044",
-          "date": "2026-11-05"
+          "title": "8035 東京エレクトロン レーティング、目標株価（IFIS株予報）",
+          "url": "https://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report_pbr&bcode=8035",
+          "date": "2026-11-20"
         },
         {
-          "title": "Bernstein's $350 Target Says Coherent's Selloff Went Too Far（TIKR）",
-          "url": "https://www.tikr.com/blog/bernsteins-350-target-says-coherents-selloff-went-too-far",
-          "date": "2026-11-11"
+          "title": "Tokyo Electron stock: Nomura keeps Buy rating at 12,600 yen（ad-hoc-news）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/tokyo-electron-stock-nomura-keeps-buy-rating-at-12-600-yen/70540265",
+          "date": "2026-11-20"
         },
         {
-          "title": "Coherent (COHR) Stock Price Prediction: Strong Q1 growth meets a bruised chart（Blockchain.News）",
-          "url": "https://blockchain.news/news/20261123-price-prediction-cohr-strong-q1-growth-meets-a-bruised",
-          "date": "2026-11-23"
+          "title": "Stock Market Today, Nov. 24: Nvidia Gives Back $240 Billion in Market Value（Motley Fool）",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/",
+          "date": "2026-11-24"
         },
         {
-          "title": "Coherent stock falls 15% as the AI chip rout hits optical suppliers（Startup Fortune）",
-          "url": "https://startupfortune.com/coherent-stock-falls-15-as-the-ai-chip-rout-hits-optical-suppliers/",
-          "date": "2026-11-21"
+          "title": "日経平均は大幅続落、米半導体規制強化でAI関連株に売り（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261117/878046.html",
+          "date": "2026-11-17"
         },
         {
-          "title": "Coherent Corp. Form 8-K（自社株買いの承認）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0000820318/000119312526467737/d867801d8k.htm",
-          "date": "2026-11-19"
+          "title": "日経平均は大幅に3日ぶり反落、アドバンテストが1銘柄で約631円分押し下げ（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261120/878590.html",
+          "date": "2026-11-20"
         },
         {
-          "title": "Stock market rebounds sharply after sell-off（ABC News）",
-          "url": "https://abcnews.com/Business/stock-market-rebounds-sharply-after-selloff/story?id=138373790",
-          "date": "2026-11-23"
+          "title": "日経平均は大幅反発、エヌビディアCEO復帰でAI関連株に買い戻し／ランチタイムコメント（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261124/878909.html",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "November Nightmare on Wall Street: AI Trade Cracks（Charles Schwab）",
+          "url": "https://www.schwab.com/learn/story/market-volatility",
+          "date": "2026-11-20"
         }
       ]
     },
     {
-      "ticker": "NRG",
-      "name": "NRG Energy",
-      "verdict": "headwind",
-      "summary": "11/9の決算は予想を大きく上回り見通しも据え置いたが、決算後も目標株価の引き下げが4件以上続き（直近は11/20のゴールドマン・サックス167→149ドル）、引き上げが見つからなかったことが決め手。引き下げの理由には、電力の先物価格の低下やテキサス州の電力価格の弱さが挙げられている。売りのきっかけだったテキサス州のデータセンター建設の一時停止の公約も、まだ決着していない。",
-      "why_cheap": "主に業界全体の売り。11/3の米中間選挙で民主党が議会を制し、テキサス州知事選ではデータセンター建設の一時停止を公約したヒノホサ氏が当選した。データセンター向けの電力需要への期待がしぼみ、NRGは11/4に13.5%下げ、11/5の終値80.55ドルは過去365日で最も低かった。その後11/6に9.6%、11/9に10.3%上げたが、11/20は6.45%安の87.80ドルで終えた（この日の下げの理由は確認できていない）。",
+      "ticker": "6920.T",
+      "name": "レーザーテック",
+      "verdict": "neutral",
+      "summary": "受注の見通しは引き上げた（今期3,000〜4,000億円→4,000〜5,000億円）一方、7〜9月期は減収減益で市場予想を下回り、11/24にはゴールドマン・サックスが目標株価を71,000→52,000円に下げ、半導体株全体の売りの原因も残っているため、材料が混在している。11/24の上昇（2,950円高の33,200円）はエヌビディアのCEO復帰を受けた半導体株全体の買い戻しと同じ日の動きだった。",
+      "why_cheap": "会社固有の要因と業界全体の売りの両方。会社側では、10/30発表の7〜9月期が売上高25.5%減・営業利益41.0%減で、営業利益は市場予想を約100億円下回った（発表前の同日も8.81%安）。業界側では、11/5にクアルコムとアームの決算を受けた半導体株の売りで14.2%下げ、11/20は米ハイテク株安（SECによるエヌビディアの会計調査の報道、利上げ観測など）を受けて前場に3,200円安の30,120円を付け、終値は30,250円だった。",
       "positives": [
-        "7〜9月期（11/9発表）の売上高は94.66億ドル（前年同期76.35億ドル）。調整後1株利益は4.68ドル（前年2.78ドル）で、予想の3.44ドルを上回った。調整後EBITDAは20.13億ドル（前年12.05億ドル）。",
-        "2026年の見通し（調整後1株利益7.90〜9.90ドル）を据え置き、2027年の見通し（同8.05〜10.05ドル、調整後EBITDA 55〜60億ドル）を新たに示した。",
-        "ガス火力発電所6か所（490万kW）を40億ドルで売却する（2027年4〜6月期に完了見込み）。自社株買いを2026〜27年で30億ドルに増やし、配当も8%増やす。",
-        "テキサス州の環境当局は11/16〜17にデータセンターの許可審査を再開した。NRGのテキサス州のデータセンター向け計画（120万kW）は「予定どおり」で、年内の正式契約を目指している。",
-        "レイモンド・ジェームズは中間選挙後の下げを「行き過ぎた反射的な売り」と評した（11/5）。投資判断の平均は「買い」（15人）。"
+        "今期（2027年6月期）の受注高の見通しを3,000〜4,000億円から4,000〜5,000億円に引き上げた（10/30）。主因はEUVマスク検査装置ACTIS A200HiTの量産向けの追加受注で、顧客の評価が終わる前から注文が続いているという。",
+        "通期予想は据え置き。売上高2,900億円（前期比25.8%増）、営業利益1,250億円（18.8%増）、純利益900億円（16.2%増）で、いずれも過去最高の見込み。年間配当は351円（前期329円）。",
+        "7〜9月期の装置の生産実績は723億2,600万円で前年同期比120.2%増。サービスの売上高は160億1,100万円で31.2%増え、売上高の約4割を占めた。",
+        "7〜9月期の下振れについて、会社は売上高がおおむね想定どおりとし、フィスコは売上計上の時期の問題で過度に悪く受け止められていないと伝えた。11/2の株価は大幅に反発した。",
+        "11/4にSBI証券が目標株価を60,900→65,700円、岩井コスモ証券が65,500→66,000円に上げた（ともに強気の判断を継続）。ゴールドマン・サックスは11/24に目標株価を下げたが「買い」は継続した。"
       ],
       "negatives": [
-        "決算後も目標株価の引き下げが続く。ゴールドマン・サックス167→149ドル（11/20）、HSBC 179→150ドル（11/16）、BMO 147→124ドル（11/16）、ジェフリーズ131→116ドル（11/11）。決算後の引き上げは見つからなかった。",
-        "BMOは引き下げの理由に、電力の先物価格の低下と、発電所売却で減る利益を挙げた。レイモンド・ジェームズも、テキサス州の電力価格の弱さを理由に152→150ドルに下げた。",
-        "経営陣は、2026年の調整後EBITDAが見通しの中心をやや下回ると見込んでいる。",
-        "テキサス州の送電網運営者（ERCOT）の監査は続いており、ヒノホサ氏の一時停止は就任日の2027-01-19から始まる可能性がある。",
-        "決算前の10月後半にも、バークレイズ204→163ドル、シーポート190→160ドルなど5社が目標株価を下げていた（引き上げはモルガン・スタンレーの1件）。"
+        "7〜9月期の売上高は403億6,900万円で前年同期比25.5%減、営業利益は157億6,900万円で41.0%減、純利益は107億3,400万円で43.7%減。営業利益率は49.3%から39.1%に下がった。",
+        "営業利益は市場予想を約100億円下回った。通期予想に対する進み具合は売上高13.9%、営業利益12.6%で、残り9か月に売上高約2,496億円が必要になる。",
+        "ゴールドマン・サックスが11/24に目標株価を71,000→52,000円に下げた。UBSも11/2に47,200→42,500円に下げた（中立を継続）。引き下げの理由は確認できていない。",
+        "IFISの集計（11/24時点）では、今期の経常利益の予想平均が11/17に前週比0.9%、11/24に0.5%下がった。投資判断は強気7人・中立5人・弱気2人。",
+        "半導体株の売りは収まっていない。11/24の米国市場ではエヌビディアが5.86%安、AMDが8.86%安、ナスダック総合指数が約1.5%安となり、前日の急反発の一部を失った。",
+        "売りの原因が残る。SECによるエヌビディアの会計調査の報道、12月の米利上げ観測（11/20時点の織り込みは92%）、AI投資の資金繰りへの疑問、半導体の輸出規制が広がる懸念が挙げられている。"
       ],
       "upcoming": [
-        "ERCOTの監査報告 2026-12-10、テキサス州公益事業委員会の会合 2026-12-17",
-        "テキサス州議会の開会 2027-01-12、新知事の就任 2027-01-19",
-        "発電所売却の完了見込み 2027年4〜6月期",
+        "10〜12月期（第2四半期）決算の発表日は確認できていない",
+        "米国の10月の個人消費支出（PCE）物価とGDP 2026-11-25（米国時間）",
+        "12月の米FOMC（11/20時点で利上げの織り込みは92%。日付は今回確認できていない）"
+      ],
+      "sources": [
+        {
+          "title": "レーザーテック営業益41％減、装置生産2.2倍 受注見通し想定超（アセットアライブ／note）",
+          "url": "https://note.com/asset_alive/n/n729f8c2c58cc",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "レーザーテック、売上減少も通期受注見通しを上方修正（Investing.com）",
+          "url": "https://jp.investing.com/news/earnings/article-93CH-1734596",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "レーザーテック 大幅反発、受注高見通しを大幅に引き上げ（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261102/875856.html",
+          "date": "2026-11-02"
+        },
+        {
+          "title": "レーザーテック (6920) レーティング情報（株価アルゴ kabuka.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6920.html",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "6920 レーザーテック レーティング、目標株価（IFIS株予報）",
+          "url": "https://kabuyoho.ifis.co.jp/index.php?id=100&action=tp1&sa=report_pbr&bcode=6920",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "前日に動いた銘柄 part2 レーザーテック、AIメカテック、ミタチ産業など（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261125/878996.html",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "日経平均は大幅に3日ぶり反落、アドバンテストが1銘柄で約631円分押し下げ（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261120/878590.html",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Asia stocks mixed as chip rout triggers KOSPI trading halt; China outperforms（Investing.com）",
+          "url": "https://www.investing.com/news/stock-market-news/asia-stocks-mixed-as-chip-rout-triggers-kospi-trading-halt-china-outperforms-5002134",
+          "date": "2026-11-05"
+        },
+        {
+          "title": "November Nightmare on Wall Street: AI Trade Cracks（Charles Schwab）",
+          "url": "https://www.schwab.com/learn/story/market-volatility",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Stock Market Today, Nov. 24: Nvidia Gives Back $240 Billion in Market Value（Motley Fool）",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-nvidia-gives-back-usd240-billion-in-market-value-despite-wall-street-upgrade-signaling-29-upside/",
+          "date": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "ticker": "6701.T",
+      "name": "日本電気",
+      "verdict": "neutral",
+      "summary": "業績と見通しは良く目標株価の引き下げも見つからなかったが、AI関連株の売りと防衛費を巡る懸念という2つの業界要因がどちらも収まっておらず、材料が混在している。10/28に通期見通しを引き上げた翌日から株価は下げ、11/19時点で1か月の下落率は20.1%だった。11/24の日本株の急反発の後、同日の米国ではハイテク株が再び下げている。",
+      "why_cheap": "会社固有の悪材料よりも、決算後の売りと業界全体の売りが重なっている。10/28の決算は通期見通しの引き上げを伴ったが、市場では織り込み済みとされ、翌10/29は「サプライズが乏しい」として大幅続落した。11月はAI投資の先行きへの疑いから日本の電機・半導体株がまとめて売られ、NECも11/19時点で1か月に20.1%下げた（富士通は22.1%）。11/13には防衛費の規模が想定より小さくなるとの報道で防衛関連株が急落した。11/24の値動きに触れた記事は見つからなかった。",
+      "positives": [
+        "7〜9月期（10/28発表）の売上収益は9,341億円で前年同期比9.4%増、調整後（Non-GAAP）営業利益は1,136億円で26.1%増。営業利益は市場予想と会社計画を100億円程度上回ったとみられている（フィスコ）。",
+        "通期見通しを引き上げた。売上収益3兆5,400億円→3兆7,400億円、調整後営業利益4,300億円→4,600億円、調整後最終利益2,900億円→3,100億円。理由は米CSGの連結と、航空宇宙・防衛、海洋システムの上振れ。",
+        "国内ITサービスの中核「BluStellar」は7〜9月期の売上収益が1,922億円で26.4%増。国内ITサービスの受注はモダナイゼーション案件を中心に堅調と会社は説明している。",
+        "目標株価の引き下げは見つからなかった。決算後にUBSが5,150→5,400円（10/29、中立を継続）、岩井コスモが6,000→6,300円（10/30）に引き上げた。平均は1か月前6,273円→11/19時点6,308円（13人中12人が買い側）。",
+        "11/24の日経平均は2,207円高（3.91%高）と急反発した。エヌビディアのフアン氏のCEO復帰を受けて、AI・半導体株が買い戻された。"
+      ],
+      "negatives": [
+        "業界全体の売りの原因が残っている。11/24の米国ではナスダック総合が約1.5%安、エヌビディアが5.86%安と反落した。データセンター建設の規制強化やAI投資の採算への疑問は消えていないと報じられている。",
+        "防衛費の懸念が続いている。政府が年内に改定する安保関連3文書の防衛費について、5年間で50兆〜60兆円台とする案が浮上（防衛省内の積算は80兆円）と11/13に報じられ、三菱重工や川崎重工が急落した。決着は付いていない。",
+        "7〜9月期の航空宇宙・防衛は売上収益が1.1%増にとどまり、営業利益は減益（利益率15.5%→10.3%）。国内ITサービスの売上収益は0.1%減で横ばいだった。",
+        "通期見通しの引き上げは海外（CSGの連結）が中心で、国内ITサービスの見通しは据え置き。CSGを前年にも含めた比較では7〜9月期の売上収益は4.0%増にとどまる。",
+        "通期のフリー・キャッシュ・フローの見通しは3,000億円の黒字から900億円の赤字に変わった。有利子負債は4,892億円から7,747億円に増えた。",
+        "米国では12月のFOMCで0.25%の利上げがほぼ織り込まれている。米政権が16の貿易相手を対象にした調査を近く公表し、新たな関税につながるとの報道も11/24に出た。"
+      ],
+      "upcoming": [
+        "米PCE物価指数の発表 2026-11-25",
+        "米FOMC 2026年12月（0.25%の利上げがほぼ織り込み済み）",
+        "安保関連3文書の改定（防衛費の規模）2026年内の予定",
+        "次の決算（10〜12月期）の発表日は確認できなかった"
+      ],
+      "sources": [
+        {
+          "title": "2026年度（27年3月期）第2四半期決算概要（NEC 発表資料）",
+          "url": "https://group.nec/assets/global/ja/about/ir/library/pdf/261028/261028-01.pdf",
+          "date": "2026-10-28"
+        },
+        {
+          "title": "ＮＥＣ、通期業績予想を上方修正 ＣＳＧ新規連結を反映（株探）",
+          "url": "https://s.kabutan.jp/news/n202610281116/",
+          "date": "2026-10-28"
+        },
+        {
+          "title": "ＮＥＣ 大幅続落、決算サプライズ乏しく売り先行の形に（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261029/875424.html",
+          "date": "2026-10-29"
+        },
+        {
+          "title": "NEC (6701) レーティング・目標株価の一覧（株価.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6701.html",
+          "date": "2026-10-30"
+        },
+        {
+          "title": "ＮＥＣ (6701) アナリストの予想株価（みんかぶ）",
+          "url": "https://minkabu.jp/stock/6701/analyst_consensus",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "Japan AI selloff: These chips and electronics stocks were the worst hit（Investing.com）",
+          "url": "https://www.investing.com/news/stock-market-news/japan-ai-selloff-these-chips-and-electronics-stocks-were-the-worst-hit-93CH-5037748",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "菱重工や川重など防衛株が急落、防衛費５年５０兆－６０兆円台案浮上と（ウエルスアドバイザー／Yahoo!ファイナンス）",
+          "url": "https://finance.yahoo.co.jp/news/detail/f8911558ff92f608889aa7910663e95c4f95ec1c",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "エヌビディア株の急騰を背景にしたAI関連株高が波及し、一時59000円台回復【クロージング】（財経新聞／フィスコ）",
+          "url": "https://www.zaikei.co.jp/article/20261124/878948.html",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "Nasdaq, S&P 500 end lower following Monday's Nvidia-fueled rally（MarketScreener／Reuters）",
+          "url": "https://www.marketscreener.com/news/nasdaq-s-p-500-end-lower-following-monday-s-nvidia-fueled-rally-ce7851dbdd81f720",
+          "date": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "ticker": "6273.T",
+      "name": "ＳＭＣ",
+      "verdict": "neutral",
+      "summary": "11/13の決算は予想を上回り通期見通しも引き上げたが、10月以降に確認できた目標株価の変更は引き下げだけで、半導体株の売りの原因も残っているため、材料が混在している。11/24の上昇（8.32%高）はエヌビディアのCEO復帰を受けたAI・半導体株の買い戻しと同じ日の動きで、同日の米国では半導体株が再び下げた。",
+      "why_cheap": "会社固有の悪材料は見つからず、市場と半導体関連の売りに連動している。11/13の決算発表後に株価は4%上げたが、翌週（11/16〜20）は日経平均が7.70%、TOPIXが6.78%下げた。原因はエヌビディアを巡る問題（CEOの辞任、SECが会計を調べているとの報道、中国への密輸の疑い）とAI投資の失速への懸念で、11/20は日経平均が3,007円下げた。米国の先端半導体の輸出規制の強化（11/19発効）も重なった。11/20の午前に55,150円だった株価は、11/24に59,900円まで戻した。",
+      "positives": [
+        "7〜9月期（11/13発表）の売上高は2,826億円で前年同期比41%増、前の四半期比4%増。営業利益は839億円（利益率29.7%）で、増益の主因は販売量の増加だった。",
+        "通期見通しを引き上げた。営業利益は750億円引き上げて2,940億円（利益率27.4%の見込み）。売上高も引き上げ、前の期に比べ27%増を見込む。",
+        "上期（4〜9月）の売上高は5,540億円でアナリスト予想を4.4%上回り、1株利益は977円で約20%上回った。決算後、今期の1株利益の予想平均は3,480円から3,720円に上がった（Simply Wall St）。",
+        "今年2度目の自社株買いを発表した（上限100万株・500億円、発行済みの1.6%相当）。9月末の純現金は7,358億円。",
+        "アナリストの判断は買い側が9人、中立が6人、売りは0人（11/20時点）。平均目標株価は1か月前86,643円→85,575円でほぼ横ばい。",
+        "11/24は8.32%高の59,900円。日経平均は2,207円高（3.91%高）で、東証プライムの61.6%の銘柄が上げた。"
+      ],
+      "negatives": [
+        "10月以降に確認できた目標株価の変更は引き下げだけ。シティ90,000→83,000円（11/18、強気を継続）、マッコーリー100,000→99,200円（10/21）、ゴールドマン83,000→81,000円（10/20、中立）。みずほは10/8に中立・69,000円で調査を始めた。引き上げは9/10が最後。",
+        "11/24の米国ではナスダック総合が約1.5%安、エヌビディアが5.86%安と反落した。前日の急騰の利益確定に加え、フアン氏復帰の統治面のリスクが意識された。",
+        "米商務省の先端半導体の輸出規制の強化が11/19に発効した。TSMCとサムスンが中国顧客向けの一部の受注・出荷を止めたと報じられている。中国の半導体投資への影響は読めず、ＳＭＣへの影響に触れた資料は見つからなかった。",
+        "エヌビディアの会計を巡るSECの調査、データセンター建設の規制強化、AI投資の採算への疑問は残っている。11/24の反発後も、追加の材料がなければ警戒感の強い展開が続くとの見方がある。",
+        "米国では12月のFOMCで0.25%の利上げがほぼ織り込まれている。米政権が16の貿易相手の過剰な生産能力を調べた結果を近く公表し、新たな関税につながるとの報道も11/24に出た。"
+      ],
+      "upcoming": [
+        "10〜12月期（第3四半期）決算の発表 2027-02-09",
+        "米PCE物価指数の発表 2026-11-25",
+        "米FOMC 2026年12月（0.25%の利上げがほぼ織り込み済み）"
+      ],
+      "sources": [
+        {
+          "title": "SMCが通期業績予想を上方修正、今年2度目の自社株買いを発表（Investing.com 日本版）",
+          "url": "https://jp.investing.com/news/earnings/article-93CH-1756312",
+          "date": "2026-11-13"
+        },
+        {
+          "title": "Results: SMC Corporation Exceeded Expectations And The Consensus Has Updated Its Estimates（Simply Wall St／Webull 掲載）",
+          "url": "https://www.webull.com/news/15935482180912128",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "SMC (6273) レーティング・目標株価の一覧（株価.jp.net）",
+          "url": "https://www.kabuka.jp.net/rating/6273.html",
+          "date": "2026-11-18"
+        },
+        {
+          "title": "ＳＭＣ (6273) アナリストの予想株価（みんかぶ）",
+          "url": "https://minkabu.jp/stock/6273/analyst_consensus",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "日経平均寄与度ランキング（大引け）～日経平均は大幅反発（Fisco／Investing.com 日本版）",
+          "url": "https://jp.investing.com/news/stock-market-news/article-1768742",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "全面安で配当利回り5%台のマツダ、日本郵船など高配当割安株が増加。今週は「日本のAI株リバウンド上昇」の行方が焦点に（楽天証券トウシル）",
+          "url": "https://media.rakuten-sec.net/articles/-/54118",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "相場展望 11月23日号 日経平均は「弱気相場」入り（財経新聞）",
+          "url": "https://www.zaikei.co.jp/article/20261124/878810.html",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "16nm以下の中国向け受注を停止か、米規制強化でTSMCとサムスンが審査厳格化（マイナビ TECH+）",
+          "url": "https://news.mynavi.jp/techplus/article/20261124-5397509/",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "Nasdaq, S&P 500 end lower following Monday's Nvidia-fueled rally（MarketScreener／Reuters）",
+          "url": "https://www.marketscreener.com/news/nasdaq-s-p-500-end-lower-following-monday-s-nvidia-fueled-rally-ce7851dbdd81f720",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "IRカレンダー（SMC株式会社）",
+          "url": "https://www.smcworld.com/ir/ja-jp/calendar.html",
+          "date": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One",
+      "verdict": "neutral",
+      "summary": "10/20発表の7〜9月期決算は予想を上回り貸倒れ・延滞も前年より改善したが、クレジットカード金利の上限（10%）を巡る政治リスクが11/21のトランプ大統領の発言で強まったばかりで、材料が混在している。目標株価は10月の決算後に引き上げがあり、11月に確認できた引き下げはUBSの小幅な1件（280→274ドル、買い維持）だけだった。12月の米利上げもほぼ織り込まれており、業界の逆風の原因は収まっていない。",
+      "why_cheap": "会社固有の要因と業界全体の要因の両方。11/4は、中間選挙で民主党が上下両院を制し、カード金利の上限案が通りやすくなるとの見方から、シンクロニー、キャピタル・ワン、ブレッドがそろって3.5〜4.3%下げた。11/21にはトランプ大統領が、10%の金利上限で民主党と協力すると述べ、ウェルズ・ファーゴはこの重しが最も響く会社としてキャピタル・ワンなど3社を挙げた。会社側では、決算の利益に引当金の取り崩し（2.25億ドル）が含まれること、2027年に広告宣伝費を増やす方針、ディスカバーのカード残高の減少が挙げられている。11/20以降の値動きを直接説明する記事は見つからなかった。",
+      "positives": [
+        "7〜9月期（10/20発表）の売上高は163.4億ドルで前年同期比6%増（予想161.1億ドル）。調整後1株利益は6.69ドルで12%増（予想5.45ドル）。1株利益は5.61ドル（前年4.83ドル）。",
+        "貸倒れと延滞は前年より改善した。7〜9月期の貸倒れ額は31.2億ドルで10%減、国内カードの貸倒れ率は3.98%（前年より0.65ポイント低下）、延滞率は3.74%（同0.15ポイント低下）。",
+        "ディスカバー統合の効果は年換算で約18億ドルと、会社は予定より早いとしている。自社の決済網の取扱高は約1,910億ドルで25%増。7〜9月期に26億ドルの自社株買いを行った。",
+        "目標株価は、エバーコアが決算後に220→230ドルに引き上げた。バンク・オブ・アメリカ（252ドル）とゴールドマン・サックスは11月に強気の判断を維持した。平均は256.07ドル（11/20ごろ時点）。",
+        "金利上限について、ウェルズ・ファーゴは法律になるかは不確かで、決まる場合も既存の残高ではなく新しい利用分が対象、水準は30%以上が基本の想定とした。TDコーウェンも10%より36%に近くなるとみる。"
+      ],
+      "negatives": [
+        "トランプ大統領が11/21に10%の金利上限で民主党と協力すると述べた。民主党は2027年1月から上下両院を握り、上院銀行委員長になる見込みのウォーレン議員は法案を通す用意があるとしている。",
+        "カード事業への依存が大きい。カード貸出は2,764億ドルで貸出全体（4,625億ドル）の約60%。10%の上限は金利収入を「大きく圧縮しうる」と評され、3行の比較で最も影響を受けやすいとされた。",
+        "10月の月次では、国内カードの貸倒れ率が4.02%、延滞率が3.87%で、7〜9月期の水準（3.98%、3.74%）を上回った。季節要因かどうかは資料では確認できていない。",
+        "7〜9月期の利益には2.25億ドルの引当金の取り崩しが含まれる。広告宣伝費は14%増の約16億ドルで、会社は2027年にさらに増やす方針。ディスカバーのカード残高は前年より約3%減った。",
+        "UBSは11/2に目標株価を280→274ドルに下げた（買い維持）。",
+        "12/8〜9のFOMCでの0.25%の利上げはほぼ確実と織り込まれている。11/24の米国株はS&P500が0.53%安で、11月の下げは収まり切っていない。"
+      ],
+      "upcoming": [
+        "米国の10月の個人消費支出（PCE）物価 2026-11-25",
+        "米FOMC 2026-12-08〜09（0.25%の利上げの織り込みは約95%）",
+        "11月分の月次の貸倒れ・延滞の開示は12月半ばの見込み（日付は確認できていない）",
+        "新しい議会の開会は2027年1月（金利上限の法案の扱いは未定）",
+        "10〜12月期決算は外部の予定表では 2027-01-26（推定。会社の発表は確認できていない）"
+      ],
+      "sources": [
+        {
+          "title": "Capital One Stock Gains as Q3 Earnings Beat Estimates on Higher NII（Zacks）",
+          "url": "https://www.zacks.com/stock/news/3011611/capital-one-stock-gains-as-q3-earnings-beat-estimates-on-higher-nii",
+          "date": "2026-10-21"
+        },
+        {
+          "title": "COF Q3 Earnings Call Highlights Integration and Spending Plans（Zacks）",
+          "url": "https://www.zacks.com/stock/news/3011873/cof-q3-earnings-call-highlights-integration-and-spending-plans",
+          "date": "2026-10-21"
+        },
+        {
+          "title": "Capital One Form 8-K Ex. 99.1（2026年10月分の月次信用指標）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000927628/000092762826000160/ex991october2026creditmetr.htm",
+          "date": "2026-10-31"
+        },
+        {
+          "title": "Credit card firms fall as Democrats sweep Congress（rallies.ai）",
+          "url": "https://rallies.ai/news/credit-card-firms-fall-as-democrats-sweep-congress-e0017f1ab1f70628",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "Trump says he would work with Democrats to cap credit card interest rates（Stock Analysis）",
+          "url": "https://stockanalysis.com/news/trump-joins-democrats-credit-card-rate-cap/",
+          "date": "2026-11-21"
+        },
+        {
+          "title": "Credit card cap headline risk is real, but law is less certain, Wells Fargo says（rallies.ai）",
+          "url": "https://rallies.ai/news/credit-card-cap-headline-risk-is-real-but-law-is-less-certain-wells-fargo-says-c95e2cbb0a95f369",
+          "date": "2026-11-23"
+        },
+        {
+          "title": "Trump Revives Push for Card Rate Cap: What It Means for C, JPM & COF（Yahoo Finance／Zacks）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/trump-revives-push-card-rate-140900997.html",
+          "date": "2026-11-23"
+        },
+        {
+          "title": "Capital One Financial (COF) Stock Price, Quote & Analysis（TipRanks、アナリストの変更履歴）",
+          "url": "https://www.tipranks.com/stocks/cof",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "S&P 500 Drops 0.53% While the Dow Closes Above 50,000（24/7 Wall St.）",
+          "url": "https://247wallst.com/cards/the-dow-closed-above-50-000-for-the-first-time-while-the-nas-gspc-market-bell-01m87nyn7mshvn15b2vdser41w",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "December Fed Hike Near 100% as Williams Says Fed Must Act（Trading and Investment News）",
+          "url": "https://www.tradingandinvestmentnews.co.uk/december-fed-hike-williams/",
+          "date": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "ticker": "CVS",
+      "name": "CVS Health",
+      "verdict": "headwind",
+      "summary": "11/4の会社分割の発表以降、目標株価の引き下げが11/18まで9件以上続き、さらに11/16〜20にメディケア・アドバンテージの監査強化案、メディケア拡大案、品質評価の報酬見直し案が相次いで出て、医療保険業界への逆風が強まっていることが決め手。11/4の決算そのものは予想を上回り、2026年の見通しも引き上げた。業界の売りの原因はいずれも提案の段階で、決着していない。",
+      "why_cheap": "会社固有の要因と業界全体の売りが重なっている。会社側では、11/4に薬局事業と保険・薬剤給付管理（PBM）事業を2社に分ける計画（2028年前半に完了予定）を突然発表し、好決算にもかかわらず12.5%下げた。規制への守りの動きと受け取られ、財務の詳細も示されなかった。業界側では、11/16に米当局がメディケア・アドバンテージの監査強化案を公表、11/19にサンダース議員のメディケア拡大案が報じられ、11/20夜には品質評価に基づく報酬の見直し案が出て、11/23の取引開始直後に2.7%下げた。11/23の終値は79.65ドル。",
+      "positives": [
+        "7〜9月期（11/4発表）の売上高は1,084億ドルで前年同期比5.4%増。調整後1株利益は2.09ドル（前年1.60ドル）で、予想の1.65ドルを上回った。調整後営業利益は41.94億ドルで21.2%増。",
+        "保険部門の医療費の比率は91.3%（前年92.8%）に改善し、同部門の調整後営業利益は9.12億ドル（前年3.14億ドル）になった。",
+        "2026年の見通しを引き上げた。調整後1株利益7.90〜8.10ドル→8.20ドル以上、営業キャッシュフロー115億ドル以上→155億ドル以上。2027年の調整後1株利益は8.65ドル以上とした（予想は8.53ドル）。",
+        "目標株価を下げた各社（RBC、バーンスタイン、ゴールドマン、レイモンド・ジェームズ、UBSなど）は強気の投資判断を維持している。判断の内訳は買い15・中立1・売り0、目標株価の平均は110.43ドル（11/20時点）。",
+        "監査強化案と報酬見直し案はどちらも提案の段階。報酬見直し案の影響は2031〜2037年で、確定と法的な争いを経る必要がある。監査強化の旧版は2025年9月に連邦地裁で無効とされ、控訴審の判断は出ていない。"
+      ],
+      "negatives": [
+        "目標株価の引き下げが続いた。エバーコア125→110ドル（11/4）、UBS 118→107ドル（11/5）、レイモンド・ジェームズ120→103ドル（11/6）、ウェルズ・ファーゴ123→112ドル（11/12）、RBC 113→108ドル（11/16）、バーンスタイン112→106ドル（11/18）。引き上げは見つからなかった。",
+        "RBCは引き下げの理由に、分割で失われる相乗効果と分割に伴う費用を挙げた。UBSは分割が規制への守りの動きと受け取られたとし、バークレイズは財務の詳細がないことを懸念に挙げた。",
+        "11/16公表の監査強化案は、抜き取り調査の誤り率を契約全体に当てはめ、2018年分までさかのぼる。当局の見積もりでは業界全体で1年分あたり約90億ドルを回収する。意見の受付は2027-01-19まで。",
+        "11/20夜公表の品質評価の報酬見直し案は、当局の見積もりで2031〜2037年に約1,070億ドルの支払い減になる。調査会社は「不確かさの嵐が続くことを示している」と評した。",
+        "政治面の圧力が強まっている。サンダース議員は初年度にメディケアの対象年齢を65歳から55歳に下げる案を示し、ウォーレン議員は11/18にCVSなど大手3社の解体を求めた。民主党は2027年1月から上下両院を握る。",
+        "会社は2027年の逆風として、薬の割引制度によるPBM事業への圧力、弱い営業シーズン、保険の加入者の減少を挙げ、2027年がPBMなどの部門の利益の底になるとした。保険料は高い医療費が続く前提で設定している。"
+      ],
+      "upcoming": [
+        "10〜12月期決算と2027年の正式な見通しは外部の資料では 2027-02-08（会社の発表は確認できていない）",
+        "メディケア・アドバンテージの監査強化案への意見の締め切り 2027-01-19",
+        "新しい議会の開会は2027年1月（サンダース議員が上院の厚生委員長になる見込み）",
+        "会社分割の完了予定 2028年前半"
+      ],
+      "sources": [
+        {
+          "title": "CVS Health Form 8-K Ex. 99.1（2026年 第3四半期決算）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000064803/000006480326000107/cvs_ex99x1q3-26.htm",
+          "date": "2026-11-04"
+        },
+        {
+          "title": "What Did CVS Health's Quarter Change For Its Stock?（Trefis）",
+          "url": "https://www.trefis.com/stock/cvs/articles/623635/what-did-cvs-healths-quarter-change-for-its-stock/2026-11-07",
+          "date": "2026-11-07"
+        },
+        {
+          "title": "RBC cuts CVS Health stock price target on separation costs（Investing.com）",
+          "url": "https://www.investing.com/news/analyst-ratings/rbc-cuts-cvs-health-stock-price-target-on-separation-costs-93CH-5030032",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "How Big Could CVS Health Stock's Next Fall Be?（Trefis）",
+          "url": "https://www.trefis.com/stock/cvs/articles/628279/how-big-could-cvs-health-stock-s-next-fall-be/2026-11-24",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "Medicare For All Momentum Sinks Health Insurer Stocks（Forbes）",
+          "url": "https://www.forbes.com/sites/brucejapsen/2026/11/19/medicare-for-all-momentum-sinks-health-insurer-stocks/",
+          "date": "2026-11-19"
+        },
+        {
+          "title": "UnitedHealth Stock (UNH) Falls 5.6% as Health Insurers Slide（HeyGoTrade）",
+          "url": "https://www.heygotrade.com/en/news/unitedhealth-unh-stock-news-november-20-2026/",
+          "date": "2026-11-20"
+        },
+        {
+          "title": "Health insurance stocks fall as Medicare Advantage audit proposal hits sector（Beinsure）",
+          "url": "https://beinsure.com/news/health-insurance-stocks-fall-as-medicare-advantage-audit-proposal-hits-sector/",
+          "date": "2026-11-23"
+        },
+        {
+          "title": "Health Insurers Stocks Slide Again on Latest Medicare Proposal（J&R Report／Yahoo Finance 転載）",
+          "url": "https://jrreport.wordandbrown.com/2026/11/24/health-insurers-stocks-slide-again-on-latest-medicare-proposal/",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "CVS Health (CVS) Stock Forecast & Analyst Price Targets（TipRanks）",
+          "url": "https://www.tipranks.com/stocks/cvs/forecast",
+          "date": "2026-11-20"
+        }
+      ]
+    },
+    {
+      "ticker": "FANG",
+      "name": "Diamondback Energy",
+      "verdict": "neutral",
+      "summary": "会社の業績は良く生産見通しも引き上げたが、株価を下げている原油安がまだ収まっておらず（11/23に北海ブレントが8/31以来の安値で終了）、11/29にOPECプラスの2027年の方針決定を控えているため、材料が混在している。目標株価は引き上げと引き下げの両方がある。11/16に発表した買収は一部を新株で支払う。",
+      "why_cheap": "主に原油安による業界全体の売り。北海ブレントは10/30に約118ドルで終えた後、中東からの供給の増加、リビアのパイプライン再開、2027年の供給過剰の予想で下げ、11/23は89.37ドル（3.46%安）、WTIは80.17ドル（3.88%安）で終えた。株価は過去1年の高値212.08ドルから、11/10まで7営業日続けて下げた（合計16.0%安）。会社側では、決算後の11/4に設備投資の増加への懸念で3.7%下げ、11/16には現金と新株で支払う買収を発表した。",
+      "positives": [
+        "7〜9月期（11/2発表）の1株利益は5.69ドル（前年同期3.51ドル）。フリーキャッシュフローは21.48億ドル。",
+        "2026年通期の生産見通しを引き上げた（原油は日量52.2万バレル以上→約52.4万バレル）。四半期の基本配当を7.3%増やして1株1.18ドルにした。",
+        "負債は合計133.75億ドルで、1年前の164.32億ドルから減った。7〜9月期に約2.51億ドルの自社株買いをした。",
+        "11/16にダブル・イーグルの資産（ミッドランド盆地の約17.6万エーカー）を買うと発表した。会社は1株あたりのキャッシュフローがすぐに増え、負債の比率は変わらないと説明している。",
+        "トゥルイストは11/17に目標株価を232→242ドルに上げた（買いを維持）。買収で2027年の1株あたりフリーキャッシュフローが3%増えるとみている。"
+      ],
+      "negatives": [
+        "原油価格の下げが続いている。11/23の終値は北海ブレントが8/31以来、WTIが8/10以来の安さ。7〜9月期の会社の原油の販売価格は1バレル87.30ドルで、足元のWTIはこれを下回る。",
+        "2027年に供給過剰になるとの予想がある。調査会社BMIは2027年後半に大きな過剰が生じ、北海ブレントが2027年10〜12月期に平均67ドルまで下がると見込む（米国とイランの合意を2027年1〜3月期と想定）。",
+        "目標株価の引き下げもある。レイモンド・ジェームズ256→246ドル（11/20）、みずほ254→248ドル（買収発表後、強気は維持）。",
+        "買収の対価は現金21.5億ドルと新株約1,556万株。現金分は手元資金と借り入れでまかなう。発表日の11/16は、原油安の中で株価が下げたと報じられた。",
+        "2026年の設備投資の見通しを約39億ドル→39.5〜40.0億ドルに上げた。2027年に生産を横ばいで保つには四半期あたり10〜11億ドルが要るとされ、原油安の局面では現金収支を圧迫するとの見方がある。",
+        "原油の値下がりに備えた契約（10〜12月期は日量17.5万バレル分）の下限は平均50.57ドルで、今の価格帯での値下がりは業績にそのまま響きやすい。"
+      ],
+      "upcoming": [
+        "OPECプラスの閣僚会合 2026-11-29（2027年の生産方針と新しい基準生産量を決める見込み）",
+        "ダブル・イーグル資産の買収完了 2026-12-21（見込み）",
         "次の決算発表日は確認できていない"
       ],
       "sources": [
         {
-          "title": "NRG Form 8-K Ex. 99.1（2026年 第3四半期決算）",
-          "url": "https://www.sec.gov/Archives/edgar/data/0001013871/000101387126000022/nrgq32026ex991.htm",
-          "date": "2026-11-09"
+          "title": "Diamondback Energy Form 8-K Ex. 99.1（2026年 第3四半期決算）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001539838/000153983826000180/diamondbackex991-11x2x26.htm",
+          "date": "2026-11-02"
         },
         {
-          "title": "NRG Q3 Earnings Call Focuses on Asset Sale and 2027 Outlook（Zacks）",
-          "url": "https://www.zacks.com/stock/news/3027493/nrg-q3-earnings-call-focuses-on-asset-sale-and-2027-outlook",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "What Sent NRG Energy Stock Higher?（Trefis）",
-          "url": "https://www.trefis.com/stock/nrg/articles2/624089/what-sent-nrg-energy-stock-higher/2026-11-10",
-          "date": "2026-11-10"
-        },
-        {
-          "title": "Goldman Sachs Adjusts Price Target on NRG Energy to $149 From $167（MarketScreener）",
-          "url": "https://www.marketscreener.com/news/goldman-sachs-adjusts-price-target-on-nrg-energy-to-149-from-167-ce785ed3d88fff2c",
-          "date": "2026-11-20"
-        },
-        {
-          "title": "BMO cuts NRG Energy stock price target on asset sale to LS Power（Investing.com）",
-          "url": "https://www.investing.com/news/analyst-ratings/bmo-cuts-nrg-energy-stock-price-target-on-asset-sale-to-ls-power-93CH-5030137",
+          "title": "Diamondback Energy Form 8-K Ex. 99.1（ミッドランド盆地の資産買収の発表）",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001539838/000110465926128377/tm2629913d1_ex99-1.htm",
           "date": "2026-11-16"
         },
         {
-          "title": "NRG Stock Overview（Stock Analysis、アナリストの変更履歴）",
-          "url": "https://stockanalysis.com/stocks/nrg/",
-          "date": "2026-10-31"
+          "title": "Diamondback Energy (FANG) Stock Price Drops After Q3 Earnings Per Share Dip（Webull）",
+          "url": "https://www.webull.com/news/15862925998267392",
+          "date": "2026-11-04"
         },
         {
-          "title": "As Vistra and other energy stocks slide...（Longbridge）",
-          "url": "https://longbridge.com/en/news/304329045",
-          "date": "2026-11-05"
+          "title": "Diamondback Energy Stock: 7 Straight Red Days, Down 16%（Trefis）",
+          "url": "https://www.trefis.com/stock/fang/articles/624217/diamondback-energy-stock-7-straight-red-days-down-16/2026-11-11",
+          "date": "2026-11-11"
         },
         {
-          "title": "Texas regulators are resuming environmental permits for data centers（Victoria Advocate／Texas Tribune）",
-          "url": "https://victoriaadvocate.com/2026/11/21/texas-regulators-are-resuming-environmental-permits-for-data-centers/",
-          "date": "2026-11-21"
+          "title": "Diamondback Energy stock: Raymond James cuts price target to USD 246（ad-hoc-news）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/diamondback-energy-stock-raymond-james-cuts-price-target-to-usd-246/70547198",
+          "date": "2026-11-23"
         },
         {
-          "title": "Texas Data Center Critical Dates and Procedures Following the 2026 Elections（Gibson Dunn）",
-          "url": "https://www.gibsondunn.com/texas-data-center-critical-dates-and-procedures-following-the-2026-elections/",
-          "date": "2026-11-18"
+          "title": "Oil slips as energy stocks dip even with deal talk（Finimize）",
+          "url": "https://finimize.com/content/oil-slips-as-energy-stocks-dip-even-with-deal-talk",
+          "date": "2026-11-16"
+        },
+        {
+          "title": "OPEC+ keeps December oil output targets steady ahead of tougher call for 2027（GV Wire／Reuters）",
+          "url": "https://gvwire.com/2026/11/01/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027/",
+          "date": "2026-11-01"
+        },
+        {
+          "title": "Three month low for crude oil prices（Oklahoma Energy Today）",
+          "url": "https://okenergytoday.com/2026/11/three-month-low-for-crude-oil-prices/",
+          "date": "2026-11-23"
+        },
+        {
+          "title": "OPEC at a Crossroads（Rigzone）",
+          "url": "https://www.rigzone.com/news/opec_at_a_crossroads-24-nov-2026-185156-article/",
+          "date": "2026-11-24"
         }
       ]
     }
