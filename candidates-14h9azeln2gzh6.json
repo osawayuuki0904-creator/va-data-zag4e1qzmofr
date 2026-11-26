@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-11-26T07:17:38+09:00",
-  "run_date": "2026-11-26",
+  "generated_at": "2026-11-27T07:17:53+09:00",
+  "run_date": "2026-11-27",
   "data_dates": {
     "JP": [
-      "2026-11-25"
+      "2026-11-26"
     ],
     "US": [
       "2026-11-25"
     ]
   },
   "summary": {
-    "total": 105,
+    "total": 107,
     "triggered": 1,
-    "waiting": 57,
-    "none": 47,
+    "waiting": 54,
+    "none": 52,
     "unavailable": 0,
     "by_rule": {
-      "value_screen": 1
+      "analyst_gap_jp": 1
     },
-    "paper_open": 79,
+    "paper_open": 86,
     "timing_mode": "double_bottom"
   },
   "thresholds": {
@@ -77,40 +77,40 @@
   },
   "candidates": [
     {
-      "ticker": "6902.T",
-      "name": "デンソー",
-      "entry_rule": "value_screen",
+      "ticker": "6701.T",
+      "name": "日本電気",
+      "entry_rule": "analyst_gap_jp",
       "timing": "成立",
-      "timing_reason": "1番底 35日前 / 2番底 12日前（安値 1,808.00）、ネックライン 1,926.00 を上抜け",
-      "price": 1952.0,
+      "timing_reason": "1番底 13日前 / 2番底 3日前（安値 4,225.00）、ネックライン 4,523.00 を上抜け",
+      "price": 4625.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 5.6,
-      "target_mean_price": 2062.2222,
-      "target_low_price": 1670.0,
-      "num_analyst_opinions": 18,
-      "pbr": 0.95130974,
-      "per": 12.410198,
-      "payout_ratio": 0.4578,
-      "equity_ratio": 0.629112455665849,
+      "as_of": "2026-11-26",
+      "gap_pct": 37.9,
+      "target_mean_price": 6376.923,
+      "target_low_price": 5400.0,
+      "num_analyst_opinions": 13,
+      "pbr": 2.7237847,
+      "per": 19.590816,
+      "payout_ratio": 0.17790002,
+      "equity_ratio": 0.4917582762005058,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
           "state": "成立",
-          "reason": "1番底 35日前 / 2番底 12日前（安値 1,808.00）、ネックライン 1,926.00 を上抜け"
+          "reason": "1番底 13日前 / 2番底 3日前（安値 4,225.00）、ネックライン 4,523.00 を上抜け"
         },
         "confirm": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+          "state": "待機中",
+          "reason": "5日線 4,393.60 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+          "state": "待機中",
+          "reason": "5日線 4,393.60 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "6902.T",
+      "chart_ric": "6701.T",
       "outlook": {
         "state": "good",
         "concerns": [],
@@ -118,94 +118,26 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": -0.5,
-            "detail": "目標株価（平均）が14日前から -0.5%"
+            "value": 1.1,
+            "detail": "目標株価（平均）が14日前から +1.1%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 5.1,
-            "detail": "売上が前年同期比 +5.1%"
+            "value": 9.4,
+            "detail": "売上が前年同期比 +9.4%"
           },
           {
             "key": "earnings",
             "state": "ok",
-            "value": 8.4,
-            "detail": "利益が前年同期比 +8.4%"
+            "value": 25.3,
+            "detail": "利益が前年同期比 +25.3%"
           },
           {
             "key": "forecast",
             "state": "ok",
-            "value": 22.6,
-            "detail": "予想EPS が実績EPS から +22.6%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "5803.T",
-      "name": "フジクラ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "安値圏 2,062.50 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 2062.5,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 212.9,
-      "target_mean_price": 6453.077,
-      "target_low_price": 2520.0,
-      "num_analyst_opinions": 13,
-      "pbr": 4.926809,
-      "per": 12.63477,
-      "payout_ratio": 0.3778,
-      "equity_ratio": 0.578022268204577,
-      "operating_cf_ok": true,
-      "held": true,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 2,062.50 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 2,062.50 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 2,062.50 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "5803.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "target_trend"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "concern",
-            "value": -5.2,
-            "detail": "目標株価（平均）が14日前から -5.2%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 59.9,
-            "detail": "売上が前年同期比 +59.9%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 178.6,
-            "detail": "利益が前年同期比 +178.6%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 85.5,
-            "detail": "予想EPS が実績EPS から +85.5%"
+            "value": 204.5,
+            "detail": "予想EPS が実績EPS から +204.5%"
           }
         ]
       }
@@ -214,17 +146,17 @@
       "ticker": "9984.T",
       "name": "ソフトバンクグループ",
       "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "安値圏 2,696.50 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 2696.5,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 2894.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 154.1,
+      "as_of": "2026-11-26",
+      "gap_pct": 136.7,
       "target_mean_price": 6850.6943,
       "target_low_price": 4000.0,
       "num_analyst_opinions": 18,
-      "pbr": 0.937278,
-      "per": 14.046466,
+      "pbr": 1.0059271,
+      "per": 11.963126,
       "payout_ratio": 0.048800003,
       "equity_ratio": 0.290073323509721,
       "operating_cf_ok": false,
@@ -232,16 +164,16 @@
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 2,696.50 にいる（タッチ 1回目）。2番底の形成待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 2,696.50 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 1日。5日線 3,063.70 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 2,696.50 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 1日。5日線 3,063.70 の上抜け待ち"
         }
       },
       "chart_ric": "9984.T",
@@ -254,8 +186,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -11.7,
-            "detail": "目標株価（平均）が14日前から -11.7%"
+            "value": -10.5,
+            "detail": "目標株価（平均）が14日前から -10.5%"
           },
           {
             "key": "revenue",
@@ -272,8 +204,8 @@
           {
             "key": "forecast",
             "state": "ok",
-            "value": 53.8,
-            "detail": "予想EPS が実績EPS から +53.8%"
+            "value": 22.1,
+            "detail": "予想EPS が実績EPS から +22.1%"
           }
         ]
       }
@@ -322,8 +254,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -3.8,
-            "detail": "目標株価（平均）が14日前から -3.8%"
+            "value": -3.6,
+            "detail": "目標株価（平均）が14日前から -3.6%"
           },
           {
             "key": "revenue",
@@ -458,8 +390,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -7.5,
-            "detail": "目標株価（平均）が14日前から -7.5%"
+            "value": -4.3,
+            "detail": "目標株価（平均）が14日前から -4.3%"
           },
           {
             "key": "revenue",
@@ -728,8 +660,8 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": -0.7,
-            "detail": "目標株価（平均）が14日前から -0.7%"
+            "value": -0.5,
+            "detail": "目標株価（平均）が14日前から -0.5%"
           },
           {
             "key": "revenue",
@@ -748,143 +680,6 @@
             "state": "ok",
             "value": 82.9,
             "detail": "予想EPS が実績EPS から +82.9%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "6762.T",
-      "name": "ＴＤＫ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 0日前（安値 2,107.00）、ネックライン 2,365.50。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 2142.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 89.7,
-      "target_mean_price": 4063.125,
-      "target_low_price": 2900.0,
-      "num_analyst_opinions": 16,
-      "pbr": 1.746238,
-      "per": 10.939734,
-      "payout_ratio": 0.2298,
-      "equity_ratio": 0.49539010345003315,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 0日前（安値 2,107.00）、ネックライン 2,365.50。2番底をつけている最中（ネックライン上抜け待ち）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 12日。5日線 2,212.80 の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 12日。5日線 2,212.80 の上抜け待ち"
-        }
-      },
-      "chart_ric": "6762.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "target_trend",
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "concern",
-            "value": -2.6,
-            "detail": "目標株価（平均）が14日前から -2.6%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 26.6,
-            "detail": "売上が前年同期比 +26.6%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 37.0,
-            "detail": "利益が前年同期比 +37.0%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -45.4,
-            "detail": "予想EPS が実績EPS から -45.4%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "8035.T",
-      "name": "東京エレクトロン",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "安値圏 7,825.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 7825.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 89.1,
-      "target_mean_price": 14800.0,
-      "target_low_price": 9600.0,
-      "num_analyst_opinions": 23,
-      "pbr": 8.070604,
-      "per": 50.211758,
-      "payout_ratio": 0.59400004,
-      "equity_ratio": 0.7235219051260802,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 7,825.00 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 7,825.00 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 7,825.00 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "8035.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "target_trend"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "concern",
-            "value": -3.1,
-            "detail": "目標株価（平均）が14日前から -3.1%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 48.4,
-            "detail": "売上が前年同期比 +48.4%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 73.9,
-            "detail": "利益が前年同期比 +73.9%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 721.5,
-            "detail": "予想EPS が実績EPS から +721.5%"
           }
         ]
       }
@@ -933,8 +728,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -3.2,
-            "detail": "目標株価（平均）が14日前から -3.2%"
+            "value": -2.2,
+            "detail": "目標株価（平均）が14日前から -2.2%"
           },
           {
             "key": "revenue",
@@ -953,6 +748,74 @@
             "state": "ok",
             "value": 84.6,
             "detail": "予想EPS が実績EPS から +84.6%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "8035.T",
+      "name": "東京エレクトロン",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "安値圏 7,825.00 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 7871.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 88.0,
+      "target_mean_price": 14800.0,
+      "target_low_price": 9600.0,
+      "num_analyst_opinions": 23,
+      "pbr": 8.118049,
+      "per": 44.17691,
+      "payout_ratio": 0.59400004,
+      "equity_ratio": 0.7235219051260802,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 7,825.00 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 8,378.20 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 8,378.20 の上抜け待ち"
+        }
+      },
+      "chart_ric": "8035.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "target_trend"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "concern",
+            "value": -3.1,
+            "detail": "目標株価（平均）が14日前から -3.1%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 48.4,
+            "detail": "売上が前年同期比 +48.4%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 73.9,
+            "detail": "利益が前年同期比 +73.9%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 618.5,
+            "detail": "予想EPS が実績EPS から +618.5%"
           }
         ]
       }
@@ -1026,40 +889,40 @@
       }
     },
     {
-      "ticker": "6146.T",
-      "name": "ディスコ",
+      "ticker": "6762.T",
+      "name": "ＴＤＫ",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 0日前（安値 40,590.00）、ネックライン 47,580.00。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 40590.0,
+      "timing_reason": "1番底 13日前 / 2番底 1日前（安値 2,107.00）、ネックライン 2,365.50。ネックライン上抜け待ち",
+      "price": 2209.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 83.8,
-      "target_mean_price": 74605.0,
-      "target_low_price": 54900.0,
-      "num_analyst_opinions": 20,
-      "pbr": 7.006894,
-      "per": 27.601917,
-      "payout_ratio": 0.3822,
-      "equity_ratio": 0.7906242853876058,
+      "as_of": "2026-11-26",
+      "gap_pct": 83.9,
+      "target_mean_price": 4063.125,
+      "target_low_price": 2900.0,
+      "num_analyst_opinions": 16,
+      "pbr": 1.8008589,
+      "per": 11.28192,
+      "payout_ratio": 0.2298,
+      "equity_ratio": 0.49539010345003315,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 0日前（安値 40,590.00）、ネックライン 47,580.00。2番底をつけている最中（ネックライン上抜け待ち）"
+          "reason": "1番底 13日前 / 2番底 1日前（安値 2,107.00）、ネックライン 2,365.50。ネックライン上抜け待ち"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 40,590.00 を更新。5日線の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 2,107.00 を 13日前に更新後、5日線 2,201.80 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 40,590.00 を更新。5日線の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 2,107.00 を 13日前に更新後、5日線 2,201.80 を上抜け（安値から 4.8%）"
         }
       },
-      "chart_ric": "6146.T",
+      "chart_ric": "6762.T",
       "outlook": {
         "state": "concern",
         "concerns": [
@@ -1070,26 +933,26 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -3.1,
-            "detail": "目標株価（平均）が14日前から -3.1%"
+            "value": -2.6,
+            "detail": "目標株価（平均）が14日前から -2.6%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 36.4,
-            "detail": "売上が前年同期比 +36.4%"
+            "value": 26.6,
+            "detail": "売上が前年同期比 +26.6%"
           },
           {
             "key": "earnings",
             "state": "ok",
-            "value": 44.0,
-            "detail": "利益が前年同期比 +44.0%"
+            "value": 37.0,
+            "detail": "利益が前年同期比 +37.0%"
           },
           {
             "key": "forecast",
             "state": "concern",
-            "value": -7.5,
-            "detail": "予想EPS が実績EPS から -7.5%"
+            "value": -45.4,
+            "detail": "予想EPS が実績EPS から -45.4%"
           }
         ]
       }
@@ -1138,8 +1001,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -10.4,
-            "detail": "目標株価（平均）が14日前から -10.4%"
+            "value": -10.8,
+            "detail": "目標株価（平均）が14日前から -10.8%"
           },
           {
             "key": "revenue",
@@ -1158,6 +1021,75 @@
             "state": "ok",
             "value": 94.5,
             "detail": "予想EPS が実績EPS から +94.5%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "6146.T",
+      "name": "ディスコ",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "1番底 13日前 / 2番底 1日前（安値 40,590.00）、ネックライン 47,580.00。ネックライン上抜け待ち",
+      "price": 42200.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 76.8,
+      "target_mean_price": 74605.0,
+      "target_low_price": 54900.0,
+      "num_analyst_opinions": 20,
+      "pbr": 7.284822,
+      "per": 28.696941,
+      "payout_ratio": 0.3822,
+      "equity_ratio": 0.7906242853876058,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 13日前 / 2番底 1日前（安値 40,590.00）、ネックライン 47,580.00。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 42,778.00 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 42,778.00 の上抜け待ち"
+        }
+      },
+      "chart_ric": "6146.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "target_trend",
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "concern",
+            "value": -3.1,
+            "detail": "目標株価（平均）が14日前から -3.1%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 36.4,
+            "detail": "売上が前年同期比 +36.4%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 44.0,
+            "detail": "利益が前年同期比 +44.0%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -7.5,
+            "detail": "予想EPS が実績EPS から -7.5%"
           }
         ]
       }
@@ -1231,69 +1163,67 @@
       }
     },
     {
-      "ticker": "DELL",
-      "name": "Dell Technologies",
+      "ticker": "ALB",
+      "name": "Albemarle Corporation",
       "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 297.05999755859375,
+      "timing": "待機中",
+      "timing_reason": "安値圏 79.70 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 81.5,
       "currency": "USD",
       "as_of": "2026-11-25",
-      "gap_pct": 71.6,
-      "target_mean_price": 509.88,
-      "target_low_price": 325.0,
-      "num_analyst_opinions": 25,
-      "pbr": -133.21075,
-      "per": 17.27093,
-      "payout_ratio": 0.13430001,
-      "equity_ratio": -0.02438639101159094,
+      "gap_pct": 72.5,
+      "target_mean_price": 140.55144,
+      "target_low_price": 86.0,
+      "num_analyst_opinions": 21,
+      "pbr": 1.1578678,
+      "per": 19.638554,
+      "payout_ratio": 0.3916,
+      "equity_ratio": 0.5822182821511217,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+          "state": "待機中",
+          "reason": "安値圏 79.70 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 3日。5日線 303.56 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 79.70 を 3日前に更新後、5日線 81.47 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 3日。5日線 303.56 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 79.70 を 3日前に更新後、5日線 81.47 を上抜け（安値から 2.3%）"
         }
       },
-      "chart_ric": "DELL.N",
+      "chart_ric": "ALB.N",
       "outlook": {
-        "state": "concern",
-        "concerns": [
-          "target_trend"
-        ],
+        "state": "good",
+        "concerns": [],
         "checks": [
           {
             "key": "target_trend",
-            "state": "concern",
-            "value": -13.6,
-            "detail": "目標株価（平均）が14日前から -13.6%"
+            "state": "ok",
+            "value": 0.9,
+            "detail": "目標株価（平均）が14日前から +0.9%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 57.7,
-            "detail": "売上が前年同期比 +57.7%"
+            "value": 18.8,
+            "detail": "売上が前年同期比 +18.8%"
           },
           {
             "key": "earnings",
-            "state": "ok",
-            "value": 272.9,
-            "detail": "利益が前年同期比 +272.9%"
+            "state": "unknown",
+            "value": null,
+            "detail": "利益の前年同期比が取れない"
           },
           {
             "key": "forecast",
             "state": "ok",
-            "value": 78.2,
-            "detail": "予想EPS が実績EPS から +78.2%"
+            "value": 84.6,
+            "detail": "予想EPS が実績EPS から +84.6%"
           }
         ]
       }
@@ -1538,15 +1468,14 @@
       "outlook": {
         "state": "concern",
         "concerns": [
-          "target_trend",
           "revenue"
         ],
         "checks": [
           {
             "key": "target_trend",
-            "state": "concern",
-            "value": -1.1,
-            "detail": "目標株価（平均）が14日前から -1.1%"
+            "state": "ok",
+            "value": -0.8,
+            "detail": "目標株価（平均）が14日前から -0.8%"
           },
           {
             "key": "revenue",
@@ -1570,70 +1499,69 @@
       }
     },
     {
-      "ticker": "6920.T",
-      "name": "レーザーテック",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "安値圏 29,325.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 29325.0,
-      "currency": "JPY",
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 297.05999755859375,
+      "currency": "USD",
       "as_of": "2026-11-25",
-      "gap_pct": 68.9,
-      "target_mean_price": 49518.75,
-      "target_low_price": 34000.0,
-      "num_analyst_opinions": 16,
-      "pbr": 10.983496,
-      "per": 38.052788,
-      "payout_ratio": 0.4269,
-      "equity_ratio": 0.7332481806030001,
+      "gap_pct": 67.8,
+      "target_mean_price": 498.36,
+      "target_low_price": 325.0,
+      "num_analyst_opinions": 25,
+      "pbr": -133.21075,
+      "per": 17.27093,
+      "payout_ratio": 0.13430001,
+      "equity_ratio": -0.02438639101159094,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 29,325.00 にいる（タッチ 1回目）。2番底の形成待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 29,325.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 303.56 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 29,325.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 303.56 の上抜け待ち"
         }
       },
-      "chart_ric": "6920.T",
+      "chart_ric": "DELL.N",
       "outlook": {
         "state": "concern",
         "concerns": [
-          "revenue",
-          "earnings"
+          "target_trend"
         ],
         "checks": [
           {
             "key": "target_trend",
-            "state": "ok",
-            "value": 0.5,
-            "detail": "目標株価（平均）が14日前から +0.5%"
+            "state": "concern",
+            "value": -15.5,
+            "detail": "目標株価（平均）が14日前から -15.5%"
           },
           {
             "key": "revenue",
-            "state": "concern",
-            "value": -25.5,
-            "detail": "売上が前年同期比 -25.5%"
+            "state": "ok",
+            "value": 103.4,
+            "detail": "売上が前年同期比 +103.4%"
           },
           {
             "key": "earnings",
-            "state": "concern",
-            "value": -43.4,
-            "detail": "利益が前年同期比 -43.4%"
+            "state": "ok",
+            "value": 286.8,
+            "detail": "利益が前年同期比 +286.8%"
           },
           {
             "key": "forecast",
             "state": "ok",
-            "value": 41.7,
-            "detail": "予想EPS が実績EPS から +41.7%"
+            "value": 78.2,
+            "detail": "予想EPS が実績EPS から +78.2%"
           }
         ]
       }
@@ -1751,8 +1679,8 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": -0.8,
-            "detail": "目標株価（平均）が14日前から -0.8%"
+            "value": -0.3,
+            "detail": "目標株価（平均）が14日前から -0.3%"
           },
           {
             "key": "revenue",
@@ -1910,6 +1838,75 @@
       }
     },
     {
+      "ticker": "6920.T",
+      "name": "レーザーテック",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 30550.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 62.1,
+      "target_mean_price": 49518.75,
+      "target_low_price": 34000.0,
+      "num_analyst_opinions": 16,
+      "pbr": 11.442311,
+      "per": 39.641346,
+      "payout_ratio": 0.4269,
+      "equity_ratio": 0.7332481806030001,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 31,329.00 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 1日。5日線 31,329.00 の上抜け待ち"
+        }
+      },
+      "chart_ric": "6920.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "revenue",
+          "earnings"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 0.5,
+            "detail": "目標株価（平均）が14日前から +0.5%"
+          },
+          {
+            "key": "revenue",
+            "state": "concern",
+            "value": -25.5,
+            "detail": "売上が前年同期比 -25.5%"
+          },
+          {
+            "key": "earnings",
+            "state": "concern",
+            "value": -43.4,
+            "detail": "利益が前年同期比 -43.4%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 41.7,
+            "detail": "予想EPS が実績EPS から +41.7%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "GEV",
       "name": "GE Vernova",
       "entry_rule": "analyst_gap_us",
@@ -1954,8 +1951,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -2.4,
-            "detail": "目標株価（平均）が14日前から -2.4%"
+            "value": -2.5,
+            "detail": "目標株価（平均）が14日前から -2.5%"
           },
           {
             "key": "revenue",
@@ -2385,74 +2382,6 @@
       }
     },
     {
-      "ticker": "6273.T",
-      "name": "ＳＭＣ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 0日前（安値 55,290.00）、ネックライン 62,320.00。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 56360.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 51.8,
-      "target_mean_price": 85575.0,
-      "target_low_price": 69000.0,
-      "num_analyst_opinions": 16,
-      "pbr": 1.6331819,
-      "per": 16.439539,
-      "payout_ratio": 0.2917,
-      "equity_ratio": 0.9148966081056823,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 0日前（安値 55,290.00）、ネックライン 62,320.00。2番底をつけている最中（ネックライン上抜け待ち）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 12日。5日線 57,758.00 の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 12日。5日線 57,758.00 の上抜け待ち"
-        }
-      },
-      "chart_ric": "6273.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.2,
-            "detail": "目標株価（平均）が14日前から -0.2%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 41.3,
-            "detail": "売上が前年同期比 +41.3%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 39.2,
-            "detail": "利益が前年同期比 +39.2%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -4.2,
-            "detail": "予想EPS が実績EPS から -4.2%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "APTV",
       "name": "Aptiv",
       "entry_rule": "value_screen",
@@ -2496,8 +2425,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -2.8,
-            "detail": "目標株価（平均）が14日前から -2.8%"
+            "value": -1.9,
+            "detail": "目標株価（平均）が14日前から -1.9%"
           },
           {
             "key": "revenue",
@@ -2516,6 +2445,74 @@
             "state": "ok",
             "value": 68.4,
             "detail": "予想EPS が実績EPS から +68.4%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "6273.T",
+      "name": "ＳＭＣ",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "1番底 13日前 / 2番底 1日前（安値 55,290.00）、ネックライン 62,320.00。2番底をつけている最中（ネックライン上抜け待ち）",
+      "price": 56430.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 51.6,
+      "target_mean_price": 85575.0,
+      "target_low_price": 69000.0,
+      "num_analyst_opinions": 16,
+      "pbr": 1.6352104,
+      "per": 16.460197,
+      "payout_ratio": 0.2917,
+      "equity_ratio": 0.9148966081056823,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 13日前 / 2番底 1日前（安値 55,290.00）、ネックライン 62,320.00。2番底をつけている最中（ネックライン上抜け待ち）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "60日安値から 13日。5日線 57,344.00 の上抜け待ち"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "60日安値から 13日。5日線 57,344.00 の上抜け待ち"
+        }
+      },
+      "chart_ric": "6273.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.2,
+            "detail": "目標株価（平均）が14日前から -0.2%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 41.3,
+            "detail": "売上が前年同期比 +41.3%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 39.2,
+            "detail": "利益が前年同期比 +39.2%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -4.2,
+            "detail": "予想EPS が実績EPS から -4.2%"
           }
         ]
       }
@@ -2564,8 +2561,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -2.8,
-            "detail": "目標株価（平均）が14日前から -2.8%"
+            "value": -1.9,
+            "detail": "目標株価（平均）が14日前から -1.9%"
           },
           {
             "key": "revenue",
@@ -2655,6 +2652,74 @@
       }
     },
     {
+      "ticker": "2802.T",
+      "name": "味の素",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 4009.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 50.7,
+      "target_mean_price": 6042.857,
+      "target_low_price": 5100.0,
+      "num_analyst_opinions": 14,
+      "pbr": 4.98395,
+      "per": 24.60264,
+      "payout_ratio": 0.3068,
+      "equity_ratio": 0.4253155854345693,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 4,007.60 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 4,007.60 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "2802.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "target_trend"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "concern",
+            "value": -3.9,
+            "detail": "目標株価（平均）が14日前から -3.9%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 11.8,
+            "detail": "売上が前年同期比 +11.8%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 98.5,
+            "detail": "利益が前年同期比 +98.5%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 42.5,
+            "detail": "予想EPS が実績EPS から +42.5%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "DASH",
       "name": "DoorDash",
       "entry_rule": "analyst_gap_us",
@@ -2729,8 +2794,8 @@
       "price": 46.36000061035156,
       "currency": "USD",
       "as_of": "2026-11-25",
-      "gap_pct": 49.6,
-      "target_mean_price": 69.33333,
+      "gap_pct": 49.5,
+      "target_mean_price": 69.29167,
       "target_low_price": 51.0,
       "num_analyst_opinions": 24,
       "pbr": 2.2858834,
@@ -2758,13 +2823,14 @@
       "outlook": {
         "state": "concern",
         "concerns": [
+          "target_trend",
           "earnings",
           "forecast"
         ],
         "checks": [
           {
             "key": "target_trend",
-            "state": "ok",
+            "state": "concern",
             "value": -1.0,
             "detail": "目標株価（平均）が14日前から -1.0%"
           },
@@ -2785,74 +2851,6 @@
             "state": "concern",
             "value": -3.6,
             "detail": "予想EPS が実績EPS から -3.6%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "2802.T",
-      "name": "味の素",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4052.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 49.1,
-      "target_mean_price": 6042.857,
-      "target_low_price": 5100.0,
-      "num_analyst_opinions": 14,
-      "pbr": 5.0374074,
-      "per": 24.848223,
-      "payout_ratio": 0.3068,
-      "equity_ratio": 0.4253155854345693,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 3,819.00 を 2日前に更新後、5日線 4,044.00 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値 3,819.00 を 2日前に更新後、5日線 4,044.00 を上抜け。ただし終値が安値から 6.1% 上（5% 以内ではない）"
-        }
-      },
-      "chart_ric": "2802.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "target_trend"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "concern",
-            "value": -4.0,
-            "detail": "目標株価（平均）が14日前から -4.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 11.8,
-            "detail": "売上が前年同期比 +11.8%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 98.5,
-            "detail": "利益が前年同期比 +98.5%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 42.3,
-            "detail": "予想EPS が実績EPS から +42.3%"
           }
         ]
       }
@@ -2931,7 +2929,7 @@
       "entry_rule": "analyst_gap_us",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 2回）",
-      "price": 57.654998779296875,
+      "price": 57.65999984741211,
       "currency": "USD",
       "as_of": "2026-11-25",
       "gap_pct": 47.9,
@@ -3198,74 +3196,6 @@
       }
     },
     {
-      "ticker": "5020.T",
-      "name": "ＥＮＥＯＳホールディングス",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 0日前（安値 1,144.00）、ネックライン 1,249.50。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 1144.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 45.5,
-      "target_mean_price": 1665.0,
-      "target_low_price": 1500.0,
-      "num_analyst_opinions": 6,
-      "pbr": 0.7989781,
-      "per": 4.3610854,
-      "payout_ratio": 0.1367,
-      "equity_ratio": 0.3705364692707993,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 0日前（安値 1,144.00）、ネックライン 1,249.50。2番底をつけている最中（ネックライン上抜け待ち）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 1,144.00 を更新。5日線の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 1,144.00 を更新。5日線の上抜け待ち"
-        }
-      },
-      "chart_ric": "5020.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.0,
-            "detail": "目標株価（平均）が14日前から +0.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 19.2,
-            "detail": "売上が前年同期比 +19.2%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 24.1,
-            "detail": "利益が前年同期比 +24.1%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -62.1,
-            "detail": "予想EPS が実績EPS から -62.1%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "APH",
       "name": "Amphenol",
       "entry_rule": "analyst_gap_us",
@@ -3279,7 +3209,7 @@
       "target_low_price": 85.0,
       "num_analyst_opinions": 19,
       "pbr": 10.534814,
-      "per": 31.773914,
+      "per": 31.636366,
       "payout_ratio": 0.2174,
       "equity_ratio": 0.37015031639019896,
       "operating_cf_ok": true,
@@ -3325,8 +3255,8 @@
           {
             "key": "forecast",
             "state": "ok",
-            "value": 57.6,
-            "detail": "予想EPS が実績EPS から +57.6%"
+            "value": 56.9,
+            "detail": "予想EPS が実績EPS から +56.9%"
           }
         ]
       }
@@ -3470,6 +3400,74 @@
       }
     },
     {
+      "ticker": "5020.T",
+      "name": "ＥＮＥＯＳホールディングス",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "1番底 13日前 / 2番底 1日前（安値 1,144.00）、ネックライン 1,249.50。2番底をつけている最中（ネックライン上抜け待ち）",
+      "price": 1158.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 43.7,
+      "target_mean_price": 1665.0,
+      "target_low_price": 1500.0,
+      "num_analyst_opinions": 6,
+      "pbr": 0.80910504,
+      "per": 4.416362,
+      "payout_ratio": 0.1367,
+      "equity_ratio": 0.3705364692707993,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 13日前 / 2番底 1日前（安値 1,144.00）、ネックライン 1,249.50。2番底をつけている最中（ネックライン上抜け待ち）"
+        },
+        "confirm": {
+          "state": "成立",
+          "reason": "60日安値 1,144.00 を 1日前に更新後、5日線 1,157.90 を上抜け"
+        },
+        "confirm_near_low": {
+          "state": "成立",
+          "reason": "60日安値 1,144.00 を 1日前に更新後、5日線 1,157.90 を上抜け（安値から 1.3%）"
+        }
+      },
+      "chart_ric": "5020.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 0.0,
+            "detail": "目標株価（平均）が14日前から +0.0%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 19.2,
+            "detail": "売上が前年同期比 +19.2%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 24.1,
+            "detail": "利益が前年同期比 +24.1%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -62.1,
+            "detail": "予想EPS が実績EPS から -62.1%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "GOOG",
       "name": "Alphabet Inc. (Class C)",
       "entry_rule": "analyst_gap_us",
@@ -3540,72 +3538,6 @@
       }
     },
     {
-      "ticker": "6701.T",
-      "name": "日本電気",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 2日前（安値 4,225.00）、ネックライン 4,523.00。ネックライン上抜け待ち",
-      "price": 4496.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 41.8,
-      "target_mean_price": 6376.923,
-      "target_low_price": 5400.0,
-      "num_analyst_opinions": 13,
-      "pbr": 2.647813,
-      "per": 19.044392,
-      "payout_ratio": 0.17790002,
-      "equity_ratio": 0.4917582762005058,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 2日前（安値 4,225.00）、ネックライン 4,523.00。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 4,316.80 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 4,316.80 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6701.T",
-      "outlook": {
-        "state": "good",
-        "concerns": [],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 1.1,
-            "detail": "目標株価（平均）が14日前から +1.1%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 9.4,
-            "detail": "売上が前年同期比 +9.4%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 25.3,
-            "detail": "利益が前年同期比 +25.3%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 204.5,
-            "detail": "予想EPS が実績EPS から +204.5%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "GNRC",
       "name": "Generac",
       "entry_rule": "analyst_gap_us",
@@ -3647,8 +3579,8 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": -0.1,
-            "detail": "目標株価（平均）が14日前から -0.1%"
+            "value": 0.9,
+            "detail": "目標株価（平均）が14日前から +0.9%"
           },
           {
             "key": "revenue",
@@ -3807,75 +3739,6 @@
       }
     },
     {
-      "ticker": "6702.T",
-      "name": "富士通",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 3441.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 39.6,
-      "target_mean_price": 4803.846,
-      "target_low_price": 4100.0,
-      "num_analyst_opinions": 13,
-      "pbr": 2.9084878,
-      "per": 22.354319,
-      "payout_ratio": 0.38639998,
-      "equity_ratio": 0.5956079058870591,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 3,218.00 を 12日前に更新後、5日線 3,387.60 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値 3,218.00 を 12日前に更新後、5日線 3,387.60 を上抜け。ただし終値が安値から 6.9% 上（5% 以内ではない）"
-        }
-      },
-      "chart_ric": "6702.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "earnings",
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.6,
-            "detail": "目標株価（平均）が14日前から -0.6%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 3.7,
-            "detail": "売上が前年同期比 +3.7%"
-          },
-          {
-            "key": "earnings",
-            "state": "concern",
-            "value": -51.8,
-            "detail": "利益が前年同期比 -51.8%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -1.4,
-            "detail": "予想EPS が実績EPS から -1.4%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "CDNS",
       "name": "Cadence Design Systems",
       "entry_rule": "analyst_gap_us",
@@ -4008,6 +3871,72 @@
       }
     },
     {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "1番底 14日前 / 2番底 3日前（安値 71.19）、ネックライン 82.49。ネックライン上抜け待ち",
+      "price": 74.73999786376953,
+      "currency": "USD",
+      "as_of": "2026-11-25",
+      "gap_pct": 39.3,
+      "target_mean_price": 104.1,
+      "target_low_price": 75.0,
+      "num_analyst_opinions": 16,
+      "pbr": 5.4487133,
+      "per": 28.526718,
+      "payout_ratio": 0.1279,
+      "equity_ratio": 0.026387522141310765,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 14日前 / 2番底 3日前（安値 71.19）、ネックライン 82.49。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "成立",
+          "reason": "60日安値 71.19 を 3日前に更新後、5日線 74.55 を上抜け"
+        },
+        "confirm_near_low": {
+          "state": "成立",
+          "reason": "60日安値 71.19 を 3日前に更新後、5日線 74.55 を上抜け（安値から 5.0%）"
+        }
+      },
+      "chart_ric": "IBKR.O",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 0.1,
+            "detail": "目標株価（平均）が14日前から +0.1%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 13.5,
+            "detail": "売上が前年同期比 +13.5%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 16.9,
+            "detail": "利益が前年同期比 +16.9%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 26.6,
+            "detail": "予想EPS が実績EPS から +26.6%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "EXE",
       "name": "Expand Energy",
       "entry_rule": "analyst_gap_us",
@@ -4053,8 +3982,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -1.9,
-            "detail": "目標株価（平均）が14日前から -1.9%"
+            "value": -1.7,
+            "detail": "目標株価（平均）が14日前から -1.7%"
           },
           {
             "key": "revenue",
@@ -4071,8 +4000,8 @@
           {
             "key": "forecast",
             "state": "concern",
-            "value": -33.2,
-            "detail": "予想EPS が実績EPS から -33.2%"
+            "value": -33.5,
+            "detail": "予想EPS が実績EPS から -33.5%"
           }
         ]
       }
@@ -4214,6 +4143,72 @@
       }
     },
     {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "entry_rule": "analyst_gap_us",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 609.8900146484375,
+      "currency": "USD",
+      "as_of": "2026-11-25",
+      "gap_pct": 38.1,
+      "target_mean_price": 842.53656,
+      "target_low_price": 650.0,
+      "num_analyst_opinions": 58,
+      "pbr": 5.7230663,
+      "per": 20.121742,
+      "payout_ratio": 0.0716,
+      "equity_ratio": 0.5935260545159977,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "成立",
+          "reason": "60日安値 560.84 を 3日前に更新後、5日線 590.87 を上抜け"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値 560.84 を 3日前に更新後、5日線 590.87 を上抜け。ただし終値が安値から 8.7% 上（5% 以内ではない）"
+        }
+      },
+      "chart_ric": "META.O",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.9,
+            "detail": "目標株価（平均）が14日前から -0.9%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 26.1,
+            "detail": "売上が前年同期比 +26.1%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 264.8,
+            "detail": "利益が前年同期比 +264.8%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 17.3,
+            "detail": "予想EPS が実績EPS から +17.3%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "CSCO",
       "name": "Cisco",
       "entry_rule": "analyst_gap_us",
@@ -4282,67 +4277,70 @@
       }
     },
     {
-      "ticker": "4063.T",
-      "name": "信越化学工業",
+      "ticker": "6702.T",
+      "name": "富士通",
       "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 2日前（安値 5,237.00）、ネックライン 5,791.00。ネックライン上抜け待ち",
-      "price": 5492.0,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 3521.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 36.1,
-      "target_mean_price": 7475.0,
-      "target_low_price": 6200.0,
-      "num_analyst_opinions": 16,
-      "pbr": 2.209846,
-      "per": 20.237305,
-      "payout_ratio": 0.409,
-      "equity_ratio": 0.7885025310376875,
+      "as_of": "2026-11-26",
+      "gap_pct": 36.4,
+      "target_mean_price": 4803.846,
+      "target_low_price": 4100.0,
+      "num_analyst_opinions": 13,
+      "pbr": 2.9761076,
+      "per": 22.874035,
+      "payout_ratio": 0.38639998,
+      "equity_ratio": 0.5956079058870591,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": true,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 2日前（安値 5,237.00）、ネックライン 5,791.00。ネックライン上抜け待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
         },
         "confirm": {
-          "state": "成立",
-          "reason": "60日安値 5,237.00 を 2日前に更新後、5日線 5,450.40 を上抜け"
+          "state": "待機中",
+          "reason": "5日線 3,414.00 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
-          "state": "成立",
-          "reason": "60日安値 5,237.00 を 2日前に更新後、5日線 5,450.40 を上抜け（安値から 4.9%）"
+          "state": "待機中",
+          "reason": "5日線 3,414.00 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "4063.T",
+      "chart_ric": "6702.T",
       "outlook": {
-        "state": "good",
-        "concerns": [],
+        "state": "concern",
+        "concerns": [
+          "earnings",
+          "forecast"
+        ],
         "checks": [
           {
             "key": "target_trend",
             "state": "ok",
-            "value": -1.0,
-            "detail": "目標株価（平均）が14日前から -1.0%"
+            "value": -0.6,
+            "detail": "目標株価（平均）が14日前から -0.6%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 15.6,
-            "detail": "売上が前年同期比 +15.6%"
+            "value": 3.7,
+            "detail": "売上が前年同期比 +3.7%"
           },
           {
             "key": "earnings",
-            "state": "ok",
-            "value": 21.7,
-            "detail": "利益が前年同期比 +21.7%"
+            "state": "concern",
+            "value": -51.8,
+            "detail": "利益が前年同期比 -51.8%"
           },
           {
             "key": "forecast",
-            "state": "ok",
-            "value": 21.5,
-            "detail": "予想EPS が実績EPS から +21.5%"
+            "state": "concern",
+            "value": -1.4,
+            "detail": "予想EPS が実績EPS から -1.4%"
           }
         ]
       }
@@ -4389,8 +4387,8 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": 0.3,
-            "detail": "目標株価（平均）が14日前から +0.3%"
+            "value": 0.4,
+            "detail": "目標株価（平均）が14日前から +0.4%"
           },
           {
             "key": "revenue",
@@ -4409,6 +4407,72 @@
             "state": "ok",
             "value": 37.5,
             "detail": "予想EPS が実績EPS から +37.5%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "4063.T",
+      "name": "信越化学工業",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "待機中",
+      "timing_reason": "1番底 13日前 / 2番底 3日前（安値 5,237.00）、ネックライン 5,791.00。ネックライン上抜け待ち",
+      "price": 5516.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 35.5,
+      "target_mean_price": 7475.0,
+      "target_low_price": 6200.0,
+      "num_analyst_opinions": 16,
+      "pbr": 2.2195032,
+      "per": 20.325743,
+      "payout_ratio": 0.409,
+      "equity_ratio": 0.7885025310376875,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 13日前 / 2番底 3日前（安値 5,237.00）、ネックライン 5,791.00。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 5,446.60 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 5,446.60 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "4063.T",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -1.0,
+            "detail": "目標株価（平均）が14日前から -1.0%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 15.6,
+            "detail": "売上が前年同期比 +15.6%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 21.7,
+            "detail": "利益が前年同期比 +21.7%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 21.5,
+            "detail": "予想EPS が実績EPS から +21.5%"
           }
         ]
       }
@@ -4617,142 +4681,6 @@
       }
     },
     {
-      "ticker": "6326.T",
-      "name": "クボタ",
-      "entry_rule": "value_screen",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 2370.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 33.7,
-      "target_mean_price": 3168.182,
-      "target_low_price": 2400.0,
-      "num_analyst_opinions": 11,
-      "pbr": 0.96915704,
-      "per": 10.008446,
-      "payout_ratio": 0.21540001,
-      "equity_ratio": 0.4227273921341957,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 2,366.20 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 2,366.20 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6326.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.0,
-            "detail": "目標株価（平均）が14日前から +0.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 5.1,
-            "detail": "売上が前年同期比 +5.1%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 4.7,
-            "detail": "利益が前年同期比 +4.7%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -16.9,
-            "detail": "予想EPS が実績EPS から -16.9%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "6326.T",
-      "name": "クボタ",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 2370.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 33.7,
-      "target_mean_price": 3168.182,
-      "target_low_price": 2400.0,
-      "num_analyst_opinions": 11,
-      "pbr": 0.96915704,
-      "per": 10.008446,
-      "payout_ratio": 0.21540001,
-      "equity_ratio": 0.4227273921341957,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 2,366.20 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 2,366.20 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6326.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.0,
-            "detail": "目標株価（平均）が14日前から +0.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 5.1,
-            "detail": "売上が前年同期比 +5.1%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 4.7,
-            "detail": "利益が前年同期比 +4.7%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -16.9,
-            "detail": "予想EPS が実績EPS から -16.9%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "XYZ",
       "name": "Block, Inc.",
       "entry_rule": "analyst_gap_us",
@@ -4814,74 +4742,6 @@
             "state": "ok",
             "value": 608.3,
             "detail": "予想EPS が実績EPS から +608.3%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "6501.T",
-      "name": "日立製作所",
-      "entry_rule": "analyst_gap_jp",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4959.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 32.0,
-      "target_mean_price": 6543.75,
-      "target_low_price": 5200.0,
-      "num_analyst_opinions": 16,
-      "pbr": 3.376991,
-      "per": 29.841137,
-      "payout_ratio": 0.355,
-      "equity_ratio": 0.43669048428567686,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": true,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "5日線 4,913.60 を上回っているが、上抜けた日ではない"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "5日線 4,913.60 を上回っているが、上抜けた日ではない"
-        }
-      },
-      "chart_ric": "6501.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "earnings"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.0,
-            "detail": "目標株価（平均）が14日前から +0.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 14.8,
-            "detail": "売上が前年同期比 +14.8%"
-          },
-          {
-            "key": "earnings",
-            "state": "concern",
-            "value": -17.7,
-            "detail": "利益が前年同期比 -17.7%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 7.2,
-            "detail": "予想EPS が実績EPS から +7.2%"
           }
         ]
       }
@@ -5021,6 +4881,346 @@
       }
     },
     {
+      "ticker": "6326.T",
+      "name": "クボタ",
+      "entry_rule": "value_screen",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 2375.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 31.1,
+      "target_mean_price": 3113.6365,
+      "target_low_price": 2400.0,
+      "num_analyst_opinions": 11,
+      "pbr": 0.97140616,
+      "per": 10.0316725,
+      "payout_ratio": 0.21540001,
+      "equity_ratio": 0.4227273921341957,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 2,353.80 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 2,353.80 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6326.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "target_trend",
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "concern",
+            "value": -1.7,
+            "detail": "目標株価（平均）が14日前から -1.7%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 5.1,
+            "detail": "売上が前年同期比 +5.1%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 4.7,
+            "detail": "利益が前年同期比 +4.7%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -16.9,
+            "detail": "予想EPS が実績EPS から -16.9%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "6326.T",
+      "name": "クボタ",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 2375.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 31.1,
+      "target_mean_price": 3113.6365,
+      "target_low_price": 2400.0,
+      "num_analyst_opinions": 11,
+      "pbr": 0.97140616,
+      "per": 10.0316725,
+      "payout_ratio": 0.21540001,
+      "equity_ratio": 0.4227273921341957,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 2,353.80 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 2,353.80 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6326.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "target_trend",
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "concern",
+            "value": -1.7,
+            "detail": "目標株価（平均）が14日前から -1.7%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 5.1,
+            "detail": "売上が前年同期比 +5.1%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 4.7,
+            "detail": "利益が前年同期比 +4.7%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -16.9,
+            "detail": "予想EPS が実績EPS から -16.9%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "8801.T",
+      "name": "三井不動産",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 1559.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 30.9,
+      "target_mean_price": 2040.8334,
+      "target_low_price": 1690.0,
+      "num_analyst_opinions": 12,
+      "pbr": 1.2536839,
+      "per": 15.96213,
+      "payout_ratio": 0.3736,
+      "equity_ratio": 0.32445186675395016,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 33日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 33日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "8801.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -1.0,
+            "detail": "目標株価（平均）が14日前から -1.0%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 8.6,
+            "detail": "売上が前年同期比 +8.6%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 133.7,
+            "detail": "利益が前年同期比 +133.7%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -2.7,
+            "detail": "予想EPS が実績EPS から -2.7%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "entry_rule": "analyst_gap_us",
+      "timing": "待機中",
+      "timing_reason": "安値圏 52.70 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 53.95000076293945,
+      "currency": "USD",
+      "as_of": "2026-11-25",
+      "gap_pct": 30.9,
+      "target_mean_price": 70.62963,
+      "target_low_price": 60.0,
+      "num_analyst_opinions": 27,
+      "pbr": 1.5464213,
+      "per": 12.015591,
+      "payout_ratio": 0.2316,
+      "equity_ratio": 0.42802841327536645,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 52.70 にいる（タッチ 1回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "成立",
+          "reason": "60日安値 52.70 を 2日前に更新後、5日線 53.55 を上抜け"
+        },
+        "confirm_near_low": {
+          "state": "成立",
+          "reason": "60日安値 52.70 を 2日前に更新後、5日線 53.55 を上抜け（安値から 2.4%）"
+        }
+      },
+      "chart_ric": "OXY.N",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.2,
+            "detail": "目標株価（平均）が14日前から -0.2%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 19.0,
+            "detail": "売上が前年同期比 +19.0%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 149.4,
+            "detail": "利益が前年同期比 +149.4%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 17.3,
+            "detail": "予想EPS が実績EPS から +17.3%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "6501.T",
+      "name": "日立製作所",
+      "entry_rule": "analyst_gap_jp",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 5012.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 30.6,
+      "target_mean_price": 6543.75,
+      "target_low_price": 5200.0,
+      "num_analyst_opinions": 16,
+      "pbr": 3.413083,
+      "per": 30.160069,
+      "payout_ratio": 0.355,
+      "equity_ratio": 0.43669048428567686,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 4,941.20 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 4,941.20 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "6501.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "earnings"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 0.0,
+            "detail": "目標株価（平均）が14日前から +0.0%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 14.8,
+            "detail": "売上が前年同期比 +14.8%"
+          },
+          {
+            "key": "earnings",
+            "state": "concern",
+            "value": -17.7,
+            "detail": "利益が前年同期比 -17.7%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 7.2,
+            "detail": "予想EPS が実績EPS から +7.2%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "KKR",
       "name": "KKR & Co.",
       "entry_rule": "analyst_gap_us",
@@ -5084,6 +5284,74 @@
             "state": "ok",
             "value": 110.8,
             "detail": "予想EPS が実績EPS から +110.8%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "3407.T",
+      "name": "旭化成",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "1番底 13日前 / 2番底 3日前（安値 1,472.50）、ネックライン 1,630.50。ネックライン上抜け待ち",
+      "price": 1527.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 27.5,
+      "target_mean_price": 1948.1818,
+      "target_low_price": 1400.0,
+      "num_analyst_opinions": 11,
+      "pbr": 0.97703785,
+      "per": 10.634225,
+      "payout_ratio": 0.32029998,
+      "equity_ratio": 0.5047094655484621,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 13日前 / 2番底 3日前（安値 1,472.50）、ネックライン 1,630.50。ネックライン上抜け待ち"
+        },
+        "confirm": {
+          "state": "待機中",
+          "reason": "5日線 1,511.50 を上回っているが、上抜けた日ではない"
+        },
+        "confirm_near_low": {
+          "state": "待機中",
+          "reason": "5日線 1,511.50 を上回っているが、上抜けた日ではない"
+        }
+      },
+      "chart_ric": "3407.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.6,
+            "detail": "目標株価（平均）が14日前から -0.6%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 15.4,
+            "detail": "売上が前年同期比 +15.4%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 5.6,
+            "detail": "利益が前年同期比 +5.6%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -30.2,
+            "detail": "予想EPS が実績EPS から -30.2%"
           }
         ]
       }
@@ -5163,15 +5431,15 @@
       "entry_rule": "value_screen",
       "timing": "待機中",
       "timing_reason": "安値圏 6,440.00 にいる（タッチ 2回目）。2番底の形成待ち",
-      "price": 6543.0,
+      "price": 6622.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 21.2,
+      "as_of": "2026-11-26",
+      "gap_pct": 19.7,
       "target_mean_price": 7929.091,
       "target_low_price": 4120.0,
       "num_analyst_opinions": 11,
-      "pbr": 0.7405576,
-      "per": 8.146976,
+      "pbr": 0.7494991,
+      "per": 8.245343,
       "payout_ratio": 0.26770002,
       "equity_ratio": 0.482094580145566,
       "operating_cf_ok": true,
@@ -5183,12 +5451,12 @@
           "reason": "安値圏 6,440.00 にいる（タッチ 2回目）。2番底の形成待ち"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 6,562.60 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 6,440.00 を 12日前に更新後、5日線 6,540.20 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 6,562.60 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 6,440.00 を 12日前に更新後、5日線 6,540.20 を上抜け（安値から 2.8%）"
         }
       },
       "chart_ric": "9104.T",
@@ -5226,20 +5494,86 @@
       }
     },
     {
+      "ticker": "2502.T",
+      "name": "アサヒグループホールディングス",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "1番底 32日前 / 2番底 19日前（安値 1,559.00）、ネックライン 1,702.00 を上回っているが、上抜けた日ではない",
+      "price": 1789.5,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 15.9,
+      "target_mean_price": 2074.7856,
+      "target_low_price": 1670.0,
+      "num_analyst_opinions": 14,
+      "pbr": 0.845139,
+      "per": 14.692118,
+      "payout_ratio": 0.4269,
+      "equity_ratio": 0.4981495962287925,
+      "operating_cf_ok": true,
+      "held": true,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 32日前 / 2番底 19日前（安値 1,559.00）、ネックライン 1,702.00 を上回っているが、上抜けた日ではない"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 32日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 32日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "2502.T",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 0.5,
+            "detail": "目標株価（平均）が14日前から +0.5%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 6.2,
+            "detail": "売上が前年同期比 +6.2%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 40.6,
+            "detail": "利益が前年同期比 +40.6%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 17.5,
+            "detail": "予想EPS が実績EPS から +17.5%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "1925.T",
       "name": "大和ハウス工業",
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 2350.5,
+      "price": 2338.5,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 9.2,
+      "as_of": "2026-11-26",
+      "gap_pct": 9.8,
       "target_mean_price": 2567.7778,
       "target_low_price": 2400.0,
       "num_analyst_opinions": 9,
-      "pbr": 0.9757383,
-      "per": 9.857412,
+      "pbr": 0.9707569,
+      "per": 10.0571995,
       "payout_ratio": 0.3054,
       "equity_ratio": 0.344341146107915,
       "operating_cf_ok": true,
@@ -5252,11 +5586,11 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+          "reason": "60日安値の更新が 36日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 35日前（20日以内ではない）"
+          "reason": "60日安値の更新が 36日前（20日以内ではない）"
         }
       },
       "chart_ric": "1925.T",
@@ -5285,8 +5619,76 @@
           {
             "key": "forecast",
             "state": "ok",
-            "value": 97.4,
-            "detail": "予想EPS が実績EPS から +97.4%"
+            "value": 102.4,
+            "detail": "予想EPS が実績EPS から +102.4%"
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "9202.T",
+      "name": "ＡＮＡホールディングス",
+      "entry_rule": "value_screen",
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
+      "price": 3257.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 9.1,
+      "target_mean_price": 3553.3333,
+      "target_low_price": 2700.0,
+      "num_analyst_opinions": 12,
+      "pbr": 0.97330916,
+      "per": 10.669943,
+      "payout_ratio": 0.31120002,
+      "equity_ratio": 0.37723153334101955,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 25日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 25日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "9202.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "earnings"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": 3.0,
+            "detail": "目標株価（平均）が14日前から +3.0%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 13.1,
+            "detail": "売上が前年同期比 +13.1%"
+          },
+          {
+            "key": "earnings",
+            "state": "concern",
+            "value": -0.2,
+            "detail": "利益が前年同期比 -0.2%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 59.5,
+            "detail": "予想EPS が実績EPS から +59.5%"
           }
         ]
       }
@@ -5360,20 +5762,86 @@
       }
     },
     {
+      "ticker": "6902.T",
+      "name": "デンソー",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "1番底 36日前 / 2番底 13日前（安値 1,808.00）、ネックライン 1,926.00 を上回っているが、上抜けた日ではない",
+      "price": 1932.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 6.7,
+      "target_mean_price": 2062.2222,
+      "target_low_price": 1670.0,
+      "num_analyst_opinions": 18,
+      "pbr": 0.9415627,
+      "per": 12.283045,
+      "payout_ratio": 0.4578,
+      "equity_ratio": 0.629112455665849,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": true,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "1番底 36日前 / 2番底 13日前（安値 1,808.00）、ネックライン 1,926.00 を上回っているが、上抜けた日ではない"
+        },
+        "confirm": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 36日前（20日以内ではない）"
+        },
+        "confirm_near_low": {
+          "state": "未該当",
+          "reason": "60日安値の更新が 36日前（20日以内ではない）"
+        }
+      },
+      "chart_ric": "6902.T",
+      "outlook": {
+        "state": "good",
+        "concerns": [],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.5,
+            "detail": "目標株価（平均）が14日前から -0.5%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 5.1,
+            "detail": "売上が前年同期比 +5.1%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 8.4,
+            "detail": "利益が前年同期比 +8.4%"
+          },
+          {
+            "key": "forecast",
+            "state": "ok",
+            "value": 22.6,
+            "detail": "予想EPS が実績EPS から +22.6%"
+          }
+        ]
+      }
+    },
+    {
       "ticker": "9022.T",
       "name": "東海旅客鉄道",
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 4510.0,
+      "price": 4493.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 2.1,
+      "as_of": "2026-11-26",
+      "gap_pct": 2.5,
       "target_mean_price": 4603.3335,
       "target_low_price": 3630.0,
       "num_analyst_opinions": 12,
-      "pbr": 0.80312693,
-      "per": 8.026482,
+      "pbr": 0.8000996,
+      "per": 7.996227,
       "payout_ratio": 0.0587,
       "equity_ratio": 0.46598816088849054,
       "operating_cf_ok": true,
@@ -5386,11 +5854,11 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 33日前（20日以内ではない）"
+          "reason": "60日安値の更新が 34日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 33日前（20日以内ではない）"
+          "reason": "60日安値の更新が 34日前（20日以内ではない）"
         }
       },
       "chart_ric": "9022.T",
@@ -5429,40 +5897,40 @@
       }
     },
     {
-      "ticker": "SNDK",
-      "name": "Sandisk",
-      "entry_rule": "analyst_gap_us",
+      "ticker": "5803.T",
+      "name": "フジクラ",
+      "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "安値圏 73.61 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 73.61000061035156,
-      "currency": "USD",
-      "as_of": "2026-11-25",
-      "gap_pct": 230.6,
-      "target_mean_price": 243.35938,
-      "target_low_price": 85.0,
-      "num_analyst_opinions": 24,
-      "pbr": 4.676323,
-      "per": 4.7065215,
-      "payout_ratio": 0.0,
-      "equity_ratio": 0.6991602612520549,
+      "timing_reason": "安値圏 2,062.50 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 2077.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 192.9,
+      "target_mean_price": 6083.846,
+      "target_low_price": 2520.0,
+      "num_analyst_opinions": 13,
+      "pbr": 4.961446,
+      "per": 12.723597,
+      "payout_ratio": 0.3778,
+      "equity_ratio": 0.578022268204577,
       "operating_cf_ok": true,
-      "held": false,
+      "held": true,
       "paper_open": false,
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "安値圏 73.61 にいる（タッチ 1回目）。2番底の形成待ち"
+          "reason": "安値圏 2,062.50 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 73.61 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 1日。5日線 2,274.80 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 73.61 を更新。5日線の上抜け待ち"
+          "reason": "60日安値から 1日。5日線 2,274.80 の上抜け待ち"
         }
       },
-      "chart_ric": "SNDK.O",
+      "chart_ric": "5803.T",
       "outlook": {
         "state": "concern",
         "concerns": [
@@ -5472,26 +5940,26 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -88.1,
-            "detail": "目標株価（平均）が14日前から -88.1%"
+            "value": -10.6,
+            "detail": "目標株価（平均）が14日前から -10.6%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 377.9,
-            "detail": "売上が前年同期比 +377.9%"
+            "value": 59.9,
+            "detail": "売上が前年同期比 +59.9%"
           },
           {
             "key": "earnings",
             "state": "ok",
-            "value": 6909.6,
-            "detail": "利益が前年同期比 +6909.6%"
+            "value": 178.6,
+            "detail": "利益が前年同期比 +178.6%"
           },
           {
             "key": "forecast",
             "state": "ok",
-            "value": 129.5,
-            "detail": "予想EPS が実績EPS から +129.5%"
+            "value": 85.5,
+            "detail": "予想EPS が実績EPS から +85.5%"
           }
         ]
       }
@@ -5500,17 +5968,17 @@
       "ticker": "5802.T",
       "name": "住友電気工業",
       "entry_rule": "analyst_gap_jp",
-      "timing": "待機中",
-      "timing_reason": "安値圏 1,233.50 にいる（タッチ 2回目）。2番底の形成待ち",
-      "price": 1233.5,
+      "timing": "未該当",
+      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 2回）",
+      "price": 1283.5,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 160.4,
+      "as_of": "2026-11-26",
+      "gap_pct": 150.2,
       "target_mean_price": 3211.818,
       "target_low_price": 2500.0,
       "num_analyst_opinions": 11,
-      "pbr": 1.3381878,
-      "per": 12.357244,
+      "pbr": 1.3924314,
+      "per": 12.858145,
       "payout_ratio": 1.303,
       "equity_ratio": 0.5686425128903695,
       "operating_cf_ok": true,
@@ -5518,16 +5986,16 @@
       "paper_open": false,
       "timing_modes": {
         "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 1,233.50 にいる（タッチ 2回目）。2番底の形成待ち"
+          "state": "未該当",
+          "reason": "ダブルボトム未形成（安値圏へのタッチ 2回）"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値 1,233.50 を更新。5日線の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 1,233.50 を 1日前に更新後、5日線 1,280.70 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値 1,233.50 を更新。5日線の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 1,233.50 を 1日前に更新後、5日線 1,280.70 を上抜け（安値から 4.1%）"
         }
       },
       "chart_ric": "5802.T",
@@ -5633,16 +6101,16 @@
       "name": "三菱重工業",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "安値圏 2,628.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 2628.0,
+      "timing_reason": "安値圏 2,622.00 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 2622.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 99.4,
+      "as_of": "2026-11-26",
+      "gap_pct": 99.9,
       "target_mean_price": 5240.625,
       "target_low_price": 3110.0,
       "num_analyst_opinions": 16,
-      "pbr": 2.7459838,
-      "per": 28.69622,
+      "pbr": 2.7397146,
+      "per": 28.630705,
       "payout_ratio": 0.29479998,
       "equity_ratio": 0.37347931505708,
       "operating_cf_ok": true,
@@ -5651,15 +6119,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "安値圏 2,628.00 にいる（タッチ 1回目）。2番底の形成待ち"
+          "reason": "安値圏 2,622.00 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値 2,628.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 2,622.00 を更新。5日線の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値 2,628.00 を更新。5日線の上抜け待ち"
+          "reason": "60日安値 2,622.00 を更新。5日線の上抜け待ち"
         }
       },
       "chart_ric": "7011.T",
@@ -5672,8 +6140,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -1.9,
-            "detail": "目標株価（平均）が14日前から -1.9%"
+            "value": -2.2,
+            "detail": "目標株価（平均）が14日前から -2.2%"
           },
           {
             "key": "revenue",
@@ -5834,72 +6302,6 @@
       }
     },
     {
-      "ticker": "ALB",
-      "name": "Albemarle Corporation",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "安値圏 79.70 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 81.5,
-      "currency": "USD",
-      "as_of": "2026-11-25",
-      "gap_pct": 72.5,
-      "target_mean_price": 140.55144,
-      "target_low_price": 86.0,
-      "num_analyst_opinions": 21,
-      "pbr": 1.1578678,
-      "per": 19.638554,
-      "payout_ratio": 0.3916,
-      "equity_ratio": 0.5822182821511217,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 79.70 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 79.70 を 3日前に更新後、5日線 81.47 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "成立",
-          "reason": "60日安値 79.70 を 3日前に更新後、5日線 81.47 を上抜け（安値から 2.3%）"
-        }
-      },
-      "chart_ric": "ALB.N",
-      "outlook": {
-        "state": "good",
-        "concerns": [],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.4,
-            "detail": "目標株価（平均）が14日前から -0.4%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 18.8,
-            "detail": "売上が前年同期比 +18.8%"
-          },
-          {
-            "key": "earnings",
-            "state": "unknown",
-            "value": null,
-            "detail": "利益の前年同期比が取れない"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 84.6,
-            "detail": "予想EPS が実績EPS から +84.6%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "entry_rule": "analyst_gap_us",
@@ -5943,8 +6345,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -1.2,
-            "detail": "目標株価（平均）が14日前から -1.2%"
+            "value": -1.3,
+            "detail": "目標株価（平均）が14日前から -1.3%"
           },
           {
             "key": "revenue",
@@ -6011,8 +6413,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -1.7,
-            "detail": "目標株価（平均）が14日前から -1.7%"
+            "value": -1.4,
+            "detail": "目標株価（平均）が14日前から -1.4%"
           },
           {
             "key": "revenue",
@@ -6110,8 +6512,8 @@
       "price": 235.27999877929688,
       "currency": "USD",
       "as_of": "2026-11-25",
-      "gap_pct": 44.7,
-      "target_mean_price": 340.37564,
+      "gap_pct": 44.4,
+      "target_mean_price": 339.68,
       "target_low_price": 240.0,
       "num_analyst_opinions": 23,
       "pbr": 2.5289135,
@@ -6143,8 +6545,8 @@
           {
             "key": "target_trend",
             "state": "ok",
-            "value": 0.7,
-            "detail": "目標株価（平均）が14日前から +0.7%"
+            "value": 0.5,
+            "detail": "目標株価（平均）が14日前から +0.5%"
           },
           {
             "key": "revenue",
@@ -6172,15 +6574,15 @@
       "name": "三菱ケミカルグループ",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 2日前（安値 988.80）、ネックライン 1,086.00。2番底をつけている最中（ネックライン上抜け待ち）",
-      "price": 1008.5,
+      "timing_reason": "1番底 13日前 / 2番底 3日前（安値 988.80）、ネックライン 1,086.00。2番底をつけている最中（ネックライン上抜け待ち）",
+      "price": 1014.5,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 39.5,
+      "as_of": "2026-11-26",
+      "gap_pct": 38.7,
       "target_mean_price": 1407.0,
       "target_low_price": 1100.0,
       "num_analyst_opinions": 10,
-      "pbr": 0.75302273,
+      "pbr": 0.75750273,
       "per": null,
       "payout_ratio": 0.9561,
       "equity_ratio": 0.2997774737097534,
@@ -6190,15 +6592,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 2日前（安値 988.80）、ネックライン 1,086.00。2番底をつけている最中（ネックライン上抜け待ち）"
+          "reason": "1番底 13日前 / 2番底 3日前（安値 988.80）、ネックライン 1,086.00。2番底をつけている最中（ネックライン上抜け待ち）"
         },
         "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 1,018.86 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 988.80 を 3日前に更新後、5日線 1,013.26 を上抜け"
         },
         "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 2日。5日線 1,018.86 の上抜け待ち"
+          "state": "成立",
+          "reason": "60日安値 988.80 を 3日前に更新後、5日線 1,013.26 を上抜け（安値から 2.6%）"
         }
       },
       "chart_ric": "4188.T",
@@ -6236,152 +6638,20 @@
       }
     },
     {
-      "ticker": "IBKR",
-      "name": "Interactive Brokers",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "1番底 14日前 / 2番底 3日前（安値 71.19）、ネックライン 82.49。ネックライン上抜け待ち",
-      "price": 74.73999786376953,
-      "currency": "USD",
-      "as_of": "2026-11-25",
-      "gap_pct": 39.3,
-      "target_mean_price": 104.1,
-      "target_low_price": 75.0,
-      "num_analyst_opinions": 16,
-      "pbr": 5.4487133,
-      "per": 28.526718,
-      "payout_ratio": 0.1279,
-      "equity_ratio": 0.026387522141310765,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 14日前 / 2番底 3日前（安値 71.19）、ネックライン 82.49。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 71.19 を 3日前に更新後、5日線 74.55 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "成立",
-          "reason": "60日安値 71.19 を 3日前に更新後、5日線 74.55 を上抜け（安値から 5.0%）"
-        }
-      },
-      "chart_ric": "IBKR.O",
-      "outlook": {
-        "state": "good",
-        "concerns": [],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.1,
-            "detail": "目標株価（平均）が14日前から +0.1%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 13.5,
-            "detail": "売上が前年同期比 +13.5%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 16.9,
-            "detail": "利益が前年同期比 +16.9%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 26.6,
-            "detail": "予想EPS が実績EPS から +26.6%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "entry_rule": "analyst_gap_us",
-      "timing": "未該当",
-      "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 609.8900146484375,
-      "currency": "USD",
-      "as_of": "2026-11-25",
-      "gap_pct": 38.1,
-      "target_mean_price": 842.53656,
-      "target_low_price": 650.0,
-      "num_analyst_opinions": 58,
-      "pbr": 5.7230663,
-      "per": 20.808258,
-      "payout_ratio": 0.0716,
-      "equity_ratio": 0.5935260545159977,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "未該当",
-          "reason": "ダブルボトム未形成（安値圏へのタッチ 1回）"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 560.84 を 3日前に更新後、5日線 590.87 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値 560.84 を 3日前に更新後、5日線 590.87 を上抜け。ただし終値が安値から 8.7% 上（5% 以内ではない）"
-        }
-      },
-      "chart_ric": "META.O",
-      "outlook": {
-        "state": "good",
-        "concerns": [],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.9,
-            "detail": "目標株価（平均）が14日前から -0.9%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 26.1,
-            "detail": "売上が前年同期比 +26.1%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 264.8,
-            "detail": "利益が前年同期比 +264.8%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 21.7,
-            "detail": "予想EPS が実績EPS から +21.7%"
-          }
-        ]
-      }
-    },
-    {
       "ticker": "6861.T",
       "name": "キーエンス",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 2日前（安値 13,950.00）、ネックライン 15,144.00。ネックライン上抜け待ち",
-      "price": 14655.0,
+      "timing_reason": "1番底 13日前 / 2番底 0日前（安値 13,950.00）、ネックライン 15,144.00。2番底をつけている最中（ネックライン上抜け待ち）",
+      "price": 14310.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 35.8,
-      "target_mean_price": 19906.25,
+      "as_of": "2026-11-26",
+      "gap_pct": 37.4,
+      "target_mean_price": 19656.25,
       "target_low_price": 16240.0,
       "num_analyst_opinions": 16,
-      "pbr": 4.79655,
-      "per": 32.6734,
+      "pbr": 4.6836324,
+      "per": 31.90422,
       "payout_ratio": 0.2675,
       "equity_ratio": 0.945736115216494,
       "operating_cf_ok": true,
@@ -6390,15 +6660,15 @@
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 2日前（安値 13,950.00）、ネックライン 15,144.00。ネックライン上抜け待ち"
+          "reason": "1番底 13日前 / 2番底 0日前（安値 13,950.00）、ネックライン 15,144.00。2番底をつけている最中（ネックライン上抜け待ち）"
         },
         "confirm": {
           "state": "待機中",
-          "reason": "5日線 14,568.40 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 13日。5日線 14,486.00 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "5日線 14,568.40 を上回っているが、上抜けた日ではない"
+          "reason": "60日安値から 13日。5日線 14,486.00 の上抜け待ち"
         }
       },
       "chart_ric": "6861.T",
@@ -6411,8 +6681,8 @@
           {
             "key": "target_trend",
             "state": "concern",
-            "value": -80.2,
-            "detail": "目標株価（平均）が14日前から -80.2%"
+            "value": -80.4,
+            "detail": "目標株価（平均）が14日前から -80.4%"
           },
           {
             "key": "revenue",
@@ -6639,15 +6909,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
       "timing_reason": "安値圏 1,502.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 1538.0,
+      "price": 1530.5,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 31.9,
+      "as_of": "2026-11-26",
+      "gap_pct": 32.5,
       "target_mean_price": 2028.0,
       "target_low_price": 1660.0,
       "num_analyst_opinions": 11,
-      "pbr": 1.5341171,
-      "per": 11.33132,
+      "pbr": 1.5266361,
+      "per": 11.276063,
       "payout_ratio": 0.3094,
       "equity_ratio": 0.3393782292241181,
       "operating_cf_ok": true,
@@ -6660,11 +6930,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値から 2日。5日線 1,552.00 の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 1,536.20 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値から 2日。5日線 1,552.00 の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 1,536.20 の上抜け待ち"
         }
       },
       "chart_ric": "8053.T",
@@ -6700,136 +6970,69 @@
       }
     },
     {
-      "ticker": "7936.T",
-      "name": "アシックス",
+      "ticker": "8031.T",
+      "name": "三井物産",
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
-      "timing_reason": "1番底 47日前 / 2番底 2日前（安値 3,989.00）、ネックライン 5,167.00。ネックライン上抜け待ち",
-      "price": 4309.0,
+      "timing_reason": "安値圏 4,476.00 にいる（タッチ 1回目）。2番底の形成待ち",
+      "price": 4595.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 31.3,
-      "target_mean_price": 5656.923,
-      "target_low_price": 4800.0,
+      "as_of": "2026-11-26",
+      "gap_pct": 31.1,
+      "target_mean_price": 6022.3076,
+      "target_low_price": 4700.0,
       "num_analyst_opinions": 13,
-      "pbr": 8.592549,
-      "per": 20.493675,
-      "payout_ratio": 0.2008,
-      "equity_ratio": 0.4633730050470604,
+      "pbr": 1.4449686,
+      "per": 13.269992,
+      "payout_ratio": 0.3754,
+      "equity_ratio": 0.4210903253594069,
       "operating_cf_ok": true,
       "held": false,
       "paper_open": false,
       "timing_modes": {
         "double_bottom": {
           "state": "待機中",
-          "reason": "1番底 47日前 / 2番底 2日前（安値 3,989.00）、ネックライン 5,167.00。ネックライン上抜け待ち"
+          "reason": "安値圏 4,476.00 にいる（タッチ 1回目）。2番底の形成待ち"
         },
         "confirm": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 47日前（20日以内ではない）"
+          "state": "待機中",
+          "reason": "5日線 4,579.00 を上回っているが、上抜けた日ではない"
         },
         "confirm_near_low": {
-          "state": "未該当",
-          "reason": "60日安値の更新が 47日前（20日以内ではない）"
+          "state": "待機中",
+          "reason": "5日線 4,579.00 を上回っているが、上抜けた日ではない"
         }
       },
-      "chart_ric": "7936.T",
+      "chart_ric": "8031.T",
       "outlook": {
         "state": "concern",
         "concerns": [
-          "target_trend",
           "forecast"
         ],
         "checks": [
           {
             "key": "target_trend",
-            "state": "concern",
-            "value": -2.6,
-            "detail": "目標株価（平均）が14日前から -2.6%"
+            "state": "ok",
+            "value": -0.9,
+            "detail": "目標株価（平均）が14日前から -0.9%"
           },
           {
             "key": "revenue",
             "state": "ok",
-            "value": 21.8,
-            "detail": "売上が前年同期比 +21.8%"
+            "value": 14.9,
+            "detail": "売上が前年同期比 +14.9%"
           },
           {
             "key": "earnings",
             "state": "ok",
-            "value": 0.8,
-            "detail": "利益が前年同期比 +0.8%"
+            "value": 22.8,
+            "detail": "利益が前年同期比 +22.8%"
           },
           {
             "key": "forecast",
             "state": "concern",
-            "value": -51.9,
-            "detail": "予想EPS が実績EPS から -51.9%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "OXY",
-      "name": "Occidental Petroleum",
-      "entry_rule": "analyst_gap_us",
-      "timing": "待機中",
-      "timing_reason": "安値圏 52.70 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 53.95000076293945,
-      "currency": "USD",
-      "as_of": "2026-11-25",
-      "gap_pct": 30.9,
-      "target_mean_price": 70.62963,
-      "target_low_price": 60.0,
-      "num_analyst_opinions": 27,
-      "pbr": 1.5464213,
-      "per": 12.015591,
-      "payout_ratio": 0.2316,
-      "equity_ratio": 0.42802841327536645,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 52.70 にいる（タッチ 1回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 52.70 を 2日前に更新後、5日線 53.55 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "成立",
-          "reason": "60日安値 52.70 を 2日前に更新後、5日線 53.55 を上抜け（安値から 2.4%）"
-        }
-      },
-      "chart_ric": "OXY.N",
-      "outlook": {
-        "state": "good",
-        "concerns": [],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": 0.0,
-            "detail": "目標株価（平均）が14日前から +0.0%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 19.0,
-            "detail": "売上が前年同期比 +19.0%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 149.4,
-            "detail": "利益が前年同期比 +149.4%"
-          },
-          {
-            "key": "forecast",
-            "state": "ok",
-            "value": 17.3,
-            "detail": "予想EPS が実績EPS から +17.3%"
+            "value": -15.1,
+            "detail": "予想EPS が実績EPS から -15.1%"
           }
         ]
       }
@@ -6840,15 +7043,15 @@
       "entry_rule": "analyst_gap_jp",
       "timing": "待機中",
       "timing_reason": "安値圏 4,460.00 にいる（タッチ 1回目）。2番底の形成待ち",
-      "price": 4513.0,
+      "price": 4512.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
+      "as_of": "2026-11-26",
       "gap_pct": 30.2,
       "target_mean_price": 5876.364,
       "target_low_price": 5100.0,
       "num_analyst_opinions": 11,
-      "pbr": 1.6620846,
-      "per": 12.683379,
+      "pbr": 1.6617163,
+      "per": 12.799637,
       "payout_ratio": 0.3404,
       "equity_ratio": 0.41433885149724203,
       "operating_cf_ok": true,
@@ -6861,11 +7064,11 @@
         },
         "confirm": {
           "state": "待機中",
-          "reason": "60日安値から 2日。5日線 4,586.20 の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 4,522.60 の上抜け待ち"
         },
         "confirm_near_low": {
           "state": "待機中",
-          "reason": "60日安値から 2日。5日線 4,586.20 の上抜け待ち"
+          "reason": "60日安値から 3日。5日線 4,522.60 の上抜け待ち"
         }
       },
       "chart_ric": "8002.T",
@@ -6896,76 +7099,8 @@
           {
             "key": "forecast",
             "state": "concern",
-            "value": -12.6,
-            "detail": "予想EPS が実績EPS から -12.6%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "3407.T",
-      "name": "旭化成",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "1番底 12日前 / 2番底 2日前（安値 1,472.50）、ネックライン 1,630.50。ネックライン上抜け待ち",
-      "price": 1523.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 27.9,
-      "target_mean_price": 1948.1818,
-      "target_low_price": 1400.0,
-      "num_analyst_opinions": 11,
-      "pbr": 0.9741595,
-      "per": 10.602896,
-      "payout_ratio": 0.32029998,
-      "equity_ratio": 0.5047094655484621,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "1番底 12日前 / 2番底 2日前（安値 1,472.50）、ネックライン 1,630.50。ネックライン上抜け待ち"
-        },
-        "confirm": {
-          "state": "成立",
-          "reason": "60日安値 1,472.50 を 2日前に更新後、5日線 1,516.80 を上抜け"
-        },
-        "confirm_near_low": {
-          "state": "成立",
-          "reason": "60日安値 1,472.50 を 2日前に更新後、5日線 1,516.80 を上抜け（安値から 3.4%）"
-        }
-      },
-      "chart_ric": "3407.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.6,
-            "detail": "目標株価（平均）が14日前から -0.6%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 15.4,
-            "detail": "売上が前年同期比 +15.4%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 5.6,
-            "detail": "利益が前年同期比 +5.6%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -30.2,
-            "detail": "予想EPS が実績EPS から -30.2%"
+            "value": -11.8,
+            "detail": "予想EPS が実績EPS から -11.8%"
           }
         ]
       }
@@ -6976,15 +7111,15 @@
       "entry_rule": "value_screen",
       "timing": "未該当",
       "timing_reason": "ダブルボトム未形成（安値圏へのタッチ 1回）",
-      "price": 680.5,
+      "price": 680.0,
       "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 10.7,
+      "as_of": "2026-11-26",
+      "gap_pct": 10.8,
       "target_mean_price": 753.3333,
       "target_low_price": 470.0,
       "num_analyst_opinions": 9,
-      "pbr": 0.61421674,
-      "per": 9.863749,
+      "pbr": 0.6137655,
+      "per": 9.856502,
       "payout_ratio": 0.3479,
       "equity_ratio": 0.37723247431565304,
       "operating_cf_ok": true,
@@ -6997,11 +7132,11 @@
         },
         "confirm": {
           "state": "未該当",
-          "reason": "60日安値の更新が 30日前（20日以内ではない）"
+          "reason": "60日安値の更新が 31日前（20日以内ではない）"
         },
         "confirm_near_low": {
           "state": "未該当",
-          "reason": "60日安値の更新が 30日前（20日以内ではない）"
+          "reason": "60日安値の更新が 31日前（20日以内ではない）"
         }
       },
       "chart_ric": "5401.T",
@@ -7032,74 +7167,6 @@
             "state": "ok",
             "value": 708.8,
             "detail": "予想EPS が実績EPS から +708.8%"
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "9101.T",
-      "name": "日本郵船",
-      "entry_rule": "value_screen",
-      "timing": "待機中",
-      "timing_reason": "安値圏 6,543.00 にいる（タッチ 2回目）。2番底の形成待ち",
-      "price": 6636.0,
-      "currency": "JPY",
-      "as_of": "2026-11-25",
-      "gap_pct": 3.9,
-      "target_mean_price": 6891.8184,
-      "target_low_price": 3810.0,
-      "num_analyst_opinions": 11,
-      "pbr": 0.8373858,
-      "per": 8.756697,
-      "payout_ratio": 0.3325,
-      "equity_ratio": 0.5905782181491713,
-      "operating_cf_ok": true,
-      "held": false,
-      "paper_open": false,
-      "timing_modes": {
-        "double_bottom": {
-          "state": "待機中",
-          "reason": "安値圏 6,543.00 にいる（タッチ 2回目）。2番底の形成待ち"
-        },
-        "confirm": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 6,667.20 の上抜け待ち"
-        },
-        "confirm_near_low": {
-          "state": "待機中",
-          "reason": "60日安値から 11日。5日線 6,667.20 の上抜け待ち"
-        }
-      },
-      "chart_ric": "9101.T",
-      "outlook": {
-        "state": "concern",
-        "concerns": [
-          "forecast"
-        ],
-        "checks": [
-          {
-            "key": "target_trend",
-            "state": "ok",
-            "value": -0.4,
-            "detail": "目標株価（平均）が14日前から -0.4%"
-          },
-          {
-            "key": "revenue",
-            "state": "ok",
-            "value": 33.8,
-            "detail": "売上が前年同期比 +33.8%"
-          },
-          {
-            "key": "earnings",
-            "state": "ok",
-            "value": 185.3,
-            "detail": "利益が前年同期比 +185.3%"
-          },
-          {
-            "key": "forecast",
-            "state": "concern",
-            "value": -32.4,
-            "detail": "予想EPS が実績EPS から -32.4%"
           }
         ]
       }
@@ -7172,14 +7239,82 @@
           }
         ]
       }
+    },
+    {
+      "ticker": "9101.T",
+      "name": "日本郵船",
+      "entry_rule": "value_screen",
+      "timing": "待機中",
+      "timing_reason": "安値圏 6,543.00 にいる（タッチ 2回目）。2番底の形成待ち",
+      "price": 6674.0,
+      "currency": "JPY",
+      "as_of": "2026-11-26",
+      "gap_pct": 3.3,
+      "target_mean_price": 6891.8184,
+      "target_low_price": 3810.0,
+      "num_analyst_opinions": 11,
+      "pbr": 0.8421809,
+      "per": 8.806841,
+      "payout_ratio": 0.3325,
+      "equity_ratio": 0.5905782181491713,
+      "operating_cf_ok": true,
+      "held": false,
+      "paper_open": false,
+      "timing_modes": {
+        "double_bottom": {
+          "state": "待機中",
+          "reason": "安値圏 6,543.00 にいる（タッチ 2回目）。2番底の形成待ち"
+        },
+        "confirm": {
+          "state": "成立",
+          "reason": "60日安値 6,543.00 を 12日前に更新後、5日線 6,635.40 を上抜け"
+        },
+        "confirm_near_low": {
+          "state": "成立",
+          "reason": "60日安値 6,543.00 を 12日前に更新後、5日線 6,635.40 を上抜け（安値から 2.0%）"
+        }
+      },
+      "chart_ric": "9101.T",
+      "outlook": {
+        "state": "concern",
+        "concerns": [
+          "forecast"
+        ],
+        "checks": [
+          {
+            "key": "target_trend",
+            "state": "ok",
+            "value": -0.4,
+            "detail": "目標株価（平均）が14日前から -0.4%"
+          },
+          {
+            "key": "revenue",
+            "state": "ok",
+            "value": 33.8,
+            "detail": "売上が前年同期比 +33.8%"
+          },
+          {
+            "key": "earnings",
+            "state": "ok",
+            "value": 185.3,
+            "detail": "利益が前年同期比 +185.3%"
+          },
+          {
+            "key": "forecast",
+            "state": "concern",
+            "value": -32.4,
+            "detail": "予想EPS が実績EPS から -32.4%"
+          }
+        ]
+      }
     }
   ],
   "market_trend": {
     "JP": {
       "state": "down",
-      "pct": -3.28,
+      "pct": -3.0,
       "ticker": "1306.T",
-      "as_of": "2026-11-25",
+      "as_of": "2026-11-26",
       "days": 20
     },
     "US": {
